@@ -1,6 +1,7 @@
 package de.uni_trier.bibliothek;
 
-import java.io.File;
+import java.io.InputStreamReader;
+import java.io.Reader;
 
 import de.uni_trier.bibliothek.xml.Unmarshaller;
 import de.uni_trier.bibliothek.xml.XMLValidator;
@@ -19,9 +20,10 @@ public class Main {
         // System.out.println(
         //         "testfile xml validates against testfile.xsd " + XMLValidator.validateXMLSchema(xsdPath, xmlPath));
 
+        Reader xmlReader = new InputStreamReader(ClassLoader.getSystemResource("ah232-3_HT018907295_Moguntiensis_Trevirensis_1690.xml").openStream());
+
         Unmarshaller<ModsCollection> unmarshaller = new Unmarshaller<>(ModsCollection.class);
-        ModsCollection modsCollection = unmarshaller.unmarshal(new File(
-                "/home/ackels/Dokumente/ocr-to-tei-pipeline/OCR-To-TEI/src/main/resources/ah232-3_HT018907295_Moguntiensis_Trevirensis_1690.xml"));
+        ModsCollection modsCollection = unmarshaller.unmarshal(xmlReader);
 
         System.out.println("eingelesen YAY ^^");
     }
