@@ -1,3 +1,5 @@
+package de.uni_trier.bibliothek.xml;
+
 import java.io.IOException;
 import java.io.File;
 
@@ -26,7 +28,7 @@ public class XMLValidator
             System.out.println("Exception: " + e.getMessage());
             return false;
         }
-        return true;
-    }
-    
+            return true;
+        }
+
 }
