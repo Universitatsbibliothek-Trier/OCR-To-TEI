@@ -15,14 +15,14 @@ import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java-Klasse für Note complex type.
+ * <p>Java-Klasse für note complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="Note">
+ * <complexType name="note">
  *   <simpleContent>
- *     <extension base="<http://www.loc.gov/mods/v3>NoteValue">
+ *     <extension base="<http://www.loc.gov/mods/v3>noteValue">
  *       <attribute name="type">
  *         <simpleType>
  *           <restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Note", propOrder = {
+@XmlType(name = "note", propOrder = {
     "value"
 })
 public class Note {

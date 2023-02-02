@@ -17,17 +17,17 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für TextLineType complex type.
+ * <p>Java-Klasse für textLineType complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="TextLineType">
+ * <complexType name="textLineType">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="Coords" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}CoordsType"/>
- *         <element name="TextEquiv" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}TextEquivType" maxOccurs="unbounded"/>
+ *         <element name="Coords" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}coordsType"/>
+ *         <element name="TextEquiv" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}textEquivType" maxOccurs="unbounded"/>
  *       </sequence>
  *       <attribute name="id" use="required">
  *         <simpleType>
@@ -44,7 +44,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TextLineType", propOrder = {
+@XmlType(name = "textLineType", propOrder = {
     "coords",
     "textEquiv"
 })

@@ -17,17 +17,17 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für PageType complex type.
+ * <p>Java-Klasse für pageType complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="PageType">
+ * <complexType name="pageType">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="ReadingOrder" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}ReadingOrderType"/>
- *         <element name="TextRegion" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}TextRegionType" maxOccurs="unbounded"/>
+ *         <element name="ReadingOrder" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}readingOrderType"/>
+ *         <element name="TextRegion" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}textRegionType" maxOccurs="unbounded"/>
  *       </sequence>
  *       <attribute name="imageFilename" use="required">
  *         <simpleType>
@@ -57,7 +57,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PageType", propOrder = {
+@XmlType(name = "pageType", propOrder = {
     "readingOrder",
     "textRegion"
 })

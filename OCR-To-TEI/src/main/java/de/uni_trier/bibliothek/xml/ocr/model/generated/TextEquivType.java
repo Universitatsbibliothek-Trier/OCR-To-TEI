@@ -15,12 +15,12 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für TextEquivType complex type.
+ * <p>Java-Klasse für textEquivType complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="TextEquivType">
+ * <complexType name="textEquivType">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
@@ -41,7 +41,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TextEquivType", propOrder = {
+@XmlType(name = "textEquivType", propOrder = {
     "unicode"
 })
 public class TextEquivType {

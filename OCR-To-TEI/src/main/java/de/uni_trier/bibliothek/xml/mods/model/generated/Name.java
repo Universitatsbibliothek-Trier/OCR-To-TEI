@@ -14,12 +14,12 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für Name complex type.
+ * <p>Java-Klasse für name complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="Name">
+ * <complexType name="name">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Name", propOrder = {
+@XmlType(name = "name", propOrder = {
     "namePart"
 })
 public class Name {

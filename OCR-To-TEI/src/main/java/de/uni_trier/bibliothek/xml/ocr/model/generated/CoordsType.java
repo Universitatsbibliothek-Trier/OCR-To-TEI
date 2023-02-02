@@ -14,12 +14,12 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für CoordsType complex type.
+ * <p>Java-Klasse für coordsType complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="CoordsType">
+ * <complexType name="coordsType">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <attribute name="points" use="required">
@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CoordsType")
+@XmlType(name = "coordsType")
 public class CoordsType {
 
     @XmlAttribute(name = "points", required = true)

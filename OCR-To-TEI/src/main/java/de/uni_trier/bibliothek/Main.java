@@ -1,35 +1,46 @@
 package de.uni_trier.bibliothek;
 
+import java.io.File;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.net.URL;
+
+import javax.xml.XMLConstants;
+import javax.xml.transform.stream.StreamSource;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
+import javax.xml.validation.Validator;
+
+import org.xml.sax.SAXException;
 
 import de.uni_trier.bibliothek.xml.Unmarshaller;
 import de.uni_trier.bibliothek.xml.XMLValidator;
+import de.uni_trier.bibliothek.xml.mods.ModsCollectionManuell;
+import de.uni_trier.bibliothek.xml.mods.ModsUnmarshaller;
+import de.uni_trier.bibliothek.xml.mods.model.generated.HbzIdentifier;
+import de.uni_trier.bibliothek.xml.mods.model.generated.Mods;
 import de.uni_trier.bibliothek.xml.mods.model.generated.ModsCollection;
+import de.uni_trier.bibliothek.xml.ocr.PcGtsUnmarshaller;
+import de.uni_trier.bibliothek.xml.ocr.model.generated.MetadataType;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.PcGts;
 
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        // String xsdPath="OCR-To-TEI/src/resources/testfile.xsd";
-        // String xmlPath="OCR-To-TEI/src/resources/testfile1_example.xml";
-        // String xsdPath="OCR-To-TEI/src/resources/testfile.xsd";
-        // String xmlPath="OCR-To-TEI/src/resources/testfile1_example.xml";
-        // String xsdPath = "/home/ackels/Dokumente/ocr-to-tei-pipeline/example-data/mods.xsd";
-        // String xmlPath = "/home/ackels/Dokumente/ocr-to-tei-pipeline/example-data/ah232-3_HT018907295_Moguntiensis_Trevirensis_1690.xml";
 
-        // System.out.println(
-        //         "testfile xml validates against testfile.xsd " + XMLValidator.validateXMLSchema(xsdPath, xmlPath));
+        
 
-        // Reader xmlReader = new InputStreamReader(ClassLoader.getSystemResource("ah232-3_HT018907295_Moguntiensis_Trevirensis_1690.xml").openStream());
+        String xmlPathreader ="";
+        // relativer Pfad der XML (Ordner: resources)
+        xmlPathreader = "0029.xml";
 
-        // Unmarshaller<ModsCollection> unmarshaller = new Unmarshaller<>(ModsCollection.class);
-        // ModsCollection modsCollection = unmarshaller.unmarshal(xmlReader);
+        Reader xmlReader = new InputStreamReader(ClassLoader.getSystemResource(xmlPathreader).openStream());
 
-        Reader xmlReader = new InputStreamReader(ClassLoader.getSystemResource("0029.xml").openStream());
+        //alternativ: ModsUnmarshaller
+        PcGtsUnmarshaller pcGtsUnmarshaller = new PcGtsUnmarshaller();
 
-        Unmarshaller<PcGts> unmarshaller = new Unmarshaller<>(PcGts.class);
-        PcGts pcGts = unmarshaller.unmarshal(xmlReader);
+        PcGts pcgts = pcGtsUnmarshaller.unmarshal(xmlReader);
 
         System.out.println("eingelesen YAY ^^");
     }

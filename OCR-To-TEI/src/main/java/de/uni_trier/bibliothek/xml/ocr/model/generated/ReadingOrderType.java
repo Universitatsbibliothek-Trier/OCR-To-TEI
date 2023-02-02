@@ -14,16 +14,16 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für ReadingOrderType complex type.
+ * <p>Java-Klasse für readingOrderType complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="ReadingOrderType">
+ * <complexType name="readingOrderType">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <all>
- *         <element name="OrderedGroup" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}OrderedGroupType"/>
+ *         <element name="OrderedGroup" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}orderedGroupType"/>
  *       </all>
  *     </restriction>
  *   </complexContent>
@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ReadingOrderType", propOrder = {
+@XmlType(name = "readingOrderType", propOrder = {
 
 })
 public class ReadingOrderType {

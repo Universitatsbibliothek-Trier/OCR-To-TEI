@@ -17,16 +17,16 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für OrderedGroupType complex type.
+ * <p>Java-Klasse für orderedGroupType complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="OrderedGroupType">
+ * <complexType name="orderedGroupType">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="RegionRefIndexed" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}RegionRefIndexedType" maxOccurs="unbounded"/>
+ *         <element name="RegionRefIndexed" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}regionRefIndexedType" maxOccurs="unbounded"/>
  *       </sequence>
  *       <attribute name="id">
  *         <simpleType>
@@ -42,7 +42,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OrderedGroupType", propOrder = {
+@XmlType(name = "orderedGroupType", propOrder = {
     "regionRefIndexed"
 })
 public class OrderedGroupType {

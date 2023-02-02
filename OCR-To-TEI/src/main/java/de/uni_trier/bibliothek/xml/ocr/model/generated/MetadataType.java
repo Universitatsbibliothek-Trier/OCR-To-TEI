@@ -14,19 +14,19 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für MetadataType complex type.
+ * <p>Java-Klasse für metadataType complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="MetadataType">
+ * <complexType name="metadataType">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <all>
- *         <element name="Creator" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}CreatorType"/>
- *         <element name="Created" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}CreatedType"/>
- *         <element name="LastChange" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}LastChangeType"/>
- *         <element name="Comments" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}CommentsType"/>
+ *         <element name="Creator" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}creatorType"/>
+ *         <element name="Created" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}createdType"/>
+ *         <element name="LastChange" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}lastChangeType"/>
+ *         <element name="Comments" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}commentsType"/>
  *       </all>
  *     </restriction>
  *   </complexContent>
@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MetadataType", propOrder = {
+@XmlType(name = "metadataType", propOrder = {
 
 })
 public class MetadataType {

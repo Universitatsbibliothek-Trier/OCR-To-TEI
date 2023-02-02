@@ -14,12 +14,12 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für PhysicalDescription complex type.
+ * <p>Java-Klasse für physicalDescription complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="PhysicalDescription">
+ * <complexType name="physicalDescription">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *             </restriction>
  *           </simpleType>
  *         </element>
- *         <element name="form" type="{http://www.loc.gov/mods/v3}Form"/>
+ *         <element name="form" type="{http://www.loc.gov/mods/v3}form"/>
  *       </sequence>
  *     </restriction>
  *   </complexContent>
@@ -39,7 +39,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PhysicalDescription", propOrder = {
+@XmlType(name = "physicalDescription", propOrder = {
     "extent",
     "form"
 })

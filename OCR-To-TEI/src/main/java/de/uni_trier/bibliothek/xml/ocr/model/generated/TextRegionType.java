@@ -17,18 +17,18 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für TextRegionType complex type.
+ * <p>Java-Klasse für textRegionType complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="TextRegionType">
+ * <complexType name="textRegionType">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="Coords" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}CoordsType"/>
- *         <element name="TextLine" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}TextLineType" maxOccurs="unbounded" minOccurs="0"/>
- *         <element name="TextEquiv" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}TextEquivType" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="Coords" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}coordsType"/>
+ *         <element name="TextLine" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}textLineType" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="TextEquiv" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}textEquivType" maxOccurs="unbounded" minOccurs="0"/>
  *       </sequence>
  *       <attribute name="id" use="required">
  *         <simpleType>
@@ -57,7 +57,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TextRegionType", propOrder = {
+@XmlType(name = "textRegionType", propOrder = {
     "coords",
     "textLine",
     "textEquiv"

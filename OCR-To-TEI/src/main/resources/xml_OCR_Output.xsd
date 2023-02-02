@@ -5,27 +5,23 @@
   elementFormDefault="qualified"
   attributeFormDefault="unqualified">
 
-  <!-- xsi:schemaLocation="http://www.loc.gov/mods/v3 xml_OCR_Output.xsd" -->
-
-  <!-- targetNamespace="http://www.loc.gov/mods/v3" -->
   <xs:element name="PcGts">
     <xs:complexType>
       <xs:all>
-        <xs:element name="Metadata" type="self:MetadataType" />
-        <xs:element name="Page" type="self:PageType" />
+        <xs:element name="Metadata" type="self:metadataType" />
+        <xs:element name="Page" type="self:pageType" />
       </xs:all>
     </xs:complexType>
   </xs:element>
 
-  <xs:complexType name="PageType">
+  <xs:complexType name="pageType">
     <xs:sequence>
-      <xs:element name="ReadingOrder" type="self:ReadingOrderType" />
-      <xs:element name="TextRegion" type="self:TextRegionType" minOccurs="1" maxOccurs="unbounded" />
+      <xs:element name="ReadingOrder" type="self:readingOrderType" />
+      <xs:element name="TextRegion" type="self:textRegionType" minOccurs="1" maxOccurs="unbounded" />
     </xs:sequence>
     <xs:attribute name="imageFilename" use="required">
       <xs:simpleType>
-        <xs:restriction base="xs:string">
-        </xs:restriction>
+        <xs:restriction base="xs:string"/>
       </xs:simpleType>
     </xs:attribute>
     <xs:attribute name="imageHeight" use="required">
@@ -44,13 +40,12 @@
     </xs:attribute>
   </xs:complexType>
 
-
-  <xs:complexType name="TextRegionType">
+  <xs:complexType name="textRegionType">
     <xs:sequence>
-      <xs:element name="Coords" type="self:CoordsType" />
-      <xs:element name="TextLine" type="self:TextLineType"  minOccurs="0"
-      maxOccurs="unbounded" />
-      <xs:element name="TextEquiv" type="self:TextEquivType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="Coords" type="self:coordsType" />
+      <xs:element name="TextLine" type="self:textLineType" minOccurs="0"
+        maxOccurs="unbounded" />
+      <xs:element name="TextEquiv" type="self:textEquivType" minOccurs="0" maxOccurs="unbounded" />
     </xs:sequence>
     <xs:attribute name="id" use="required">
       <xs:simpleType>
@@ -61,23 +56,21 @@
     </xs:attribute>
     <xs:attribute name="orientation" use="optional">
       <xs:simpleType>
-        <xs:restriction base="xs:string">
-        </xs:restriction>
+        <xs:restriction base="xs:string"/>
       </xs:simpleType>
     </xs:attribute>
     <xs:attribute name="type" use="required">
       <xs:simpleType>
-        <xs:restriction base="xs:string">
-        </xs:restriction>
+        <xs:restriction base="xs:string"/>
       </xs:simpleType>
     </xs:attribute>
   </xs:complexType>
 
-  <xs:complexType name="TextLineType">
+  <xs:complexType name="textLineType">
     <xs:sequence>
-      <xs:element name="Coords" type="self:CoordsType" />
-      <xs:element name="TextEquiv" type="self:TextEquivType" minOccurs="1"
-      maxOccurs="unbounded" />
+      <xs:element name="Coords" type="self:coordsType" />
+      <xs:element name="TextEquiv" type="self:textEquivType" minOccurs="1"
+        maxOccurs="unbounded" />
     </xs:sequence>
     <xs:attribute name="id" use="required">
       <xs:simpleType>
@@ -88,51 +81,48 @@
     </xs:attribute>
   </xs:complexType>
 
-  <xs:complexType name="CoordsType">   
+  <xs:complexType name="coordsType">
     <xs:attribute name="points" use="required">
       <xs:simpleType>
         <xs:restriction base="xs:string">
-          <xs:pattern value="\d+(,\d+ \d+)*,\d+"/>
-          <!-- <xs:pattern value="^\d+(,\d+ \d+)*,\d+"/> -->
+          <xs:pattern value="\d+(,\d+ \d+)*,\d+" />
         </xs:restriction>
       </xs:simpleType>
     </xs:attribute>
   </xs:complexType>
 
-
-  <xs:complexType name="TextEquivType">   
+  <xs:complexType name="textEquivType">
     <xs:sequence>
       <xs:element name="Unicode" />
     </xs:sequence>
     <xs:attribute name="index" use="optional">
       <xs:simpleType>
         <xs:restriction base="xs:string">
-          <xs:pattern value="\d+"/>
+          <xs:pattern value="\d+" />
         </xs:restriction>
       </xs:simpleType>
     </xs:attribute>
   </xs:complexType>
 
-  <xs:complexType name="ReadingOrderType">
+  <xs:complexType name="readingOrderType">
     <xs:all>
-      <xs:element name="OrderedGroup" type="self:OrderedGroupType" />
+      <xs:element name="OrderedGroup" type="self:orderedGroupType" />
     </xs:all>
   </xs:complexType>
 
-  <xs:complexType name="OrderedGroupType">
+  <xs:complexType name="orderedGroupType">
     <xs:sequence>
-      <xs:element name="RegionRefIndexed" type="self:RegionRefIndexedType" minOccurs="1"
+      <xs:element name="RegionRefIndexed" type="self:regionRefIndexedType" minOccurs="1"
         maxOccurs="unbounded" />
     </xs:sequence>
     <xs:attribute name="id">
       <xs:simpleType>
-        <xs:restriction base="xs:string">
-        </xs:restriction>
+        <xs:restriction base="xs:string"/>
       </xs:simpleType>
     </xs:attribute>
   </xs:complexType>
 
-  <xs:complexType name="RegionRefIndexedType">
+  <xs:complexType name="regionRefIndexedType">
     <xs:attribute name="index" use="required">
       <xs:simpleType>
         <xs:restriction base="xs:string">
@@ -149,36 +139,33 @@
     </xs:attribute>
   </xs:complexType>
 
-
-  <xs:complexType name="MetadataType">
+  <xs:complexType name="metadataType">
     <xs:all>
-      <xs:element name="Creator" type="self:CreatorType" />
-      <xs:element name="Created" type="self:CreatedType" />
-      <xs:element name="LastChange" type="self:LastChangeType" />
-      <xs:element name="Comments" type="self:CommentsType" />
+      <xs:element name="Creator" type="self:creatorType" />
+      <xs:element name="Created" type="self:createdType" />
+      <xs:element name="LastChange" type="self:lastChangeType" />
+      <xs:element name="Comments" type="self:commentsType" />
     </xs:all>
   </xs:complexType>
 
-  <xs:simpleType name="CreatorType">
+  <xs:simpleType name="creatorType">
     <xs:restriction base="xs:string" />
   </xs:simpleType>
 
-  <xs:simpleType name="CreatedType">
+  <xs:simpleType name="createdType">
     <xs:restriction base="xs:string">
       <xs:pattern value="\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}" />
     </xs:restriction>
   </xs:simpleType>
 
-
-  <xs:simpleType name="LastChangeType">
+  <xs:simpleType name="lastChangeType">
     <xs:restriction base="xs:string">
       <xs:pattern value="\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}" />
     </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="CommentsType">
+  <xs:simpleType name="commentsType">
     <xs:restriction base="xs:string" />
   </xs:simpleType>
 
-  
 </xs:schema> 

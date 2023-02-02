@@ -24,8 +24,8 @@ import jakarta.xml.bind.annotation.XmlType;
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <all>
- *         <element name="Metadata" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}MetadataType"/>
- *         <element name="Page" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}PageType"/>
+ *         <element name="Metadata" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}metadataType"/>
+ *         <element name="Page" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}pageType"/>
  *       </all>
  *     </restriction>
  *   </complexContent>

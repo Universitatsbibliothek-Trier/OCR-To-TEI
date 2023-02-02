@@ -14,12 +14,12 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für OriginInfo complex type.
+ * <p>Java-Klasse für originInfo complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="OriginInfo">
+ * <complexType name="originInfo">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *             </restriction>
  *           </simpleType>
  *         </element>
- *         <element name="place" type="{http://www.loc.gov/mods/v3}Place"/>
+ *         <element name="place" type="{http://www.loc.gov/mods/v3}place"/>
  *         <element name="publisher">
  *           <simpleType>
  *             <restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -47,7 +47,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OriginInfo", propOrder = {
+@XmlType(name = "originInfo", propOrder = {
     "dateIssued",
     "place",
     "publisher"

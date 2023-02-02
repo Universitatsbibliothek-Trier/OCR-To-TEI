@@ -6,25 +6,24 @@
   <xs:element name="modsCollection">
     <xs:complexType>
       <xs:all>
-        <xs:element name="mods" type="self:Mods" />
+        <xs:element name="mods" type="self:mods" />
       </xs:all>
     </xs:complexType>
   </xs:element>
 
-  <xs:complexType name="Mods">
+  <xs:complexType name="mods">
     <xs:sequence>
-      <xs:element name="identifier" type="self:HbzIdentifier" minOccurs="1" maxOccurs="1" />
-      <xs:element name="originInfo" type="self:OriginInfo" minOccurs="1" maxOccurs="1" />
-      <xs:element name="genre" type="self:Genre" minOccurs="1" maxOccurs="1" />
-      <xs:element name="note" type="self:Note" minOccurs="1" maxOccurs="unbounded" />
-      <xs:element name="location" type="self:Location" minOccurs="1" maxOccurs="1" />
-      <xs:element name="typeOfResource" type="self:TypeofResource" minOccurs="1" maxOccurs="1">
-      </xs:element>
-      <xs:element name="subject" type="self:Subject" minOccurs="1" maxOccurs="1" />
-      <xs:element name="name" type="self:Name" minOccurs="1" maxOccurs="unbounded" />
-      <xs:element name="recordInfo" type="self:RecordInfo" minOccurs="1" />
-      <xs:element name="physicalDescription" type="self:PhysicalDescription" minOccurs="1" />
-      <xs:element name="titleInfo" type="self:TitleInfo" minOccurs="1" />
+      <xs:element name="identifier" type="self:hbzIdentifier" minOccurs="1" maxOccurs="1" />
+      <xs:element name="originInfo" type="self:originInfo" minOccurs="1" maxOccurs="1" />
+      <xs:element name="genre" type="self:genre" minOccurs="1" maxOccurs="1" />
+      <xs:element name="note" type="self:note" minOccurs="1" maxOccurs="unbounded" />
+      <xs:element name="location" type="self:location" minOccurs="1" maxOccurs="1" />
+      <xs:element name="typeOfResource" type="self:typeofResource" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="subject" type="self:subject" minOccurs="1" maxOccurs="1" />
+      <xs:element name="name" type="self:name" minOccurs="1" maxOccurs="unbounded" />
+      <xs:element name="recordInfo" type="self:recordInfo" minOccurs="1" />
+      <xs:element name="physicalDescription" type="self:physicalDescription" minOccurs="1" />
+      <xs:element name="titleInfo" type="self:titleInfo" minOccurs="1" />
     </xs:sequence>
     <xs:attribute name="version">
       <xs:simpleType>
@@ -42,58 +41,49 @@
     </xs:attribute>
   </xs:complexType>
 
-  <xs:complexType name="TitleInfo">
+  <xs:complexType name="titleInfo">
     <xs:sequence>
       <xs:element name="title">
         <xs:simpleType>
-          <xs:restriction base="xs:string">
-          </xs:restriction>
+          <xs:restriction base="xs:string"/>
         </xs:simpleType>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="PhysicalDescription">
+  <xs:complexType name="physicalDescription">
     <xs:sequence>
       <xs:element name="extent">
         <xs:simpleType>
-          <xs:restriction base="xs:string">
-          </xs:restriction>
+          <xs:restriction base="xs:string"/>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="form" type="self:Form">
+      <xs:element name="form" type="self:form">
       </xs:element>
     </xs:sequence>
   </xs:complexType>
 
-
-  <xs:complexType name="Form">
+  <xs:complexType name="form">
     <xs:simpleContent>
-      <xs:extension base="self:FormValue">
+      <xs:extension base="self:formValue">
         <xs:attribute name="authority" use="optional">
           <xs:simpleType>
-            <xs:restriction base="xs:string">
-            </xs:restriction>
+            <xs:restriction base="xs:string"/>
           </xs:simpleType>
         </xs:attribute>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
-  <xs:simpleType name="FormValue">
-    <xs:restriction base="xs:string">
-
-    </xs:restriction>
-
+  <xs:simpleType name="formValue">
+    <xs:restriction base="xs:string"/>
   </xs:simpleType>
 
-
-  <xs:simpleType name="TypeofResource">
-    <xs:restriction base="xs:string">
-</xs:restriction>
+  <xs:simpleType name="typeofResource">
+    <xs:restriction base="xs:string"/>
   </xs:simpleType>
 
-  <xs:complexType name="RecordInfo">
+  <xs:complexType name="recordInfo">
     <xs:sequence>
       <xs:element name="recordContentSource">
         <xs:simpleType>
@@ -105,47 +95,43 @@
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="Location">
+  <xs:complexType name="location">
     <xs:sequence>
       <xs:element name="physicalLocation">
         <xs:simpleType>
-          <xs:restriction base="xs:string">
-          </xs:restriction>
+          <xs:restriction base="xs:string"/>
         </xs:simpleType>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="Name">
+  <xs:complexType name="name">
     <xs:sequence>
       <xs:element name="namePart">
         <xs:simpleType>
-          <xs:restriction base="xs:string">
-          </xs:restriction>
+          <xs:restriction base="xs:string"/>
         </xs:simpleType>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="Subject">
+  <xs:complexType name="subject">
     <xs:sequence>
       <xs:element name="topic">
         <xs:simpleType>
-          <xs:restriction base="xs:string">
-          </xs:restriction>
+          <xs:restriction base="xs:string"/>
         </xs:simpleType>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="Note">
+  <xs:complexType name="note">
     <xs:simpleContent>
-      <xs:extension base="self:NoteValue">
+      <xs:extension base="self:noteValue">
         <xs:attribute name="type" use="optional">
           <xs:simpleType>
             <xs:restriction base="xs:string">
-              <xs:enumeration value="statement of responsibility">
-              </xs:enumeration>
+              <xs:enumeration value="statement of responsibility"/>
             </xs:restriction>
           </xs:simpleType>
         </xs:attribute>
@@ -153,22 +139,17 @@
     </xs:simpleContent>
   </xs:complexType>
 
-  <xs:simpleType name="NoteValue">
-    <xs:restriction base="xs:string">
-
-    </xs:restriction>
-
+  <xs:simpleType name="noteValue">
+    <xs:restriction base="xs:string"/>
   </xs:simpleType>
 
-
-  <xs:complexType name="Genre">
+  <xs:complexType name="genre">
     <xs:simpleContent>
-      <xs:extension base="self:GenreValue">
+      <xs:extension base="self:genreValue">
         <xs:attribute name="authority">
           <xs:simpleType>
             <xs:restriction base="xs:string">
-              <xs:enumeration value="marcgt">
-              </xs:enumeration>
+              <xs:enumeration value="marcgt"/>
             </xs:restriction>
           </xs:simpleType>
         </xs:attribute>
@@ -176,15 +157,15 @@
     </xs:simpleContent>
   </xs:complexType>
 
-  <xs:simpleType name="GenreValue">
+  <xs:simpleType name="genreValue">
     <xs:restriction base="xs:string">
       <xs:enumeration value="book" />
     </xs:restriction>
   </xs:simpleType>
 
-  <xs:complexType name="HbzIdentifier">
+  <xs:complexType name="hbzIdentifier">
     <xs:simpleContent>
-      <xs:extension base="self:HbzIdentifierValue">
+      <xs:extension base="self:hbzIdentifierValue">
         <xs:attribute name="type">
           <xs:simpleType>
             <xs:restriction base="xs:string">
@@ -196,7 +177,7 @@
     </xs:simpleContent>
   </xs:complexType>
 
-  <xs:complexType name="OriginInfo">
+  <xs:complexType name="originInfo">
     <xs:sequence>
       <xs:element name="dateIssued">
         <xs:simpleType>
@@ -205,7 +186,7 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="place" type="self:Place">
+      <xs:element name="place" type="self:place">
       </xs:element>
       <xs:element name="publisher">
         <xs:simpleType>
@@ -217,32 +198,30 @@
     </xs:sequence>
   </xs:complexType>
 
-  <xs:simpleType name="HbzIdentifierValue">
+  <xs:simpleType name="hbzIdentifierValue">
     <xs:restriction base="xs:string">
       <xs:pattern value="HT\d+" />
     </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="PlaceTermValue">
+  <xs:simpleType name="placeTermValue">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="[Frankfurt, Main]">
-      </xs:enumeration>
+      <xs:enumeration value="[Frankfurt, Main]"/>
     </xs:restriction>
   </xs:simpleType>
 
-  <xs:complexType name="Place">
+  <xs:complexType name="place">
     <xs:all>
       <xs:element name="placeTerm">
         <xs:complexType>
           <xs:simpleContent>
-            <xs:extension base="self:PlaceTermValue">
-              <xs:attribute name="type">
-              </xs:attribute>
+            <xs:extension base="self:placeTermValue">
+              <xs:attribute name="type"/>
             </xs:extension>
           </xs:simpleContent>
         </xs:complexType>
       </xs:element>
     </xs:all>
-
   </xs:complexType>
+
 </xs:schema>

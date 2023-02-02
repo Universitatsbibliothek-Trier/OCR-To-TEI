@@ -15,14 +15,14 @@ import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java-Klasse für Form complex type.
+ * <p>Java-Klasse für form complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="Form">
+ * <complexType name="form">
  *   <simpleContent>
- *     <extension base="<http://www.loc.gov/mods/v3>FormValue">
+ *     <extension base="<http://www.loc.gov/mods/v3>formValue">
  *       <attribute name="authority">
  *         <simpleType>
  *           <restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Form", propOrder = {
+@XmlType(name = "form", propOrder = {
     "value"
 })
 public class Form {
