@@ -14,12 +14,12 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für regionRefIndexedType complex type.
+ * <p>Java-Klasse für RegionRefIndexed complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="regionRefIndexedType">
+ * <complexType name="RegionRefIndexed">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <attribute name="index" use="required">
@@ -44,8 +44,8 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "regionRefIndexedType")
-public class RegionRefIndexedType {
+@XmlType(name = "RegionRefIndexed")
+public class RegionRefIndexed {
 
     @XmlAttribute(name = "index", required = true)
     protected String index;

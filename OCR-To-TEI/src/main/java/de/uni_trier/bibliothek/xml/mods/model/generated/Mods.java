@@ -17,26 +17,26 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für mods complex type.
+ * <p>Java-Klasse für Mods complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="mods">
+ * <complexType name="Mods">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="identifier" type="{http://www.loc.gov/mods/v3}hbzIdentifier"/>
- *         <element name="originInfo" type="{http://www.loc.gov/mods/v3}originInfo"/>
- *         <element name="genre" type="{http://www.loc.gov/mods/v3}genre"/>
- *         <element name="note" type="{http://www.loc.gov/mods/v3}note" maxOccurs="unbounded"/>
- *         <element name="location" type="{http://www.loc.gov/mods/v3}location"/>
- *         <element name="typeOfResource" type="{http://www.loc.gov/mods/v3}typeofResource"/>
- *         <element name="subject" type="{http://www.loc.gov/mods/v3}subject"/>
- *         <element name="name" type="{http://www.loc.gov/mods/v3}name" maxOccurs="unbounded"/>
- *         <element name="recordInfo" type="{http://www.loc.gov/mods/v3}recordInfo"/>
- *         <element name="physicalDescription" type="{http://www.loc.gov/mods/v3}physicalDescription"/>
- *         <element name="titleInfo" type="{http://www.loc.gov/mods/v3}titleInfo"/>
+ *         <element name="identifier" type="{http://www.loc.gov/mods/v3}HbzIdentifier"/>
+ *         <element name="originInfo" type="{http://www.loc.gov/mods/v3}OriginInfo"/>
+ *         <element name="genre" type="{http://www.loc.gov/mods/v3}Genre"/>
+ *         <element name="note" type="{http://www.loc.gov/mods/v3}Note" maxOccurs="unbounded"/>
+ *         <element name="location" type="{http://www.loc.gov/mods/v3}Location"/>
+ *         <element name="typeOfResource" type="{http://www.loc.gov/mods/v3}TypeofResource"/>
+ *         <element name="subject" type="{http://www.loc.gov/mods/v3}Subject"/>
+ *         <element name="name" type="{http://www.loc.gov/mods/v3}Name" maxOccurs="unbounded"/>
+ *         <element name="recordInfo" type="{http://www.loc.gov/mods/v3}RecordInfo"/>
+ *         <element name="physicalDescription" type="{http://www.loc.gov/mods/v3}PhysicalDescription"/>
+ *         <element name="titleInfo" type="{http://www.loc.gov/mods/v3}TitleInfo"/>
  *       </sequence>
  *       <attribute name="version">
  *         <simpleType>
@@ -60,7 +60,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "mods", propOrder = {
+@XmlType(name = "Mods", propOrder = {
     "identifier",
     "originInfo",
     "genre",

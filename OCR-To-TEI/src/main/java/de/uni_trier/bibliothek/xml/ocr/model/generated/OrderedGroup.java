@@ -17,22 +17,20 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für textLineType complex type.
+ * <p>Java-Klasse für OrderedGroup complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="textLineType">
+ * <complexType name="OrderedGroup">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="Coords" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}coordsType"/>
- *         <element name="TextEquiv" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}textEquivType" maxOccurs="unbounded"/>
+ *         <element name="RegionRefIndexed" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}RegionRefIndexed" maxOccurs="unbounded"/>
  *       </sequence>
- *       <attribute name="id" use="required">
+ *       <attribute name="id">
  *         <simpleType>
  *           <restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *             <pattern value="l\d+"/>
  *           </restriction>
  *         </simpleType>
  *       </attribute>
@@ -44,72 +42,45 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "textLineType", propOrder = {
-    "coords",
-    "textEquiv"
+@XmlType(name = "OrderedGroup", propOrder = {
+    "regionRefIndexed"
 })
-public class TextLineType {
+public class OrderedGroup {
 
-    @XmlElement(name = "Coords", required = true)
-    protected CoordsType coords;
-    @XmlElement(name = "TextEquiv", required = true)
-    protected List<TextEquivType> textEquiv;
-    @XmlAttribute(name = "id", required = true)
+    @XmlElement(name = "RegionRefIndexed", required = true)
+    protected List<RegionRefIndexed> regionRefIndexed;
+    @XmlAttribute(name = "id")
     protected String id;
 
     /**
-     * Ruft den Wert der coords-Eigenschaft ab.
-     * 
-     * @return
-     *     possible object is
-     *     {@link CoordsType }
-     *     
-     */
-    public CoordsType getCoords() {
-        return coords;
-    }
-
-    /**
-     * Legt den Wert der coords-Eigenschaft fest.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link CoordsType }
-     *     
-     */
-    public void setCoords(CoordsType value) {
-        this.coords = value;
-    }
-
-    /**
-     * Gets the value of the textEquiv property.
+     * Gets the value of the regionRefIndexed property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the textEquiv property.
+     * This is why there is not a {@code set} method for the regionRefIndexed property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getTextEquiv().add(newItem);
+     *    getRegionRefIndexed().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link TextEquivType }
+     * {@link RegionRefIndexed }
      * 
      * 
      * @return
-     *     The value of the textEquiv property.
+     *     The value of the regionRefIndexed property.
      */
-    public List<TextEquivType> getTextEquiv() {
-        if (textEquiv == null) {
-            textEquiv = new ArrayList<>();
+    public List<RegionRefIndexed> getRegionRefIndexed() {
+        if (regionRefIndexed == null) {
+            regionRefIndexed = new ArrayList<>();
         }
-        return this.textEquiv;
+        return this.regionRefIndexed;
     }
 
     /**

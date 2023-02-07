@@ -15,14 +15,14 @@ import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java-Klasse für genre complex type.
+ * <p>Java-Klasse für Genre complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="genre">
+ * <complexType name="Genre">
  *   <simpleContent>
- *     <extension base="<http://www.loc.gov/mods/v3>genreValue">
+ *     <extension base="<http://www.loc.gov/mods/v3>GenreValue">
  *       <attribute name="authority">
  *         <simpleType>
  *           <restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "genre", propOrder = {
+@XmlType(name = "Genre", propOrder = {
     "value"
 })
 public class Genre {

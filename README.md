@@ -1,28 +1,22 @@
-## Einlesen der Meta-Daten aus den XML-Dateien, die von OCR generiert werden
+## Einlesen von Meta-Daten/OCR-Output von XML-Dateien
 
-Mit diesem Java-Programm ist es möglich, XML-Dateien einzulesen und in Java-Objekten zu speichern.
-Dies ist nur mit den passenden ".xsd"-Dateien (XML-Schema) möglich, da aus ihnen Java-Klassen erzeugt werden.
+Mit diesem Java-Programm ist es möglich, XML-Dateien mit Mods oder OCR-Output einzulesen und in Java-Objekten zu speichern.
+Dies ist nur mit den dazugehörigen ".xsd"-Dateien (XML-Schema) möglich, da aus ihnen die Java-Klassen erzeugt werden.
 In Objekten dieser Klassen werden anschließend über einen Unmarshaller die jeweiligen Daten einer angegebenen XML gespeichert.
+Im Falle einer angegebenen XML-Datei mit OCR-Output können explizit die TextLines dieser Datei ausgegeben werden.
 
 ## Ausführung
 
-Zum Einlesen einer bestimmten XML-Datei aus dem "resources"-Folder muss der String der Variable "xmlPathreader" in der "Main"-Klasse angepasst werden.
-Anschließend muss der entsprechende UnMarshaller (ModsUnmarshaller/PcGtsUnmarshaller) benutzt werden, um das passende Java-Objekt zurückzugeben.
-Das Starten der "Main"-Klasse erzeugt das erwähnte Java-Objekt, in dem alle Daten der dazugehörigen XML-Datei gespeichert werden.
+Zum Einlesen einer bestimmten XML-Datei mit Mods aus dem "resources"-Folder muss der String der Variable "modsPathreader" in der "Main"-Klasse angepasst werden. Bei einer XML-Datei mit OCR-Output kann man den String "ocrPathreader" entsprechend ändern.(relative Pfade)
+Das Starten des Projektes ist über den Run-Button von Visual Studio Code möglich.
 
 ## Ordnerstruktur
-
-OCR-To-TEI/scripts
-Enthält Skripte zum Generieren von Java-Klassen aus ".xsd"-Dateien. In diesem Fall von "xml_OCR_Output.xsd" und "mods.xsd".
 
 OCR-To-TEI/source/main/resources
 Enthält XML-Dateien mit den dazugehörigen ".xsd"-Dateien 
 
 OCR-To-TEI/source/main/java/de/uni_trier/bibliothek/
 Enthält Main-Klasse des Java-Projektes
-
-OCR-To-TEI/source/main/java/de/uni_trier/bibliothek/xml
-Enthält XMLValidator um XML-Dateien gegen ".xsd"-Dateien zu validieren
 
 OCR-To-TEI/source/main/java/de/uni_trier/bibliothek/xml/mods
 Enthält ModsUnmarshaller, der aus einer angegebenen XML-Datei Java-Objekte generiert.
@@ -32,12 +26,16 @@ Enthält automatisch generierte Java-Klassen
 
 OCR-To-TEI/source/main/java/de/uni_trier/bibliothek/xml/ocr
 Enthält PcGtsUnmarshaller, der aus einer angegebenen XML-Datei Java-Objekte generiert.
+Enthält außerdem einen OcrDataLineReader, der eine ArrayList der TextLines zurückgibt.
 
 OCR-To-TEI/source/main/java/de/uni_trier/bibliothek/xml/ocr/model/generated
 Enthält automatisch generierte Java-Klassen
 
+OCR-To-TEI/scripts
+Enthält Skripte zum Generieren von Java-Klassen aus ".xsd"-Dateien. In diesem Fall von "xml_OCR_Output.xsd" und "mods.xsd".
+
 ## Dependencies
 
+Die Dependencies werden beim Starten des Projektes von Maven automatisch geladen und installiert.
 Die Library "JAXB RI" von "https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-ri/4.0.0" wird im Ordner "OCR-To-TEI/lib" benötigt, sodass die Struktur wie folgt aussieht:
-OCR-To-TEI/lib"/jaxb-ri-4.0.0/jaxb-ri
-Damit können die Skripte unter "OCR-To-TEI/scripts" ausgeführt werden, um die Java-Klassen der XML zu generieren.
+.../OCR-To-TEI/lib"/jaxb-ri-4.0.0/jaxb-ri

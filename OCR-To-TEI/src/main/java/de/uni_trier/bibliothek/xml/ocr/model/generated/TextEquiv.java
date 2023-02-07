@@ -15,16 +15,16 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für textEquivType complex type.
+ * <p>Java-Klasse für TextEquiv complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="textEquivType">
+ * <complexType name="TextEquiv">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="Unicode" type="{http://www.w3.org/2001/XMLSchema}anyType"/>
+ *         <element name="Unicode" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}Unicode"/>
  *       </sequence>
  *       <attribute name="index">
  *         <simpleType>
@@ -41,13 +41,13 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "textEquivType", propOrder = {
+@XmlType(name = "TextEquiv", propOrder = {
     "unicode"
 })
-public class TextEquivType {
+public class TextEquiv {
 
     @XmlElement(name = "Unicode", required = true)
-    protected Object unicode;
+    protected String unicode;
     @XmlAttribute(name = "index")
     protected String index;
 
@@ -56,10 +56,10 @@ public class TextEquivType {
      * 
      * @return
      *     possible object is
-     *     {@link Object }
+     *     {@link String }
      *     
      */
-    public Object getUnicode() {
+    public String getUnicode() {
         return unicode;
     }
 
@@ -68,10 +68,10 @@ public class TextEquivType {
      * 
      * @param value
      *     allowed object is
-     *     {@link Object }
+     *     {@link String }
      *     
      */
-    public void setUnicode(Object value) {
+    public void setUnicode(String value) {
         this.unicode = value;
     }
 

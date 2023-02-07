@@ -17,18 +17,18 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für textRegionType complex type.
+ * <p>Java-Klasse für TextRegion complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="textRegionType">
+ * <complexType name="TextRegion">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="Coords" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}coordsType"/>
- *         <element name="TextLine" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}textLineType" maxOccurs="unbounded" minOccurs="0"/>
- *         <element name="TextEquiv" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}textEquivType" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="Coords" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}Coords"/>
+ *         <element name="TextLine" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}TextLine" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="TextEquiv" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}TextEquiv" maxOccurs="unbounded" minOccurs="0"/>
  *       </sequence>
  *       <attribute name="id" use="required">
  *         <simpleType>
@@ -57,19 +57,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "textRegionType", propOrder = {
+@XmlType(name = "TextRegion", propOrder = {
     "coords",
     "textLine",
     "textEquiv"
 })
-public class TextRegionType {
+public class TextRegion {
 
     @XmlElement(name = "Coords", required = true)
-    protected CoordsType coords;
+    protected Coords coords;
     @XmlElement(name = "TextLine")
-    protected List<TextLineType> textLine;
+    protected List<TextLine> textLine;
     @XmlElement(name = "TextEquiv")
-    protected List<TextEquivType> textEquiv;
+    protected List<TextEquiv> textEquiv;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "orientation")
@@ -82,10 +82,10 @@ public class TextRegionType {
      * 
      * @return
      *     possible object is
-     *     {@link CoordsType }
+     *     {@link Coords }
      *     
      */
-    public CoordsType getCoords() {
+    public Coords getCoords() {
         return coords;
     }
 
@@ -94,10 +94,10 @@ public class TextRegionType {
      * 
      * @param value
      *     allowed object is
-     *     {@link CoordsType }
+     *     {@link Coords }
      *     
      */
-    public void setCoords(CoordsType value) {
+    public void setCoords(Coords value) {
         this.coords = value;
     }
 
@@ -119,13 +119,13 @@ public class TextRegionType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link TextLineType }
+     * {@link TextLine }
      * 
      * 
      * @return
      *     The value of the textLine property.
      */
-    public List<TextLineType> getTextLine() {
+    public List<TextLine> getTextLine() {
         if (textLine == null) {
             textLine = new ArrayList<>();
         }
@@ -150,13 +150,13 @@ public class TextRegionType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link TextEquivType }
+     * {@link TextEquiv }
      * 
      * 
      * @return
      *     The value of the textEquiv property.
      */
-    public List<TextEquivType> getTextEquiv() {
+    public List<TextEquiv> getTextEquiv() {
         if (textEquiv == null) {
             textEquiv = new ArrayList<>();
         }

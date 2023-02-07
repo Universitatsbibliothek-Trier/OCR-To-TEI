@@ -9,26 +9,22 @@ package de.uni_trier.bibliothek.xml.ocr.model.generated;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für coordsType complex type.
+ * <p>Java-Klasse für ReadingOrder complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="coordsType">
+ * <complexType name="ReadingOrder">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <attribute name="points" use="required">
- *         <simpleType>
- *           <restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *             <pattern value="\d+(,\d+ \d+)*,\d+"/>
- *           </restriction>
- *         </simpleType>
- *       </attribute>
+ *       <all>
+ *         <element name="OrderedGroup" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}OrderedGroup"/>
+ *       </all>
  *     </restriction>
  *   </complexContent>
  * </complexType>
@@ -37,34 +33,36 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "coordsType")
-public class CoordsType {
+@XmlType(name = "ReadingOrder", propOrder = {
 
-    @XmlAttribute(name = "points", required = true)
-    protected String points;
+})
+public class ReadingOrder {
+
+    @XmlElement(name = "OrderedGroup", required = true)
+    protected OrderedGroup orderedGroup;
 
     /**
-     * Ruft den Wert der points-Eigenschaft ab.
+     * Ruft den Wert der orderedGroup-Eigenschaft ab.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link OrderedGroup }
      *     
      */
-    public String getPoints() {
-        return points;
+    public OrderedGroup getOrderedGroup() {
+        return orderedGroup;
     }
 
     /**
-     * Legt den Wert der points-Eigenschaft fest.
+     * Legt den Wert der orderedGroup-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link OrderedGroup }
      *     
      */
-    public void setPoints(String value) {
-        this.points = value;
+    public void setOrderedGroup(OrderedGroup value) {
+        this.orderedGroup = value;
     }
 
 }

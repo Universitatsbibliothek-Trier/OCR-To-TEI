@@ -17,19 +17,19 @@ import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java-Klasse für place complex type.
+ * <p>Java-Klasse für Place complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="place">
+ * <complexType name="Place">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <all>
  *         <element name="placeTerm">
  *           <complexType>
  *             <simpleContent>
- *               <extension base="<http://www.loc.gov/mods/v3>placeTermValue">
+ *               <extension base="<http://www.loc.gov/mods/v3>PlaceTermValue">
  *                 <attribute name="type" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" />
  *               </extension>
  *             </simpleContent>
@@ -44,7 +44,7 @@ import jakarta.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "place", propOrder = {
+@XmlType(name = "Place", propOrder = {
 
 })
 public class Place {
@@ -85,7 +85,7 @@ public class Place {
      * <pre>{@code
      * <complexType>
      *   <simpleContent>
-     *     <extension base="<http://www.loc.gov/mods/v3>placeTermValue">
+     *     <extension base="<http://www.loc.gov/mods/v3>PlaceTermValue">
      *       <attribute name="type" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" />
      *     </extension>
      *   </simpleContent>

@@ -13,11 +13,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für genreValue.
+ * <p>Java-Klasse für GenreValue.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * <pre>{@code
- * <simpleType name="genreValue">
+ * <simpleType name="GenreValue">
  *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
  *     <enumeration value="book"/>
  *   </restriction>
@@ -25,7 +25,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * }</pre>
  * 
  */
-@XmlType(name = "genreValue")
+@XmlType(name = "GenreValue")
 @XmlEnum
 public enum GenreValue {
 

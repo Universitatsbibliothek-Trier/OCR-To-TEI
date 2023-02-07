@@ -46,93 +46,93 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link MetadataType }
+     * Create an instance of {@link Metadata }
      * 
      * @return
-     *     the new instance of {@link MetadataType }
+     *     the new instance of {@link Metadata }
      */
-    public MetadataType createMetadataType() {
-        return new MetadataType();
+    public Metadata createMetadata() {
+        return new Metadata();
     }
 
     /**
-     * Create an instance of {@link PageType }
+     * Create an instance of {@link Page }
      * 
      * @return
-     *     the new instance of {@link PageType }
+     *     the new instance of {@link Page }
      */
-    public PageType createPageType() {
-        return new PageType();
+    public Page createPage() {
+        return new Page();
     }
 
     /**
-     * Create an instance of {@link TextRegionType }
+     * Create an instance of {@link TextRegion }
      * 
      * @return
-     *     the new instance of {@link TextRegionType }
+     *     the new instance of {@link TextRegion }
      */
-    public TextRegionType createTextRegionType() {
-        return new TextRegionType();
+    public TextRegion createTextRegion() {
+        return new TextRegion();
     }
 
     /**
-     * Create an instance of {@link TextLineType }
+     * Create an instance of {@link TextLine }
      * 
      * @return
-     *     the new instance of {@link TextLineType }
+     *     the new instance of {@link TextLine }
      */
-    public TextLineType createTextLineType() {
-        return new TextLineType();
+    public TextLine createTextLine() {
+        return new TextLine();
     }
 
     /**
-     * Create an instance of {@link CoordsType }
+     * Create an instance of {@link Coords }
      * 
      * @return
-     *     the new instance of {@link CoordsType }
+     *     the new instance of {@link Coords }
      */
-    public CoordsType createCoordsType() {
-        return new CoordsType();
+    public Coords createCoords() {
+        return new Coords();
     }
 
     /**
-     * Create an instance of {@link TextEquivType }
+     * Create an instance of {@link TextEquiv }
      * 
      * @return
-     *     the new instance of {@link TextEquivType }
+     *     the new instance of {@link TextEquiv }
      */
-    public TextEquivType createTextEquivType() {
-        return new TextEquivType();
+    public TextEquiv createTextEquiv() {
+        return new TextEquiv();
     }
 
     /**
-     * Create an instance of {@link ReadingOrderType }
+     * Create an instance of {@link ReadingOrder }
      * 
      * @return
-     *     the new instance of {@link ReadingOrderType }
+     *     the new instance of {@link ReadingOrder }
      */
-    public ReadingOrderType createReadingOrderType() {
-        return new ReadingOrderType();
+    public ReadingOrder createReadingOrder() {
+        return new ReadingOrder();
     }
 
     /**
-     * Create an instance of {@link OrderedGroupType }
+     * Create an instance of {@link OrderedGroup }
      * 
      * @return
-     *     the new instance of {@link OrderedGroupType }
+     *     the new instance of {@link OrderedGroup }
      */
-    public OrderedGroupType createOrderedGroupType() {
-        return new OrderedGroupType();
+    public OrderedGroup createOrderedGroup() {
+        return new OrderedGroup();
     }
 
     /**
-     * Create an instance of {@link RegionRefIndexedType }
+     * Create an instance of {@link RegionRefIndexed }
      * 
      * @return
-     *     the new instance of {@link RegionRefIndexedType }
+     *     the new instance of {@link RegionRefIndexed }
      */
-    public RegionRefIndexedType createRegionRefIndexedType() {
-        return new RegionRefIndexedType();
+    public RegionRefIndexed createRegionRefIndexed() {
+        return new RegionRefIndexed();
     }
 
 }

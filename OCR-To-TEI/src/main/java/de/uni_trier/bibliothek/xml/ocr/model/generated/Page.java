@@ -17,17 +17,17 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für pageType complex type.
+ * <p>Java-Klasse für Page complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="pageType">
+ * <complexType name="Page">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="ReadingOrder" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}readingOrderType"/>
- *         <element name="TextRegion" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}textRegionType" maxOccurs="unbounded"/>
+ *         <element name="ReadingOrder" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}ReadingOrder"/>
+ *         <element name="TextRegion" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}TextRegion" maxOccurs="unbounded"/>
  *       </sequence>
  *       <attribute name="imageFilename" use="required">
  *         <simpleType>
@@ -57,16 +57,16 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "pageType", propOrder = {
+@XmlType(name = "Page", propOrder = {
     "readingOrder",
     "textRegion"
 })
-public class PageType {
+public class Page {
 
     @XmlElement(name = "ReadingOrder", required = true)
-    protected ReadingOrderType readingOrder;
+    protected ReadingOrder readingOrder;
     @XmlElement(name = "TextRegion", required = true)
-    protected List<TextRegionType> textRegion;
+    protected List<TextRegion> textRegion;
     @XmlAttribute(name = "imageFilename", required = true)
     protected String imageFilename;
     @XmlAttribute(name = "imageHeight", required = true)
@@ -79,10 +79,10 @@ public class PageType {
      * 
      * @return
      *     possible object is
-     *     {@link ReadingOrderType }
+     *     {@link ReadingOrder }
      *     
      */
-    public ReadingOrderType getReadingOrder() {
+    public ReadingOrder getReadingOrder() {
         return readingOrder;
     }
 
@@ -91,10 +91,10 @@ public class PageType {
      * 
      * @param value
      *     allowed object is
-     *     {@link ReadingOrderType }
+     *     {@link ReadingOrder }
      *     
      */
-    public void setReadingOrder(ReadingOrderType value) {
+    public void setReadingOrder(ReadingOrder value) {
         this.readingOrder = value;
     }
 
@@ -116,13 +116,13 @@ public class PageType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link TextRegionType }
+     * {@link TextRegion }
      * 
      * 
      * @return
      *     The value of the textRegion property.
      */
-    public List<TextRegionType> getTextRegion() {
+    public List<TextRegion> getTextRegion() {
         if (textRegion == null) {
             textRegion = new ArrayList<>();
         }

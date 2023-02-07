@@ -8,14 +8,8 @@
 package de.uni_trier.bibliothek.xml.mods;
 import java.io.Reader;
 import de.uni_trier.bibliothek.xml.Unmarshaller;
-import de.uni_trier.bibliothek.xml.mods.model.generated.Mods;
 import de.uni_trier.bibliothek.xml.mods.model.generated.ModsCollection;
 import jakarta.xml.bind.JAXBException;
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlRootElement;
-import jakarta.xml.bind.annotation.XmlType;
 
 
 public class ModsUnmarshaller 

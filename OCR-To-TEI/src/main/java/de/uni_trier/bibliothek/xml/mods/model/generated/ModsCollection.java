@@ -24,7 +24,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <all>
- *         <element name="mods" type="{http://www.loc.gov/mods/v3}mods"/>
+ *         <element name="mods" type="{http://www.loc.gov/mods/v3}Mods"/>
  *       </all>
  *     </restriction>
  *   </complexContent>

@@ -2,5 +2,3 @@
 /OCR-To-TEI/target
 /OCR-To-TEI/.vscode
 /.vscode
-/OCR-To-TEI/src/main/java/de/uni_trier/bibliothek/xml/mods/model/generated
-/OCR-To-TEI/src/main/java/de/uni_trier/bibliothek/xml/ocr/model/generated

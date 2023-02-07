@@ -24,8 +24,8 @@ import jakarta.xml.bind.annotation.XmlType;
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <all>
- *         <element name="Metadata" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}metadataType"/>
- *         <element name="Page" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}pageType"/>
+ *         <element name="Metadata" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}Metadata"/>
+ *         <element name="Page" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}Page"/>
  *       </all>
  *     </restriction>
  *   </complexContent>
@@ -42,19 +42,19 @@ import jakarta.xml.bind.annotation.XmlType;
 public class PcGts {
 
     @XmlElement(name = "Metadata", required = true)
-    protected MetadataType metadata;
+    protected Metadata metadata;
     @XmlElement(name = "Page", required = true)
-    protected PageType page;
+    protected Page page;
 
     /**
      * Ruft den Wert der metadata-Eigenschaft ab.
      * 
      * @return
      *     possible object is
-     *     {@link MetadataType }
+     *     {@link Metadata }
      *     
      */
-    public MetadataType getMetadata() {
+    public Metadata getMetadata() {
         return metadata;
     }
 
@@ -63,10 +63,10 @@ public class PcGts {
      * 
      * @param value
      *     allowed object is
-     *     {@link MetadataType }
+     *     {@link Metadata }
      *     
      */
-    public void setMetadata(MetadataType value) {
+    public void setMetadata(Metadata value) {
         this.metadata = value;
     }
 
@@ -75,10 +75,10 @@ public class PcGts {
      * 
      * @return
      *     possible object is
-     *     {@link PageType }
+     *     {@link Page }
      *     
      */
-    public PageType getPage() {
+    public Page getPage() {
         return page;
     }
 
@@ -87,10 +87,10 @@ public class PcGts {
      * 
      * @param value
      *     allowed object is
-     *     {@link PageType }
+     *     {@link Page }
      *     
      */
-    public void setPage(PageType value) {
+    public void setPage(Page value) {
         this.page = value;
     }
 

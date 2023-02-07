@@ -15,14 +15,14 @@ import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java-Klasse für hbzIdentifier complex type.
+ * <p>Java-Klasse für HbzIdentifier complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="hbzIdentifier">
+ * <complexType name="HbzIdentifier">
  *   <simpleContent>
- *     <extension base="<http://www.loc.gov/mods/v3>hbzIdentifierValue">
+ *     <extension base="<http://www.loc.gov/mods/v3>HbzIdentifierValue">
  *       <attribute name="type">
  *         <simpleType>
  *           <restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "hbzIdentifier", propOrder = {
+@XmlType(name = "HbzIdentifier", propOrder = {
     "value"
 })
 public class HbzIdentifier {
