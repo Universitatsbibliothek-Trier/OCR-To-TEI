@@ -1,0 +1,5 @@
+/OCR-To-TEI/lib
+/OCR-To-TEI/target
+/OCR-To-TEI/.vscode
+/.vscode
+*.class
