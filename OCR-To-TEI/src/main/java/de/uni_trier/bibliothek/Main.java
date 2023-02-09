@@ -8,8 +8,13 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import javax.xml.XMLConstants;
@@ -29,6 +34,9 @@ import de.uni_trier.bibliothek.xml.mods.model.generated.ModsCollection;
 import de.uni_trier.bibliothek.xml.ocr.GetFilesFromFolder;
 import de.uni_trier.bibliothek.xml.ocr.OcrDataLineReader;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.PcGts;
+import de.uni_trier.bibliothek.xml.tei.TEIMarshaller;
+import de.uni_trier.bibliothek.xml.tei.TEIUnmarshaller;
+import de.uni_trier.bibliothek.xml.tei.model.generated.TEI;
 
 public class Main {
 
@@ -55,15 +63,32 @@ public class Main {
         for (String fileName : fileNames) 
         {
             String relativeFileNamePath = ocrFolderName + fileName;
-            System.out.println("Eingelesene Datei: " + relativeFileNamePath);
+            // System.out.println("Eingelesene Datei: " + relativeFileNamePath);
             ocrTextLines = OcrDataLineReader.getTextLines(relativeFileNamePath);
             for (int i = 0; i < ocrTextLines.size(); i++) 
             {
                 // print TextLines from all XML files
-                System.out.println("Zeile " + i + " von " + fileName + " ist: " + ocrTextLines.get(i));
+                // System.out.println("Zeile " + i + " von " + fileName + " ist: " + ocrTextLines.get(i));
             }
 
         }
+
+        String teiPath ="OCR-To-TEI/src/main/resources/teiOutputFiles/TEITestData.xml";
+        InputStream teiInputStream = new FileInputStream(teiPath);
+        Reader teiXmlReader = new InputStreamReader(teiInputStream);
+        TEI teiObject = TEIUnmarshaller.unmarshal(teiXmlReader);
+        System.out.println("Version von TEI ist: " + teiObject.getVersion()); 
+
+        String teiXmlString = TEIMarshaller.marshall(teiObject);
+        // System.out.println(teiXmlString);
+
+        List<String> lines = Arrays.asList(teiXmlString);
+        Path file = Paths.get("OCR-To-TEI/src/main/resources/teiOutputFiles/TEITestData1.xml");
+        Files.write(file, lines, StandardCharsets.UTF_8);
+
+
+
+        
 
     }
 

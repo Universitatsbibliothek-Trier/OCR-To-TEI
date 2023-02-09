@@ -15,6 +15,7 @@ import de.uni_trier.bibliothek.xml.ocr.model.generated.PcGts;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.TextEquiv;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.TextLine;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.TextRegion;
+import de.uni_trier.bibliothek.xml.tei.TEIUnmarshaller;
 import jakarta.xml.bind.JAXBException;
 
 public class OcrDataLineReader extends PcGts 

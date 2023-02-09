@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:mods="http://www.tei-c.org/ns/1.0"
+    version="5.0"
+    xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../TEIxsd.xsd">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>
+                    Topographia Archiepiscopatuvm Moguntinensis, Treuirensis, et Coloniensis, Das
+                    ist Beschreibúng der Vornembsten Stätt vnd Plätz, in denen Ertzbistúmen Maÿntz,
+                    Trier, vnd Cöln. Grundstrukturierte TEI-Daten.
+                </title>
+            </titleStmt>
+        </fileDesc>
+        <sourceDesc>
+            <mods:mods version="3.5" ID="merian1690topographia">
+                <mods:identifier type="HBZ">HT018907295</mods:identifier>
+                <mods:originInfo>
+                    <mods:dateIssued>1690</mods:dateIssued>
+                    <mods:place>
+                        <mods:placeTerm type="text">[Frankfurt, Main]</mods:placeTerm>
+                    </mods:place>
+                    <mods:publisher>[Meriansche Erben]</mods:publisher>
+                </mods:originInfo>
+                <mods:genre authority="marcgt">book</mods:genre>
+                <mods:note type="statement of responsibility">An Tag gegeben dúrch Matth: Merian ;
+                    [Martin
+                    Zeiller]</mods:note>
+                <mods:note>Bevorzugter Titel: Topographia Archiepiscopatuum Moguntinensis,
+                    Trevirensis et
+                    Coloniensis</mods:note>
+                <mods:note>Bibliographischer Nachweis: Wüthrich: Das druckgraphische Werk von
+                    Matthaeus
+                    Merian d. Ae., Band 4 (1996), Nummer 31</mods:note>
+                <mods:note>Textverfasser ermittelt</mods:note>
+                <mods:note>Hinweise zur Ausgabe (nach Wüthrich): 3. Ausgabe Frankfurt, Meriansche
+                    Erben</mods:note>
+                <mods:note>Erscheinungsjahr nach Wüthrich: datiert 1646, effektiv um 1690</mods:note>
+                <mods:note>Blatt M4, verso unbedruckt</mods:note>
+                <mods:note>Seite 3 mit Hozschnittleiste "Vase und Rebhühner"</mods:note>
+                <mods:note>Die Panoramaansicht von Mainz mit großem vertikalem Riß, 8 cm vom linken
+                    Bildrand
+                    aus. - Im Register sind von "Königsberg" bis "Kyll" die Anfangsmajuskeln K in
+                    Schwabacher-
+                    statt
+                    in Fraktur-Lettern gesetzt.</mods:note>
+                <mods:note>Kupfertitel (erstes Blatt). - Reihenfolge der Kupfer siehe Bindeanweisung
+                    (43
+                    Nummern). Die Karte des Eichsfelds fehlt im Kupferverzeichnis und im Band.</mods:note>
+                <mods:note>Format: groß-4°</mods:note>
+                <mods:note>FEI-Fingerprint nach dem Exemplar der Universitätsbibliothek Trier</mods:note>
+                <mods:note>hbz Verbund-ID: HT018907295</mods:note>
+                <mods:location>
+                    <mods:physicalLocation>DE-385: https://lobid.org/organisations/DE-385</mods:physicalLocation>
+                </mods:location>
+                <mods:typeOfResource>text</mods:typeOfResource>
+                <mods:subject>
+                    <mods:topic>vornehmsten Städte Plätze den Erzbistümern Mainz Köln</mods:topic>
+                </mods:subject>
+                <mods:name>
+                    <mods:namePart>Merian, Matthaeus, der Ältere</mods:namePart>
+                </mods:name>
+                <mods:name>
+                    <mods:namePart>Zeiller, Martin</mods:namePart>
+                </mods:name>
+                <mods:name>
+                    <mods:namePart>Frankfurt am Main</mods:namePart>
+                </mods:name>
+                <mods:recordInfo>
+                    <mods:recordContentSource>DE-605</mods:recordContentSource>
+                </mods:recordInfo>
+                <mods:physicalDescription>
+                    <mods:extent>95 Seiten, 9 ungezählte Seiten, 64 ungezählte Blätter Bildtafeln
+                        (zum Teil
+                        gefaltet) ; Illustrationen, Karten ; 4°</mods:extent>
+                    <mods:form authority="marcform">print</mods:form>
+                </mods:physicalDescription>
+                <mods:titleInfo>
+                    <mods:title>Topographia Archiepiscopatuvm Moguntinensis, Treuirensis, et
+                        Coloniensis, Das
+                        ist Beschreibúng der Vornembsten Stätt vnd Plätz, in denen Ertzbistúmen
+                        Maÿntz, Trier,
+                        vnd
+                        Cöln.</mods:title>
+                </mods:titleInfo>
+            </mods:mods>
+        </sourceDesc>
+    </teiHeader>
+    <text>
+        <pb />
+<lb />ES werden zu dem Hochlo̊blichſten <lb />Unter⸗Rheiniſchen Kreyß (deſſen
+        Außſchreiben⸗ <lb />der Fůrſt der Herr Chur⸗Fůrſt zu Meyntz / ꝛc. iſt) gerechnet / die <lb />Vier
+        Herren Chur⸗Fůrſten / Meyntz / Trier / Co̊ln / und Pfaltz; <lb />Item / die Graffen von
+        Naſſau⸗Beilſtein; die Graffen von Reif⸗ <lb />ferſcheid; und von Nieder⸗Jſenburg; ſampt
+        Salm; der Jnnhaber der Herrſchafft <lb />Rheineck am Rhein; ferners die Baley Coblentz / und
+        die Stadt Gelnhauſen. Was <lb />Neuenar / Seltz / und die Abbtey S. Maximini zu Trier
+        anbelangt / ſo etwa auch hieher <lb />geho̊ret haben; ſo ſind ſolche jetzt in ho̊hern
+        Hånden. <lb />Was nun die Stådte und Ort / ſo in dieſem Hochlo̊bl. Unter⸗Rheiniſchen <lb />Kreyß
+        gelegen / und von welchen wir uns in dieſem Tractat / ſo viel uns wiſſend / zu <lb />hand
+        vorgenommen / belanget; ſo iſt von den Chur⸗Pfåltziſchen Orten / in dem <lb />Fůnfften
+        Theil unſerer Topographiæ Germaniæ, unter dem Titul / Palatinatus Rhe- <lb />ni; von der
+        Graffſchafft Beilſtein aber / und der Stadt Gelnhauſen / in der Topo- <lb />graphia Haſſiæ,
+        Bericht geſchehen. So ſind auch die Aempter in der Berg⸗ſtraß / <lb />welche / vermo̊g des
+        anno 1648. gemachten General⸗Reichs⸗Friedens / dem Herrn <lb />Chur⸗Fůrſten von Meyntz /
+        ꝛc. zu reſtituiren geweſen / in der beſagten Topogra- <lb />phia Palatinatus Rheni
+        einkommen; Dahero ſolche allhie zu wiederholen / nicht <lb />no̊thig iſt. <lb />Der andern
+        Drey Chur⸗Fůrſtenthumb / oder Ertzbiſtumben Stådte / ꝛc. <lb />aber / wollen wir eines
+        jeden abſonderlich beſchreiben; damit / der Leſer / weil die⸗ <lb />ſer ho̊chſtgemeldte
+        Kreyß ſich weit erſtrecket / deſto beſſer / und mehrers / darauß <lb />kommen ko̊nne / als
+        wann / wie in theils Lånder / ſo nur eine Landtaffel bedo̊rf⸗ <lb />fen / Beſchreibung
+        geſchehen / ſie durcheinander geſetzt wůrden / Jedoch wollen <lb />wir dieſe Ordnung halten
+        / daß wir bey jedem Chur⸗Fůrſtenthumb den <lb />Haupt⸗Ort vornen anſetzen / deme hernach
+        die andere darzu geho̊rige / <lb />dem A B C. nach / folgen ſollen. <pb />
+<lb />Meyntz <lb />DJß
+        iſt die Haupt⸗Stadt <lb />deß Hochlo̊blichſten Ertzbiſt⸗ <lb />thumb / und Chur⸗Fůrſten⸗ <lb />thumbs
+        Meyntz / ſo von den <lb />Alten Maguntiacum, Mo- <lb />guntiacum, Mogontiacum, Maguntia, <lb />Magotia,
+        Mogontia, Mongontiacum, <lb />Moguntiaco, Magontiaco, Maguntiacus, <lb />Moguntia, und alſo
+        auch heutiges Tags ins <lb />gemein; Teutſch aber Meyntz / oder Mentz / <lb />Frantzo̊ſiſch
+        / Mayance, und Welſch Magon- <lb />za, oder Maguntiaco, genannt wird. Woher <lb />aber
+        dieſer Nahm komme / ſeyn die Gelehrten <lb />nicht einerley Meynung. Theils bringen ihn <lb />von
+        dem Fluß Mogano, Mogo, oder Mœno, <lb />Mayn: Rhenanus von Mago, ſo vor Alters <lb />ein
+        Hauß geheiſſen / oder Heim / und dem <lb />Wåſſerlein Cia, her / ſo jetzt durch die Stadt <lb />laufft
+        / und bey dem Kloſter Alt⸗Můnſter in <lb />dieſelbe kommt / und auß ſolcher durch deß <lb />Schloſſes
+        Graben / in den Rhein laufft / und <lb />auff teutſch Ombach genannt wird / auch noch <lb />ſeines
+        alten Namens Merckzeichen in den be⸗ <lb />nachbarten Do̊rffern behålt: Deren eines Zal⸗ <lb />bach
+        auff der Cey / oder Ciebach / das ander <lb />Bretzenheim auf der Cey / genannt wird: Da⸗ <lb />von
+        eines alten Manns Sprichwort geweſen: <lb />Meyntz ligt gar nahe dabey. Andere haben <lb />andere
+        Meynungen. Nicolaus Serarius, ſo <lb />fůnff Bůcher von dieſer Stadt geſchrieben / <lb />wil
+        ſolche Namen Mogoncia, oder Magun- <lb />ciacum, vonden drey Flůſſen / Ma, oder Mon, <lb />Gon,
+        oder Gonzo, und beſagtem Cia, herfůh⸗ <lb />ren / welche alle noch verhanden / und in den <lb />Rhein
+        ſich ergieſſen: Daher das Dorff Mon⸗ <lb />bach von dem Erſten / und das nåchſte Dorff <lb />Gontzenheim
+        von dem Andern / ſo bey Meyntz <lb />der Lobach genannt wird / den Namen haben. <lb />Von
+        dem Erbauer dieſer Stadt / iſt man <lb />auch nicht einig. Etliche wollen / daß die Zau⸗ <lb />berer
+        von Trier 1362. Jahr vor Chriſti Ge⸗ <lb />burt / ſeyen verjagt worden / deren Fůrſt Ne- <lb />quam
+        geheiſſen / welcher dieſe Stadt angefan⸗ <lb />gen: Daher das Gedicht / Moguntia, ab anti- <lb />quo
+        Nequam, das iſt / Meyntz iſt von ſelbi⸗ <lb />gem alten Ertzzauberer Nequam erbauet. Ge⸗ <lb />dachter
+        Serarius vermeynet / der Warheit die⸗ <lb />ſes am åhnlichſten zu ſeyn / wann man wil / daß <lb />Meyntz
+        von Claudio Druſo Germanico, <lb />deß Kåyſers Auguſti Stieff⸗Sohn / und Kåy⸗ <lb />ſers
+        Tiberii Brudern / deß Germanici Vat⸗ <lb />tern / etwan zehen Jahr / oder nicht viel eher /
+        vor <lb />Chriſti Geburt / erbauet worden ſey: Obwol <lb />nicht geleugnet werden ko̊nne /
+        daß vielleicht <lb />zuvor allhie ein Dorff / oder Flecken / geſtan⸗ <lb />den / und C.
+        Julius Cæſar, das Kriegsvolck da <lb />zu lagern / der Stadt eine Gelegenheit / und <lb />gleichſam
+        einen Anfang gegeben habe. Sie iſt <lb />aber anfangs nicht gar zum Rhein erbauet <lb />worden
+        / und hålt man darfůr / daß ſie in einer <lb />weiten Ebene / wo das Siechenhauß / und das <lb />Kloſter
+        der Nonnen unſer Frauen im Gnaden⸗ <lb />oder heiligen Thal iſt / erſtlich geſtanden ſeye. <lb />Sie
+        iſt folgends unterſchiedlich belågert / zer⸗ <lb />ſto̊ret / und vewůſtet worden / wie
+        unten geſagt <lb />werden wird. Nach der Hunniſchen Nider⸗ <lb />lag / iſt ſie / von den
+        Francken / inſonderheit aber <lb />vom Ko̊nig Dagoberto I. wieder gebeſſert / <lb />und von
+        dem alten Ort nåher zum Rhein / da <lb />ſie noch jetzt ſtehet / verſetzt worden. Sie hat <lb />vorzeiten
+        auch zum Teutſchland geho̊ret / und <lb />ſich der teutſchen Spraach gebraucht / wie ge⸗ <lb />dachter
+        Serarius cap. 10. &amp; 11. lehret; wiewol <lb />viel dieſe Stadt dem Franckreich
+        zuſchreiben / <lb />die er daſelbſt anziehet / und die Lobſprůch / ſo <lb />ihr die
+        Scribenten geben / in beſagtem zehenden <lb />Capitel erzehlet / wie dann die Ro̊mer allhie
+        ih⸗ <lb />re Beſatzungen / und Obriſte / gehalten haben. <lb />Der alte Hiſtoricus
+        Radevvicus ſchreibet <lb />lib. 1. c. 13. allbereit von ſeiner Zeit / daß Meyntz <lb />ein
+        groſſe und veſte Stadt an dem Rhein / und <lb />auff der Seiten / da ſie denſelben hat / wol
+        be⸗ <lb />wohnet / und volckreich: Und / auff der andern <lb />Seiten / an Innwohnern faſt
+        o̊de ſeye / habe <lb />nur ein ſtarcke Mauer / daran nicht wenig <lb />Thůrn ſtehen. Und
+        dieſes ſagt Radevicus. </text>
+</TEI>
