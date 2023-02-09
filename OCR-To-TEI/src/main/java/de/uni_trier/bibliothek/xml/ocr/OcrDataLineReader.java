@@ -1,6 +1,8 @@
 package de.uni_trier.bibliothek.xml.ocr;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.ArrayList;
@@ -15,47 +17,58 @@ import de.uni_trier.bibliothek.xml.ocr.model.generated.TextLine;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.TextRegion;
 import jakarta.xml.bind.JAXBException;
 
-public class OcrDataLineReader extends PcGts {
+public class OcrDataLineReader extends PcGts 
+{
+	public static ArrayList<String> getTextLines(String filePath) throws IOException, JAXBException 
+	{
+		ArrayList<String> ocrTextLineList = new ArrayList<String>();
+		InputStream inputStream = new FileInputStream(filePath);
+		Reader xmlReader = new InputStreamReader(inputStream);
 
-	public ArrayList<String> getTextLines(String filepath) {
-		ArrayList<String> ocrtextlines = new ArrayList<String>();
-		try (Reader xmlReader = new InputStreamReader(ClassLoader.getSystemResource(filepath).openStream())) 
+		// create Java object with data from XML file after unmarshalling
+		PcGts pcgtsObject;
+		pcgtsObject = PcGtsUnmarshaller.unmarshal(xmlReader);
+
+		xmlReader.close();
+		// read values from Java object
+		Page page = pcgtsObject.getPage();
+		List<TextRegion> textRegionList = page.getTextRegion();
+		List<TextLine> textLineList;
+		List<TextEquiv> textEquivList;
+		for (TextRegion textRegion : textRegionList) 
 		{
-			//create Java object with data from XML file after unmarshalling
-			PcGts pcgts = PcGtsUnmarshaller.unmarshal(xmlReader);
-			//read values from Java object
-			Page page = pcgts.getPage();
-			List<TextRegion> textreg = page.getTextRegion();
-			List<TextLine> textl;
-			List<TextEquiv> textequiv;
-			for (TextRegion tr : textreg) {
-				textl = tr.getTextLine();
+			textLineList = textRegion.getTextLine();
 
-				for (TextLine tl : textl) {
-					textequiv = tl.getTextEquiv();
-					// get attribute "id" from textline
-					String tlid = tl.getId();					
-					char l = 'l';
+			for (TextLine textLine : textLineList) 
+			{
+				textEquivList = textLine.getTextEquiv();
+				// get attribute "id" from textline
+				String textLineID = textLine.getId();
+				char l = 'l';
 
-					// check if new line begins
-					if (tlid.charAt(0) == l) {
-						for (TextEquiv te : textequiv) {
-							Object uc = te.getUnicode();
-							int index = Integer.parseInt(te.getIndex());
-							if (index == 0) {
-								//add text from Unicode to ArrayList
-								ocrtextlines.add(uc.toString());
+				// check if new line begins
+				if (textLineID.charAt(0) == l) 
+				{
+					for (TextEquiv TextEquiv : textEquivList) 
+					{
+						Object unicode = TextEquiv.getUnicode();
+						int indexTextEquiv;
+						if (TextEquiv.getIndex() != null) 
+						{
+							indexTextEquiv = Integer.parseInt(TextEquiv.getIndex());
+							if (indexTextEquiv == 0) 
+							{
+								// add text from Unicode to ArrayList
+								ocrTextLineList.add(unicode.toString());
 							}
 						}
-					}
 
+					}
 				}
+
 			}
-		} catch (JAXBException | IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
-		return ocrtextlines;
+		return ocrTextLineList;
 	}
 
 }
