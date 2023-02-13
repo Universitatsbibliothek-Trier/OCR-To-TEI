@@ -20,17 +20,10 @@ import jakarta.xml.bind.JAXBException;
 
 public class OcrDataLineReader extends PcGts 
 {
-	public static ArrayList<String> getTextLines(String filePath) throws IOException, JAXBException 
+	public static ArrayList<String> getTextLines(PcGts pcgtsObject) throws IOException, JAXBException 
 	{
 		ArrayList<String> ocrTextLineList = new ArrayList<String>();
-		InputStream inputStream = new FileInputStream(filePath);
-		Reader xmlReader = new InputStreamReader(inputStream);
 
-		// create Java object with data from XML file after unmarshalling
-		PcGts pcgtsObject;
-		pcgtsObject = PcGtsUnmarshaller.unmarshal(xmlReader);
-
-		xmlReader.close();
 		// read values from Java object
 		Page page = pcgtsObject.getPage();
 		List<TextRegion> textRegionList = page.getTextRegion();

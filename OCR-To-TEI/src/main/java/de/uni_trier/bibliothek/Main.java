@@ -25,6 +25,7 @@ import javax.xml.validation.Validator;
 
 import org.xml.sax.SAXException;
 
+import de.uni_trier.bibliothek.xml.TEICreator;
 import de.uni_trier.bibliothek.xml.Unmarshaller;
 import de.uni_trier.bibliothek.xml.XMLValidator;
 import de.uni_trier.bibliothek.xml.mods.ModsUnmarshaller;
@@ -33,6 +34,7 @@ import de.uni_trier.bibliothek.xml.mods.model.generated.Mods;
 import de.uni_trier.bibliothek.xml.mods.model.generated.ModsCollection;
 import de.uni_trier.bibliothek.xml.ocr.GetFilesFromFolder;
 import de.uni_trier.bibliothek.xml.ocr.OcrDataLineReader;
+import de.uni_trier.bibliothek.xml.ocr.PcGtsUnmarshaller;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.PcGts;
 import de.uni_trier.bibliothek.xml.tei.TEIMarshaller;
 import de.uni_trier.bibliothek.xml.tei.TEIUnmarshaller;
@@ -51,41 +53,49 @@ public class Main {
         System.out.println("Inhalt von \"" + modsPath + "\" eingelesen");
         xmlReader.close();
 
-        // read textlines of folder of XML files with OCR Output:
-        // create ArrayList for TextLines
-        ArrayList<String> ocrTextLines = new ArrayList<String>(); 
-
         // get file names from folder
         String ocrFolderName = "OCR-To-TEI/src/main/resources/ocrOutputFiles/";
         ArrayList<String> fileNames = GetFilesFromFolder.getFileNames(ocrFolderName);
+        ArrayList<String> relativeFileNames = new ArrayList<String>();
 
         // iterate files from folder
         for (String fileName : fileNames) 
         {
             String relativeFileNamePath = ocrFolderName + fileName;
-            // System.out.println("Eingelesene Datei: " + relativeFileNamePath);
-            ocrTextLines = OcrDataLineReader.getTextLines(relativeFileNamePath);
+            relativeFileNames.add(relativeFileNamePath);  
+        }
+
+        ArrayList<PcGts> pcgtsList = new ArrayList<PcGts>();
+        ArrayList<String> ocrTextLines = new ArrayList<String>(); 
+        for (String fileName : relativeFileNames) 
+        {
+            //print out lines of ocr XML files
+            InputStream inputStreamPcgts = new FileInputStream(fileName);
+            inputStreamPcgts = new FileInputStream(fileName);
+            xmlReader = new InputStreamReader(inputStreamPcgts);
+            PcGts pcgtsObject = PcGtsUnmarshaller.unmarshal(xmlReader);
+            ocrTextLines = OcrDataLineReader.getTextLines(pcgtsObject);
             for (int i = 0; i < ocrTextLines.size(); i++) 
             {
                 // print TextLines from all XML files
-                // System.out.println("Zeile " + i + " von " + fileName + " ist: " + ocrTextLines.get(i));
+                // System.out.println("Zeile " + (i+1) + " von " + fileName + " ist: " + ocrTextLines.get(i));
             }
-
+            // create list of PcGts Objects
+            pcgtsList.add(pcgtsObject);
         }
+        xmlReader.close();
 
-        String teiPath ="OCR-To-TEI/src/main/resources/teiOutputFiles/TEITestData.xml";
-        InputStream teiInputStream = new FileInputStream(teiPath);
-        Reader teiXmlReader = new InputStreamReader(teiInputStream);
-        TEI teiObject = TEIUnmarshaller.unmarshal(teiXmlReader);
-        System.out.println("Version von TEI ist: " + teiObject.getVersion()); 
-
+		// create TEI from modsCollection-object and list of PcGts-objects
+        TEI teiObject = TEICreator.createTEI(modsCollection, pcgtsList);
         String teiXmlString = TEIMarshaller.marshall(teiObject);
-        // System.out.println(teiXmlString);
+        System.out.println(teiXmlString);
 
-        List<String> lines = Arrays.asList(teiXmlString);
-        Path file = Paths.get("OCR-To-TEI/src/main/resources/teiOutputFiles/TEITestData1.xml");
-        Files.write(file, lines, StandardCharsets.UTF_8);
-
+        //write TEI as file
+        String modsFileName = modsPath.substring(modsPath.lastIndexOf("/") +1);
+        String teiFileName = "TEI_" + modsFileName;
+        List<String> lines = Arrays.asList(teiXmlString); 
+        Path filePath = Paths.get("OCR-To-TEI/src/main/resources/teiOutputFiles/" + teiFileName);
+        Files.write(filePath, lines, StandardCharsets.UTF_8);
 
 
         
