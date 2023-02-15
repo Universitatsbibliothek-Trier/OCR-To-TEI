@@ -3,7 +3,6 @@ package de.uni_trier.bibliothek.xml.tei;
 import java.io.Reader;
 
 import de.uni_trier.bibliothek.xml.Unmarshaller;
-import de.uni_trier.bibliothek.xml.ocr.model.generated.PcGts;
 import de.uni_trier.bibliothek.xml.tei.model.generated.TEI;
 import jakarta.xml.bind.JAXBException;
 

@@ -1,11 +1,8 @@
 package de.uni_trier.bibliothek.xml.tei;
 
-import java.io.StringWriter;
-import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 
-import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import de.uni_trier.bibliothek.xml.Marshaller;
 import de.uni_trier.bibliothek.xml.tei.model.generated.TEI;

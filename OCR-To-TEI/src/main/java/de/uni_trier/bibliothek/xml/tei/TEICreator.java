@@ -1,5 +1,6 @@
-package de.uni_trier.bibliothek.xml;
+package de.uni_trier.bibliothek.xml.tei;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,20 +8,23 @@ import de.uni_trier.bibliothek.xml.mods.model.generated.GenreValue;
 import de.uni_trier.bibliothek.xml.mods.model.generated.ModsCollection;
 import de.uni_trier.bibliothek.xml.mods.model.generated.Name;
 import de.uni_trier.bibliothek.xml.mods.model.generated.Note;
+import de.uni_trier.bibliothek.xml.ocr.OcrDataLineReader;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.PcGts;
 import de.uni_trier.bibliothek.xml.tei.model.generated.FileDesc;
 import de.uni_trier.bibliothek.xml.tei.model.generated.SourceDec;
 import de.uni_trier.bibliothek.xml.tei.model.generated.TEI;
 import de.uni_trier.bibliothek.xml.tei.model.generated.TeiHeader;
-import de.uni_trier.bibliothek.xml.tei.model.generated.Text;
 import de.uni_trier.bibliothek.xml.tei.model.generated.TitleStmt;
+import jakarta.xml.bind.JAXBElement;
+import jakarta.xml.bind.JAXBException;
 
 public class TEICreator extends TEI
 {
 	public static String teiVersion = "5.0";
 
-	public static TEI createTEI(ModsCollection modsCollection, ArrayList<PcGts> pcgtsList)
+	public static TEI createTEI(ModsCollection modsCollection, ArrayList<PcGts> pcgtsList) throws IOException, JAXBException
 	{
+		// take objects from Mods XML file
 		TEI teiObject = new TEI();
 		de.uni_trier.bibliothek.xml.mods.model.generated.Mods modsObject = modsCollection.getMods();
 		de.uni_trier.bibliothek.xml.mods.model.generated.TitleInfo titleInfo = modsObject.getTitleInfo();
@@ -37,8 +41,7 @@ public class TEICreator extends TEI
 		de.uni_trier.bibliothek.xml.mods.model.generated.PhysicalDescription physicalDescription = modsObject.getPhysicalDescription();
 		de.uni_trier.bibliothek.xml.mods.model.generated.Form physicalForm = physicalDescription.getForm();
 		
-
-
+		// create new objects for TEI
 		TeiHeader teiHeader = new TeiHeader();
 		FileDesc fileDesc = new FileDesc();
 		TitleStmt titleStmt = new TitleStmt();
@@ -111,13 +114,26 @@ public class TEICreator extends TEI
 		de.uni_trier.bibliothek.xml.tei.model.generated.TitleInfo teiTitleInfo = new de.uni_trier.bibliothek.xml.tei.model.generated.TitleInfo();
 		teiTitleInfo.setTitle(titleInfoString);	
 
+		de.uni_trier.bibliothek.xml.tei.model.generated.Text teiText = new de.uni_trier.bibliothek.xml.tei.model.generated.Text();
 
+		// add lines from files with OCR-Output
+		de.uni_trier.bibliothek.xml.tei.model.generated.ObjectFactory teiObjectFactory = new de.uni_trier.bibliothek.xml.tei.model.generated.ObjectFactory();
+		ArrayList<String> lineStrings = new ArrayList<>();
+		JAXBElement<String> lbElement = teiObjectFactory.createTextLb(null);
+		JAXBElement<String> pbElement = teiObjectFactory.createTextPb(null);
+		for(PcGts pcgtsObject : pcgtsList)
+		{
+			teiText.getContent().add(pbElement);
+			lineStrings = OcrDataLineReader.getTextLines(pcgtsObject);
+			for(String textLineStrings : lineStrings)
+			{
+				teiText.getContent().add(lbElement);
+				teiText.getContent().add(textLineStrings);
+			}			
+		}
 
-
-
-		Text textObject = new Text();
-		// List<Serializable> list = new List<Serializable>();
-		// textObject.content =List<Serializable>;
+		// map data from modsCollection onto TEI object
+		teiObject.setText(teiText);
 		teiMods.setTitleInfo(teiTitleInfo);
 		teiMods.setPhysicalDescription(teiPhysicalDescription);
 		teiMods.setRecordInfo(teiRecordInfo);
@@ -140,9 +156,7 @@ public class TEICreator extends TEI
 		teiHeader.setFileDesc(fileDesc);	
 		teiObject.setTeiHeader(teiHeader);
 		teiObject.setVersion(teiVersion);
-		teiObject.setText(textObject);
-		return teiObject;
-		
+		return teiObject;		
 	}
 
 

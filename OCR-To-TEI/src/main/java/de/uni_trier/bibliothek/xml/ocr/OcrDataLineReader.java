@@ -1,21 +1,14 @@
 package de.uni_trier.bibliothek.xml.ocr;
 
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
 import java.util.ArrayList;
 import java.util.List;
 
-import de.uni_trier.bibliothek.xml.Unmarshaller;
-import de.uni_trier.bibliothek.xml.mods.model.generated.ModsCollection;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.Page;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.PcGts;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.TextEquiv;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.TextLine;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.TextRegion;
-import de.uni_trier.bibliothek.xml.tei.TEIUnmarshaller;
 import jakarta.xml.bind.JAXBException;
 
 public class OcrDataLineReader extends PcGts 
