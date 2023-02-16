@@ -6,6 +6,7 @@ Dazu werden über Unmarshaller die Daten aus den XML-Dateien in Objekten gespeic
 ## Ausführung
 
 Zum Einlesen einer bestimmten XML-Datei mit Mods aus dem `resources`-Folder muss der String der Variable `modsPath` in der `Main`-Klasse angepasst werden. Für die Angabe eines Ordners mit mehreren Dateien aus dem OCR-Output kann man den String `ocrFolderName` entsprechend ändern. (relative Pfade)
+Zusätzlich kann der Titel der Mods-Datei in der Datei `parameters.xml` geändert werden.
 Das Starten des Projektes ist über den *Run*-Button von Visual Studio Code möglich.
 Die Ausgabe ist eine generierte XML-Datei im Ordner `teiOutputFiles`, die folgenden Namen trägt:
 `TEI_NameDerXmlModDatei`
@@ -13,7 +14,8 @@ Die Ausgabe ist eine generierte XML-Datei im Ordner `teiOutputFiles`, die folgen
 ## Ordnerstruktur
 
 **OCR-To-TEI/source/main/resources**  
-Enthält `.xsd`-Dateien für XML-Dateien mit OCR-Output, für XML-Dateien mit Mods und für XML-Dateien mit TEI-Vorgaben
+Enthält `.xsd`-Dateien für XML-Dateien mit OCR-Output, für XML-Dateien mit Mods und für XML-Dateien mit TEI-Vorgaben. 
+Enthält außerdem die `parameters.xml`-Datei in der der Titel eines Bandes angegeben werden kann.
 
 **OCR-To-TEI/source/main/java/de/uni_trier/bibliothek/**  
 Enthält `Main`-Klasse des Java-Projektes
@@ -44,5 +46,5 @@ Enthält Skripte zum Generieren von Java-Klassen aus `.xsd`-Dateien. In diesem F
 ## Dependencies
 
 Die Dependencies werden beim Starten des Projektes von Maven automatisch geladen und installiert.
-Die Library `JAXB RI` von https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-ri/4.0.0 wird im Ordner **OCR-To-TEI/lib** benötigt, sodass die Struktur wie folgt aussieht:
+Die Libraries von `JAXB RI` von https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-ri/4.0.0 werden im Ordner **OCR-To-TEI/lib** benötigt, sodass die Struktur wie folgt aussieht:
 **.../OCR-To-TEI/lib/jaxb-ri-4.0.0/jaxb-ri**

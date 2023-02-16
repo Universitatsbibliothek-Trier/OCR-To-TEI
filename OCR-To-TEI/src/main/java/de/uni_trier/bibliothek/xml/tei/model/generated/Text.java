@@ -70,8 +70,8 @@ public class Text {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link Lb }{@code >}
+     * {@link JAXBElement }{@code <}{@link Pb }{@code >}
      * {@link String }
      * 
      * 

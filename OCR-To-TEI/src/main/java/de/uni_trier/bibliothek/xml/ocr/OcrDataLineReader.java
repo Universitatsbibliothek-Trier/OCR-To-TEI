@@ -11,10 +11,8 @@ import de.uni_trier.bibliothek.xml.ocr.model.generated.TextLine;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.TextRegion;
 import jakarta.xml.bind.JAXBException;
 
-public class OcrDataLineReader extends PcGts 
-{
-	public static ArrayList<String> getTextLines(PcGts pcgtsObject) throws IOException, JAXBException 
-	{
+public class OcrDataLineReader extends PcGts {
+	public static ArrayList<String> getTextLines(PcGts pcgtsObject) throws IOException, JAXBException {
 		ArrayList<String> ocrTextLineList = new ArrayList<String>();
 
 		// read values from Java object
@@ -22,32 +20,26 @@ public class OcrDataLineReader extends PcGts
 		List<TextRegion> textRegionList = page.getTextRegion();
 		List<TextLine> textLineList;
 		List<TextEquiv> textEquivList;
-		for (TextRegion textRegion : textRegionList) 
-		{
+		for (TextRegion textRegion : textRegionList) {
 			textLineList = textRegion.getTextLine();
 
-			for (TextLine textLine : textLineList) 
-			{
+			for (TextLine textLine : textLineList) {
 				textEquivList = textLine.getTextEquiv();
 				// get attribute "id" from textline
 				String textLineID = textLine.getId();
 				char l = 'l';
 
 				// check if new line begins
-				if (textLineID.charAt(0) == l) 
-				{
-					for (TextEquiv TextEquiv : textEquivList) 
-					{
-						Object unicode = TextEquiv.getUnicode();
-						int indexTextEquiv;
-						if (TextEquiv.getIndex() != null) 
-						{
-							indexTextEquiv = Integer.parseInt(TextEquiv.getIndex());
-							if (indexTextEquiv == 0) 
-							{
-								// add text from Unicode to ArrayList
-								ocrTextLineList.add(unicode.toString());
-							}
+				if (textLineID.charAt(0) == l && !textEquivList.isEmpty()) {
+					// String unicode = textEquivList.get(0).getUnicode();
+					// ocrTextLineList.add(unicode);
+
+					for (TextEquiv TextEquiv : textEquivList) {
+						String unicode = TextEquiv.getUnicode();
+						if (TextEquiv.getIndex() != null && TextEquiv.getIndex().equals("0")) {
+							// add text from Unicode to ArrayList
+							ocrTextLineList.add(unicode);
+							break; // we found the candidate YAY ^^
 						}
 
 					}

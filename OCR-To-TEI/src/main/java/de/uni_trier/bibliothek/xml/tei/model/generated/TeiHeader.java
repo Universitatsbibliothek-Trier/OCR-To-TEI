@@ -25,7 +25,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
  *         <element name="fileDesc" type="{http://www.tei-c.org/ns/1.0}FileDesc"/>
- *         <element name="sourceDesc" type="{http://www.tei-c.org/ns/1.0}SourceDec"/>
+ *         <element name="sourceDesc" type="{http://www.tei-c.org/ns/1.0}SourceDesc"/>
  *       </sequence>
  *       <attribute name="version">
  *         <simpleType>
@@ -58,7 +58,7 @@ public class TeiHeader {
     @XmlElement(required = true)
     protected FileDesc fileDesc;
     @XmlElement(required = true)
-    protected SourceDec sourceDesc;
+    protected SourceDesc sourceDesc;
     @XmlAttribute(name = "version")
     protected String version;
     @XmlAttribute(name = "ID")
@@ -93,10 +93,10 @@ public class TeiHeader {
      * 
      * @return
      *     possible object is
-     *     {@link SourceDec }
+     *     {@link SourceDesc }
      *     
      */
-    public SourceDec getSourceDesc() {
+    public SourceDesc getSourceDesc() {
         return sourceDesc;
     }
 
@@ -105,10 +105,10 @@ public class TeiHeader {
      * 
      * @param value
      *     allowed object is
-     *     {@link SourceDec }
+     *     {@link SourceDesc }
      *     
      */
-    public void setSourceDesc(SourceDec value) {
+    public void setSourceDesc(SourceDesc value) {
         this.sourceDesc = value;
     }
 

@@ -1,5 +1,6 @@
 package de.uni_trier.bibliothek;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -12,9 +13,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import de.uni_trier.bibliothek.xml.Unmarshaller;
 import de.uni_trier.bibliothek.xml.mods.ModsUnmarshaller;
 import de.uni_trier.bibliothek.xml.mods.model.generated.ModsCollection;
-import de.uni_trier.bibliothek.xml.ocr.GetFilesFromFolder;
 import de.uni_trier.bibliothek.xml.ocr.PcGtsUnmarshaller;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.PcGts;
 import de.uni_trier.bibliothek.xml.tei.TEICreator;
@@ -26,6 +27,15 @@ public class Main {
 
 	public static void main(String[] args) throws Exception 
 	{
+		// get title from parameters.xml
+		Unmarshaller<Parameters> unmarshallerParas = new Unmarshaller<>(Parameters.class);
+		InputStream inputStreamParas = new FileInputStream("OCR-To-TEI/src/main/resources/parameters.xml");
+		Reader xmlReaderParas = new InputStreamReader(inputStreamParas);
+		Parameters parameters = unmarshallerParas.unmarshal(xmlReaderParas);
+		String title = parameters.title;
+		title = title.trim();
+		xmlReaderParas.close();
+
 		// read data of XML file with mods-collection 
 		String modsPath ="OCR-To-TEI/src/main/resources/modsFiles/ah232-3_HT018907295_Moguntiensis_Trevirensis_1690.xml";
 		InputStream inputStream = new FileInputStream(modsPath);
@@ -36,21 +46,14 @@ public class Main {
 		System.out.println("Inhalt von \"" + modsPath + "\" eingelesen");
 		xmlReader.close();
 
-		// get file names from folder
+		// get file from folder
 		String ocrFolderName = "OCR-To-TEI/src/main/resources/ocrOutputFiles/";
-		ArrayList<String> fileNames = GetFilesFromFolder.getFileNames(ocrFolderName);
-		ArrayList<String> relativeFileNames = new ArrayList<String>();
-
-		// iterate files from folder
-		for (String fileName : fileNames) 
-		{
-			String relativeFileNamePath = ocrFolderName + fileName;
-			relativeFileNames.add(relativeFileNamePath);  
-		}
+		File ocrFile = new File(ocrFolderName);
+		List<File> ocrFiles = Arrays.asList(ocrFile.listFiles());
 
 		// create list of PcGts Objects from folder files
 		ArrayList<PcGts> pcgtsList = new ArrayList<PcGts>();
-		for (String fileName : relativeFileNames) 
+		for (File fileName : ocrFiles) 
 		{	
 			InputStream inputStreamPcgts = new FileInputStream(fileName);
 			inputStreamPcgts = new FileInputStream(fileName);
@@ -61,7 +64,7 @@ public class Main {
 		xmlReader.close();
 
 		// create TEI from modsCollection-object and list of PcGts-objects
-		TEI teiObject = TEICreator.createTEI(modsCollection, pcgtsList);
+		TEI teiObject = TEICreator.createTEI(modsCollection, pcgtsList, title);
 		String teiXmlString = TEIMarshaller.marshall(teiObject);
 
 		// manipulate XML-String of TEI

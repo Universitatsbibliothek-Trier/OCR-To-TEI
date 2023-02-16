@@ -81,6 +81,26 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Pb }
+     * 
+     * @return
+     *     the new instance of {@link Pb }
+     */
+    public Pb createPb() {
+        return new Pb();
+    }
+
+    /**
+     * Create an instance of {@link Lb }
+     * 
+     * @return
+     *     the new instance of {@link Lb }
+     */
+    public Lb createLb() {
+        return new Lb();
+    }
+
+    /**
      * Create an instance of {@link FileDesc }
      * 
      * @return
@@ -101,13 +121,13 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SourceDec }
+     * Create an instance of {@link SourceDesc }
      * 
      * @return
-     *     the new instance of {@link SourceDec }
+     *     the new instance of {@link SourceDesc }
      */
-    public SourceDec createSourceDec() {
-        return new SourceDec();
+    public SourceDesc createSourceDesc() {
+        return new SourceDesc();
     }
 
     /**
@@ -241,29 +261,29 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Pb }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link Pb }{@code >}
      */
     @XmlElementDecl(namespace = "http://www.tei-c.org/ns/1.0", name = "pb", scope = Text.class)
-    public JAXBElement<String> createTextPb(String value) {
-        return new JAXBElement<>(_TextPb_QNAME, String.class, Text.class, value);
+    public JAXBElement<Pb> createTextPb(Pb value) {
+        return new JAXBElement<>(_TextPb_QNAME, Pb.class, Text.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Lb }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link Lb }{@code >}
      */
     @XmlElementDecl(namespace = "http://www.tei-c.org/ns/1.0", name = "lb", scope = Text.class)
-    public JAXBElement<String> createTextLb(String value) {
-        return new JAXBElement<>(_TextLb_QNAME, String.class, Text.class, value);
+    public JAXBElement<Lb> createTextLb(Lb value) {
+        return new JAXBElement<>(_TextLb_QNAME, Lb.class, Text.class, value);
     }
 
 }

@@ -5,14 +5,9 @@ import java.util.regex.Pattern;
 
 public class TEIStringManipulator
 {
-	public static String teiVersion = "5.0";
-
 	public static String manipulateTEI(String teiXML) 
 	{
 		String teiManipulatedString = teiXML;
-
-		// remove unnecessary namespace declaration and attribute
-		teiManipulatedString = teiManipulatedString.replaceAll("xsi:nil=\"true\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"", "");
 		// add namespace declaration
 		teiManipulatedString = teiManipulatedString.replaceAll("<TEI", "<TEI xmlns:mods=\"http://www.loc.gov/mods/v3\"");
 		// put elements in mods-namespace
