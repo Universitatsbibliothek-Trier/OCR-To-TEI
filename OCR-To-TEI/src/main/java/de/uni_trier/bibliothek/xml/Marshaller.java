@@ -3,8 +3,10 @@ package de.uni_trier.bibliothek.xml;
 import java.io.StringWriter;
 import java.io.Writer;
 
+import org.glassfish.jaxb.runtime.marshaller.NamespacePrefixMapper;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.PropertyException;
 
 public class Marshaller<T> 
 {
@@ -40,5 +42,15 @@ public class Marshaller<T>
     public void marshal(T object, Writer writer) throws JAXBException 
     {
         this.marshaller.marshal(object, writer);
+    }
+
+    public void setNamespacePrefixMapper(NamespacePrefixMapper namespacePrefixMapper) throws PropertyException
+    {
+        marshaller.setProperty("org.glassfish.jaxb.namespacePrefixMapper", namespacePrefixMapper);
+    }
+
+    public void setSchemaLocation(String schemaLocation) throws PropertyException
+    {
+        marshaller.setProperty(jakarta.xml.bind.Marshaller.JAXB_SCHEMA_LOCATION, schemaLocation);
     }
 }

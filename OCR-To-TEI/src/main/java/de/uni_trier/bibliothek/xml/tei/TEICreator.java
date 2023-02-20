@@ -37,81 +37,47 @@ import jakarta.xml.bind.JAXBException;
 public class TEICreator extends TEI {
 	public static final String TEIVERSION = "5.0";
 
-	public static TEI createTEI(ModsCollection modsCollection, ArrayList<PcGts> pcgtsList, String title)
+	public static TEI createTEI(ModsCollection modsCollection, ArrayList<PcGts> pcgtsList)
 			throws IOException, JAXBException {
-		// take object from Mods XML file
-		TEI teiObject = new TEI();
+		TEI teiObject = new TEI();		
+		// take objects from Mods XML file
+		de.uni_trier.bibliothek.xml.tei.model.generated.ModsCollection teiModsCollection = new de.uni_trier.bibliothek.xml.tei.model.generated.ModsCollection();
 		de.uni_trier.bibliothek.xml.mods.model.generated.Mods mods = modsCollection.getMods();
 
-		// create new objects for TEI
+		// create objects for TEI
 		TeiHeader teiHeader = new TeiHeader();
 		FileDesc fileDesc = new FileDesc();
 		TitleStmt titleStmt = new TitleStmt();
-		String titleInfoString = title;
-		titleStmt.setTitle(titleInfoString + " Grundstrukturierte TEI-Daten");
 		SourceDesc sourceDesc = new SourceDesc();
-
-		String modsVersion = mods.getVersion();
-		String modsID = mods.getID();
-
 		Mods teiMods = new Mods();
 		HbzIdentifier teiHbzIdentifier = new HbzIdentifier();
-		teiHbzIdentifier.setType(mods.getIdentifier().getType());
-		teiHbzIdentifier.setValue(mods.getIdentifier().getValue());
 		OriginInfo teiOriginInfo = new OriginInfo();
-
 		Place teiPlace = new Place();
 		PlaceTerm teiPlaceTerm = new PlaceTerm();
-		teiPlace.setPlaceTerm(teiPlaceTerm);
-		teiPlaceTerm.setType(mods.getOriginInfo().getPlace().getPlaceTerm().getType());
-		String placeTermValueString = mods.getOriginInfo().getPlace().getPlaceTerm().getValue().value();
-		teiPlaceTerm.setValue(PlaceTermValue.fromValue(placeTermValueString));
-
 		Genre teiGenre = new Genre();
-		String genreString = mods.getGenre().getValue().value();
-		GenreValue teiGenreValue = GenreValue.fromValue(genreString);
-
+		Location teiLocation = new Location();
+		Subject teiSubject = new Subject();
+		RecordInfo teiRecordInfo = new RecordInfo();
+		PhysicalDescription teiPhysicalDescription = new PhysicalDescription();
+		Form teiPhysicalForm = new Form();
+		TitleInfo teiTitleInfo = new TitleInfo();
+		Text teiText = new Text();
+		
 		for (de.uni_trier.bibliothek.xml.mods.model.generated.Note noteObject : mods.getNote()) {
 			Note teiNote = new Note();
 			String typeAttribute = noteObject.getType();
-			String noteValue = noteObject.getValue();
 			if (!(typeAttribute == null)) {
 				teiNote.setType(typeAttribute);
 			}
-			teiNote.setValue(noteValue);
+			teiNote.setValue(noteObject.getValue());
 			teiMods.getNote().add(teiNote);
 		}
 
-		Location teiLocation = new Location();
-		teiLocation.setPhysicalLocation(mods.getLocation().getPhysicalLocation());
-
-		String subjectString = mods.getSubject().getTopic();
-		Subject teiSubject = new Subject();
-		teiSubject.setTopic(subjectString);
-
 		for (de.uni_trier.bibliothek.xml.mods.model.generated.Name nameObject : mods.getName()) {
 			Name teiName = new Name();
-			String namePart = nameObject.getNamePart();
-			teiName.setNamePart(namePart);
+			teiName.setNamePart(nameObject.getNamePart());
 			teiMods.getName().add(teiName);
 		}
-
-		String recordContentString = mods.getRecordInfo().getRecordContentSource();
-		RecordInfo teiRecordInfo = new RecordInfo();
-		teiRecordInfo.setRecordContentSource(recordContentString);
-
-		String physicalDescriptionString = mods.getPhysicalDescription().getExtent();
-		PhysicalDescription teiPhysicalDescription = new PhysicalDescription();
-		teiPhysicalDescription.setExtent(physicalDescriptionString);
-		Form teiPhysicalForm = new Form();
-		teiPhysicalForm.setValue(mods.getPhysicalDescription().getForm().getValue());
-		teiPhysicalForm.setAuthority(mods.getPhysicalDescription().getForm().getAuthority());
-		teiPhysicalDescription.setForm(teiPhysicalForm);
-
-		TitleInfo teiTitleInfo = new TitleInfo();
-		teiTitleInfo.setTitle(titleInfoString);
-
-		Text teiText = new Text();
 
 		// add lines from files with OCR-Output
 		ObjectFactory teiObjectFactory = new ObjectFactory();
@@ -128,6 +94,20 @@ public class TEICreator extends TEI {
 		}
 
 		// map data from modsCollection onto TEI object
+		teiTitleInfo.setTitle(mods.getTitleInfo().getTitle());
+		teiPhysicalForm.setValue(mods.getPhysicalDescription().getForm().getValue());
+		teiPhysicalForm.setAuthority(mods.getPhysicalDescription().getForm().getAuthority());
+		teiPhysicalDescription.setForm(teiPhysicalForm);
+		teiPhysicalDescription.setExtent(mods.getPhysicalDescription().getExtent());
+		teiRecordInfo.setRecordContentSource(mods.getRecordInfo().getRecordContentSource());
+		teiSubject.setTopic(mods.getSubject().getTopic());
+		teiLocation.setPhysicalLocation(mods.getLocation().getPhysicalLocation());
+		teiPlaceTerm.setValue(PlaceTermValue.fromValue(mods.getOriginInfo().getPlace().getPlaceTerm().getValue().value()));
+		teiPlace.setPlaceTerm(teiPlaceTerm);
+		teiPlaceTerm.setType(mods.getOriginInfo().getPlace().getPlaceTerm().getType());
+		teiHbzIdentifier.setType(mods.getIdentifier().getType());
+		teiHbzIdentifier.setValue(mods.getIdentifier().getValue());
+		titleStmt.setTitle(mods.getTitleInfo().getTitle() + " Grundstrukturierte TEI-Daten");
 		teiObject.setText(teiText);
 		teiMods.setTitleInfo(teiTitleInfo);
 		teiMods.setPhysicalDescription(teiPhysicalDescription);
@@ -135,7 +115,7 @@ public class TEICreator extends TEI {
 		teiMods.setSubject(teiSubject);
 		teiMods.setTypeOfResource(mods.getTypeOfResource());
 		teiMods.setLocation(teiLocation);
-		teiGenre.setValue(teiGenreValue);
+		teiGenre.setValue(GenreValue.fromValue(mods.getGenre().getValue().value()));
 		teiGenre.setAuthority(mods.getGenre().getAuthority());
 		teiMods.setGenre(teiGenre);
 		teiOriginInfo.setDateIssued(mods.getOriginInfo().getDateIssued());
@@ -143,9 +123,10 @@ public class TEICreator extends TEI {
 		teiOriginInfo.setPublisher(mods.getOriginInfo().getPublisher());
 		teiMods.setIdentifier(teiHbzIdentifier);
 		teiMods.setOriginInfo(teiOriginInfo);
-		teiMods.setVersion(modsVersion);
-		teiMods.setID(modsID);
-		sourceDesc.setMods(teiMods);
+		teiMods.setVersion(mods.getVersion());
+		teiMods.setID(mods.getID());
+		teiModsCollection.setMods(teiMods);
+		sourceDesc.setModsCollection(teiModsCollection);
 		teiHeader.setSourceDesc(sourceDesc);
 		fileDesc.setTitleStmt(titleStmt);
 		teiHeader.setFileDesc(fileDesc);

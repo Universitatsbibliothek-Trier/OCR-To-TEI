@@ -131,6 +131,16 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ModsCollection }
+     * 
+     * @return
+     *     the new instance of {@link ModsCollection }
+     */
+    public ModsCollection createModsCollection() {
+        return new ModsCollection();
+    }
+
+    /**
      * Create an instance of {@link Mods }
      * 
      * @return

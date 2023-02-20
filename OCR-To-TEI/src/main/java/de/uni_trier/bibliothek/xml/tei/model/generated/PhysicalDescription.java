@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *             </restriction>
  *           </simpleType>
  *         </element>
- *         <element name="form" type="{http://www.tei-c.org/ns/1.0}Form"/>
+ *         <element name="form" type="{http://www.loc.gov/mods/v3}Form"/>
  *       </sequence>
  *     </restriction>
  *   </complexContent>

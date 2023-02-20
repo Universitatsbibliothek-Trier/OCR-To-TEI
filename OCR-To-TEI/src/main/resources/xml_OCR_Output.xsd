@@ -129,7 +129,7 @@
   <xs:complexType name="RegionRefIndexed">
     <xs:attribute name="index" use="required">
       <xs:simpleType>
-        <xs:restriction base="xs:string">
+        <xs:restriction base="xs:integer">
           <xs:pattern value="\d*" />
         </xs:restriction>
       </xs:simpleType>

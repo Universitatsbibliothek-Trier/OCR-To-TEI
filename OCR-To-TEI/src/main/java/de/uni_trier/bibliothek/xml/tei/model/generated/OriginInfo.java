@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *             </restriction>
  *           </simpleType>
  *         </element>
- *         <element name="place" type="{http://www.tei-c.org/ns/1.0}Place"/>
+ *         <element name="place" type="{http://www.loc.gov/mods/v3}Place"/>
  *         <element name="publisher">
  *           <simpleType>
  *             <restriction base="{http://www.w3.org/2001/XMLSchema}string">

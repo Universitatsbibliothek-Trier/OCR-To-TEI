@@ -22,7 +22,7 @@ import jakarta.xml.bind.annotation.XmlValue;
  * <pre>{@code
  * <complexType name="HbzIdentifier">
  *   <simpleContent>
- *     <extension base="<http://www.tei-c.org/ns/1.0>HbzIdentifierValue">
+ *     <extension base="<http://www.loc.gov/mods/v3>HbzIdentifierValue">
  *       <attribute name="type">
  *         <simpleType>
  *           <restriction base="{http://www.w3.org/2001/XMLSchema}string">

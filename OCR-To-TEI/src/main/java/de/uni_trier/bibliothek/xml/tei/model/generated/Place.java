@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlValue;
  *         <element name="placeTerm">
  *           <complexType>
  *             <simpleContent>
- *               <extension base="<http://www.tei-c.org/ns/1.0>PlaceTermValue">
+ *               <extension base="<http://www.loc.gov/mods/v3>PlaceTermValue">
  *                 <attribute name="type" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" />
  *               </extension>
  *             </simpleContent>
@@ -85,7 +85,7 @@ public class Place {
      * <pre>{@code
      * <complexType>
      *   <simpleContent>
-     *     <extension base="<http://www.tei-c.org/ns/1.0>PlaceTermValue">
+     *     <extension base="<http://www.loc.gov/mods/v3>PlaceTermValue">
      *       <attribute name="type" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" />
      *     </extension>
      *   </simpleContent>

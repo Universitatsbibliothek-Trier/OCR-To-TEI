@@ -6,7 +6,6 @@ Dazu werden über Unmarshaller die Daten aus den XML-Dateien in Objekten gespeic
 ## Ausführung
 
 Zum Einlesen einer bestimmten XML-Datei mit Mods aus dem `resources`-Folder muss der String der Variable `modsPath` in der `Main`-Klasse angepasst werden. Für die Angabe eines Ordners mit mehreren Dateien aus dem OCR-Output kann man den String `ocrFolderName` entsprechend ändern. (relative Pfade)
-Zusätzlich kann der Titel der Mods-Datei in der Datei `parameters.xml` geändert werden.
 Das Starten des Projektes ist über den *Run*-Button von Visual Studio Code möglich.
 Die Ausgabe ist eine generierte XML-Datei im Ordner `teiOutputFiles`, die folgenden Namen trägt:
 `TEI_NameDerXmlModDatei`
@@ -15,7 +14,6 @@ Die Ausgabe ist eine generierte XML-Datei im Ordner `teiOutputFiles`, die folgen
 
 **OCR-To-TEI/source/main/resources**  
 Enthält `.xsd`-Dateien für XML-Dateien mit OCR-Output, für XML-Dateien mit Mods und für XML-Dateien mit TEI-Vorgaben. 
-Enthält außerdem die `parameters.xml`-Datei in der der Titel eines Bandes angegeben werden kann.
 
 **OCR-To-TEI/source/main/java/de/uni_trier/bibliothek/**  
 Enthält `Main`-Klasse des Java-Projektes
@@ -35,7 +33,7 @@ Enthält automatisch generierte Java-Klassen
 
 **OCR-To-TEI/source/main/java/de/uni_trier/bibliothek/xml/tei**  
 Enthält `TEIUnmarshaller`, der aus einer angegebenen XML-Datei Java-Objekte generiert.
-Enthält außerdem einen `TEICreator`, der Daten aus OCR-Output und Metadaten zusammenführt und in ein neues Objekt speichert. Enthält `TEIStringManipulator`, der das erzeugte TEI-Objekt anpasst.
+Enthält außerdem einen `TEICreator`, der Daten aus OCR-Output und Metadaten zusammenführt und in ein neues Objekt speichert.
 
 **OCR-To-TEI/source/main/java/de/uni_trier/bibliothek/xml/tei/model/generated**  
 Enthält automatisch generierte Java-Klassen

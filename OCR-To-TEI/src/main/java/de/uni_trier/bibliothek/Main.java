@@ -13,29 +13,18 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import de.uni_trier.bibliothek.xml.Unmarshaller;
 import de.uni_trier.bibliothek.xml.mods.ModsUnmarshaller;
 import de.uni_trier.bibliothek.xml.mods.model.generated.ModsCollection;
 import de.uni_trier.bibliothek.xml.ocr.PcGtsUnmarshaller;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.PcGts;
 import de.uni_trier.bibliothek.xml.tei.TEICreator;
 import de.uni_trier.bibliothek.xml.tei.TEIMarshaller;
-import de.uni_trier.bibliothek.xml.tei.TEIStringManipulator;
 import de.uni_trier.bibliothek.xml.tei.model.generated.TEI;
 
 public class Main {
 
 	public static void main(String[] args) throws Exception 
 	{
-		// get title from parameters.xml
-		Unmarshaller<Parameters> unmarshallerParas = new Unmarshaller<>(Parameters.class);
-		InputStream inputStreamParas = new FileInputStream("OCR-To-TEI/src/main/resources/parameters.xml");
-		Reader xmlReaderParas = new InputStreamReader(inputStreamParas);
-		Parameters parameters = unmarshallerParas.unmarshal(xmlReaderParas);
-		String title = parameters.title;
-		title = title.trim();
-		xmlReaderParas.close();
-
 		// read data of XML file with mods-collection 
 		String modsPath ="OCR-To-TEI/src/main/resources/modsFiles/ah232-3_HT018907295_Moguntiensis_Trevirensis_1690.xml";
 		InputStream inputStream = new FileInputStream(modsPath);
@@ -64,16 +53,13 @@ public class Main {
 		xmlReader.close();
 
 		// create TEI from modsCollection-object and list of PcGts-objects
-		TEI teiObject = TEICreator.createTEI(modsCollection, pcgtsList, title);
+		TEI teiObject = TEICreator.createTEI(modsCollection, pcgtsList);
 		String teiXmlString = TEIMarshaller.marshall(teiObject);
-
-		// manipulate XML-String of TEI
-        String teiXmlStringManipulated = TEIStringManipulator.manipulateTEI(teiXmlString);
 		
 		// write TEI as file
 		String modsFileName = modsPath.substring(modsPath.lastIndexOf("/") +1);
 		String teiFileName = "TEI_" + modsFileName;
-		List<String> teiLines = Arrays.asList(teiXmlStringManipulated); 
+		List<String> teiLines = Arrays.asList(teiXmlString); 
 		Path teiFilePath = Paths.get("OCR-To-TEI/src/main/resources/teiOutputFiles/" + teiFileName);
 		Files.write(teiFilePath, teiLines, StandardCharsets.UTF_8);			
 	}

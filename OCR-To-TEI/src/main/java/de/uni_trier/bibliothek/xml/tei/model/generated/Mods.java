@@ -26,17 +26,17 @@ import jakarta.xml.bind.annotation.XmlType;
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="identifier" type="{http://www.tei-c.org/ns/1.0}HbzIdentifier"/>
- *         <element name="originInfo" type="{http://www.tei-c.org/ns/1.0}OriginInfo"/>
- *         <element name="genre" type="{http://www.tei-c.org/ns/1.0}Genre"/>
- *         <element name="note" type="{http://www.tei-c.org/ns/1.0}Note" maxOccurs="unbounded"/>
- *         <element name="location" type="{http://www.tei-c.org/ns/1.0}Location"/>
- *         <element name="typeOfResource" type="{http://www.tei-c.org/ns/1.0}TypeofResource"/>
- *         <element name="subject" type="{http://www.tei-c.org/ns/1.0}Subject"/>
- *         <element name="name" type="{http://www.tei-c.org/ns/1.0}Name" maxOccurs="unbounded"/>
- *         <element name="recordInfo" type="{http://www.tei-c.org/ns/1.0}RecordInfo"/>
- *         <element name="physicalDescription" type="{http://www.tei-c.org/ns/1.0}PhysicalDescription"/>
- *         <element name="titleInfo" type="{http://www.tei-c.org/ns/1.0}TitleInfo"/>
+ *         <element name="identifier" type="{http://www.loc.gov/mods/v3}HbzIdentifier"/>
+ *         <element name="originInfo" type="{http://www.loc.gov/mods/v3}OriginInfo"/>
+ *         <element name="genre" type="{http://www.loc.gov/mods/v3}Genre"/>
+ *         <element name="note" type="{http://www.loc.gov/mods/v3}Note" maxOccurs="unbounded"/>
+ *         <element name="location" type="{http://www.loc.gov/mods/v3}Location"/>
+ *         <element name="typeOfResource" type="{http://www.loc.gov/mods/v3}TypeofResource"/>
+ *         <element name="subject" type="{http://www.loc.gov/mods/v3}Subject"/>
+ *         <element name="name" type="{http://www.loc.gov/mods/v3}Name" maxOccurs="unbounded"/>
+ *         <element name="recordInfo" type="{http://www.loc.gov/mods/v3}RecordInfo"/>
+ *         <element name="physicalDescription" type="{http://www.loc.gov/mods/v3}PhysicalDescription"/>
+ *         <element name="titleInfo" type="{http://www.loc.gov/mods/v3}TitleInfo"/>
  *       </sequence>
  *       <attribute name="version">
  *         <simpleType>

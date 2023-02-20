@@ -46,12 +46,12 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
 
 })
-@XmlRootElement(name = "TEI")
+@XmlRootElement(name = "TEI", namespace = "http://www.tei-c.org/ns/1.0")
 public class TEI {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://www.tei-c.org/ns/1.0", required = true)
     protected TeiHeader teiHeader;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://www.tei-c.org/ns/1.0", required = true)
     protected Text text;
     @XmlAttribute(name = "version")
     protected String version;

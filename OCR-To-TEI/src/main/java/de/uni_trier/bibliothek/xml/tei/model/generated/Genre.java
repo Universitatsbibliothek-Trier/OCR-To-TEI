@@ -22,7 +22,7 @@ import jakarta.xml.bind.annotation.XmlValue;
  * <pre>{@code
  * <complexType name="Genre">
  *   <simpleContent>
- *     <extension base="<http://www.tei-c.org/ns/1.0>GenreValue">
+ *     <extension base="<http://www.loc.gov/mods/v3>GenreValue">
  *       <attribute name="authority">
  *         <simpleType>
  *           <restriction base="{http://www.w3.org/2001/XMLSchema}string">

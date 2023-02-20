@@ -49,7 +49,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TeiHeader", propOrder = {
+@XmlType(name = "TeiHeader", namespace = "http://www.tei-c.org/ns/1.0", propOrder = {
     "fileDesc",
     "sourceDesc"
 })

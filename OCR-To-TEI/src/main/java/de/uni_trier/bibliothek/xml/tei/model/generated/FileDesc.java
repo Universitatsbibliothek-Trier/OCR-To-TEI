@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "FileDesc", propOrder = {
+@XmlType(name = "FileDesc", namespace = "http://www.tei-c.org/ns/1.0", propOrder = {
     "titleStmt"
 })
 public class FileDesc {

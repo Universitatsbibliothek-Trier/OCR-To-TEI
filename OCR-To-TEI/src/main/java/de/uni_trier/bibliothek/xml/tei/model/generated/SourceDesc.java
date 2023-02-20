@@ -23,7 +23,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="mods" type="{http://www.tei-c.org/ns/1.0}Mods"/>
+ *         <element ref="{http://www.loc.gov/mods/v3}modsCollection"/>
  *       </sequence>
  *     </restriction>
  *   </complexContent>
@@ -33,36 +33,36 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SourceDesc", propOrder = {
-    "mods"
+@XmlType(name = "SourceDesc", namespace = "http://www.tei-c.org/ns/1.0", propOrder = {
+    "modsCollection"
 })
 public class SourceDesc {
 
-    @XmlElement(required = true)
-    protected Mods mods;
+    @XmlElement(namespace = "http://www.loc.gov/mods/v3", required = true)
+    protected ModsCollection modsCollection;
 
     /**
-     * Ruft den Wert der mods-Eigenschaft ab.
+     * Ruft den Wert der modsCollection-Eigenschaft ab.
      * 
      * @return
      *     possible object is
-     *     {@link Mods }
+     *     {@link ModsCollection }
      *     
      */
-    public Mods getMods() {
-        return mods;
+    public ModsCollection getModsCollection() {
+        return modsCollection;
     }
 
     /**
-     * Legt den Wert der mods-Eigenschaft fest.
+     * Legt den Wert der modsCollection-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is
-     *     {@link Mods }
+     *     {@link ModsCollection }
      *     
      */
-    public void setMods(Mods value) {
-        this.mods = value;
+    public void setModsCollection(ModsCollection value) {
+        this.modsCollection = value;
     }
 
 }
