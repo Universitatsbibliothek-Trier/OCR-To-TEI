@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.tei-c.org/ns/1.0"
+  xmlns:self="http://www.tei-c.org/ns/1.0"  elementFormDefault="qualified"
+  attributeFormDefault="unqualified" xmlns:mods="http://www.loc.gov/mods/v3">
+  <xs:import namespace="http://www.loc.gov/mods/v3" schemaLocation="mods.xsd"/>
+
+  <xs:element name="TEI">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="teiHeader" type="self:TeiHeader" />
+        <xs:element name="text" type="self:Text" />
+      </xs:all>
+      <xs:attribute name="version">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="\d+.\d" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="Text" mixed="true">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="pb" type="self:Pb" maxOccurs="unbounded" />
+      <xs:element name="lb" type="self:Lb" maxOccurs="unbounded" />
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="Pb">
+    <xs:all/>
+  </xs:complexType>
+
+  <xs:complexType name="Lb">
+    <xs:all />
+  </xs:complexType>
+
+  <xs:complexType name="TeiHeader">
+    <xs:sequence>
+      <xs:element name="fileDesc" type="self:FileDesc" minOccurs="1" maxOccurs="1" />
+      <xs:element name="sourceDesc" type="self:SourceDesc" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="version">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="3.5" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="ID">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="merian\d{4}topographia" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="FileDesc">
+    <xs:sequence>
+      <xs:element name="titleStmt" type="self:TitleStmt" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TitleStmt">
+    <xs:sequence>
+      <xs:element name="title" type="self:Title" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="Title">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+
+
+  <xs:complexType name="SourceDesc">
+    <xs:sequence>
+      <xs:element ref="mods:modsCollection" />
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
