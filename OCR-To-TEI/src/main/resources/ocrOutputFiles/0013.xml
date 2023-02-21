@@ -819,7 +819,7 @@
     <TextRegion id="r6" type="page-number">
       <Coords points="1893,308 1893,182 2001,182 2001,308"/>
       <TextEquiv>
-        <Unicode>42</Unicode>
+        <Unicode>13</Unicode>
       </TextEquiv>
     </TextRegion>
     <ImageRegion id="r7">

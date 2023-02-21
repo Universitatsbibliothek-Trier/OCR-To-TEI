@@ -7,7 +7,7 @@ Dazu werden über Unmarshaller die Daten aus den XML-Dateien in Objekten gespeic
 
 Zum Einlesen einer bestimmten XML-Datei mit Mods aus dem `resources`-Folder muss der String der Variable `modsPath` in der `Main`-Klasse angepasst werden. Für die Angabe eines Ordners mit mehreren Dateien aus dem OCR-Output kann man den String `ocrFolderName` entsprechend ändern. (relative Pfade)
 Das Starten des Projektes ist über den *Run*-Button von Visual Studio Code möglich.
-Die Ausgabe ist eine generierte XML-Datei im Ordner `teiOutputFiles`, die folgenden Namen trägt:
+Die Ausgabe ist eine generierte XML-Datei im Ordner `teiOutputFiles`, die folgender Namenskonvention folgt:
 `TEI_NameDerXmlModDatei`
 
 ## Ordnerstruktur
@@ -26,7 +26,7 @@ Enthält automatisch generierte Java-Klassen
 
 **OCR-To-TEI/source/main/java/de/uni_trier/bibliothek/xml/ocr**  
 Enthält `PcGtsUnmarshaller`, der aus einer angegebenen XML-Datei Java-Objekte generiert.
-Enthält außerdem einen `OcrDataLineReader`, der eine `ArrayList` der `TextLines` einer XML-Datei mit OCR-Output zurückgibt.
+Enthält außerdem einen `OcrDataReader`, der Funktionen zum Auslesen der XML-Dateien mit OCR-Output bereithält.
 
 **OCR-To-TEI/source/main/java/de/uni_trier/bibliothek/xml/ocr/model/generated**  
 Enthält automatisch generierte Java-Klassen
@@ -40,6 +40,9 @@ Enthält automatisch generierte Java-Klassen
 
 **OCR-To-TEI/scripts**  
 Enthält Skripte zum Generieren von Java-Klassen aus `.xsd`-Dateien. In diesem Fall von `xml_OCR_Output.xsd`,`mods.xsd` und `TEIxsd.xsd`.
+
+**change_parameters**
+Enthält eine `.csv`-Datei, die eine Liste von Dateinamen vom OCR-Output, deren Seitenzahlen und ein jeweiliger Kommentar, ob die Seitenzahl automatisch korrekt als Zahl erkannt wurde.  
 
 ## Dependencies
 
