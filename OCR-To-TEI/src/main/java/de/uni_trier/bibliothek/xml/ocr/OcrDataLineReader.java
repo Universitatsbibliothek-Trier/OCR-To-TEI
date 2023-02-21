@@ -21,7 +21,7 @@ public class OcrDataLineReader extends PcGts {
 		List<TextEquiv> textEquivList;
 		for (TextRegion textRegion : textRegionList) {
 			textLineList = textRegion.getTextLine();
-			if(!textRegion.getType().equals("page-number")){
+			if(textRegion.getType().equals("paragraph")){
 				for (TextLine textLine : textLineList) {
 					textEquivList = textLine.getTextEquiv();
 					// get attribute "id" from textline
@@ -40,7 +40,7 @@ public class OcrDataLineReader extends PcGts {
 					}
 				}
 			}
-			else{
+			else if(textRegion.getType().equals("page-number")){
 				// todo issue #8
 			}	
 		}
