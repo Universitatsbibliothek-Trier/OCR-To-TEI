@@ -42,21 +42,21 @@ public class Main {
 		// get files from folder and sort them
 		String ocrFolderName = "OCR-To-TEI/src/main/resources/ocrOutputFiles/";
 		File ocrFile = new File(ocrFolderName);
-		File[] orcFiles = ocrFile.listFiles();
-		Arrays.sort(orcFiles);
+		File[] ocrFiles = ocrFile.listFiles();
+		Arrays.sort(ocrFiles);
 
 		// create csv and write header to csv file
 		File file = new File("change_parameters/pageNumbersFileNames.csv");	
 		file.delete();	
 		FileWriter outputfile = new FileWriter(file, true);
 		CSVWriter writer = new CSVWriter(outputfile);
-		String[] header = { "Datenname:", "Seitenzahl:", "Kommentar:" };
+		String[] header = { "Dateiname:", "Seitenzahl:", "Kommentar:" };
 		writer.writeNext(header);
 		writer.close();
 
 		// create list of PcGts Objects from folder files
 		ArrayList<PcGts> pcgtsList = new ArrayList<PcGts>();
-		for (File fileName : orcFiles) 
+		for (File fileName : ocrFiles) 
 		{	
 			InputStream inputStreamPcgts = new FileInputStream(fileName);
 			inputStreamPcgts = new FileInputStream(fileName);
