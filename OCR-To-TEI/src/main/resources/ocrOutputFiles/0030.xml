@@ -966,7 +966,7 @@
     <TextRegion id="r3" type="page-number">
       <Coords points="261,424 261,267 400,267 400,424"/>
       <TextEquiv>
-        <Unicode>42</Unicode>
+        <Unicode>30</Unicode>
       </TextEquiv>
     </TextRegion>
     <TextRegion id="r4" type="catch-word">

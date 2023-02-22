@@ -29,6 +29,11 @@
 
   <xs:complexType name="Pb">
     <xs:all/>
+    <xs:attribute name="n">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer"/>
+      </xs:simpleType>
+    </xs:attribute>
   </xs:complexType>
 
   <xs:complexType name="Lb">

@@ -2,6 +2,7 @@ package de.uni_trier.bibliothek;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileWriter;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
@@ -13,8 +14,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.opencsv.CSVWriter;
+
 import de.uni_trier.bibliothek.xml.mods.ModsUnmarshaller;
 import de.uni_trier.bibliothek.xml.mods.model.generated.ModsCollection;
+import de.uni_trier.bibliothek.xml.ocr.OcrDataReader;
 import de.uni_trier.bibliothek.xml.ocr.PcGtsUnmarshaller;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.PcGts;
 import de.uni_trier.bibliothek.xml.tei.TEICreator;
@@ -35,10 +39,20 @@ public class Main {
 		System.out.println("Inhalt von \"" + modsPath + "\" eingelesen");
 		xmlReader.close();
 
-		// get file from folder
+		// get files from folder and sort them
 		String ocrFolderName = "OCR-To-TEI/src/main/resources/ocrOutputFiles/";
 		File ocrFile = new File(ocrFolderName);
-		List<File> ocrFiles = Arrays.asList(ocrFile.listFiles());
+		File[] ocrFiles = ocrFile.listFiles();
+		Arrays.sort(ocrFiles);
+
+		// create csv and write header to csv file
+		File file = new File("change_parameters/pageNumbersFileNames.csv");	
+		file.delete();	
+		FileWriter outputfile = new FileWriter(file, true);
+		CSVWriter writer = new CSVWriter(outputfile);
+		String[] header = { "Dateiname:", "Seitenzahl:", "Kommentar:" };
+		writer.writeNext(header);
+		writer.close();
 
 		// create list of PcGts Objects from folder files
 		ArrayList<PcGts> pcgtsList = new ArrayList<PcGts>();
@@ -48,6 +62,8 @@ public class Main {
 			inputStreamPcgts = new FileInputStream(fileName);
 			xmlReader = new InputStreamReader(inputStreamPcgts);
 			PcGts pcgtsObject = PcGtsUnmarshaller.unmarshal(xmlReader);
+			String fileNameString = fileName.getName();
+			OcrDataReader.csvPageNameComments(fileNameString, pcgtsObject, file);
 			pcgtsList.add(pcgtsObject);
 		}
 		xmlReader.close();
