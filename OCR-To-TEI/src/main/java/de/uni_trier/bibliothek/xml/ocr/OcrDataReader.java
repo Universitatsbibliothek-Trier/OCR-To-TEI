@@ -8,8 +8,11 @@ import java.util.List;
 
 import com.opencsv.CSVWriter;
 
+import de.uni_trier.bibliothek.xml.ocr.model.generated.OrderedGroup;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.Page;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.PcGts;
+import de.uni_trier.bibliothek.xml.ocr.model.generated.ReadingOrder;
+import de.uni_trier.bibliothek.xml.ocr.model.generated.RegionRefIndexed;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.TextEquiv;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.TextLine;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.TextRegion;
@@ -21,7 +24,8 @@ public class OcrDataReader extends PcGts {
 		ArrayList<String> ocrTextLineList = new ArrayList<String>();
 		// read values from Java object
 		Page page = pcgtsObject.getPage();
-		for (TextRegion textRegion : page.getTextRegion()) {
+		List<TextRegion> textRegionOrdered = sortOrder(page);
+		for (TextRegion textRegion : textRegionOrdered) {
 			if (textRegion.getType().equals("paragraph")) {
 				for (TextLine textLine : textRegion.getTextLine()) {
 					List<TextEquiv> textEquivList = textLine.getTextEquiv();
@@ -83,8 +87,7 @@ public class OcrDataReader extends PcGts {
 			FileWriter outputfile = new FileWriter(csvFile, true);
 			CSVWriter writer = new CSVWriter(outputfile);
 			// add data to csv
-			if (!pageNumber.matches("[0-9]+"))
-			{
+			if (!pageNumber.matches("[0-9]+")) {
 				comment = "Seitenzahl nicht erkannt";
 			}
 			String[] data1 = { fileName, pageNumber, comment };
@@ -92,8 +95,26 @@ public class OcrDataReader extends PcGts {
 			// closing writer connection
 			writer.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+	public static List<TextRegion> sortOrder(Page page) {
+		OrderedGroup orderedGroup = page.getReadingOrder().getOrderedGroup();
+		List<TextRegion> textRegionListOrdered = new ArrayList<TextRegion>();
+		List<TextRegion> textRegionList = page.getTextRegion();
+		List<RegionRefIndexed> regionRefIndexedList = new ArrayList<RegionRefIndexed>();
+		regionRefIndexedList = orderedGroup.getRegionRefIndexed();
+		for (int i = 0; i < regionRefIndexedList.size(); i++) {
+			String regionRefId = regionRefIndexedList.get(i).getRegionRef();
+			for (int y = 0; y < textRegionList.size(); y++) {
+				TextRegion textRegion = textRegionList.get(y);
+				if (textRegion.getId().equals(regionRefId)) {
+					textRegionListOrdered.add(textRegionList.get(y));
+					break; // found correct TextRegion
+				}
+			}
+		}
+		return textRegionListOrdered;
 	}
 }
