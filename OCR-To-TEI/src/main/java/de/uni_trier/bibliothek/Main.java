@@ -29,24 +29,46 @@ public class Main {
 
 	public static void main(String[] args) throws Exception 
 	{
+		ArrayList<String> argsList= new ArrayList<>(Arrays.asList(args));
+		for(String argElement : argsList)
+		{
+			System.out.println(argElement);
+			System.out.println("nächstes");
+		}
 		// read data of XML file with mods-collection 
-		String modsPath ="OCR-To-TEI/src/main/resources/modsFiles/ah232-3_HT018907295_Moguntiensis_Trevirensis_1690.xml";
+		// String modsPath ="/home/ackels/Dokumente/ocr-to-tei-pipeline-1/OCR-To-TEI/src/main/resources/modsFiles/ah232-3_HT018907295_Moguntiensis_Trevirensis_1690.xml";
+		String modsPath = argsList.get(0);
 		InputStream inputStream = new FileInputStream(modsPath);
 		Reader xmlReader = new InputStreamReader(inputStream);
-
+		System.out.println("KNALL1");
 		// create Java object with data from XML file after unmarshalling
 		ModsCollection modsCollection = ModsUnmarshaller.unmarshal(xmlReader);
-		System.out.println("Inhalt von \"" + modsPath + "\" eingelesen");
+		// System.out.println("Inhalt von \"" + modsPath + "\" eingelesen");
 		xmlReader.close();
 
 		// get files from folder and sort them
-		String ocrFolderName = "OCR-To-TEI/src/main/resources/ocrOutputFiles/";
+		// String ocrFolderName = "/home/ackels/Dokumente/ocr-to-tei-pipeline-1/OCR-To-TEI/src/main/resources/ocrOutputFiles/";
+		String ocrFolderName = argsList.get(1);
 		File ocrFile = new File(ocrFolderName);
 		File[] ocrFiles = ocrFile.listFiles();
 		Arrays.sort(ocrFiles);
 
 		// create csv and write header to csv file
-		File file = new File("change_parameters/pageNumbersFileNames.csv");	
+		String teiPathName = argsList.get(2);
+		int lastSlash = teiPathName.lastIndexOf('/');
+		System.out.println("last index of slash");
+		String csvFileName = teiPathName.substring(lastSlash+1,teiPathName.length());
+		System.out.println("filename got");
+		csvFileName = csvFileName.substring(0,csvFileName.length()-4);
+		System.out.println("filename got without extension");
+		csvFileName = csvFileName + "_page-numbers.csv";
+		System.out.println("Name der csv: " + csvFileName);
+
+		teiPathName = teiPathName.substring(0,lastSlash+1);
+		String csvPathFileName = teiPathName + csvFileName;
+		System.out.println("csv Path AND Name: " + csvPathFileName);
+
+		File file = new File(csvPathFileName);	
 		file.delete();	
 		FileWriter outputfile = new FileWriter(file, true);
 		CSVWriter writer = new CSVWriter(outputfile);
@@ -74,9 +96,10 @@ public class Main {
 		
 		// write TEI as file
 		String modsFileName = modsPath.substring(modsPath.lastIndexOf("/") +1);
-		String teiFileName = "TEI_" + modsFileName;
+		// String teiFileName = "TEI_" + modsFileName;
 		List<String> teiLines = Arrays.asList(teiXmlString); 
-		Path teiFilePath = Paths.get("OCR-To-TEI/src/main/resources/teiOutputFiles/" + teiFileName);
+		// Path teiFilePath = Paths.get("/home/ackels/Dokumente/ocr-to-tei-pipeline-1/OCR-To-TEI/src/main/resources/teiOutputFiles/" + teiFileName);
+		Path teiFilePath = Paths.get(argsList.get(2));
 		Files.write(teiFilePath, teiLines, StandardCharsets.UTF_8);			
 	}
 

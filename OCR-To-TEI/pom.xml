@@ -23,6 +23,7 @@
       <groupId>jakarta.xml.bind</groupId>
       <artifactId>jakarta.xml.bind-api</artifactId>
       <version>3.0.1</version>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>com.sun.xml.bind</groupId>
@@ -76,6 +77,15 @@
         <version>3.2.0</version>
         <configuration>
           <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.1.0</version>
+        <configuration>
+            <mainClass>de.uni_trier.bibliothek.Main</mainClass>
         </configuration>
       </plugin>
 

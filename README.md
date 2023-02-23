@@ -5,10 +5,9 @@ Dazu werden über Unmarshaller die Daten aus den XML-Dateien in Objekten gespeic
 
 ## Ausführung
 
-Zum Einlesen einer bestimmten XML-Datei mit Mods aus dem `resources`-Folder muss der String der Variable `modsPath` in der `Main`-Klasse angepasst werden. Für die Angabe eines Ordners mit mehreren Dateien aus dem OCR-Output kann man den String `ocrFolderName` entsprechend ändern. (relative Pfade)
-Das Starten des Projektes ist über den *Run*-Button von Visual Studio Code möglich.
-Die Ausgabe ist eine generierte XML-Datei im Ordner `teiOutputFiles`, die folgender Namenskonvention folgt:
-`TEI_NameDerXmlModDatei`
+Zum Einlesen einer bestimmten XML-Datei mit Mods muss der erste eingegebene Parameter einen absoluten Pfad mit Dateinamen besitzen.
+Für die Angabe eines Ordners mit mehreren Dateien aus dem OCR-Output muss der zweite angegebene Paramter den Pfad zu einem Ordner enthalten, in dem sich die XML-Dateien vom OCR-Output befinden.
+In den dritten Parameter muss der Pfad mit Dateinamen der auszugebenen TEI-Datei geschrieben werden. Eine `.csv`-Datei wird zusaätzlich nach Eingabe der Paramter im selben Ordner der TEI-Datei erzeugt.
 
 ## Ordnerstruktur
 
