@@ -30,10 +30,10 @@ until [ "$selection" = "0" ]; do
         2 ) read -p "Please enter path to OCR-Output folder " ocrPath ;;
         3 ) read -p "Pleaser enter path with file name for TEI-Output file: " teiPathName;;
         4 ) echo "Conversion started!"
-        mvn -q -e compile exec:java -Dexec.arguments="$modsPath,$ocrPath,$teiPathName" 
+        mvn -q -e compile exec:java -Dexec.arguments="-m,$modsPath,-o,$ocrPath,-t,$teiPathName" 
         echo "Conversion ended!" ;;
         0 ) exit ;;
-        * ) echo "Please enter 1, 2, or 0"; press_enter ;;
+        * ) echo "Please enter 1, 2, 3, 4 or 0"; press_enter ;;
     esac
 done
 

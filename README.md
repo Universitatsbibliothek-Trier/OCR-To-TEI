@@ -1,13 +1,14 @@
-## Einlesen von Meta-Daten/OCR-Output von XML-Dateien
+## Erstellen einer TEI-Datei aus Meta-Daten und OCR-Output in Form von XML-Dateien
 
 Mit diesem Java-Programm ist es möglich aus einem Dateiordner, in dem sich XML-Dateien mit OCR-Output befinden, und einer XML-Datei mit Metainformationen TEI-Dateien zu erzeugen.
-Dazu werden über Unmarshaller die Daten aus den XML-Dateien in Objekten gespeichert. Anschließend werden die benötigten Informationen in einem weiteren Objekt, dessen benutzten Klassen über eine `.xsd`-Datei erzeugt wurden, zusammengeführt. Dieses Objekt wird über einen Marshaller in eine XML-Datei umgewandelt, die im letzten Schritt so abgeändert wird, dass die den Vorgaben der TEI entspricht.
+Dazu werden über Unmarshaller die Daten aus den XML-Dateien in Objekten gespeichert. Anschließend werden die benötigten Informationen in einem weiteren Objekt, dessen benutzten Klassen über eine `.xsd`-Datei erzeugt wurden, zusammengeführt. Dieses Objekt wird über einen Marshaller in eine XML-Datei umgewandelt, die im letzten Schritt so abgeändert wird, dass die den Vorgaben der TEI entspricht. Dabei wird zusätzlich eine `.csv`-Datei erzeugt, die Informationen über von der OCR nicht erkannte Seitenzahlen enthält.
 
 ## Ausführung
 
-Zum Einlesen einer bestimmten XML-Datei mit Mods muss der erste eingegebene Parameter einen absoluten Pfad mit Dateinamen besitzen.
-Für die Angabe eines Ordners mit mehreren Dateien aus dem OCR-Output muss der zweite angegebene Paramter den Pfad zu einem Ordner enthalten, in dem sich die XML-Dateien vom OCR-Output befinden.
-In den dritten Parameter muss der Pfad mit Dateinamen der auszugebenen TEI-Datei geschrieben werden. Eine `.csv`-Datei wird zusaätzlich nach Eingabe der Paramter im selben Ordner der TEI-Datei erzeugt.
+Um das Programm auszuführen zu können müssen verschiedene Argumente mitgegeben werden. Da das Java-Programm von Maven zusammengebaut wird, sieht der Befehl zum Starten wie folgt aus:
+`mvn -q compile exec:java -Dexec.arguments="-m,/PfadZurModsDatei.xml,-o,/PfadZumOCROrdner/,-t,/PfadFürTEIUndCSV/teiName.xml"`
+Dieser Befehl muss vom Ordner aus gestartet werden, in dem sich die `pom.xml`-Datei von Maven befindet.
+Alternativ dazu kann das Bash-Skript `startWithArguments.sh` ausgeführt werden, dass den Benutzer über ein Menü die benötigten Argumente eingeben lässt.
 
 ## Ordnerstruktur
 
@@ -15,7 +16,7 @@ In den dritten Parameter muss der Pfad mit Dateinamen der auszugebenen TEI-Datei
 Enthält `.xsd`-Dateien für XML-Dateien mit OCR-Output, für XML-Dateien mit Mods und für XML-Dateien mit TEI-Vorgaben. 
 
 **OCR-To-TEI/source/main/java/de/uni_trier/bibliothek/**  
-Enthält `Main`-Klasse des Java-Projektes
+Enthält `Main`-Klasse des Java-Projektes, den `CSVCreator` und den `CmdLineParser`, der die Kommandozeilenargumente enliest.
 
 **OCR-To-TEI/source/main/java/de/uni_trier/bibliothek/xml/mods**  
 Enthält `ModsUnmarshaller`, der aus einer angegebenen XML-Datei Java-Objekte generiert.
@@ -39,12 +40,13 @@ Enthält automatisch generierte Java-Klassen
 
 **OCR-To-TEI/scripts**  
 Enthält Skripte zum Generieren von Java-Klassen aus `.xsd`-Dateien. In diesem Fall von `xml_OCR_Output.xsd`,`mods.xsd` und `TEIxsd.xsd`.
+Enthält außerdem ein Skript zum Starten des Programmes.
 
 **change_parameters**
-Enthält eine `.csv`-Datei, die eine Liste von Dateinamen vom OCR-Output, deren Seitenzahlen und ein jeweiliger Kommentar, ob die Seitenzahl automatisch korrekt als Zahl erkannt wurde.  
+Wird in Zukunft eine `Parameters`-Datei enthalten, die einen String als Zusatz für den Titel speichert.
 
 ## Dependencies
 
-Die Dependencies werden beim Starten des Projektes von Maven automatisch geladen und installiert.
+Die Dependencies werden beim Starten des Projektes von Maven automatisch geladen.
 Die Libraries von `JAXB RI` von https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-ri/4.0.0 werden im Ordner **OCR-To-TEI/lib** benötigt, sodass die Struktur wie folgt aussieht:
 **.../OCR-To-TEI/lib/jaxb-ri-4.0.0/jaxb-ri**

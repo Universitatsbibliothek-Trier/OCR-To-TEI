@@ -10,4 +10,4 @@ ocrPath="/home/ackels/Dokumente/ocr-to-tei-pipeline-1/OCR-To-TEI/src/main/resour
 teiPathName="/home/ackels/Dokumente/ocr-to-tei-pipeline-1/TEI_CSV_Output/TEI_created_Band1.xml"
 
 mvn -q compile exec:java \
--Dexec.arguments="$modsPath,$ocrPath,$teiPathName"
+-Dexec.arguments="-m,$modsPath,-o,$ocrPath,-t,$teiPathName"
