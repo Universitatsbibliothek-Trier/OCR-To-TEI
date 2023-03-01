@@ -11,7 +11,6 @@ import com.opencsv.CSVWriter;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.OrderedGroup;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.Page;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.PcGts;
-import de.uni_trier.bibliothek.xml.ocr.model.generated.ReadingOrder;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.RegionRefIndexed;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.TextEquiv;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.TextLine;
