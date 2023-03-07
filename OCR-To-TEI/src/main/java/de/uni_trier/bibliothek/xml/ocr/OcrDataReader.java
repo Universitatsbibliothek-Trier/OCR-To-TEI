@@ -11,7 +11,6 @@ import com.opencsv.CSVWriter;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.OrderedGroup;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.Page;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.PcGts;
-import de.uni_trier.bibliothek.xml.ocr.model.generated.ReadingOrder;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.RegionRefIndexed;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.TextEquiv;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.TextLine;
@@ -52,7 +51,15 @@ public class OcrDataReader extends PcGts {
 	public static String getPageNumber(PcGts pcgtsObject) {
 		String pageNumber = "";
 		// read values from Java object
-		List<TextRegion> textRegionList = pcgtsObject.getPage().getTextRegion();
+		List<Object> textRegionObjectList = pcgtsObject.getPage().getTextRegionOrImageRegion();
+		List<TextRegion> textRegionList = new ArrayList<TextRegion>();
+		for (Object textRegionOrImageRegion : textRegionObjectList) {
+			if(textRegionOrImageRegion instanceof TextRegion)
+			{
+				TextRegion textRegion =  TextRegion.class.cast(textRegionOrImageRegion);
+				textRegionList.add(textRegion);
+			}	
+		}
 		for (TextRegion textRegion : textRegionList) {
 			if (textRegion.getType().equals("page-number")) {
 				if (textRegion.getTextLine().isEmpty()) {
@@ -102,9 +109,16 @@ public class OcrDataReader extends PcGts {
 	public static List<TextRegion> sortOrder(Page page) {
 		OrderedGroup orderedGroup = page.getReadingOrder().getOrderedGroup();
 		List<TextRegion> textRegionListOrdered = new ArrayList<TextRegion>();
-		List<TextRegion> textRegionList = page.getTextRegion();
-		List<RegionRefIndexed> regionRefIndexedList = new ArrayList<RegionRefIndexed>();
-		regionRefIndexedList = orderedGroup.getRegionRefIndexed();
+		List<Object> textRegionObjectList = page.getTextRegionOrImageRegion();
+		List<TextRegion> textRegionList = new ArrayList<TextRegion>();
+		for (Object textRegionOrImageRegion : textRegionObjectList) {
+			if(textRegionOrImageRegion instanceof TextRegion)
+			{
+				TextRegion textRegion =  TextRegion.class.cast(textRegionOrImageRegion);
+				textRegionList.add(textRegion);
+			}	
+		}
+		List<RegionRefIndexed> regionRefIndexedList = orderedGroup.getRegionRefIndexed();
 		for (int i = 0; i < regionRefIndexedList.size(); i++) {
 			String regionRefId = regionRefIndexedList.get(i).getRegionRef();
 			for (int y = 0; y < textRegionList.size(); y++) {

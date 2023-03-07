@@ -7,33 +7,29 @@
 
 package de.uni_trier.bibliothek.xml.ocr.model.generated;
 
-import java.math.BigInteger;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für RegionRefIndexed complex type.
+ * <p>Java-Klasse für ImageRegion complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="RegionRefIndexed">
+ * <complexType name="ImageRegion">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <attribute name="index" use="required">
- *         <simpleType>
- *           <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
- *             <pattern value="\d*"/>
- *           </restriction>
- *         </simpleType>
- *       </attribute>
- *       <attribute name="regionRef" use="required">
+ *       <sequence>
+ *         <element name="Coords" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}Coords"/>
+ *       </sequence>
+ *       <attribute name="id" use="required">
  *         <simpleType>
  *           <restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *             <pattern value="r\d*"/>
+ *             <pattern value="r\d+"/>
  *           </restriction>
  *         </simpleType>
  *       </attribute>
@@ -45,60 +41,62 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RegionRefIndexed")
-public class RegionRefIndexed {
+@XmlType(name = "ImageRegion", propOrder = {
+    "coords"
+})
+public class ImageRegion {
 
-    @XmlAttribute(name = "index", required = true)
-    protected BigInteger index;
-    @XmlAttribute(name = "regionRef", required = true)
-    protected String regionRef;
+    @XmlElement(name = "Coords", required = true)
+    protected Coords coords;
+    @XmlAttribute(name = "id", required = true)
+    protected String id;
 
     /**
-     * Ruft den Wert der index-Eigenschaft ab.
+     * Ruft den Wert der coords-Eigenschaft ab.
      * 
      * @return
      *     possible object is
-     *     {@link BigInteger }
+     *     {@link Coords }
      *     
      */
-    public BigInteger getIndex() {
-        return index;
+    public Coords getCoords() {
+        return coords;
     }
 
     /**
-     * Legt den Wert der index-Eigenschaft fest.
+     * Legt den Wert der coords-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is
-     *     {@link BigInteger }
+     *     {@link Coords }
      *     
      */
-    public void setIndex(BigInteger value) {
-        this.index = value;
+    public void setCoords(Coords value) {
+        this.coords = value;
     }
 
     /**
-     * Ruft den Wert der regionRef-Eigenschaft ab.
+     * Ruft den Wert der id-Eigenschaft ab.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getRegionRef() {
-        return regionRef;
+    public String getId() {
+        return id;
     }
 
     /**
-     * Legt den Wert der regionRef-Eigenschaft fest.
+     * Legt den Wert der id-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setRegionRef(String value) {
-        this.regionRef = value;
+    public void setId(String value) {
+        this.id = value;
     }
 
 }

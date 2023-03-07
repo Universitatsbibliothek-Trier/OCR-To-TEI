@@ -3,3 +3,4 @@
 /OCR-To-TEI/.vscode
 /.vscode
 *.class
+/OCR-To-TEI/scripts/startWithConstant.sh

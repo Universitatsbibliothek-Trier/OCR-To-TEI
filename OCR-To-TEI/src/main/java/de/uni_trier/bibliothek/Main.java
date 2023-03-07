@@ -1,8 +1,8 @@
 package de.uni_trier.bibliothek;
 
 import java.io.File;
+import java.io.FileFilter;
 import java.io.FileInputStream;
-import java.io.FileWriter;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
@@ -13,8 +13,6 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import com.opencsv.CSVWriter;
 
 import de.uni_trier.bibliothek.xml.mods.ModsUnmarshaller;
 import de.uni_trier.bibliothek.xml.mods.model.generated.ModsCollection;
@@ -29,37 +27,37 @@ public class Main {
 
 	public static void main(String[] args) throws Exception 
 	{
-		// read data of XML file with mods-collection 
-		String modsPath ="OCR-To-TEI/src/main/resources/modsFiles/ah232-3_HT018907295_Moguntiensis_Trevirensis_1690.xml";
+		// parse command-line arguments
+		CmdLineParser cmdLineParser = new CmdLineParser(args);
+		String modsPath = cmdLineParser.getModsPath();
+		String ocrFolderName = cmdLineParser.getOCRFolderName();
+		String teiPathNameFile = cmdLineParser.getTEIPathNameFile();
+	
+		// create Java object with data from XML file after unmarshalling
 		InputStream inputStream = new FileInputStream(modsPath);
 		Reader xmlReader = new InputStreamReader(inputStream);
-
-		// create Java object with data from XML file after unmarshalling
 		ModsCollection modsCollection = ModsUnmarshaller.unmarshal(xmlReader);
-		System.out.println("Inhalt von \"" + modsPath + "\" eingelesen");
 		xmlReader.close();
 
-		// get files from folder and sort them
-		String ocrFolderName = "OCR-To-TEI/src/main/resources/ocrOutputFiles/";
+		// get files from folder, check for ".xml-files" and sort them
 		File ocrFile = new File(ocrFolderName);
-		File[] ocrFiles = ocrFile.listFiles();
+		File[] ocrFiles = ocrFile.listFiles(new FileFilter() {
+			public boolean accept(File ocrFolderName) {
+				String fileName = ocrFolderName.getName().toLowerCase();
+				return fileName.endsWith(".xml") && ocrFolderName.isFile();
+			}
+		});
 		Arrays.sort(ocrFiles);
 
-		// create csv and write header to csv file
-		File file = new File("change_parameters/pageNumbersFileNames.csv");	
-		file.delete();	
-		FileWriter outputfile = new FileWriter(file, true);
-		CSVWriter writer = new CSVWriter(outputfile);
-		String[] header = { "Dateiname:", "Seitenzahl:", "Kommentar:" };
-		writer.writeNext(header);
-		writer.close();
+		// create csv with header and get path of inputted TEI filename
+		String teiPathName = CSVCreator.createTEIPathName(teiPathNameFile);
+		File file = CSVCreator.createFile();
 
 		// create list of PcGts Objects from folder files
 		ArrayList<PcGts> pcgtsList = new ArrayList<PcGts>();
 		for (File fileName : ocrFiles) 
 		{	
 			InputStream inputStreamPcgts = new FileInputStream(fileName);
-			inputStreamPcgts = new FileInputStream(fileName);
 			xmlReader = new InputStreamReader(inputStreamPcgts);
 			PcGts pcgtsObject = PcGtsUnmarshaller.unmarshal(xmlReader);
 			String fileNameString = fileName.getName();
@@ -73,11 +71,10 @@ public class Main {
 		String teiXmlString = TEIMarshaller.marshall(teiObject);
 		
 		// write TEI as file
-		String modsFileName = modsPath.substring(modsPath.lastIndexOf("/") +1);
-		String teiFileName = "TEI_" + modsFileName;
 		List<String> teiLines = Arrays.asList(teiXmlString); 
-		Path teiFilePath = Paths.get("OCR-To-TEI/src/main/resources/teiOutputFiles/" + teiFileName);
-		Files.write(teiFilePath, teiLines, StandardCharsets.UTF_8);			
+		Path teiFilePath = Paths.get(teiPathNameFile);
+		Files.write(teiFilePath, teiLines, StandardCharsets.UTF_8);	
+		System.out.println("TEI and .csv created in: " + teiPathName);		
 	}
 
 }

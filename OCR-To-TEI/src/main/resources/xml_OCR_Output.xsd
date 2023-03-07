@@ -16,8 +16,11 @@
 
   <xs:complexType name="Page">
     <xs:sequence>
-      <xs:element name="ReadingOrder" type="self:ReadingOrder" />
-      <xs:element name="TextRegion" type="self:TextRegion" minOccurs="1" maxOccurs="unbounded" />
+      <xs:element name="ReadingOrder" type="self:ReadingOrder" maxOccurs="1"  />
+      <xs:choice maxOccurs="unbounded" >
+        <xs:element name="TextRegion" type="self:TextRegion" minOccurs="1"  />
+       <xs:element name="ImageRegion" type="self:ImageRegion" />
+      </xs:choice>
     </xs:sequence>
     <xs:attribute name="imageFilename" use="required">
       <xs:simpleType>
@@ -39,6 +42,20 @@
       </xs:simpleType>
     </xs:attribute>
   </xs:complexType>
+
+  <xs:complexType name="ImageRegion">
+    <xs:sequence>
+      <xs:element name="Coords" type="self:Coords" />
+    </xs:sequence>
+    <xs:attribute name="id" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="r\d+" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+
 
   <xs:complexType name="TextRegion">
     <xs:sequence>
