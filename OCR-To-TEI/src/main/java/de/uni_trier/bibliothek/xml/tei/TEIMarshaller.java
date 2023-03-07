@@ -25,6 +25,7 @@ public class TEIMarshaller<T>
     
     public static String marshall(TEI teiObject) throws JAXBException {
         marshaller.setNamespacePrefixMapper(namespacePrefixMapper);
+        marshaller.setFormat(jakarta.xml.bind.Marshaller.JAXB_FORMATTED_OUTPUT);
         return marshaller.marshal(teiObject);
     }
 
