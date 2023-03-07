@@ -1,6 +1,7 @@
 package de.uni_trier.bibliothek;
 
 import java.io.File;
+import java.io.FileFilter;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -38,9 +39,14 @@ public class Main {
 		ModsCollection modsCollection = ModsUnmarshaller.unmarshal(xmlReader);
 		xmlReader.close();
 
-		// get files from folder and sort them
+		// get files from folder, check for ".xml-files" and sort them
 		File ocrFile = new File(ocrFolderName);
-		File[] ocrFiles = ocrFile.listFiles();
+		File[] ocrFiles = ocrFile.listFiles(new FileFilter() {
+			public boolean accept(File ocrFolderName) {
+				String fileName = ocrFolderName.getName().toLowerCase();
+				return fileName.endsWith(".xml") && ocrFolderName.isFile();
+			}
+		});
 		Arrays.sort(ocrFiles);
 
 		// create csv with header and get path of inputted TEI filename

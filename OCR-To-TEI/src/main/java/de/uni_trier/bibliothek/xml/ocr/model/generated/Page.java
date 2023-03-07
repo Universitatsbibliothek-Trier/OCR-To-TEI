@@ -13,6 +13,7 @@ import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlElements;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -27,7 +28,10 @@ import jakarta.xml.bind.annotation.XmlType;
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
  *         <element name="ReadingOrder" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}ReadingOrder"/>
- *         <element name="TextRegion" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}TextRegion" maxOccurs="unbounded"/>
+ *         <choice maxOccurs="unbounded">
+ *           <element name="TextRegion" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}TextRegion"/>
+ *           <element name="ImageRegion" type="{http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15}ImageRegion"/>
+ *         </choice>
  *       </sequence>
  *       <attribute name="imageFilename" use="required">
  *         <simpleType>
@@ -59,14 +63,17 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Page", propOrder = {
     "readingOrder",
-    "textRegion"
+    "textRegionOrImageRegion"
 })
 public class Page {
 
     @XmlElement(name = "ReadingOrder", required = true)
     protected ReadingOrder readingOrder;
-    @XmlElement(name = "TextRegion", required = true)
-    protected List<TextRegion> textRegion;
+    @XmlElements({
+        @XmlElement(name = "TextRegion", type = TextRegion.class),
+        @XmlElement(name = "ImageRegion", type = ImageRegion.class)
+    })
+    protected List<Object> textRegionOrImageRegion;
     @XmlAttribute(name = "imageFilename", required = true)
     protected String imageFilename;
     @XmlAttribute(name = "imageHeight", required = true)
@@ -99,34 +106,35 @@ public class Page {
     }
 
     /**
-     * Gets the value of the textRegion property.
+     * Gets the value of the textRegionOrImageRegion property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the textRegion property.
+     * This is why there is not a {@code set} method for the textRegionOrImageRegion property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getTextRegion().add(newItem);
+     *    getTextRegionOrImageRegion().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
+     * {@link ImageRegion }
      * {@link TextRegion }
      * 
      * 
      * @return
-     *     The value of the textRegion property.
+     *     The value of the textRegionOrImageRegion property.
      */
-    public List<TextRegion> getTextRegion() {
-        if (textRegion == null) {
-            textRegion = new ArrayList<>();
+    public List<Object> getTextRegionOrImageRegion() {
+        if (textRegionOrImageRegion == null) {
+            textRegionOrImageRegion = new ArrayList<>();
         }
-        return this.textRegion;
+        return this.textRegionOrImageRegion;
     }
 
     /**

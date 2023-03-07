@@ -66,6 +66,16 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ImageRegion }
+     * 
+     * @return
+     *     the new instance of {@link ImageRegion }
+     */
+    public ImageRegion createImageRegion() {
+        return new ImageRegion();
+    }
+
+    /**
      * Create an instance of {@link TextRegion }
      * 
      * @return
