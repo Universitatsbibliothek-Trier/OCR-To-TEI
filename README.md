@@ -9,13 +9,17 @@ Um das Programm auszuführen zu können müssen verschiedene Argumente mitgegebe
 `mvn -q compile exec:java -Dexec.arguments="-m,/PfadZurModsDatei.xml,-o,/PfadZumOCROrdner/,-t,/PfadFürTEIUndCSV/teiName.xml"`
 Dieser Befehl muss vom Ordner aus gestartet werden, in dem sich die `pom.xml`-Datei von Maven befindet.
 Alternativ dazu kann das Bash-Skript `startWithArguments.sh` ausgeführt werden, dass den Benutzer über ein Menü die benötigten Argumente eingeben lässt.
+Als zusätzliche Eingabe kann in der `parameters.xml`-Datei ein String eingegeben werden, der dem Titel hinzugefügt wird.
 
 ## Ordnerstruktur
+
+**parameters**  
+Enthält `parameters.xml`-Datei, in der ein String eingegeben werden kann, der an den Titel konkateniert wird. 
 
 **OCR-To-TEI/source/main/resources**  
 Enthält `.xsd`-Dateien für XML-Dateien mit OCR-Output, für XML-Dateien mit Mods und für XML-Dateien mit TEI-Vorgaben. 
 
-**OCR-To-TEI/source/main/java/de/uni_trier/bibliothek/**  
+**OCR-To-TEI/source/main/java/de/uni_trier/bibliothek**  
 Enthält `Main`-Klasse des Java-Projektes, den `CSVCreator` und den `CmdLineParser`, der die Kommandozeilenargumente enliest.
 
 **OCR-To-TEI/source/main/java/de/uni_trier/bibliothek/xml/mods**  
@@ -41,9 +45,6 @@ Enthält automatisch generierte Java-Klassen
 **OCR-To-TEI/scripts**  
 Enthält Skripte zum Generieren von Java-Klassen aus `.xsd`-Dateien. In diesem Fall von `xml_OCR_Output.xsd`,`mods.xsd` und `TEIxsd.xsd`.
 Enthält außerdem ein Skript zum Starten des Programmes.
-
-**change_parameters**
-Wird in Zukunft eine `Parameters`-Datei enthalten, die einen String als Zusatz für den Titel speichert.
 
 ## Dependencies
 
