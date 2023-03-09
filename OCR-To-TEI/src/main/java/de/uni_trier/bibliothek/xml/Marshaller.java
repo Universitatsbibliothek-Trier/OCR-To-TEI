@@ -53,4 +53,8 @@ public class Marshaller<T>
     {
         marshaller.setProperty(jakarta.xml.bind.Marshaller.JAXB_SCHEMA_LOCATION, schemaLocation);
     }
+    public void setFormat(String formatOutput) throws PropertyException
+    {
+        marshaller.setProperty(jakarta.xml.bind.Marshaller.JAXB_FORMATTED_OUTPUT, true);
+    }
 }

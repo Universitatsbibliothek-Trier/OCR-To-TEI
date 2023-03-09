@@ -12,7 +12,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 import de.uni_trier.bibliothek.xml.mods.ModsUnmarshaller;
 import de.uni_trier.bibliothek.xml.mods.model.generated.ModsCollection;
@@ -71,10 +70,9 @@ public class Main {
 		String teiXmlString = TEIMarshaller.marshall(teiObject);
 		
 		// write TEI as file
-		List<String> teiLines = Arrays.asList(teiXmlString); 
 		Path teiFilePath = Paths.get(teiPathNameFile);
-		Files.write(teiFilePath, teiLines, StandardCharsets.UTF_8);	
-		System.out.println("TEI and .csv created in: " + teiPathName);		
+		Files.writeString(teiFilePath, teiXmlString, StandardCharsets.UTF_8);	
+		System.out.println("TEI and .csv created in: " + teiPathName);	
 	}
 
 }
