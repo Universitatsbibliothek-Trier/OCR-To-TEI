@@ -295,7 +295,7 @@
     <TextRegion id="r10" type="signature-mark">
       <Coords points="2257,5927 2257,5575 2649,5575 2649,5927"/>
       <TextEquiv>
-        <Unicode/>
+        <Unicode>Testsignatur</Unicode> 
       </TextEquiv>
     </TextRegion>
     <TextRegion id="r11" type="page-number">

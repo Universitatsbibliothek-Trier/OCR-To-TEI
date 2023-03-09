@@ -963,7 +963,7 @@
     <TextRegion id="r4" type="signature-mark">
       <Coords points="2720,6303 2720,6183 2924,6183 2924,6303"/>
       <TextEquiv>
-        <Unicode/>
+        <Unicode>TestSignatur2</Unicode>
       </TextEquiv>
     </TextRegion>
     <TextRegion id="r5" type="page-number">

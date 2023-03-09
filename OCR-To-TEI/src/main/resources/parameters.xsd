@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="/OCR-To-TEI/src/main/resources" xmlns:self="/OCR-To-TEI/src/main/resources" elementFormDefault="qualified"
+  attributeFormDefault="unqualified">
+
+  <xs:element name="parameters">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="titleAddition" type="self:TitleAddition" />
+        <xs:element name="readingOrder" type="self:ReadingOrder" />
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="ReadingOrder">
+    <xs:sequence >
+      <xs:element name="first" type="self:First" />
+      <xs:element name="second" type="self:Second"  />
+      <xs:element name="third" type="self:Third" />
+      <xs:element name="fourth" type="self:Fourth" />
+      <xs:element name="fifth" type="self:Fifth" />
+      <xs:element name="sixth" type="self:Sixth" />
+      <xs:element name="seventh" type="self:Seventh" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="First">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="Second">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="Third">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="Fourth">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="Fifth">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="Sixth">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="Seventh">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="TitleAddition">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+ 
+
+</xs:schema>

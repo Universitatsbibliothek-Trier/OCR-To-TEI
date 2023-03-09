@@ -132,8 +132,9 @@ public class OcrDataReader extends PcGts {
 		return textRegionListOrdered;
 	}
 
-	public static List<TextRegion> getBogensignaturen(PcGts pcgtsObject) {
-		List<TextRegion> textRegionListOrdered = new ArrayList<TextRegion>();
+	public static String getBogensignaturen(PcGts pcgtsObject) {
+		String bogenSignatur = "";
+		// read values from Java object
 		List<Object> textRegionObjectList = pcgtsObject.getPage().getTextRegionOrImageRegion();
 		List<TextRegion> textRegionList = new ArrayList<TextRegion>();
 		for (Object textRegionOrImageRegion : textRegionObjectList) {
@@ -143,6 +144,31 @@ public class OcrDataReader extends PcGts {
 				textRegionList.add(textRegion);
 			}	
 		}
-		return textRegionListOrdered;
+		for (TextRegion textRegion : textRegionList) {
+			if (textRegion.getType().equals("signature-mark")) {
+				
+				if (textRegion.getTextLine().isEmpty()) {
+					for (TextEquiv TextEquiv : textRegion.getTextEquiv()) {
+						if (TextEquiv.getUnicode() != null) {
+							System.out.println(TextEquiv.getUnicode());
+							bogenSignatur = TextEquiv.getUnicode();
+						}
+					}
+				} else {
+					for (TextLine textLine : textRegion.getTextLine()) {
+						List<TextEquiv> textEquivList = textLine.getTextEquiv();
+						// check if textEquiv exists
+						if (!textEquivList.isEmpty()) {
+							for (TextEquiv TextEquiv : textEquivList) {
+								if (TextEquiv.getUnicode() != null) {
+									bogenSignatur = TextEquiv.getUnicode();
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		return bogenSignatur;
 	}
 }

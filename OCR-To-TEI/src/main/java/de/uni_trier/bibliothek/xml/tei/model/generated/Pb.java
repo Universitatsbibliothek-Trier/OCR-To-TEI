@@ -23,8 +23,6 @@ import jakarta.xml.bind.annotation.XmlType;
  * <complexType name="Pb">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <all>
- *       </all>
  *       <attribute name="n">
  *         <simpleType>
  *           <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
@@ -39,9 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Pb", namespace = "http://www.tei-c.org/ns/1.0", propOrder = {
-
-})
+@XmlType(name = "Pb", namespace = "http://www.tei-c.org/ns/1.0")
 public class Pb {
 
     @XmlAttribute(name = "n")

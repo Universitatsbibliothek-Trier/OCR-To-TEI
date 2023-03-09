@@ -24,11 +24,33 @@
     <xs:choice maxOccurs="unbounded">
       <xs:element name="pb" type="self:Pb" maxOccurs="unbounded" />
       <xs:element name="lb" type="self:Lb" maxOccurs="unbounded" />
+      <xs:element name="fw" type="self:Fw" maxOccurs="unbounded"/>
     </xs:choice>
   </xs:complexType>
 
+  <xs:complexType name="Fw">
+    <xs:simpleContent>
+      <xs:extension base="self:FwValue">
+       <xs:attribute name="type">
+         <xs:simpleType>
+           <xs:restriction base="xs:string">
+            <xs:enumeration value = "sig"/>
+            <xs:enumeration value = "header"/>
+            <xs:enumeration value = "catch"/>
+            <xs:enumeration value = "pageNum"/>
+           </xs:restriction>
+         </xs:simpleType>
+       </xs:attribute>
+     </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="FwValue">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
   <xs:complexType name="Pb">
-    <xs:all/>
+    <!-- <xs:all/> -->
     <xs:attribute name="n">
       <xs:simpleType>
         <xs:restriction base="xs:integer"/>
@@ -37,7 +59,7 @@
   </xs:complexType>
 
   <xs:complexType name="Lb">
-    <xs:all />
+    <!-- <xs:all /> -->
   </xs:complexType>
 
   <xs:complexType name="TeiHeader">

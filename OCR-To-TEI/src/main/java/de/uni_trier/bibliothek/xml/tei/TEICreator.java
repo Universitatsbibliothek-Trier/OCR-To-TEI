@@ -9,14 +9,17 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 
 import de.uni_trier.bibliothek.xml.tei.model.generated.GenreValue;
+import de.uni_trier.bibliothek.ParametersProvider;
 import de.uni_trier.bibliothek.xml.Unmarshaller;
-import de.uni_trier.bibliothek.Parameters;
 import de.uni_trier.bibliothek.xml.mods.model.generated.ModsCollection;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Name;
 import de.uni_trier.bibliothek.xml.ocr.OcrDataReader;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.PcGts;
+import de.uni_trier.bibliothek.xml.parameters.model.generated.Parameters;
+import de.uni_trier.bibliothek.xml.parameters.model.generated.ReadingOrder;
 import de.uni_trier.bibliothek.xml.tei.model.generated.FileDesc;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Form;
+import de.uni_trier.bibliothek.xml.tei.model.generated.Fw;
 import de.uni_trier.bibliothek.xml.tei.model.generated.HbzIdentifier;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Lb;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Location;
@@ -63,6 +66,7 @@ public class TEICreator extends TEI {
 	public static TitleInfo teiTitleInfo = new TitleInfo();
 	public static Text teiText = new Text();
 	public static TEI teiObject = new TEI();
+	
 
 	public static TEI createTEI(ModsCollection modsCollection, ArrayList<PcGts> pcgtsList)
 			throws IOException, JAXBException {
@@ -81,12 +85,7 @@ public class TEICreator extends TEI {
 
 		// map data from modsCollection onto TEI object
 		// get title appendage from parameters.xml
-		Unmarshaller<Parameters> unmarshallerParameters = new Unmarshaller<>(Parameters.class);
-		InputStream inputStreamParameters = new FileInputStream("../parameters/parameters.xml");
-		Reader xmlReaderParameters = new InputStreamReader(inputStreamParameters);
-		Parameters parameters = unmarshallerParameters.unmarshal(xmlReaderParameters);
-		xmlReaderParameters.close();
-		inputStreamParameters.close();
+		Parameters parameters = ParametersProvider.getParameters();
 		teiTitleInfo.setTitle(mods.getTitleInfo().getTitle());
 		teiPhysicalForm.setValue(mods.getPhysicalDescription().getForm().getValue());
 		teiPhysicalForm.setAuthority(mods.getPhysicalDescription().getForm().getAuthority());
@@ -100,7 +99,7 @@ public class TEICreator extends TEI {
 		teiPlaceTerm.setType(mods.getOriginInfo().getPlace().getPlaceTerm().getType());
 		teiHbzIdentifier.setType(mods.getIdentifier().getType());
 		teiHbzIdentifier.setValue(mods.getIdentifier().getValue());
-		titleStmt.setTitle(mods.getTitleInfo().getTitle() + " " + parameters.titleAddition);
+		titleStmt.setTitle(mods.getTitleInfo().getTitle() + " " + parameters.getTitleAddition());
 		teiObject.setText(teiText);
 		teiMods.setTitleInfo(teiTitleInfo);
 		teiMods.setPhysicalDescription(teiPhysicalDescription);
@@ -131,12 +130,15 @@ public class TEICreator extends TEI {
 	public static void addLines(ArrayList<PcGts> pcgtsList) throws IOException, JAXBException
 	{
 		// add lines from files with OCR-Output
+		Parameters parameters = ParametersProvider.getParameters();
 		ObjectFactory teiObjectFactory = new ObjectFactory();
 		ArrayList<String> lineStrings = new ArrayList<>();
 		JAXBElement<Lb> jaxbLb = teiObjectFactory.createTextLb(new Lb());
 		for (PcGts pcgtsObject : pcgtsList) {
 			JAXBElement<Pb> jaxbPb = teiObjectFactory.createTextPb(new Pb());
+			JAXBElement<Fw> jaxbFwSignature = teiObjectFactory.createTextFw(new Fw());
 			Pb pb = new Pb();
+			Fw fwElement = new Fw();
 			// use function of a different class
 			lineStrings = OcrDataReader.getTextLines(pcgtsObject);
 			if (!OcrDataReader.getPageNumber(pcgtsObject).isEmpty()) {
@@ -144,6 +146,26 @@ public class TEICreator extends TEI {
 				pb.setN(BigInteger.valueOf(pageNumber));
 				jaxbPb.setValue(pb);
 			} 
+			String bogenSignatur = OcrDataReader.getBogensignaturen(pcgtsObject);
+			// bogenSignatur = "test";
+			if(!bogenSignatur.isEmpty())
+			{
+				System.out.println("Signatur ist: " + bogenSignatur);
+				fwElement.setType("sig");
+				fwElement.setValue(bogenSignatur);
+				jaxbFwSignature.setValue(fwElement);
+			}
+
+			ArrayList<String> parametersList;
+			parametersList =readingOrderList();
+			String firstParameter = parametersList.get(0);
+			if(firstParameter.equals("page_number"))
+			{
+				teiText.getContent().add(jaxbPb);
+			}
+
+			//add Elements
+			teiText.getContent().add(jaxbFwSignature);
 			teiText.getContent().add(jaxbPb);
 			for (String textLineStrings : lineStrings) {
 				teiText.getContent().add(jaxbLb);
@@ -173,5 +195,19 @@ public class TEICreator extends TEI {
 			teiMods.getName().add(teiName);
 		}
 	}
+
+	public static ArrayList<String> readingOrderList() throws JAXBException, IOException
+	{
+		ArrayList<String> parametersList = new ArrayList<String>();
+		Parameters parameters = ParametersProvider.getParameters();
+		ReadingOrder readingOrder = parameters.getReadingOrder();
+		if (readingOrder.getFirst().equals("page-number"))
+		{
+			parametersList.add("page-number");
+		}
+
+		return parametersList;
+	}
+
 
 }
