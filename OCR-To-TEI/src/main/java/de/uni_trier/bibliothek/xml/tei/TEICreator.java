@@ -137,6 +137,7 @@ public class TEICreator extends TEI {
 		for (PcGts pcgtsObject : pcgtsList) {
 			JAXBElement<Pb> jaxbPb = teiObjectFactory.createTextPb(new Pb());
 			Pb pb = new Pb();
+			// use function of a different class
 			lineStrings = OcrDataReader.getTextLines(pcgtsObject);
 			if (!OcrDataReader.getPageNumber(pcgtsObject).isEmpty()) {
 				int pageNumber = Integer.parseInt(OcrDataReader.getPageNumber(pcgtsObject).replaceAll("[\\D]", ""));

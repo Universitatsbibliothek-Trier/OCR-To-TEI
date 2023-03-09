@@ -131,4 +131,18 @@ public class OcrDataReader extends PcGts {
 		}
 		return textRegionListOrdered;
 	}
+
+	public static List<TextRegion> getBogensignaturen(PcGts pcgtsObject) {
+		List<TextRegion> textRegionListOrdered = new ArrayList<TextRegion>();
+		List<Object> textRegionObjectList = pcgtsObject.getPage().getTextRegionOrImageRegion();
+		List<TextRegion> textRegionList = new ArrayList<TextRegion>();
+		for (Object textRegionOrImageRegion : textRegionObjectList) {
+			if(textRegionOrImageRegion instanceof TextRegion)
+			{
+				TextRegion textRegion =  TextRegion.class.cast(textRegionOrImageRegion);
+				textRegionList.add(textRegion);
+			}	
+		}
+		return textRegionListOrdered;
+	}
 }
