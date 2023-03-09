@@ -1,10 +1,16 @@
 package de.uni_trier.bibliothek.xml.tei;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
 import java.math.BigInteger;
 import java.util.ArrayList;
 
 import de.uni_trier.bibliothek.xml.tei.model.generated.GenreValue;
+import de.uni_trier.bibliothek.xml.Unmarshaller;
+import de.uni_trier.bibliothek.Parameters;
 import de.uni_trier.bibliothek.xml.mods.model.generated.ModsCollection;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Name;
 import de.uni_trier.bibliothek.xml.ocr.OcrDataReader;
@@ -74,6 +80,13 @@ public class TEICreator extends TEI {
 		addNames(mods);
 
 		// map data from modsCollection onto TEI object
+		// get title appendage from parameters.xml
+		Unmarshaller<Parameters> unmarshallerParameters = new Unmarshaller<>(Parameters.class);
+		InputStream inputStreamParameters = new FileInputStream("../parameters/parameters.xml");
+		Reader xmlReaderParameters = new InputStreamReader(inputStreamParameters);
+		Parameters parameters = unmarshallerParameters.unmarshal(xmlReaderParameters);
+		xmlReaderParameters.close();
+		inputStreamParameters.close();
 		teiTitleInfo.setTitle(mods.getTitleInfo().getTitle());
 		teiPhysicalForm.setValue(mods.getPhysicalDescription().getForm().getValue());
 		teiPhysicalForm.setAuthority(mods.getPhysicalDescription().getForm().getAuthority());
@@ -87,7 +100,7 @@ public class TEICreator extends TEI {
 		teiPlaceTerm.setType(mods.getOriginInfo().getPlace().getPlaceTerm().getType());
 		teiHbzIdentifier.setType(mods.getIdentifier().getType());
 		teiHbzIdentifier.setValue(mods.getIdentifier().getValue());
-		titleStmt.setTitle(mods.getTitleInfo().getTitle() + " Grundstrukturierte TEI-Daten");
+		titleStmt.setTitle(mods.getTitleInfo().getTitle() + " " + parameters.titleAddition);
 		teiObject.setText(teiText);
 		teiMods.setTitleInfo(teiTitleInfo);
 		teiMods.setPhysicalDescription(teiPhysicalDescription);
