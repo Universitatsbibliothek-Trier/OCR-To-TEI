@@ -32,6 +32,7 @@ public class ObjectFactory {
 
     private final static QName _TextPb_QNAME = new QName("http://www.tei-c.org/ns/1.0", "pb");
     private final static QName _TextLb_QNAME = new QName("http://www.tei-c.org/ns/1.0", "lb");
+    private final static QName _TextFw_QNAME = new QName("http://www.tei-c.org/ns/1.0", "fw");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: de.uni_trier.bibliothek.xml.tei.model.generated
@@ -78,6 +79,16 @@ public class ObjectFactory {
      */
     public Text createText() {
         return new Text();
+    }
+
+    /**
+     * Create an instance of {@link Fw }
+     * 
+     * @return
+     *     the new instance of {@link Fw }
+     */
+    public Fw createFw() {
+        return new Fw();
     }
 
     /**
@@ -294,6 +305,19 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://www.tei-c.org/ns/1.0", name = "lb", scope = Text.class)
     public JAXBElement<Lb> createTextLb(Lb value) {
         return new JAXBElement<>(_TextLb_QNAME, Lb.class, Text.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Fw }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link Fw }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://www.tei-c.org/ns/1.0", name = "fw", scope = Text.class)
+    public JAXBElement<Fw> createTextFw(Fw value) {
+        return new JAXBElement<>(_TextFw_QNAME, Fw.class, Text.class, value);
     }
 
 }

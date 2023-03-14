@@ -1009,7 +1009,7 @@
     <TextRegion id="r13" type="drop-capital">
       <Coords points="277,3377 277,3183 455,3183 455,3377"/>
       <TextEquiv>
-        <Unicode/>
+        <Unicode>EEEEEE</Unicode>
       </TextEquiv>
     </TextRegion>
     <TextRegion id="r14" type="drop-capital">

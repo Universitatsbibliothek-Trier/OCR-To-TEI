@@ -840,7 +840,7 @@
     <TextRegion id="r11" type="catch-word">
       <Coords points="3495,6380 3495,6251 3655,6251 3655,6380"/>
       <TextEquiv>
-        <Unicode/>
+        <Unicode>Kustode2</Unicode>
       </TextEquiv>
     </TextRegion>
   </Page>

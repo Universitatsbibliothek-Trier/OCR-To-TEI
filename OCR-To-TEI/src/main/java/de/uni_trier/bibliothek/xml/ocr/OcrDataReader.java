@@ -23,9 +23,35 @@ public class OcrDataReader extends PcGts {
 		ArrayList<String> ocrTextLineList = new ArrayList<String>();
 		// read values from Java object
 		Page page = pcgtsObject.getPage();
+		String capital = "";
+		boolean capitalExists = false;
 		List<TextRegion> textRegionOrdered = sortOrder(page);
 		for (TextRegion textRegion : textRegionOrdered) {
-			if (textRegion.getType().equals("paragraph")) {
+			// check if drop-capital exists
+			if (textRegion.getType().equals("drop-capital"))
+			{	
+				if (textRegion.getTextLine().isEmpty()) {
+					for (TextEquiv TextEquiv : textRegion.getTextEquiv()) {
+						if (TextEquiv.getUnicode() != null) {
+							capitalExists = true;
+							capital = TextEquiv.getUnicode();
+						}
+					}
+				} else {
+					for (TextLine textLine : textRegion.getTextLine()) {
+						List<TextEquiv> textEquivList = textLine.getTextEquiv();
+						if (!textEquivList.isEmpty()) {
+							for (TextEquiv TextEquiv : textEquivList) {
+								if (TextEquiv.getUnicode() != null) {
+									capitalExists = true;
+									capital = TextEquiv.getUnicode();;
+								}
+							}
+						}
+					}
+				}
+			}
+			else if (textRegion.getType().equals("paragraph")) {
 				for (TextLine textLine : textRegion.getTextLine()) {
 					List<TextEquiv> textEquivList = textLine.getTextEquiv();
 					// get attribute "id" from textline
@@ -36,6 +62,11 @@ public class OcrDataReader extends PcGts {
 						for (TextEquiv TextEquiv : textEquivList) {
 							String unicode = TextEquiv.getUnicode();
 							if (TextEquiv.getIndex() != null && TextEquiv.getIndex().equals("0")) {
+								if(capitalExists)
+								{
+									unicode = capital + unicode;
+									capitalExists = false;
+								}	
 								// add text from Unicode to ArrayList
 								ocrTextLineList.add(unicode);
 								break; // sought index found
@@ -48,46 +79,8 @@ public class OcrDataReader extends PcGts {
 		return ocrTextLineList;
 	}
 
-	public static String getPageNumber(PcGts pcgtsObject) {
-		String pageNumber = "";
-		// read values from Java object
-		List<Object> textRegionObjectList = pcgtsObject.getPage().getTextRegionOrImageRegion();
-		List<TextRegion> textRegionList = new ArrayList<TextRegion>();
-		for (Object textRegionOrImageRegion : textRegionObjectList) {
-			if(textRegionOrImageRegion instanceof TextRegion)
-			{
-				TextRegion textRegion =  TextRegion.class.cast(textRegionOrImageRegion);
-				textRegionList.add(textRegion);
-			}	
-		}
-		for (TextRegion textRegion : textRegionList) {
-			if (textRegion.getType().equals("page-number")) {
-				if (textRegion.getTextLine().isEmpty()) {
-					for (TextEquiv TextEquiv : textRegion.getTextEquiv()) {
-						if (TextEquiv.getUnicode() != null) {
-							pageNumber = TextEquiv.getUnicode();
-						}
-					}
-				} else {
-					for (TextLine textLine : textRegion.getTextLine()) {
-						List<TextEquiv> textEquivList = textLine.getTextEquiv();
-						// check if textEquiv exists
-						if (!textEquivList.isEmpty()) {
-							for (TextEquiv TextEquiv : textEquivList) {
-								if (TextEquiv.getUnicode() != null) {
-									pageNumber = TextEquiv.getUnicode();
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		return pageNumber;
-	}
-
 	public static void csvPageNameComments(String fileName, PcGts pcgtsObject, File csvFile) {
-		String pageNumber = getPageNumber(pcgtsObject);
+		String pageNumber = getSpecialElement(pcgtsObject, "page-number");
 		String comment = "";
 		try {
 			// create FileWriter object with file as parameter
@@ -99,7 +92,6 @@ public class OcrDataReader extends PcGts {
 			}
 			String[] data1 = { fileName, pageNumber, comment };
 			writer.writeNext(data1);
-			// closing writer connection
 			writer.close();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -130,5 +122,41 @@ public class OcrDataReader extends PcGts {
 			}
 		}
 		return textRegionListOrdered;
+	}
+
+	public static String getSpecialElement(PcGts pcgtsObject, String elementType) {
+		String specialElement = "";
+		List<Object> textRegionObjectList = pcgtsObject.getPage().getTextRegionOrImageRegion();
+		List<TextRegion> textRegionList = new ArrayList<TextRegion>();
+		for (Object textRegionOrImageRegion : textRegionObjectList) {
+			if(textRegionOrImageRegion instanceof TextRegion)
+			{
+				TextRegion textRegion =  TextRegion.class.cast(textRegionOrImageRegion);
+				textRegionList.add(textRegion);
+			}	
+		}
+		for (TextRegion textRegion : textRegionList) {
+			if (textRegion.getType().equals(elementType)) {
+				if (textRegion.getTextLine().isEmpty()) {
+					for (TextEquiv TextEquiv : textRegion.getTextEquiv()) {
+						if (TextEquiv.getUnicode() != null) {
+							specialElement = TextEquiv.getUnicode();
+						}
+					}
+				} else {
+					for (TextLine textLine : textRegion.getTextLine()) {
+						List<TextEquiv> textEquivList = textLine.getTextEquiv();
+						if (!textEquivList.isEmpty()) {
+							for (TextEquiv TextEquiv : textEquivList) {
+								if (TextEquiv.getUnicode() != null) {
+									specialElement = TextEquiv.getUnicode();
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		return specialElement;
 	}
 }
