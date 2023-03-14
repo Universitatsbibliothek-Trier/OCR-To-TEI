@@ -27,6 +27,7 @@ public class OcrDataReader extends PcGts {
 		boolean capitalExists = false;
 		List<TextRegion> textRegionOrdered = sortOrder(page);
 		for (TextRegion textRegion : textRegionOrdered) {
+			// check if drop-capital exists
 			if (textRegion.getType().equals("drop-capital"))
 			{	
 				if (textRegion.getTextLine().isEmpty()) {
@@ -61,12 +62,12 @@ public class OcrDataReader extends PcGts {
 						for (TextEquiv TextEquiv : textEquivList) {
 							String unicode = TextEquiv.getUnicode();
 							if (TextEquiv.getIndex() != null && TextEquiv.getIndex().equals("0")) {
-								// add text from Unicode to ArrayList
 								if(capitalExists)
 								{
 									unicode = capital + unicode;
 									capitalExists = false;
 								}	
+								// add text from Unicode to ArrayList
 								ocrTextLineList.add(unicode);
 								break; // sought index found
 							}
@@ -91,7 +92,6 @@ public class OcrDataReader extends PcGts {
 			}
 			String[] data1 = { fileName, pageNumber, comment };
 			writer.writeNext(data1);
-			// closing writer connection
 			writer.close();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -126,7 +126,6 @@ public class OcrDataReader extends PcGts {
 
 	public static String getSpecialElement(PcGts pcgtsObject, String elementType) {
 		String specialElement = "";
-		// read values from Java object
 		List<Object> textRegionObjectList = pcgtsObject.getPage().getTextRegionOrImageRegion();
 		List<TextRegion> textRegionList = new ArrayList<TextRegion>();
 		for (Object textRegionOrImageRegion : textRegionObjectList) {
@@ -138,18 +137,15 @@ public class OcrDataReader extends PcGts {
 		}
 		for (TextRegion textRegion : textRegionList) {
 			if (textRegion.getType().equals(elementType)) {
-				
 				if (textRegion.getTextLine().isEmpty()) {
 					for (TextEquiv TextEquiv : textRegion.getTextEquiv()) {
 						if (TextEquiv.getUnicode() != null) {
-							// System.out.println(TextEquiv.getUnicode());
 							specialElement = TextEquiv.getUnicode();
 						}
 					}
 				} else {
 					for (TextLine textLine : textRegion.getTextLine()) {
 						List<TextEquiv> textEquivList = textLine.getTextEquiv();
-						// check if textEquiv exists
 						if (!textEquivList.isEmpty()) {
 							for (TextEquiv TextEquiv : textEquivList) {
 								if (TextEquiv.getUnicode() != null) {

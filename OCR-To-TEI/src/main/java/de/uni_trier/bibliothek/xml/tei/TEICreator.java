@@ -63,10 +63,20 @@ public class TEICreator extends TEI {
 
 	// create objects for special information elements
 	public static Pb pb;
-	public static Fw fwElement;
+	public static Fw signatureFwElement;
 	public static Fw pageFwElement;
 	public static Fw headerFwElement;
 	public static Fw catchWordFwElement;
+
+	// create jaxb objects for special information elements
+	public static ObjectFactory teiObjectFactoryParameters = new ObjectFactory();
+	public static JAXBElement<Lb> jaxbLb;	
+	public static JAXBElement<Fw> jaxbFwSignature;		
+	public static JAXBElement<Fw> jaxbFwPageNumber;	
+	public static JAXBElement<Fw> jaxbFwHeader;	
+	public static JAXBElement<Fw> jaxbFwCatchWord;
+	public static JAXBElement<Pb> jaxbPb;
+
 
 	public static TEI createTEI(ModsCollection modsCollection, ArrayList<PcGts> pcgtsList)
 			throws IOException, JAXBException {
@@ -77,15 +87,16 @@ public class TEICreator extends TEI {
 		// add Notes
 		addNotes(mods);
 
-		// add Lines
+		// add Lines with special information elements
 		addLines(pcgtsList);
 		
 		// add Names
 		addNames(mods);
 
-		// map data from modsCollection onto TEI object
 		// get title appendage from parameters.xml
 		Parameters parameters = ParametersProvider.getParameters();
+
+		// map data from modsCollection onto TEI object
 		teiTitleInfo.setTitle(mods.getTitleInfo().getTitle());
 		teiPhysicalForm.setValue(mods.getPhysicalDescription().getForm().getValue());
 		teiPhysicalForm.setAuthority(mods.getPhysicalDescription().getForm().getAuthority());
@@ -129,39 +140,41 @@ public class TEICreator extends TEI {
 
 	public static void addLines(ArrayList<PcGts> pcgtsList) throws IOException, JAXBException
 	{
-		// add lines from files with OCR-Output
-		
+		// add lines and special elements from files with OCR-Output
 		int ipageCount = 0;
 		for (PcGts pcgtsObject : pcgtsList) {	
-			ObjectFactory teiObjectFactory = new ObjectFactory();
-			JAXBElement<Pb> jaxbPb = teiObjectFactory.createTextPb(new Pb());
+			jaxbPb = teiObjectFactoryParameters.createTextPb(new Pb());
+			jaxbLb = teiObjectFactoryParameters.createTextLb(new Lb());	
+			jaxbFwSignature = teiObjectFactoryParameters.createTextFw(new Fw());		
+			jaxbFwPageNumber = teiObjectFactoryParameters.createTextFw(new Fw());	
+			jaxbFwHeader = teiObjectFactoryParameters.createTextFw(new Fw());	
+			jaxbFwCatchWord = teiObjectFactoryParameters.createTextFw(new Fw());
 			ipageCount++;
 			pb = new Pb();
-			fwElement = new Fw();
+			signatureFwElement = new Fw();
 			pageFwElement  = new Fw();
 			headerFwElement = new Fw();
 			catchWordFwElement = new Fw();
-			fwElement.setType("sig");
+			signatureFwElement.setType("sig");
 			headerFwElement.setType("header");
 			pageFwElement.setType("pageNum");
 			catchWordFwElement.setType("catch");
 			ArrayList<String> lineStrings = OcrDataReader.getTextLines(pcgtsObject);
 			ArrayList<String> parametersList = getReadingOrderList();
 			String pageNumberOCR = Integer.toString(ipageCount);
+			pageNumberOCR = "[" + pageNumberOCR + "]";	
 			if (!OcrDataReader.getSpecialElement(pcgtsObject, "page-number").isEmpty())
 			{
 				String pageNumber = OcrDataReader.getSpecialElement(pcgtsObject, "page-number").replaceAll("[\\D]", "");
-				if(ipageCount!=Integer.parseInt(pageNumber))
+				if(ipageCount==Integer.parseInt(pageNumber))
 				{
-					pageNumberOCR = "[" + pageNumberOCR + "]";			
-				}
-				pb.setN(pageNumberOCR);	
+					pageNumberOCR = pageNumberOCR.substring(1, pageNumberOCR.length()-1);		
+				}	
 			}
+			pb.setN(pageNumberOCR);
 			jaxbPb.setValue(pb);
 			teiText.getContent().add(jaxbPb);
-			addParameterElements(lineStrings, parametersList, pcgtsObject);	
-				
-					
+			addParameterElements(lineStrings, parametersList, pcgtsObject);				
 		}
 	}
 
@@ -205,37 +218,22 @@ public class TEICreator extends TEI {
 
 	public static void addParameterElements (ArrayList<String> lineStrings, ArrayList<String> parametersList, PcGts pcgtsObject)
 	{
-		ObjectFactory teiObjectFactoryParameters = new ObjectFactory();
-		JAXBElement<Lb> jaxbLb = teiObjectFactoryParameters.createTextLb(new Lb());	
-		JAXBElement<Fw> jaxbFwSignature = teiObjectFactoryParameters.createTextFw(new Fw());		
-		JAXBElement<Fw> jaxbFwPageNumber = teiObjectFactoryParameters.createTextFw(new Fw());	
-		JAXBElement<Fw> jaxbFwHeader = teiObjectFactoryParameters.createTextFw(new Fw());	
-		JAXBElement<Fw> jaxbFwCatchWord = teiObjectFactoryParameters.createTextFw(new Fw());
-
+		// use order from parameters file
 		for (String orderType : parametersList)
 			{
 				switch(orderType)
 				{
 					case "page_number":
-						if (!OcrDataReader.getSpecialElement(pcgtsObject, "page-number").isEmpty()) {
-							String pageNumber = OcrDataReader.getSpecialElement(pcgtsObject, "page-number");
-							pageFwElement.setValue(pageNumber);
-							jaxbFwPageNumber.setValue(pageFwElement);
-							teiText.getContent().add(jaxbFwPageNumber);	
-						} 
+						addSpecialElement(pcgtsObject, "page-number", pageFwElement, jaxbFwPageNumber);
 						break;
 					case "header":
-						if (!OcrDataReader.getSpecialElement(pcgtsObject, "header").isEmpty()) {
-							headerFwElement.setValue(OcrDataReader.getSpecialElement(pcgtsObject, "header"));
-							jaxbFwHeader.setValue(headerFwElement);
-							teiText.getContent().add(jaxbFwHeader);	
-						} 
+						addSpecialElement(pcgtsObject, "header", headerFwElement, jaxbFwHeader);
 						break;
 					case "subheading":
-						// not specially marked
+						// marked as paragraph element
 						break;
 					case "drop_capital":
-						// marked as paragraph
+						// processed in method "getTextLines" from OcrDataReader
 						break;
 					case "paragraph":
 						for (String textLineStrings : lineStrings) {
@@ -244,26 +242,24 @@ public class TEICreator extends TEI {
 						}
 						break;
 					case "catch_word":
-						if (!OcrDataReader.getSpecialElement(pcgtsObject, "catch-word").isEmpty()) {
-							catchWordFwElement.setValue(OcrDataReader.getSpecialElement(pcgtsObject, "catch-word"));
-							jaxbFwCatchWord.setValue(catchWordFwElement);
-							teiText.getContent().add(jaxbFwCatchWord);	
-						} 
+						addSpecialElement(pcgtsObject, "catch-word", catchWordFwElement, jaxbFwCatchWord);
 						break;
 					case "signature_mark":
-						String bogenSignatur = OcrDataReader.getSpecialElement(pcgtsObject,"signature-mark");
-						if(!bogenSignatur.isEmpty())
-						{
-							fwElement.setValue(bogenSignatur);
-							jaxbFwSignature.setValue(fwElement);
-							teiText.getContent().add(jaxbFwSignature);
-						}
+						addSpecialElement(pcgtsObject, "signature-mark", signatureFwElement, jaxbFwSignature);
 						break;
 					default:
 						System.out.println("Fehler bei der Angabe der Reading Order. Bitte in \"paramters.xml\" korrigieren.");
 						break;
 				}	
 			}
+	}
 
+	public static void addSpecialElement(PcGts pcgtsObject, String elementType, Fw fwElement, JAXBElement<Fw> jaxbElement)
+	{
+		if(!OcrDataReader.getSpecialElement(pcgtsObject,elementType).isEmpty()) {
+			fwElement.setValue(OcrDataReader.getSpecialElement(pcgtsObject,elementType));
+			jaxbElement.setValue(fwElement);
+			teiText.getContent().add(jaxbElement);
+		}
 	}
 }
