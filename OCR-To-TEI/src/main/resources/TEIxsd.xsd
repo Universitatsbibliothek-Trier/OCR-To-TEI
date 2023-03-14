@@ -53,7 +53,7 @@
     <!-- <xs:all/> -->
     <xs:attribute name="n">
       <xs:simpleType>
-        <xs:restriction base="xs:integer"/>
+        <xs:restriction base="xs:string"/>
       </xs:simpleType>
     </xs:attribute>
   </xs:complexType>

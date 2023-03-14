@@ -7,7 +7,6 @@
 
 package de.uni_trier.bibliothek.xml.tei.model.generated;
 
-import java.math.BigInteger;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
@@ -25,7 +24,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <attribute name="n">
  *         <simpleType>
- *           <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+ *           <restriction base="{http://www.w3.org/2001/XMLSchema}string">
  *           </restriction>
  *         </simpleType>
  *       </attribute>
@@ -41,17 +40,17 @@ import jakarta.xml.bind.annotation.XmlType;
 public class Pb {
 
     @XmlAttribute(name = "n")
-    protected BigInteger n;
+    protected String n;
 
     /**
      * Ruft den Wert der n-Eigenschaft ab.
      * 
      * @return
      *     possible object is
-     *     {@link BigInteger }
+     *     {@link String }
      *     
      */
-    public BigInteger getN() {
+    public String getN() {
         return n;
     }
 
@@ -60,10 +59,10 @@ public class Pb {
      * 
      * @param value
      *     allowed object is
-     *     {@link BigInteger }
+     *     {@link String }
      *     
      */
-    public void setN(BigInteger value) {
+    public void setN(String value) {
         this.n = value;
     }
 
