@@ -996,7 +996,7 @@
     <TextRegion id="r11" type="page-number">
       <Coords points="3433,419 3433,283 3606,283 3606,419"/>
       <TextEquiv>
-        <Unicode>42</Unicode>
+        <Unicode>0199</Unicode>
       </TextEquiv>
     </TextRegion>
     <TextRegion id="r12" type="drop-capital">

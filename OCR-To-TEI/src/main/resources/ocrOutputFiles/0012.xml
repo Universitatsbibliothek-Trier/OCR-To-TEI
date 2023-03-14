@@ -283,25 +283,25 @@
     <TextRegion id="r7" type="drop-capital">
       <Coords points="511,1387 507,1391 263,1391 263,2015 267,2020 267,2137 819,2137 933,2136 948,2116 954,2096 969,2056 969,1825 973,1821 973,1387"/>
       <TextEquiv>
-        <Unicode/>
+        <Unicode>CAPITAL</Unicode>
       </TextEquiv>
     </TextRegion>
     <TextRegion id="r8" type="catch-word">
       <Coords points="3034,5875 3034,5580 3635,5580 3635,5875"/>
       <TextEquiv>
-        <Unicode/>
+        <Unicode>Kustode1</Unicode>
       </TextEquiv>
     </TextRegion>
     <TextRegion id="r10" type="signature-mark">
       <Coords points="2257,5927 2257,5575 2649,5575 2649,5927"/>
       <TextEquiv>
-        <Unicode/>
+        <Unicode>Testsignatur1</Unicode> 
       </TextEquiv>
     </TextRegion>
     <TextRegion id="r11" type="page-number">
       <Coords points="1938,330 1938,181 2005,181 2059,181 2059,330"/>
       <TextEquiv>
-        <Unicode>12.</Unicode>
+        <Unicode>1.</Unicode>
       </TextEquiv>
     </TextRegion>
     <ImageRegion id="r12">

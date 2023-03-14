@@ -978,7 +978,7 @@
     <TextRegion id="r5" type="header">
       <Coords points="967,440 967,254 1635,254 2975,254 2975,440 1235,440"/>
       <TextEquiv>
-        <Unicode/>
+        <Unicode>Lauftitel2</Unicode>
       </TextEquiv>
     </TextRegion>
   </Page>
