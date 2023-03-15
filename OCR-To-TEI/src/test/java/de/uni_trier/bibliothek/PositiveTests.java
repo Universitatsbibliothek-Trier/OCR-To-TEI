@@ -60,7 +60,7 @@ public class PositiveTests
 		Arrays.sort(ocrFiles);
 
 		String teiPathName = CSVCreator.createTEIPathName(teiPathNameFile);
-		System.out.println("PathName of csv" + teiPathName);
+		System.out.println("PathName of csv: " + teiPathName);
 		File csvFile = CSVCreator.createFile();
 
 
@@ -100,11 +100,23 @@ public class PositiveTests
 	}
 
 	@Test
-	void folder1Test() throws JAXBException, IOException
+	void testcase1Test() throws JAXBException, IOException
 	{
-		String teiPathNameFile = "/home/ackels/Dokumente/ocr-to-tei-pipeline-1/OCR-To-TEI/src/test/TEIOutput/TEI_created_Band1.xml";
-		String ocrFolderPathString = "/ocrOutputFiles/";
-		String modsFilePath = "/modsFiles/ah232-3_HT018907295_Moguntiensis_Trevirensis_1690.xml";
+		// String teiPathNameFile = "/home/ackels/Dokumente/ocr-to-tei-pipeline-1/OCR-To-TEI/src/test/TEIOutput/TEI_created_Band1.xml";
+		String modsFilePath = "/testcase1/modsFiles/ah232-3_HT018907295_Moguntiensis_Trevirensis_1690.xml";
+		String ocrFolderPathString = "/testcase1/ocrOutputFiles/";
+		String teiPathNameFile = "src/test/resources/testcase1/teiOutputFiles/TEI_created_TestBand1.xml";
+		String tei = createTEIandCSV(teiPathNameFile, ocrFolderPathString, modsFilePath);
+		System.out.println("TEI sieht folgendermaßen aus: " + tei);
+	}
+
+	@Test
+	void testcase2Test() throws JAXBException, IOException
+	{
+		// String teiPathNameFile = "/home/ackels/Dokumente/ocr-to-tei-pipeline-1/OCR-To-TEI/src/test/TEIOutput/TEI_created_Band1.xml";
+		String modsFilePath = "/testcase2/modsFiles/ah232-3_HT018907295_Moguntiensis_Trevirensis_1690.xml";
+		String ocrFolderPathString = "/testcase2/ocrOutputFiles/";
+		String teiPathNameFile = "src/test/resources/testcase2/teiOutputFiles/TEI_created_TestBand2.xml";
 		String tei = createTEIandCSV(teiPathNameFile, ocrFolderPathString, modsFilePath);
 		System.out.println("TEI sieht folgendermaßen aus: " + tei);
 	}

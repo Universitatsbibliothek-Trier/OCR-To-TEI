@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TEI version="5.0" xmlns="http://www.tei-c.org/ns/1.0" xmlns:mods="http://www.loc.gov/mods/v3">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Topographia Archiepiscopatuvm Moguntinensis, Treuirensis, et Coloniensis, Das ist Beschreibúng der Vornembsten Stätt vnd Plätz, in denen Ertzbistúmen Maÿntz, Trier, vnd Cöln. Grundstrukturierte TEI-Daten</title>
+            </titleStmt>
+        </fileDesc>
+        <sourceDesc>
+            <mods:modsCollection>
+                <mods:mods version="3.5" ID="merian1690topographia">
+                    <mods:identifier type="HBZ">HT018907295</mods:identifier>
+                    <mods:originInfo>
+                        <mods:dateIssued>1690</mods:dateIssued>
+                        <mods:place>
+                            <mods:placeTerm type="text">[Frankfurt, Main]</mods:placeTerm>
+                        </mods:place>
+                        <mods:publisher>[Meriansche Erben]</mods:publisher>
+                    </mods:originInfo>
+                    <mods:genre authority="marcgt">book</mods:genre>
+                    <mods:note type="statement of responsibility">An Tag gegeben dúrch Matth: Merian ; [Martin Zeiller]</mods:note>
+                    <mods:note>Bevorzugter Titel: Topographia Archiepiscopatuum Moguntinensis, Trevirensis et Coloniensis</mods:note>
+                    <mods:note>Bibliographischer Nachweis: Wüthrich: Das druckgraphische Werk von Matthaeus Merian d. Ae., Band 4 (1996), Nummer 31</mods:note>
+                    <mods:note>Textverfasser ermittelt</mods:note>
+                    <mods:note>Hinweise zur Ausgabe (nach Wüthrich): 3. Ausgabe Frankfurt, Meriansche Erben</mods:note>
+                    <mods:note>Erscheinungsjahr nach Wüthrich: datiert 1646, effektiv um 1690</mods:note>
+                    <mods:note>Blatt M4, verso unbedruckt</mods:note>
+                    <mods:note>Seite 3 mit Hozschnittleiste "Vase und Rebhühner"</mods:note>
+                    <mods:note>Die Panoramaansicht von Mainz mit großem vertikalem Riß, 8 cm vom linken Bildrand aus. - Im Register sind von "Königsberg" bis "Kyll" die Anfangsmajuskeln K in Schwabacher- statt in Fraktur-Lettern gesetzt.</mods:note>
+                    <mods:note>Kupfertitel (erstes Blatt). - Reihenfolge der Kupfer siehe Bindeanweisung (43 Nummern). Die Karte des Eichsfelds fehlt im Kupferverzeichnis und im Band.</mods:note>
+                    <mods:note>Format: groß-4°</mods:note>
+                    <mods:note>FEI-Fingerprint nach dem Exemplar der Universitätsbibliothek Trier</mods:note>
+                    <mods:note>hbz Verbund-ID: HT018907295</mods:note>
+                    <mods:note type="statement of responsibility">An Tag gegeben dúrch Matth: Merian ; [Martin Zeiller]</mods:note>
+                    <mods:note>Bevorzugter Titel: Topographia Archiepiscopatuum Moguntinensis, Trevirensis et Coloniensis</mods:note>
+                    <mods:note>Bibliographischer Nachweis: Wüthrich: Das druckgraphische Werk von Matthaeus Merian d. Ae., Band 4 (1996), Nummer 31</mods:note>
+                    <mods:note>Textverfasser ermittelt</mods:note>
+                    <mods:note>Hinweise zur Ausgabe (nach Wüthrich): 3. Ausgabe Frankfurt, Meriansche Erben</mods:note>
+                    <mods:note>Erscheinungsjahr nach Wüthrich: datiert 1646, effektiv um 1690</mods:note>
+                    <mods:note>Blatt M4, verso unbedruckt</mods:note>
+                    <mods:note>Seite 3 mit Hozschnittleiste "Vase und Rebhühner"</mods:note>
+                    <mods:note>Die Panoramaansicht von Mainz mit großem vertikalem Riß, 8 cm vom linken Bildrand aus. - Im Register sind von "Königsberg" bis "Kyll" die Anfangsmajuskeln K in Schwabacher- statt in Fraktur-Lettern gesetzt.</mods:note>
+                    <mods:note>Kupfertitel (erstes Blatt). - Reihenfolge der Kupfer siehe Bindeanweisung (43 Nummern). Die Karte des Eichsfelds fehlt im Kupferverzeichnis und im Band.</mods:note>
+                    <mods:note>Format: groß-4°</mods:note>
+                    <mods:note>FEI-Fingerprint nach dem Exemplar der Universitätsbibliothek Trier</mods:note>
+                    <mods:note>hbz Verbund-ID: HT018907295</mods:note>
+                    <mods:location>
+                        <mods:physicalLocation>DE-385: https://lobid.org/organisations/DE-385</mods:physicalLocation>
+                    </mods:location>
+                    <mods:typeOfResource>text</mods:typeOfResource>
+                    <mods:subject>
+                        <mods:topic>vornehmsten Städte Plätze den Erzbistümern Mainz Köln</mods:topic>
+                    </mods:subject>
+                    <mods:name>
+                        <mods:namePart>Merian, Matthaeus, der Ältere</mods:namePart>
+                    </mods:name>
+                    <mods:name>
+                        <mods:namePart>Zeiller, Martin</mods:namePart>
+                    </mods:name>
+                    <mods:name>
+                        <mods:namePart>Frankfurt am Main</mods:namePart>
+                    </mods:name>
+                    <mods:name>
+                        <mods:namePart>Merian, Matthaeus, der Ältere</mods:namePart>
+                    </mods:name>
+                    <mods:name>
+                        <mods:namePart>Zeiller, Martin</mods:namePart>
+                    </mods:name>
+                    <mods:name>
+                        <mods:namePart>Frankfurt am Main</mods:namePart>
+                    </mods:name>
+                    <mods:recordInfo>
+                        <mods:recordContentSource>DE-605</mods:recordContentSource>
+                    </mods:recordInfo>
+                    <mods:physicalDescription>
+                        <mods:extent>95 Seiten, 9 ungezählte Seiten, 64 ungezählte Blätter Bildtafeln (zum Teil gefaltet) ; Illustrationen, Karten ; 4°</mods:extent>
+                        <mods:form authority="marcform">print</mods:form>
+                    </mods:physicalDescription>
+                    <mods:titleInfo>
+                        <mods:title>Topographia Archiepiscopatuvm Moguntinensis, Treuirensis, et Coloniensis, Das ist Beschreibúng der Vornembsten Stätt vnd Plätz, in denen Ertzbistúmen Maÿntz, Trier, vnd Cöln.</mods:title>
+                    </mods:titleInfo>
+                </mods:mods>
+            </mods:modsCollection>
+        </sourceDesc>
+    </teiHeader>
+    <text>
+        <pb n="[1]"/>
+        <fw type="pageNum">12.</fw>
+        <lb/>S werden zu dem Hochloͤblichſten
+        <lb/>Unter⸗Rheiniſchen Kreyß (deſſen Außſchreiben⸗
+        <lb/>der Fuͤrſt der Herr Chur⸗Fuͤrſt zu Meyntz / ꝛc. iſt) gerechnet / die
+        <lb/>Vier Herren Chur⸗Fuͤrſten / Meyntz / Trier / Coͤln / und Pfaltz;
+        <lb/>Item / die Graffen von Naſſau⸗Beilſtein; die Graffen von Reif⸗
+        <lb/>ferſcheid; und von Nieder⸗Jſenburg; ſampt Salm; der Jnnhaber der Herrſchafft
+        <lb/>Rheineck am Rhein; ferners die Baley Coblentz / und die Stadt Gelnhauſen. Was
+        <lb/>Neuenar / Seltz / und die Abbtey S. Maximini zu Trier anbelangt / ſo etwa auch hieher
+        <lb/>gehoͤret haben; ſo ſind ſolche jetzt in hoͤhern Haͤnden.
+        <lb/>Was nun die Staͤdte und Ort / ſo in dieſem Hochloͤbl. Unter⸗Rheiniſchen
+        <lb/>Kreyß gelegen / und von welchen wir uns in dieſem Tractat / ſo viel uns wiſſend / zu
+        <lb/>hand vorgenommen / belanget; ſo iſt von den Chur⸗Pfaͤltziſchen Orten / in dem
+        <lb/>Fuͤnfften Theil unſerer Topographiæ Germaniæ, unter dem Titul / Palatinatus Rhe-
+        <lb/>ni; von der Graffſchafft Beilſtein aber / und der Stadt Gelnhauſen / in der Topo-
+        <lb/>graphia Haſſiæ, Bericht geſchehen. So ſind auch die Aempter in der Berg⸗ſtraß /
+        <lb/>welche / vermoͤg des anno 1648. gemachten General⸗Reichs⸗Friedens / dem Herrn
+        <lb/>Chur⸗Fuͤrſten von Meyntz / ꝛc. zu reſtituiren geweſen / in der beſagten Topogra-
+        <lb/>phia Palatinatus Rheni einkommen; Dahero ſolche allhie zu wiederholen / nicht
+        <lb/>noͤthig iſt.
+        <lb/>Der andern Drey Chur⸗Fuͤrſtenthumb / oder Ertzbiſtumben Staͤdte / ꝛc.
+        <lb/>aber / wollen wir eines jeden abſonderlich beſchreiben; damit / der Leſer / weil die⸗
+        <lb/>ſer hoͤchſtgemeldte Kreyß ſich weit erſtrecket / deſto beſſer / und mehrers / darauß
+        <lb/>kommen koͤnne / als wann / wie in theils Laͤnder / ſo nur eine Landtaffel bedoͤrf⸗
+        <lb/>fen / Beſchreibung geſchehen / ſie durcheinander geſetzt wuͤrden / Jedoch wollen
+        <lb/>wir dieſe Ordnung halten / daß wir bey jedem Chur⸗Fuͤrſtenthumb den
+        <lb/>Haupt⸗Ort vornen anſetzen / deme hernach die andere darzu gehoͤrige /
+        <lb/>dem A B C. nach / folgen ſollen.
+        <pb n="[2]"/>
+        <fw type="pageNum">13</fw>
+        <lb/>Meyntz.
+        <lb/>Jß iſt die Haupt⸗Stadt
+        <lb/>deß Hochloͤblichſten Ertzbiſt⸗
+        <lb/>thumb / und Chur⸗Fuͤrſten⸗
+        <lb/>thumbs Meyntz / ſo von den
+        <lb/>Alten Maguntiacum, Mo-
+        <lb/>guntiacum, Mogontiacum, Maguntia,
+        <lb/>Magotia, Mogontia, Mongontiacum,
+        <lb/>Moguntiaco, Magontiaco, Maguntiacus,
+        <lb/>Moguntia, und alſo auch heutiges Tags ins
+        <lb/>gemein; Teutſch aber Meyntz / oder Mentz /
+        <lb/>Frantzoͤſiſch / Mayance, und Welſch Magon-
+        <lb/>za, oder Maguntiaco, genannt wird. Woher
+        <lb/>aber dieſer Nahm komme / ſeyn die Gelehrten
+        <lb/>nicht einerley Meynung. Theils bringen ihn
+        <lb/>von dem Fluß Mogano, Mogo, oder Mœno,
+        <lb/>Mayn: Rhenanus von Mago, ſo vor Alters
+        <lb/>ein Hauß geheiſſen / oder Heim / und dem
+        <lb/>Waͤſſerlein Cia, her / ſo jetzt durch die Stadt
+        <lb/>laufft / und bey dem Kloſter Alt⸗Muͦnſter in
+        <lb/>dieſelbe kommt / und auß ſolcher durch deß
+        <lb/>Schloſſes Graben / in den Rhein laufft / und
+        <lb/>auff teutſch Ombach genannt wird / auch noch
+        <lb/>ſeines alten Namens Merckzeichen in den be⸗
+        <lb/>nachbarten Doͤrffern behaͤlt: Deren eines Zal⸗
+        <lb/>bach auff der Cey / oder Ciebach / das ander
+        <lb/>Bretzenheim auf der Cey / genannt wird: Da⸗
+        <lb/>von eines alten Manns Sprichwort geweſen:
+        <lb/>Meyntz ligt gar nahe dabey. Andere haben
+        <lb/>andere Meynungen. Nicolaus Serarius, ſo
+        <lb/>fuͤnff Buͤcher von dieſer Stadt geſchrieben /
+        <lb/>wil ſolche Namen Mogoncia, oder Magun-
+        <lb/>ciacum, vonden drey Fluͤſſen / Ma, oder Mon,
+        <lb/>Gon, oder Gonzo, und beſagtem Cia, herfuͤh⸗
+        <lb/>ren / welche alle noch verhanden / und in den
+        <lb/>Rhein ſich ergieſſen: Daher das Dorff Mon⸗
+        <lb/>bach von dem Erſten / und das naͤchſte Dorff
+        <lb/>Gontzenheim von dem Andern / ſo bey Meyntz
+        <lb/>der Lobach genannt wird / den Namen haben.
+        <lb/>Von dem Erbauer dieſer Stadt / iſt man
+        <lb/>auch nicht einig. Etliche wollen / daß die Zau⸗
+        <lb/>berer von Trier 1362. Jahr vor Chriſti Ge⸗
+        <lb/>burt / ſeyen verjagt worden / deren Fuͤrſt Ne-
+        <lb/>quam geheiſſen / welcher dieſe Stadt angefan⸗
+        <lb/>gen: Daher das Gedicht / Moguntia, ab anti-
+        <lb/>quo Nequam, das iſt / Meyntz iſt von ſelbi⸗
+        <lb/>gem alten Ertzzauberer Nequam erbauet. Ge⸗
+        <lb/>dachter Serarius vermeynet / der Warheit die⸗
+        <lb/>ſes am aͤhnlichſten zu ſeyn / wann man wil / daß
+        <lb/>Meyntz von Claudio Druſo Germanico,
+        <lb/>deß Kaͤyſers Auguſti Stieff⸗Sohn / und Kaͤy⸗
+        <lb/>ſers Tiberii Brudern / deß Germanici Vat⸗
+        <lb/>tern / etwan zehen Jahr / oder nicht viel eher / vor
+        <lb/>Chriſti Geburt / erbauet worden ſey: Obwol
+        <lb/>nicht geleugnet werden koͤnne / daß vielleicht
+        <lb/>zuvor allhie ein Dorff / oder Flecken / geſtan⸗
+        <lb/>den / und C. Julius Cæſar, das Kriegsvolck da
+        <lb/>zu lagern / der Stadt eine Gelegenheit / und
+        <lb/>gleichſam einen Anfang gegeben habe. Sie iſt
+        <lb/>aber anfangs nicht gar zum Rhein erbauet
+        <lb/>worden / und haͤlt man darfuͤr / daß ſie in einer
+        <lb/>weiten Ebene / wo das Siechenhauß / und das
+        <lb/>Kloſter der Nonnen unſer Frauen im Gnaden⸗
+        <lb/>oder heiligen Thal iſt / erſtlich geſtanden ſeye.
+        <lb/>Sie iſt folgends unterſchiedlich belaͤgert / zer⸗
+        <lb/>ſtoͤret / und vewuͤſtet worden / wie unten geſagt
+        <lb/>werden wird. Nach der Hunniſchen Nider⸗
+        <lb/>lag / iſt ſie / von den Francken / inſonderheit aber
+        <lb/>vom Koͤnig Dagoberto I. wieder gebeſſert /
+        <lb/>und von dem alten Ort näher zum Rhein / da
+        <lb/>ſie noch jetzt ſtehet / verſetzt worden. Sie hat
+        <lb/>vorzeiten auch zum Teutſchland gehoͤret / und
+        <lb/>ſich der teutſchen Spraach gebraucht / wie ge⸗
+        <lb/>dachter Serarius cap. 10. &amp; 11. lehret; wiewol
+        <lb/>viel dieſe Stadt dem Franckreich zuſchreiben /
+        <lb/>die er daſelbſt anziehet / und die Lobſpruͦch / ſo
+        <lb/>ihr die Scribenten geben / in beſagtem zehenden
+        <lb/>Capitel erzehlet / wie dann die Roͤmer allhie ih⸗
+        <lb/>re Beſatzungen / und Obriſte / gehalten haben.
+        <lb/>Der alte Hiſtoricus Radevvicus ſchreibet
+        <lb/>lib. 1. c. 13. allbereit von ſeiner Zeit / daß Meyntz
+        <lb/>ein groſſe und veſte Stadt an dem Rhein / und
+        <lb/>auff der Seiten / da ſie denſelben hat / wol be⸗
+        <lb/>wohnet / und volckreich: Und / auff der andern
+        <lb/>Seiten / an Innwohnern faſt oͤde ſeye / habe
+        <lb/>nur ein ſtarcke Mauer / daran nicht wenig
+        <lb/>Thuͦrn ſtehen. Und dieſes ſagt Radevicus.
+        <pb n="[3]"/>
+        <fw type="pageNum">29</fw>
+        <lb/>Es iſt dieſe Stadt ſehr lang / aber ſchmal / ſo
+        <lb/>alſo ſeyn muͤſſen. Dann auff der Seiten gegen
+        <lb/>Franckreich / hat ſie einen etwas erhoͤheten
+        <lb/>Berg: Auff der andern aber / da ſie gegen
+        <lb/>Teutſchland ſiehet / den Rhein: Daher dann
+        <lb/>gegen demſelben ſie mit ſtattlichen Kirchen /
+        <lb/>und Gebaͤuen / gezieret iſt / gegen dem Berg
+        <lb/>aber / Weingaͤrten / und dergleichen / hat. Es
+        <lb/>ſeyn allda enge Gaſſen / auſſer zwey oder drey /
+        <lb/>ſo etwas weit / und heutiges Tags zehen Thor /
+        <lb/>deren drey gegen Mittag / Abend / und Mitter⸗
+        <lb/>nacht: Als Eine / ſo man vor der alten Druſi
+        <lb/>porta haͤlt / und deren die innere Dieterichs⸗
+        <lb/>Pfort / die euſſere aber Wilhelmiter Pfort ge⸗
+        <lb/>nennet wird. Die andere / S. Sebaſtians /
+        <lb/>oder die Gaͤw⸗Pfort: Und die dritte / Alten⸗
+        <lb/>Muͤnſters Pfort. Die uͦbrige Sieben / ge⸗
+        <lb/>hen gegen Morgen zum Rhein / zu welchen
+        <lb/>man auch das Schloßthor thun koͤnte. Von
+        <lb/>beſagtem Morgen / etwas oberhalb der Vor⸗
+        <lb/>ſtatt Filsbach / kommt der Mayn in den Rhein.
+        <lb/>Und iſt ſolcher Rhein fuͦnffhundert Schritt
+        <lb/>breit / uͤber welchen Kaͤyſer Carl der Groſſe /
+        <lb/>zehen Jahr lang / mit groſſer Muͤhe und wun⸗
+        <lb/>derlicher Kunſt / eine Bruͤcken von Holtz alſo
+        <lb/>gebauet / daß es / als ob ſie ewig waͤhren ſolte /
+        <lb/>das Anſehen gehabt / die aber ein Jahr zuvor /
+        <lb/>ehe er / der Kaͤyſer geſtorben / durch unverſehe⸗
+        <lb/>nes Feuer / in drey Stunden / alſo verbrunnen /
+        <lb/>daß / auſſer dem / ſo unter dem Waſſer geſtan⸗
+        <lb/>den / nicht ein einiges Sprießlein uͤbrig geblie⸗
+        <lb/>ben iſt. Es iſt Meyntz vor Alters ein freye
+        <lb/>und Kaͤyſerliche Stadt geweſen: Die aber
+        <lb/>Anno 1462. durch Einfall ihres Ertzbiſchoffs /
+        <lb/>mit Gewalt eingenommen / die Buͦrger zum
+        <lb/>theil umbgebracht / zum theil ins Elend ver⸗
+        <lb/>jagt / das alte Regiment abgethan / und ſolche
+        <lb/>Stadt gaͤntzlich dem Chur⸗Fuͤrſten unterthaͤ⸗
+        <lb/>nig gemacht: Und damit ſie deſto beſſer im
+        <lb/>Zaum gehalten werden moͤchte / von ihme /
+        <lb/>nicht lang hernach / daſelbſt ein veſtes Schloß
+        <lb/>erbauet worden: Wie Wilhelmus Kyrian-
+        <lb/>der in Comment. de Auguſta Treverorum
+        <lb/>part. 17. fol. 225. ſchreibet. Jſt alſo dieſe
+        <lb/>Stadt heutiges Tags unter ihrem Ertzbi⸗
+        <lb/>ſchoff / welcher ihren / der Stadt / Reichs⸗An⸗
+        <lb/>ſchlag jetzt unter dem Seinigen vertritt. Es
+        <lb/>ſeyn allhie viel alte Sachen / und darunter das
+        <lb/>ſehr groſſe Gebaͤu / ſo an der veſten Schantz /
+        <lb/>worinnen S. Jacobs Kloſter ſtehet / zuſehen /
+        <lb/>das wegen der Form / der Eichelſtein genannt
+        <lb/>wird / und zu Ehren deß obgedachten Druſi
+        <lb/>auffgerichtet worden iſt: Wie Serarius cap.
+        <lb/>15. p. 61. ſeqq. beweiſet / welcher Druſus, nicht
+        <lb/>weit von Wißbaden / und ſelbiger Gegend / ſein
+        <lb/>Leben ſolle beſchloſſen haben: Deſſen Coͤrper
+        <lb/>aber nicht in Teutſchland / wie etliche vermey⸗
+        <lb/>nen / verblieben / ſondern ins Welſchland ge⸗
+        <lb/>fuͤhret worden iſt. Von dieſem Eichelſtein
+        <lb/>ſchreibet Voſſius de Latinis Hiſtoricis, pag.
+        <lb/>431. auß Georgio Wicelio, unter anderm /
+        <lb/>alſo: Moguntiæ mons S. Jacobi, olim ſpe-
+        <lb/>cioſus appellatus eſt, haut procul a vetuſtis-
+        <lb/>ſima, atque famoſiſſima pyramide, vulgò
+        <lb/>dicta Eigelſtein; idque non à glande, ſed ab
+        <lb/>Eigil, principe gentili; cujus combuſti cine-
+        <lb/>res aſſervantur in hac columna.
+        <lb/>In Erbauung beſagter Schantz / hat man
+        <lb/>auch unter der Erden etliche Antiquiteten von
+        <lb/>Saͤulen / darinn Bilder und Schrifften zu ſe⸗
+        <lb/>hen / gefunden / wie beyſtehende Bildnuͦß auß⸗
+        <lb/>weiſet / und allda zur Gedaͤchtnuͤß auffgerich⸗
+        <lb/>tet worden. Es war auch vorzeiten ein Pyra-
+        <lb/>mis, oder Thurngrab / allhie / Druſilacium,
+        <lb/>oder Druſeloch / genannt / ſo aber nicht mehr
+        <lb/>verhanden. Man findet auch bißweilen aller⸗
+        <lb/>ley alte Muͤntzen in den Aeckern / Weinber⸗
+        <lb/>gen / und am Rheingeſtad / und auch in dem
+        <lb/>Flecken Caſſel / oder vielmehr Caſtel / (wo der
+        <lb/>Mayn in den Rhein kom̄t / und daſelbſt Kaͤy⸗
+        <lb/>ſer Trajanus, wie Freherus in Omiſſis ad
+        <lb/>part. 2. Origin. Palat. ſchreibet / ein Caſtell
+        <lb/>(Schantz / oder Beveſtigung) erbauet hat /)
+        <lb/>ſonderlich in S. Georgen Kirchen. Man hat /
+        <lb/>vor dem jetzigen teutſchen Krieg / ingleichem
+        <lb/>gewieſen / zu Meyntz allerley Heiligthümer /
+        <lb/>als das Haupt S. Albani, deß Prieſters / und
+        <lb/>Maͤrtyrers allhie: Item / von S. Aureo dem
+        <lb/>Biſchoff / und ſeiner Schweſter / der H. Ju⸗
+        <lb/>ſtina: Von dem Maͤrtyrer S. Camerino:
+        <lb/>Von S. Vincentio dem Leviten und Hiſpani⸗
+        <lb/>ſchen Maͤrtyrer: Von S. Vincentia, und ih⸗
+        <lb/>rer Tochter S. Innocentia, S. Severi, deß Bi⸗
+        <lb/>ſchoffs zu Ravenn / Weibe / und Tochter:
+        <lb/>Von S. Juſtino, dem Prieſter / ſo den H. Lau-
+        <lb/>rentium, und andere Maͤrtyrer / begraben:
+        <lb/>Und von S. Ferrutio, dem Meyntziſchen Rit⸗
+        <lb/>ter / und Maͤrtyrer / ſo zu Bleidenſtadt begra⸗
+        <lb/>ben ligt: Item / S. Stephani, deß erſten Maͤr⸗
+        <lb/>tyrers Arm / deß Maͤrtyrers S. Veiten Fin⸗
+        <lb/>ger: Der Raͤmerin S. Anaſtaſiæ Haupt: Ein
+        <lb/>Theil von dem Tiſch deß HErrn Chriſti: Ein
+        <lb/>Theil vom heiligen Creutz: S. Chryſoſtomi
+        <lb/>Haupt: Das Haupt S. Mercurii deß Maͤrty⸗
+        <pb n="[4]"/>
+        <fw type="pageNum">30</fw>
+        <lb/>rers: Item / in der Sacriſtey der Domkirchen
+        <lb/>einen Theil von dem Schweißtuch deß HEr⸗
+        <lb/>ren / in einem gar ſchweren / und ſauber gearbei⸗
+        <lb/>ten viereckichten ſilbern Futter: Item / von den
+        <lb/>Meſſern / damit S. Bartholomaͤus geſchun⸗
+        <lb/>den / eines: Und von den Steinen / damit S.
+        <lb/>Stephanus geſteiniget worden / auch einen /
+        <lb/>und ſonſten anders mehrers. Ob aber ſolches
+        <lb/>alles verhanden / davon haben wir keinen Be⸗
+        <lb/>richt. Beſagter Dom / oder Ertzbiſchoffli⸗
+        <lb/>che Hauptkirch / wird zu S. Martin genannt /
+        <lb/>in welcher vieler Ertzbiſchoͤffe Begraͤbnuͦſſen /
+        <lb/>auff deren einer / nemlich deß Cardinals Alber⸗
+        <lb/>ti / auffs wenigſte dreymal ſtehet: Alle hernach.
+        <lb/>Item / ſo ſeyn da der Domherren Graͤber zu ſe⸗
+        <lb/>hen. Der Haupt⸗Altar iſt alſo gebauet / daß
+        <lb/>der Prieſter ſein Geſicht gegen den Geiſtli⸗
+        <lb/>chen / und dem andern Volck / allezeit wendet /
+        <lb/>und wann er ſagt: Dominus Vobiſcum, ſich
+        <lb/>umbzuwenden nicht vonnoͤhten hat: Iſt mit
+        <lb/>eiſern Gittern umbgeben: Wie hievon / und
+        <lb/>was in dieſer Kirchen zu ſehen / Serarius am
+        <lb/>109. Blat zuleſen. Und ſolcher Dom hat vor⸗
+        <lb/>zeiten / ehe derſelbe hinweg kommen / einen groſ⸗
+        <lb/>ſen Schatz / und herrliche Zierden gehabt / ſo
+        <lb/>von den Hunniſchen / durch Kaͤyſer Carln
+        <lb/>den Groſſen / eroberten Schaͤtzen / herkommen
+        <lb/>ſeyn ſolle. Und ſchreibt man von einem groſ⸗
+        <lb/>ſen guͤldenen Creutz / ſo allein ſechshundert
+        <lb/>Pfund / oder zwoͤlffhundert Marck Goldes
+        <lb/>gewogen haben ſolle. Bruſchius ſagt: Daß
+        <lb/>der guͤldene Seſſel / mit vielen koͤſtlichen Edel⸗
+        <lb/>geſteinen / welchen der Koͤnig Johannes auß
+        <lb/>Boͤheim dem Ertzbiſchoff allhie / ſo ihn ge⸗
+        <lb/>kroͤnt / geſchenckt / und den die gemeinen Leut
+        <lb/>S. Martins Seſſel genannt / noch zu ſeiner
+        <lb/>Zeit verhanden geweſen / den aber beſagter Se-
+        <lb/>rarius nicht geſehen / wie er lib. 5. p. 850. col. 11.
+        <lb/>bekennet. Es hat allda 42. Domherren / dar⸗
+        <lb/>unter 24. mit dem Probſten / den innern Rath /
+        <lb/>oder Capitul / machen / auß denen / ordentlicher /
+        <lb/>Weiſe / der Ertzbiſchoff pflegt erwehlt zu wer⸗
+        <lb/>den / und darunter die drey Fuͤrnembſte / als
+        <lb/>der Probſt / Dechant / und Cantor, Infeln tra⸗
+        <lb/>gen. Und dieſe in dem Domſtifft wird die
+        <lb/>fuͤrnembſte / und hohe Geiſtlichkeit / genennet.
+        <lb/>Die andere und geringere Cleriſey beſtehet in
+        <lb/>S. Jacobs Abbtey / und andern Stifftern /
+        <lb/>deren fuͤnff Hohe / und vier Nidere ſeyn: Als
+        <lb/>1. zu S. Alban / deſſen verbrandter Kirchen
+        <lb/>Waͤnde nur noch uͤbrig: Und an. 1632. durch
+        <lb/>die Schweden abgebrochen / und die Stein an
+        <lb/>die Guſtavsburg gewendet worden; Die
+        <lb/>Domherren aber ihrer Einkommen genieſſen /
+        <lb/>und ihren Gottesdienſt in der Prediger Kir⸗
+        <lb/>chen verrichten. 2. S. Peters auſſer der Stadt /
+        <lb/>ſo jetzt mehrertheils beſchloſſen. 3. S. Ste⸗
+        <lb/>phans. 4. S. Victors / daſelbſt nur etliche bloſ⸗
+        <lb/>ſe Mauren / und etwas uͤberbliebenes von der
+        <lb/>Kirchen / die Domherrn haben ihre Verrich⸗
+        <lb/>tung in S. Johanns Kirchen. 5. Zum heili⸗
+        <lb/>gen Creutz / welche Kirche auch von Marg⸗
+        <lb/>graff Albrechten zu Brandenburg Schaden
+        <lb/>gelidten hat. 6. Unſer Frauen zu den Staf⸗
+        <lb/>feln. 7. S. Moritzen. 8. S. Johannis / in
+        <lb/>welcher Kirch deß H. Bonifacii Eingeweyd
+        <lb/>begraben worden: Und dann 9. S. Gangol⸗
+        <lb/>phi / ſo / mit einem neuen Namen / die Schloß⸗
+        <lb/>Kirche genannt wird. Ferners hat es da 7.
+        <lb/>Pfarrkirchen: Als 1. S. Ignatii, ſo vorzeiten
+        <lb/>der Tempelherren geweſen / mit zween Thuͤr⸗
+        <lb/>nen / biß zu hoͤchſt hinauff von Quaderſteinen
+        <lb/>anſehenlichen erbauet. 2. S. Quintini, davon
+        <lb/>man ſchier die gantze Stadt uͦberſehen kan / und
+        <lb/>darinn der Juͤngling Caudius de Roſieres,
+        <lb/>mit dieſer Grabſchrifft / ligt:
+        <lb/>Corporis atque animi Roſa eram; ſtirps
+        <lb/>una parentum:
+        <lb/>Clauſus in hoc tumulo, ſum cinis, oſſa,
+        <lb/>nihil.
+        <lb/>3. S. Chriſtophori. 4. S. Heimerammi. 5.
+        <lb/>S. Mariæ, ins gemein Undenmoͤnſter / ein al⸗
+        <lb/>tes Kirchlein. 6. S. Pauli, auch ein gar altes
+        <lb/>Kirchlein / von S. Bilhilde erbauet. 7. S.
+        <lb/>Nicolai, auſſer der Stadt / nahend S. Alban /
+        <lb/>darzu die Vorſtaͤdter Filtzbacher gehoͤrig.
+        <lb/>Der Mannskloͤſter ſeyn vorhin zehen ge⸗
+        <lb/>weſen: Als 1. S. Jacobs der Benedictiner /
+        <lb/>bey der Stadtmauren auff dem Berg. 2. Der
+        <lb/>Prediger. 3. Der Carmeliten. 4. Der Au⸗
+        <lb/>guſtinianer. 5. Der Cartheuſer vor der
+        <lb/>Stadt. 6. S. Wilhelms / bey dem Thor die⸗
+        <lb/>ſes Namens. 7. Antonii, ſo abgangen. 8.
+        <lb/>S. Eliſabeth / bey S. Martins Schloß / da
+        <lb/>vorzeiten das Teutſche Hauß geweſen. 9. Zum
+        <lb/>H. Grab / ſo einen hohen viereckichten Thurn
+        <lb/>hat / und das Hauß deß Ordens S. Johannis
+        <lb/>von Jeruſalem iſt. 10. S. Bernhardi, ſo auch
+        <lb/>nicht mehr.
+        <lb/>Der Frauen Kloͤſter ſeyn acht: Als 1. Al⸗
+        <lb/>tenzell / ſo umbs Jahr Chriſti 635. S. Bihildis,
+        <lb/>ein Kloſter⸗Frau allhie / auß Fuͤrſtlichen
+        <lb/>Stammen / erbauet hat. 2. Marien / im Gna⸗
+        <lb/>den⸗oder Heiligen⸗Thal / oder Dalheim / Ci⸗
+        <pb n="[5]"/>
+        <fw type="pageNum">31</fw>
+        <lb/>ſterzer Ordens. 3. Zu S. Agnes / auch Ci⸗
+        <lb/>ſterzer Ordens / auff dem Diebmarckt. 4. S.
+        <lb/>Magdalenaͤ / zun Weiſſen Frauen. 5. S.
+        <lb/>Claraͤ / deß Minor Ordens / nichtweit vom
+        <lb/>Flacksmarckt. 6. S. Franciſci, auſſer der
+        <lb/>Stadt / zwiſchen der Stadt / und S. Victor.
+        <lb/>7. S. Nicomedis, ein ſehr alte Kirch / als wel⸗
+        <lb/>che vom neundten Biſchoff zu Meyntz / S.
+        <lb/>Gottharden erbauet worden / darinn aber kei⸗
+        <lb/>ne Nonnen mehr: Gleichwie auch 8. zu S.
+        <lb/>Georgen nur noch die Kirch ſtehet. So iſt in
+        <lb/>der groͤſſern Samlung / die durchs Feuer
+        <lb/>Schaden genommen / jetzt die Truckerey. I⸗
+        <lb/>tem / ſo iſt allhie ein ſtattliches Jeſuiter Colle-
+        <lb/>gium: Item 5. Spitaͤl / als zum H. Geiſt /
+        <lb/>S. Barbara / Alexio, S. Catharina in der
+        <lb/>Vorſtadt Filtzbach / und dann das Buͤrger⸗
+        <lb/>Spital / nahend S. Barbaraͤ Spital / zum
+        <lb/>Fluͤß genannt. Item / ſechtzehen Capellen.
+        <lb/>Es ſeyn aber in dieſem Teutſchen Krieg / bey
+        <lb/>Beveſtigung / Belaͤger⸗und Eroberung der
+        <lb/>Stadt / etliche Kirchen darauff gangen: Als
+        <lb/>S. Peter und andere: Wie dan̄ beſagte Vor⸗
+        <lb/>ſtatt Filtzbach / auch hat herhalten muͤſſen.
+        <lb/>Von Bibliothecis hat es allhier 3. Fuͤrneh⸗
+        <lb/>me / als im Dom / in S. Jacobs⸗Kloſter / und
+        <lb/>bey den Jeſuitern / gehabt. Und war in beſag⸗
+        <lb/>tem Dom / inſonderheit die Complutenſiſche
+        <lb/>Bibel / ſo man Biblia regia nennet / wegen deß
+        <lb/>ſehr ſchoͤnen und koͤſtlichen Bands / zu ſehen.
+        <lb/>Die hohe Schul allhie / iſt Anno 1477. vom
+        <lb/>Churfuͤrſt⸗und Ertzbiſchoffen Diethero ge⸗
+        <lb/>ſtifftet / und ſeyn in ſolche Anno 1562. auch die
+        <lb/>Jeſuiter / ſo das Jahr zuvor hieher kommen /
+        <lb/>eingenom̄en worden / wiewol auch zuvor ein
+        <lb/>gute Schul allhie geweſen: Wie dann vor⸗
+        <lb/>laͤngſten / un̄ auch nach Stifftung ſolcher ho⸗
+        <lb/>hen Schul / es viel gelehrter Leut allda geben /
+        <lb/>die an dieſem Ort gebohren worden / gelebt /
+        <lb/>und gelehret haben: Darunter geweſen Ma-
+        <lb/>rianus Scotus, Goſwinus, Rupertus Mona-
+        <lb/>chus, Johan̄es Gawer, Sifridus de Mogun-
+        <lb/>cia, Rudolphus de Rudesheim, Gerardus de
+        <lb/>Caſtris, Petrus Sorbillo, Joh. Dietenberger /
+        <lb/>ſo die teutſche Bibel verfertiget / Michaël,
+        <lb/>Heldingus, ſonſten Sidonius genannt / ſo das
+        <lb/>Interim (welches Serarius pag. 178. cap.
+        <lb/>40. hæreticas ſanctiones nennet) ſchmiden
+        <lb/>helffen / Georgius Wicelius, Sebaſtianus
+        <lb/>Munſterus, Otho Brunfelſius, Caſpar He-
+        <lb/>dio, Cornelius Loos Callidius, und viel an⸗
+        <lb/>dere mehr. So ſtreitet dieſe Stadt mit den
+        <lb/>Staͤdten Straßburg / und Harlem / wegen
+        <lb/>Erfindung der Buchdruckerey / davon Sera-
+        <lb/>rius in vier Capituln handelt / und pag. 155.
+        <lb/>ſeqq. daßſolche allhie erfunden worden ſeye /
+        <lb/>zu erweiſen / ſich unterſtehet / und daß das erſte
+        <lb/>Model noch allda verwahret werde / im 37.
+        <lb/>Capitel / und am 159. Blat / ſaget. Es iſt aber
+        <lb/>dieſes Stuͤck von uns in Typographia Alſa-
+        <lb/>tiæ, in Beſchreibung der Stadt Straßburg /
+        <lb/>wie auch von Martino Zeillero, in der Conti⸗
+        <lb/>nuation ſeiner Raͤiß⸗Beſchreibung durch
+        <lb/>Teutſchland / cap. 14. fol. 166. ſeq. in Be⸗
+        <lb/>ſchreibung der Stadt Meyntz / und in der 38.
+        <lb/>Epiſtel / des dritten Hunderts / weitlaͤufftig
+        <lb/>tractiret worden / dahin wir uns Kuͤrtze hal⸗
+        <lb/>ber / beziehen. Im uͤbrigen ſeyn von weltlichen
+        <lb/>Gebaͤuen allhie / auſſer detz Schloſſes / oder
+        <lb/>S. Martinsburg / der Cantzley / deß neuen
+        <lb/>Baues / und deß Rahthauſes / wenig Fuͤrneh⸗
+        <lb/>me / zuſehen. Und ſeyn der Buͤrger Häuſer
+        <lb/>zwar groß / und weit / aber gar altfraͤnckiſch
+        <lb/>gebauet. Beſagtes Schloß / in welchem der
+        <lb/>Herr Churfuͤrſt Sommerszeiten pfleget Hof
+        <lb/>zu halten / ligt zu unterſt an der Stadt / am
+        <lb/>Rhein / gantz praͤchtig: Welches / nachdem es
+        <lb/>Anno 1552. von Marggraf Albrechten von
+        <lb/>Brandenburg mit Feuer angeſteckt / und zer⸗
+        <lb/>ſtoͤret worden / Ertzbiſchoff Daniel herrlich
+        <lb/>wieder erbauet hat. Es waͤchſt ein köſtlicher
+        <lb/>Wein um die Stadt / welchen man fuͤr gar
+        <lb/>geſund haͤlt. Und iſt auch ſonſten der Boden
+        <lb/>herum fruchtbar / und luſtig.
+        <lb/>Es habē ſich allhie viel denckwuͤrdige Sa⸗
+        <lb/>chen zugetragen / deren wir nur etliche erzeh⸗
+        <lb/>len wollen. Ums Jahr Chriſti 72. iſt dieſe
+        <lb/>Stadt von Civili Batavo gepluͤndert / un ver⸗
+        <lb/>wuͤſtet worden: Darauff von Barbariſchen
+        <lb/>Voͤlckern / deren Marcellinus gedenckt / der⸗
+        <lb/>gleichen geſchehen: Item / von den Francken /
+        <lb/>davon Trithemius in vita S. Maximi zule⸗
+        <lb/>ſen. Ferners haben ſie die Vandaler unter ih⸗
+        <lb/>rem Koͤnig Caroco, An. 410. und folgends
+        <lb/>Rando, ein Teutſcher Herr / auch zerſtoͤret /
+        <lb/>davon ingleichem beym Marcellino zu ſehen.
+        <lb/>Von den Hunnen und ihrem Koͤnig Attila,
+        <lb/>hat dieſer Ort gleiches erfahren. Venantius
+        <lb/>Fortunatus gedencket auch einer Zerſtörung.
+        <lb/>Anno 872. iſt dieſe Stadt durch Erdbidem
+        <lb/>zu Grund gangen. Anno 893. hat ſie Kaͤy⸗
+        <lb/>ſer Arnolphus belaͤgert / und erobert. Kaͤiſer
+        <lb/>Otho der Erſte / hat ſie auch lang belaͤgert /
+        <lb/>aber nicht erobert. Anno 1081. iſt ſie meiſten⸗
+        <pb n="[1]"/>
+        <fw type="pageNum">12.</fw>
+        <lb/>S werden zu dem Hochloͤblichſten
+        <lb/>Unter⸗Rheiniſchen Kreyß (deſſen Außſchreiben⸗
+        <lb/>der Fuͤrſt der Herr Chur⸗Fuͤrſt zu Meyntz / ꝛc. iſt) gerechnet / die
+        <lb/>Vier Herren Chur⸗Fuͤrſten / Meyntz / Trier / Coͤln / und Pfaltz;
+        <lb/>Item / die Graffen von Naſſau⸗Beilſtein; die Graffen von Reif⸗
+        <lb/>ferſcheid; und von Nieder⸗Jſenburg; ſampt Salm; der Jnnhaber der Herrſchafft
+        <lb/>Rheineck am Rhein; ferners die Baley Coblentz / und die Stadt Gelnhauſen. Was
+        <lb/>Neuenar / Seltz / und die Abbtey S. Maximini zu Trier anbelangt / ſo etwa auch hieher
+        <lb/>gehoͤret haben; ſo ſind ſolche jetzt in hoͤhern Haͤnden.
+        <lb/>Was nun die Staͤdte und Ort / ſo in dieſem Hochloͤbl. Unter⸗Rheiniſchen
+        <lb/>Kreyß gelegen / und von welchen wir uns in dieſem Tractat / ſo viel uns wiſſend / zu
+        <lb/>hand vorgenommen / belanget; ſo iſt von den Chur⸗Pfaͤltziſchen Orten / in dem
+        <lb/>Fuͤnfften Theil unſerer Topographiæ Germaniæ, unter dem Titul / Palatinatus Rhe-
+        <lb/>ni; von der Graffſchafft Beilſtein aber / und der Stadt Gelnhauſen / in der Topo-
+        <lb/>graphia Haſſiæ, Bericht geſchehen. So ſind auch die Aempter in der Berg⸗ſtraß /
+        <lb/>welche / vermoͤg des anno 1648. gemachten General⸗Reichs⸗Friedens / dem Herrn
+        <lb/>Chur⸗Fuͤrſten von Meyntz / ꝛc. zu reſtituiren geweſen / in der beſagten Topogra-
+        <lb/>phia Palatinatus Rheni einkommen; Dahero ſolche allhie zu wiederholen / nicht
+        <lb/>noͤthig iſt.
+        <lb/>Der andern Drey Chur⸗Fuͤrſtenthumb / oder Ertzbiſtumben Staͤdte / ꝛc.
+        <lb/>aber / wollen wir eines jeden abſonderlich beſchreiben; damit / der Leſer / weil die⸗
+        <lb/>ſer hoͤchſtgemeldte Kreyß ſich weit erſtrecket / deſto beſſer / und mehrers / darauß
+        <lb/>kommen koͤnne / als wann / wie in theils Laͤnder / ſo nur eine Landtaffel bedoͤrf⸗
+        <lb/>fen / Beſchreibung geſchehen / ſie durcheinander geſetzt wuͤrden / Jedoch wollen
+        <lb/>wir dieſe Ordnung halten / daß wir bey jedem Chur⸗Fuͤrſtenthumb den
+        <lb/>Haupt⸗Ort vornen anſetzen / deme hernach die andere darzu gehoͤrige /
+        <lb/>dem A B C. nach / folgen ſollen.
+        <pb n="[2]"/>
+        <fw type="pageNum">13</fw>
+        <lb/>Meyntz.
+        <lb/>Jß iſt die Haupt⸗Stadt
+        <lb/>deß Hochloͤblichſten Ertzbiſt⸗
+        <lb/>thumb / und Chur⸗Fuͤrſten⸗
+        <lb/>thumbs Meyntz / ſo von den
+        <lb/>Alten Maguntiacum, Mo-
+        <lb/>guntiacum, Mogontiacum, Maguntia,
+        <lb/>Magotia, Mogontia, Mongontiacum,
+        <lb/>Moguntiaco, Magontiaco, Maguntiacus,
+        <lb/>Moguntia, und alſo auch heutiges Tags ins
+        <lb/>gemein; Teutſch aber Meyntz / oder Mentz /
+        <lb/>Frantzoͤſiſch / Mayance, und Welſch Magon-
+        <lb/>za, oder Maguntiaco, genannt wird. Woher
+        <lb/>aber dieſer Nahm komme / ſeyn die Gelehrten
+        <lb/>nicht einerley Meynung. Theils bringen ihn
+        <lb/>von dem Fluß Mogano, Mogo, oder Mœno,
+        <lb/>Mayn: Rhenanus von Mago, ſo vor Alters
+        <lb/>ein Hauß geheiſſen / oder Heim / und dem
+        <lb/>Waͤſſerlein Cia, her / ſo jetzt durch die Stadt
+        <lb/>laufft / und bey dem Kloſter Alt⸗Muͦnſter in
+        <lb/>dieſelbe kommt / und auß ſolcher durch deß
+        <lb/>Schloſſes Graben / in den Rhein laufft / und
+        <lb/>auff teutſch Ombach genannt wird / auch noch
+        <lb/>ſeines alten Namens Merckzeichen in den be⸗
+        <lb/>nachbarten Doͤrffern behaͤlt: Deren eines Zal⸗
+        <lb/>bach auff der Cey / oder Ciebach / das ander
+        <lb/>Bretzenheim auf der Cey / genannt wird: Da⸗
+        <lb/>von eines alten Manns Sprichwort geweſen:
+        <lb/>Meyntz ligt gar nahe dabey. Andere haben
+        <lb/>andere Meynungen. Nicolaus Serarius, ſo
+        <lb/>fuͤnff Buͤcher von dieſer Stadt geſchrieben /
+        <lb/>wil ſolche Namen Mogoncia, oder Magun-
+        <lb/>ciacum, vonden drey Fluͤſſen / Ma, oder Mon,
+        <lb/>Gon, oder Gonzo, und beſagtem Cia, herfuͤh⸗
+        <lb/>ren / welche alle noch verhanden / und in den
+        <lb/>Rhein ſich ergieſſen: Daher das Dorff Mon⸗
+        <lb/>bach von dem Erſten / und das naͤchſte Dorff
+        <lb/>Gontzenheim von dem Andern / ſo bey Meyntz
+        <lb/>der Lobach genannt wird / den Namen haben.
+        <lb/>Von dem Erbauer dieſer Stadt / iſt man
+        <lb/>auch nicht einig. Etliche wollen / daß die Zau⸗
+        <lb/>berer von Trier 1362. Jahr vor Chriſti Ge⸗
+        <lb/>burt / ſeyen verjagt worden / deren Fuͤrſt Ne-
+        <lb/>quam geheiſſen / welcher dieſe Stadt angefan⸗
+        <lb/>gen: Daher das Gedicht / Moguntia, ab anti-
+        <lb/>quo Nequam, das iſt / Meyntz iſt von ſelbi⸗
+        <lb/>gem alten Ertzzauberer Nequam erbauet. Ge⸗
+        <lb/>dachter Serarius vermeynet / der Warheit die⸗
+        <lb/>ſes am aͤhnlichſten zu ſeyn / wann man wil / daß
+        <lb/>Meyntz von Claudio Druſo Germanico,
+        <lb/>deß Kaͤyſers Auguſti Stieff⸗Sohn / und Kaͤy⸗
+        <lb/>ſers Tiberii Brudern / deß Germanici Vat⸗
+        <lb/>tern / etwan zehen Jahr / oder nicht viel eher / vor
+        <lb/>Chriſti Geburt / erbauet worden ſey: Obwol
+        <lb/>nicht geleugnet werden koͤnne / daß vielleicht
+        <lb/>zuvor allhie ein Dorff / oder Flecken / geſtan⸗
+        <lb/>den / und C. Julius Cæſar, das Kriegsvolck da
+        <lb/>zu lagern / der Stadt eine Gelegenheit / und
+        <lb/>gleichſam einen Anfang gegeben habe. Sie iſt
+        <lb/>aber anfangs nicht gar zum Rhein erbauet
+        <lb/>worden / und haͤlt man darfuͤr / daß ſie in einer
+        <lb/>weiten Ebene / wo das Siechenhauß / und das
+        <lb/>Kloſter der Nonnen unſer Frauen im Gnaden⸗
+        <lb/>oder heiligen Thal iſt / erſtlich geſtanden ſeye.
+        <lb/>Sie iſt folgends unterſchiedlich belaͤgert / zer⸗
+        <lb/>ſtoͤret / und vewuͤſtet worden / wie unten geſagt
+        <lb/>werden wird. Nach der Hunniſchen Nider⸗
+        <lb/>lag / iſt ſie / von den Francken / inſonderheit aber
+        <lb/>vom Koͤnig Dagoberto I. wieder gebeſſert /
+        <lb/>und von dem alten Ort näher zum Rhein / da
+        <lb/>ſie noch jetzt ſtehet / verſetzt worden. Sie hat
+        <lb/>vorzeiten auch zum Teutſchland gehoͤret / und
+        <lb/>ſich der teutſchen Spraach gebraucht / wie ge⸗
+        <lb/>dachter Serarius cap. 10. &amp; 11. lehret; wiewol
+        <lb/>viel dieſe Stadt dem Franckreich zuſchreiben /
+        <lb/>die er daſelbſt anziehet / und die Lobſpruͦch / ſo
+        <lb/>ihr die Scribenten geben / in beſagtem zehenden
+        <lb/>Capitel erzehlet / wie dann die Roͤmer allhie ih⸗
+        <lb/>re Beſatzungen / und Obriſte / gehalten haben.
+        <lb/>Der alte Hiſtoricus Radevvicus ſchreibet
+        <lb/>lib. 1. c. 13. allbereit von ſeiner Zeit / daß Meyntz
+        <lb/>ein groſſe und veſte Stadt an dem Rhein / und
+        <lb/>auff der Seiten / da ſie denſelben hat / wol be⸗
+        <lb/>wohnet / und volckreich: Und / auff der andern
+        <lb/>Seiten / an Innwohnern faſt oͤde ſeye / habe
+        <lb/>nur ein ſtarcke Mauer / daran nicht wenig
+        <lb/>Thuͦrn ſtehen. Und dieſes ſagt Radevicus.
+        <pb n="[3]"/>
+        <fw type="pageNum">29</fw>
+        <lb/>Es iſt dieſe Stadt ſehr lang / aber ſchmal / ſo
+        <lb/>alſo ſeyn muͤſſen. Dann auff der Seiten gegen
+        <lb/>Franckreich / hat ſie einen etwas erhoͤheten
+        <lb/>Berg: Auff der andern aber / da ſie gegen
+        <lb/>Teutſchland ſiehet / den Rhein: Daher dann
+        <lb/>gegen demſelben ſie mit ſtattlichen Kirchen /
+        <lb/>und Gebaͤuen / gezieret iſt / gegen dem Berg
+        <lb/>aber / Weingaͤrten / und dergleichen / hat. Es
+        <lb/>ſeyn allda enge Gaſſen / auſſer zwey oder drey /
+        <lb/>ſo etwas weit / und heutiges Tags zehen Thor /
+        <lb/>deren drey gegen Mittag / Abend / und Mitter⸗
+        <lb/>nacht: Als Eine / ſo man vor der alten Druſi
+        <lb/>porta haͤlt / und deren die innere Dieterichs⸗
+        <lb/>Pfort / die euſſere aber Wilhelmiter Pfort ge⸗
+        <lb/>nennet wird. Die andere / S. Sebaſtians /
+        <lb/>oder die Gaͤw⸗Pfort: Und die dritte / Alten⸗
+        <lb/>Muͤnſters Pfort. Die uͦbrige Sieben / ge⸗
+        <lb/>hen gegen Morgen zum Rhein / zu welchen
+        <lb/>man auch das Schloßthor thun koͤnte. Von
+        <lb/>beſagtem Morgen / etwas oberhalb der Vor⸗
+        <lb/>ſtatt Filsbach / kommt der Mayn in den Rhein.
+        <lb/>Und iſt ſolcher Rhein fuͦnffhundert Schritt
+        <lb/>breit / uͤber welchen Kaͤyſer Carl der Groſſe /
+        <lb/>zehen Jahr lang / mit groſſer Muͤhe und wun⸗
+        <lb/>derlicher Kunſt / eine Bruͤcken von Holtz alſo
+        <lb/>gebauet / daß es / als ob ſie ewig waͤhren ſolte /
+        <lb/>das Anſehen gehabt / die aber ein Jahr zuvor /
+        <lb/>ehe er / der Kaͤyſer geſtorben / durch unverſehe⸗
+        <lb/>nes Feuer / in drey Stunden / alſo verbrunnen /
+        <lb/>daß / auſſer dem / ſo unter dem Waſſer geſtan⸗
+        <lb/>den / nicht ein einiges Sprießlein uͤbrig geblie⸗
+        <lb/>ben iſt. Es iſt Meyntz vor Alters ein freye
+        <lb/>und Kaͤyſerliche Stadt geweſen: Die aber
+        <lb/>Anno 1462. durch Einfall ihres Ertzbiſchoffs /
+        <lb/>mit Gewalt eingenommen / die Buͦrger zum
+        <lb/>theil umbgebracht / zum theil ins Elend ver⸗
+        <lb/>jagt / das alte Regiment abgethan / und ſolche
+        <lb/>Stadt gaͤntzlich dem Chur⸗Fuͤrſten unterthaͤ⸗
+        <lb/>nig gemacht: Und damit ſie deſto beſſer im
+        <lb/>Zaum gehalten werden moͤchte / von ihme /
+        <lb/>nicht lang hernach / daſelbſt ein veſtes Schloß
+        <lb/>erbauet worden: Wie Wilhelmus Kyrian-
+        <lb/>der in Comment. de Auguſta Treverorum
+        <lb/>part. 17. fol. 225. ſchreibet. Jſt alſo dieſe
+        <lb/>Stadt heutiges Tags unter ihrem Ertzbi⸗
+        <lb/>ſchoff / welcher ihren / der Stadt / Reichs⸗An⸗
+        <lb/>ſchlag jetzt unter dem Seinigen vertritt. Es
+        <lb/>ſeyn allhie viel alte Sachen / und darunter das
+        <lb/>ſehr groſſe Gebaͤu / ſo an der veſten Schantz /
+        <lb/>worinnen S. Jacobs Kloſter ſtehet / zuſehen /
+        <lb/>das wegen der Form / der Eichelſtein genannt
+        <lb/>wird / und zu Ehren deß obgedachten Druſi
+        <lb/>auffgerichtet worden iſt: Wie Serarius cap.
+        <lb/>15. p. 61. ſeqq. beweiſet / welcher Druſus, nicht
+        <lb/>weit von Wißbaden / und ſelbiger Gegend / ſein
+        <lb/>Leben ſolle beſchloſſen haben: Deſſen Coͤrper
+        <lb/>aber nicht in Teutſchland / wie etliche vermey⸗
+        <lb/>nen / verblieben / ſondern ins Welſchland ge⸗
+        <lb/>fuͤhret worden iſt. Von dieſem Eichelſtein
+        <lb/>ſchreibet Voſſius de Latinis Hiſtoricis, pag.
+        <lb/>431. auß Georgio Wicelio, unter anderm /
+        <lb/>alſo: Moguntiæ mons S. Jacobi, olim ſpe-
+        <lb/>cioſus appellatus eſt, haut procul a vetuſtis-
+        <lb/>ſima, atque famoſiſſima pyramide, vulgò
+        <lb/>dicta Eigelſtein; idque non à glande, ſed ab
+        <lb/>Eigil, principe gentili; cujus combuſti cine-
+        <lb/>res aſſervantur in hac columna.
+        <lb/>In Erbauung beſagter Schantz / hat man
+        <lb/>auch unter der Erden etliche Antiquiteten von
+        <lb/>Saͤulen / darinn Bilder und Schrifften zu ſe⸗
+        <lb/>hen / gefunden / wie beyſtehende Bildnuͦß auß⸗
+        <lb/>weiſet / und allda zur Gedaͤchtnuͤß auffgerich⸗
+        <lb/>tet worden. Es war auch vorzeiten ein Pyra-
+        <lb/>mis, oder Thurngrab / allhie / Druſilacium,
+        <lb/>oder Druſeloch / genannt / ſo aber nicht mehr
+        <lb/>verhanden. Man findet auch bißweilen aller⸗
+        <lb/>ley alte Muͤntzen in den Aeckern / Weinber⸗
+        <lb/>gen / und am Rheingeſtad / und auch in dem
+        <lb/>Flecken Caſſel / oder vielmehr Caſtel / (wo der
+        <lb/>Mayn in den Rhein kom̄t / und daſelbſt Kaͤy⸗
+        <lb/>ſer Trajanus, wie Freherus in Omiſſis ad
+        <lb/>part. 2. Origin. Palat. ſchreibet / ein Caſtell
+        <lb/>(Schantz / oder Beveſtigung) erbauet hat /)
+        <lb/>ſonderlich in S. Georgen Kirchen. Man hat /
+        <lb/>vor dem jetzigen teutſchen Krieg / ingleichem
+        <lb/>gewieſen / zu Meyntz allerley Heiligthümer /
+        <lb/>als das Haupt S. Albani, deß Prieſters / und
+        <lb/>Maͤrtyrers allhie: Item / von S. Aureo dem
+        <lb/>Biſchoff / und ſeiner Schweſter / der H. Ju⸗
+        <lb/>ſtina: Von dem Maͤrtyrer S. Camerino:
+        <lb/>Von S. Vincentio dem Leviten und Hiſpani⸗
+        <lb/>ſchen Maͤrtyrer: Von S. Vincentia, und ih⸗
+        <lb/>rer Tochter S. Innocentia, S. Severi, deß Bi⸗
+        <lb/>ſchoffs zu Ravenn / Weibe / und Tochter:
+        <lb/>Von S. Juſtino, dem Prieſter / ſo den H. Lau-
+        <lb/>rentium, und andere Maͤrtyrer / begraben:
+        <lb/>Und von S. Ferrutio, dem Meyntziſchen Rit⸗
+        <lb/>ter / und Maͤrtyrer / ſo zu Bleidenſtadt begra⸗
+        <lb/>ben ligt: Item / S. Stephani, deß erſten Maͤr⸗
+        <lb/>tyrers Arm / deß Maͤrtyrers S. Veiten Fin⸗
+        <lb/>ger: Der Raͤmerin S. Anaſtaſiæ Haupt: Ein
+        <lb/>Theil von dem Tiſch deß HErrn Chriſti: Ein
+        <lb/>Theil vom heiligen Creutz: S. Chryſoſtomi
+        <lb/>Haupt: Das Haupt S. Mercurii deß Maͤrty⸗
+        <pb n="[4]"/>
+        <fw type="pageNum">30</fw>
+        <lb/>rers: Item / in der Sacriſtey der Domkirchen
+        <lb/>einen Theil von dem Schweißtuch deß HEr⸗
+        <lb/>ren / in einem gar ſchweren / und ſauber gearbei⸗
+        <lb/>ten viereckichten ſilbern Futter: Item / von den
+        <lb/>Meſſern / damit S. Bartholomaͤus geſchun⸗
+        <lb/>den / eines: Und von den Steinen / damit S.
+        <lb/>Stephanus geſteiniget worden / auch einen /
+        <lb/>und ſonſten anders mehrers. Ob aber ſolches
+        <lb/>alles verhanden / davon haben wir keinen Be⸗
+        <lb/>richt. Beſagter Dom / oder Ertzbiſchoffli⸗
+        <lb/>che Hauptkirch / wird zu S. Martin genannt /
+        <lb/>in welcher vieler Ertzbiſchoͤffe Begraͤbnuͦſſen /
+        <lb/>auff deren einer / nemlich deß Cardinals Alber⸗
+        <lb/>ti / auffs wenigſte dreymal ſtehet: Alle hernach.
+        <lb/>Item / ſo ſeyn da der Domherren Graͤber zu ſe⸗
+        <lb/>hen. Der Haupt⸗Altar iſt alſo gebauet / daß
+        <lb/>der Prieſter ſein Geſicht gegen den Geiſtli⸗
+        <lb/>chen / und dem andern Volck / allezeit wendet /
+        <lb/>und wann er ſagt: Dominus Vobiſcum, ſich
+        <lb/>umbzuwenden nicht vonnoͤhten hat: Iſt mit
+        <lb/>eiſern Gittern umbgeben: Wie hievon / und
+        <lb/>was in dieſer Kirchen zu ſehen / Serarius am
+        <lb/>109. Blat zuleſen. Und ſolcher Dom hat vor⸗
+        <lb/>zeiten / ehe derſelbe hinweg kommen / einen groſ⸗
+        <lb/>ſen Schatz / und herrliche Zierden gehabt / ſo
+        <lb/>von den Hunniſchen / durch Kaͤyſer Carln
+        <lb/>den Groſſen / eroberten Schaͤtzen / herkommen
+        <lb/>ſeyn ſolle. Und ſchreibt man von einem groſ⸗
+        <lb/>ſen guͤldenen Creutz / ſo allein ſechshundert
+        <lb/>Pfund / oder zwoͤlffhundert Marck Goldes
+        <lb/>gewogen haben ſolle. Bruſchius ſagt: Daß
+        <lb/>der guͤldene Seſſel / mit vielen koͤſtlichen Edel⸗
+        <lb/>geſteinen / welchen der Koͤnig Johannes auß
+        <lb/>Boͤheim dem Ertzbiſchoff allhie / ſo ihn ge⸗
+        <lb/>kroͤnt / geſchenckt / und den die gemeinen Leut
+        <lb/>S. Martins Seſſel genannt / noch zu ſeiner
+        <lb/>Zeit verhanden geweſen / den aber beſagter Se-
+        <lb/>rarius nicht geſehen / wie er lib. 5. p. 850. col. 11.
+        <lb/>bekennet. Es hat allda 42. Domherren / dar⸗
+        <lb/>unter 24. mit dem Probſten / den innern Rath /
+        <lb/>oder Capitul / machen / auß denen / ordentlicher /
+        <lb/>Weiſe / der Ertzbiſchoff pflegt erwehlt zu wer⸗
+        <lb/>den / und darunter die drey Fuͤrnembſte / als
+        <lb/>der Probſt / Dechant / und Cantor, Infeln tra⸗
+        <lb/>gen. Und dieſe in dem Domſtifft wird die
+        <lb/>fuͤrnembſte / und hohe Geiſtlichkeit / genennet.
+        <lb/>Die andere und geringere Cleriſey beſtehet in
+        <lb/>S. Jacobs Abbtey / und andern Stifftern /
+        <lb/>deren fuͤnff Hohe / und vier Nidere ſeyn: Als
+        <lb/>1. zu S. Alban / deſſen verbrandter Kirchen
+        <lb/>Waͤnde nur noch uͤbrig: Und an. 1632. durch
+        <lb/>die Schweden abgebrochen / und die Stein an
+        <lb/>die Guſtavsburg gewendet worden; Die
+        <lb/>Domherren aber ihrer Einkommen genieſſen /
+        <lb/>und ihren Gottesdienſt in der Prediger Kir⸗
+        <lb/>chen verrichten. 2. S. Peters auſſer der Stadt /
+        <lb/>ſo jetzt mehrertheils beſchloſſen. 3. S. Ste⸗
+        <lb/>phans. 4. S. Victors / daſelbſt nur etliche bloſ⸗
+        <lb/>ſe Mauren / und etwas uͤberbliebenes von der
+        <lb/>Kirchen / die Domherrn haben ihre Verrich⸗
+        <lb/>tung in S. Johanns Kirchen. 5. Zum heili⸗
+        <lb/>gen Creutz / welche Kirche auch von Marg⸗
+        <lb/>graff Albrechten zu Brandenburg Schaden
+        <lb/>gelidten hat. 6. Unſer Frauen zu den Staf⸗
+        <lb/>feln. 7. S. Moritzen. 8. S. Johannis / in
+        <lb/>welcher Kirch deß H. Bonifacii Eingeweyd
+        <lb/>begraben worden: Und dann 9. S. Gangol⸗
+        <lb/>phi / ſo / mit einem neuen Namen / die Schloß⸗
+        <lb/>Kirche genannt wird. Ferners hat es da 7.
+        <lb/>Pfarrkirchen: Als 1. S. Ignatii, ſo vorzeiten
+        <lb/>der Tempelherren geweſen / mit zween Thuͤr⸗
+        <lb/>nen / biß zu hoͤchſt hinauff von Quaderſteinen
+        <lb/>anſehenlichen erbauet. 2. S. Quintini, davon
+        <lb/>man ſchier die gantze Stadt uͦberſehen kan / und
+        <lb/>darinn der Juͤngling Caudius de Roſieres,
+        <lb/>mit dieſer Grabſchrifft / ligt:
+        <lb/>Corporis atque animi Roſa eram; ſtirps
+        <lb/>una parentum:
+        <lb/>Clauſus in hoc tumulo, ſum cinis, oſſa,
+        <lb/>nihil.
+        <lb/>3. S. Chriſtophori. 4. S. Heimerammi. 5.
+        <lb/>S. Mariæ, ins gemein Undenmoͤnſter / ein al⸗
+        <lb/>tes Kirchlein. 6. S. Pauli, auch ein gar altes
+        <lb/>Kirchlein / von S. Bilhilde erbauet. 7. S.
+        <lb/>Nicolai, auſſer der Stadt / nahend S. Alban /
+        <lb/>darzu die Vorſtaͤdter Filtzbacher gehoͤrig.
+        <lb/>Der Mannskloͤſter ſeyn vorhin zehen ge⸗
+        <lb/>weſen: Als 1. S. Jacobs der Benedictiner /
+        <lb/>bey der Stadtmauren auff dem Berg. 2. Der
+        <lb/>Prediger. 3. Der Carmeliten. 4. Der Au⸗
+        <lb/>guſtinianer. 5. Der Cartheuſer vor der
+        <lb/>Stadt. 6. S. Wilhelms / bey dem Thor die⸗
+        <lb/>ſes Namens. 7. Antonii, ſo abgangen. 8.
+        <lb/>S. Eliſabeth / bey S. Martins Schloß / da
+        <lb/>vorzeiten das Teutſche Hauß geweſen. 9. Zum
+        <lb/>H. Grab / ſo einen hohen viereckichten Thurn
+        <lb/>hat / und das Hauß deß Ordens S. Johannis
+        <lb/>von Jeruſalem iſt. 10. S. Bernhardi, ſo auch
+        <lb/>nicht mehr.
+        <lb/>Der Frauen Kloͤſter ſeyn acht: Als 1. Al⸗
+        <lb/>tenzell / ſo umbs Jahr Chriſti 635. S. Bihildis,
+        <lb/>ein Kloſter⸗Frau allhie / auß Fuͤrſtlichen
+        <lb/>Stammen / erbauet hat. 2. Marien / im Gna⸗
+        <lb/>den⸗oder Heiligen⸗Thal / oder Dalheim / Ci⸗
+        <pb n="[5]"/>
+        <fw type="pageNum">31</fw>
+        <lb/>ſterzer Ordens. 3. Zu S. Agnes / auch Ci⸗
+        <lb/>ſterzer Ordens / auff dem Diebmarckt. 4. S.
+        <lb/>Magdalenaͤ / zun Weiſſen Frauen. 5. S.
+        <lb/>Claraͤ / deß Minor Ordens / nichtweit vom
+        <lb/>Flacksmarckt. 6. S. Franciſci, auſſer der
+        <lb/>Stadt / zwiſchen der Stadt / und S. Victor.
+        <lb/>7. S. Nicomedis, ein ſehr alte Kirch / als wel⸗
+        <lb/>che vom neundten Biſchoff zu Meyntz / S.
+        <lb/>Gottharden erbauet worden / darinn aber kei⸗
+        <lb/>ne Nonnen mehr: Gleichwie auch 8. zu S.
+        <lb/>Georgen nur noch die Kirch ſtehet. So iſt in
+        <lb/>der groͤſſern Samlung / die durchs Feuer
+        <lb/>Schaden genommen / jetzt die Truckerey. I⸗
+        <lb/>tem / ſo iſt allhie ein ſtattliches Jeſuiter Colle-
+        <lb/>gium: Item 5. Spitaͤl / als zum H. Geiſt /
+        <lb/>S. Barbara / Alexio, S. Catharina in der
+        <lb/>Vorſtadt Filtzbach / und dann das Buͤrger⸗
+        <lb/>Spital / nahend S. Barbaraͤ Spital / zum
+        <lb/>Fluͤß genannt. Item / ſechtzehen Capellen.
+        <lb/>Es ſeyn aber in dieſem Teutſchen Krieg / bey
+        <lb/>Beveſtigung / Belaͤger⸗und Eroberung der
+        <lb/>Stadt / etliche Kirchen darauff gangen: Als
+        <lb/>S. Peter und andere: Wie dan̄ beſagte Vor⸗
+        <lb/>ſtatt Filtzbach / auch hat herhalten muͤſſen.
+        <lb/>Von Bibliothecis hat es allhier 3. Fuͤrneh⸗
+        <lb/>me / als im Dom / in S. Jacobs⸗Kloſter / und
+        <lb/>bey den Jeſuitern / gehabt. Und war in beſag⸗
+        <lb/>tem Dom / inſonderheit die Complutenſiſche
+        <lb/>Bibel / ſo man Biblia regia nennet / wegen deß
+        <lb/>ſehr ſchoͤnen und koͤſtlichen Bands / zu ſehen.
+        <lb/>Die hohe Schul allhie / iſt Anno 1477. vom
+        <lb/>Churfuͤrſt⸗und Ertzbiſchoffen Diethero ge⸗
+        <lb/>ſtifftet / und ſeyn in ſolche Anno 1562. auch die
+        <lb/>Jeſuiter / ſo das Jahr zuvor hieher kommen /
+        <lb/>eingenom̄en worden / wiewol auch zuvor ein
+        <lb/>gute Schul allhie geweſen: Wie dann vor⸗
+        <lb/>laͤngſten / un̄ auch nach Stifftung ſolcher ho⸗
+        <lb/>hen Schul / es viel gelehrter Leut allda geben /
+        <lb/>die an dieſem Ort gebohren worden / gelebt /
+        <lb/>und gelehret haben: Darunter geweſen Ma-
+        <lb/>rianus Scotus, Goſwinus, Rupertus Mona-
+        <lb/>chus, Johan̄es Gawer, Sifridus de Mogun-
+        <lb/>cia, Rudolphus de Rudesheim, Gerardus de
+        <lb/>Caſtris, Petrus Sorbillo, Joh. Dietenberger /
+        <lb/>ſo die teutſche Bibel verfertiget / Michaël,
+        <lb/>Heldingus, ſonſten Sidonius genannt / ſo das
+        <lb/>Interim (welches Serarius pag. 178. cap.
+        <lb/>40. hæreticas ſanctiones nennet) ſchmiden
+        <lb/>helffen / Georgius Wicelius, Sebaſtianus
+        <lb/>Munſterus, Otho Brunfelſius, Caſpar He-
+        <lb/>dio, Cornelius Loos Callidius, und viel an⸗
+        <lb/>dere mehr. So ſtreitet dieſe Stadt mit den
+        <lb/>Staͤdten Straßburg / und Harlem / wegen
+        <lb/>Erfindung der Buchdruckerey / davon Sera-
+        <lb/>rius in vier Capituln handelt / und pag. 155.
+        <lb/>ſeqq. daßſolche allhie erfunden worden ſeye /
+        <lb/>zu erweiſen / ſich unterſtehet / und daß das erſte
+        <lb/>Model noch allda verwahret werde / im 37.
+        <lb/>Capitel / und am 159. Blat / ſaget. Es iſt aber
+        <lb/>dieſes Stuͤck von uns in Typographia Alſa-
+        <lb/>tiæ, in Beſchreibung der Stadt Straßburg /
+        <lb/>wie auch von Martino Zeillero, in der Conti⸗
+        <lb/>nuation ſeiner Raͤiß⸗Beſchreibung durch
+        <lb/>Teutſchland / cap. 14. fol. 166. ſeq. in Be⸗
+        <lb/>ſchreibung der Stadt Meyntz / und in der 38.
+        <lb/>Epiſtel / des dritten Hunderts / weitlaͤufftig
+        <lb/>tractiret worden / dahin wir uns Kuͤrtze hal⸗
+        <lb/>ber / beziehen. Im uͤbrigen ſeyn von weltlichen
+        <lb/>Gebaͤuen allhie / auſſer detz Schloſſes / oder
+        <lb/>S. Martinsburg / der Cantzley / deß neuen
+        <lb/>Baues / und deß Rahthauſes / wenig Fuͤrneh⸗
+        <lb/>me / zuſehen. Und ſeyn der Buͤrger Häuſer
+        <lb/>zwar groß / und weit / aber gar altfraͤnckiſch
+        <lb/>gebauet. Beſagtes Schloß / in welchem der
+        <lb/>Herr Churfuͤrſt Sommerszeiten pfleget Hof
+        <lb/>zu halten / ligt zu unterſt an der Stadt / am
+        <lb/>Rhein / gantz praͤchtig: Welches / nachdem es
+        <lb/>Anno 1552. von Marggraf Albrechten von
+        <lb/>Brandenburg mit Feuer angeſteckt / und zer⸗
+        <lb/>ſtoͤret worden / Ertzbiſchoff Daniel herrlich
+        <lb/>wieder erbauet hat. Es waͤchſt ein köſtlicher
+        <lb/>Wein um die Stadt / welchen man fuͤr gar
+        <lb/>geſund haͤlt. Und iſt auch ſonſten der Boden
+        <lb/>herum fruchtbar / und luſtig.
+        <lb/>Es habē ſich allhie viel denckwuͤrdige Sa⸗
+        <lb/>chen zugetragen / deren wir nur etliche erzeh⸗
+        <lb/>len wollen. Ums Jahr Chriſti 72. iſt dieſe
+        <lb/>Stadt von Civili Batavo gepluͤndert / un ver⸗
+        <lb/>wuͤſtet worden: Darauff von Barbariſchen
+        <lb/>Voͤlckern / deren Marcellinus gedenckt / der⸗
+        <lb/>gleichen geſchehen: Item / von den Francken /
+        <lb/>davon Trithemius in vita S. Maximi zule⸗
+        <lb/>ſen. Ferners haben ſie die Vandaler unter ih⸗
+        <lb/>rem Koͤnig Caroco, An. 410. und folgends
+        <lb/>Rando, ein Teutſcher Herr / auch zerſtoͤret /
+        <lb/>davon ingleichem beym Marcellino zu ſehen.
+        <lb/>Von den Hunnen und ihrem Koͤnig Attila,
+        <lb/>hat dieſer Ort gleiches erfahren. Venantius
+        <lb/>Fortunatus gedencket auch einer Zerſtörung.
+        <lb/>Anno 872. iſt dieſe Stadt durch Erdbidem
+        <lb/>zu Grund gangen. Anno 893. hat ſie Kaͤy⸗
+        <lb/>ſer Arnolphus belaͤgert / und erobert. Kaͤiſer
+        <lb/>Otho der Erſte / hat ſie auch lang belaͤgert /
+        <lb/>aber nicht erobert. Anno 1081. iſt ſie meiſten⸗</text>
+</TEI>
