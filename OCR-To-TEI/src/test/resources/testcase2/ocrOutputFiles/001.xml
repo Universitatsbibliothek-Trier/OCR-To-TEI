@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15 ../../xml_OCR_Output.xsd">
+  <Metadata>
+    <Creator/>
+    <Created>2021-11-11T11:11:11</Created>
+    <LastChange>2023-11-11T11:11:11</LastChange>
+    <Comments/>
+  </Metadata>
+  <Page imageFilename="0012.png" imageHeight="6490" imageWidth="3870">
+    <ReadingOrder>
+      <OrderedGroup id="g3">
+        <RegionRefIndexed index="0" regionRef="r2"/>
+        <RegionRefIndexed index="1" regionRef="r5"/>
+        <RegionRefIndexed index="2" regionRef="r4"/>
+        <RegionRefIndexed index="3" regionRef="r3"/>
+      </OrderedGroup>
+    </ReadingOrder>
+    <ImageRegion id="r1">
+      <Coords points="381,340 381,1176 3569,1176 3569,340"/>
+    </ImageRegion>
+    <TextRegion id="r2" orientation="0.25" type="paragraph">
+      <Coords points="2312,2673"/>
+      <TextLine id="l1">
+        <Coords points="3669,2837"/>
+        <TextEquiv index="0">
+          <Unicode>Gesamtzeile: 1 TextRegion 1 Seite 1 Zeile 1</Unicode>
+        </TextEquiv>
+        <TextEquiv index="1">
+          <Unicode>Diese Zeile ist die gleiche wie oben und kann ignoriert werden?</Unicode>
+        </TextEquiv>
+      </TextLine>
+      <TextEquiv>
+        <Unicode/>
+      </TextEquiv>
+    </TextRegion>
+    <TextRegion id="r3" orientation="0.25" type="paragraph">
+      <Coords points="2312,2673"/>
+      <TextLine id="l1">
+        <Coords points="3669,2837"/>
+        <TextEquiv index="0">
+          <Unicode>Gesamtzeile: 2 TextRegion 2 Seite 1 Zeile 1</Unicode>
+        </TextEquiv>
+      </TextLine>
+    </TextRegion>
+    <TextRegion id="r4" orientation="0.25" type="paragraph">
+      <Coords points="2312,2673"/>
+      <TextLine id="l1">
+        <Coords points="3669,2837"/>
+        <TextEquiv index="0">
+          <Unicode>esamtzeile: 3 TextRegion 3 Seite 1 Zeile 1</Unicode>
+        </TextEquiv>
+      </TextLine>
+    </TextRegion>
+    <TextRegion id="r5" type="drop-capital">
+      <Coords points="511,1387"/>
+      <TextEquiv>
+        <Unicode>G</Unicode>
+      </TextEquiv>
+    </TextRegion>
+    <TextRegion id="r6" type="catch-word">
+      <Coords points="3034,5875 3034,5580 3635,5580 3635,5875"/>
+      <TextEquiv>
+        <Unicode>Kustode1</Unicode>
+      </TextEquiv>
+    </TextRegion>
+    <TextRegion id="r7" type="signature-mark">
+      <Coords points="2257,5927 2257,5575 2649,5575 2649,5927"/>
+      <TextEquiv>
+        <Unicode>Bogensignatur1</Unicode>
+      </TextEquiv>
+    </TextRegion>
+    <TextRegion id="r8" type="page-number">
+      <Coords points="1938,330 1938,181 2005,181 2059,181 2059,330"/>
+      <TextEquiv>
+        <Unicode>1.</Unicode>
+      </TextEquiv>
+    </TextRegion>
+    <ImageRegion id="r9">
+      <Coords points="2074,324 2074,179 2392,179 2392,324"/>
+    </ImageRegion>
+    <ImageRegion id="r10">
+      <Coords points="1617,330 1617,176 1929,176 1929,330"/>
+    </ImageRegion>
+  </Page>
+</PcGts>

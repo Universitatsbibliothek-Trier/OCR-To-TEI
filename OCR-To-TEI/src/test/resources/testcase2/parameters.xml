@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<parameters xmlns="/OCR-To-TEI/src/main/resources" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="/OCR-To-TEI/src/main/resources  ../parameters.xsd">
+        <titleAddition>Grundstrukturierte TEI-Daten</titleAddition>
+        <readingOrder>
+                <!-- allowed values: page_number header subheading drop_capital paragraph catch_word signature_mark-->
+                 <first>page_number</first>
+                 <second>header</second>
+                 <third>subheading</third>
+                 <fourth>drop_capital</fourth>
+                 <fifth>paragraph</fifth>
+                 <sixth>catch_word</sixth>
+                 <seventh>signature_mark</seventh>
+        </readingOrder>
+</parameters>

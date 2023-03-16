@@ -95,7 +95,6 @@ public class TEICreator extends TEI {
 
 		// get title appendage from parameters.xml
 		Parameters parameters = ParametersProvider.getParameters();
-
 		// map data from modsCollection onto TEI object
 		teiTitleInfo.setTitle(mods.getTitleInfo().getTitle());
 		teiPhysicalForm.setValue(mods.getPhysicalDescription().getForm().getValue());
@@ -239,6 +238,7 @@ public class TEICreator extends TEI {
 						for (String textLineStrings : lineStrings) {
 							teiText.getContent().add(jaxbLb);
 							teiText.getContent().add(textLineStrings);
+							System.out.println("line added: " +  textLineStrings);
 						}
 						break;
 					case "catch_word":
