@@ -140,6 +140,7 @@ public class TEICreator extends TEI {
 	public static void addLines(ArrayList<PcGts> pcgtsList) throws IOException, JAXBException
 	{
 		// add lines and special elements from files with OCR-Output
+		teiText.getContent().clear();
 		int ipageCount = 0;
 		for (PcGts pcgtsObject : pcgtsList) {	
 			jaxbPb = teiObjectFactoryParameters.createTextPb(new Pb());
@@ -179,6 +180,7 @@ public class TEICreator extends TEI {
 
 	public static void addNotes(de.uni_trier.bibliothek.xml.mods.model.generated.Mods mods)
 	{
+		teiMods.getNote().clear();
 		for (de.uni_trier.bibliothek.xml.mods.model.generated.Note noteObject : mods.getNote()) {
 			Note teiNote = new Note();
 			String typeAttribute = noteObject.getType();
@@ -192,6 +194,7 @@ public class TEICreator extends TEI {
 
 	public static void addNames(de.uni_trier.bibliothek.xml.mods.model.generated.Mods mods)
 	{
+		teiMods.getName().clear();
 		for (de.uni_trier.bibliothek.xml.mods.model.generated.Name nameObject : mods.getName()) {
 			Name teiName = new Name();
 			teiName.setNamePart(nameObject.getNamePart());
@@ -217,6 +220,7 @@ public class TEICreator extends TEI {
 
 	public static void addParameterElements (ArrayList<String> lineStrings, ArrayList<String> parametersList, PcGts pcgtsObject)
 	{
+		
 		// use order from parameters file
 		for (String orderType : parametersList)
 			{
@@ -238,7 +242,6 @@ public class TEICreator extends TEI {
 						for (String textLineStrings : lineStrings) {
 							teiText.getContent().add(jaxbLb);
 							teiText.getContent().add(textLineStrings);
-							System.out.println("line added: " +  textLineStrings);
 						}
 						break;
 					case "catch_word":

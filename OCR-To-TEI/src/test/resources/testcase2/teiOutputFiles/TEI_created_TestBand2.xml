@@ -49,14 +49,14 @@
     </teiHeader>
     <text>
         <pb n="1"/>
-        <fw type="pageNum">1.</fw>
+        <fw type="pageNum">1</fw>
         <lb/>Gesamtzeile: 1 TextRegion 1 Seite 1 Zeile 1
         <lb/>Gesamtzeile: 3 TextRegion 3 Seite 1 Zeile 1
         <lb/>Gesamtzeile: 2 TextRegion 2 Seite 1 Zeile 1
         <fw type="catch">Kustode1</fw>
         <fw type="sig">Bogensignatur1</fw>
-        <pb n="[2]"/>
-        <fw type="pageNum">3</fw>
+        <pb n="2"/>
+        <fw type="pageNum">2</fw>
         <fw type="header">HeaderSeite2</fw>
         <lb/>Gesamtzeile: 1 TextRegion 1 Seite 2 Zeile 1
         <lb/>Gesamtzeile: 2 TextRegion 2 Seite 2 Zeile 1

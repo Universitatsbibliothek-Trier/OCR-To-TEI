@@ -85,7 +85,7 @@
     <TextRegion id="r9" type="page-number">
       <Coords points="1938,330 1938,181 2005,181 2059,181 2059,330"/>
       <TextEquiv>
-        <Unicode>3</Unicode>
+        <Unicode>2</Unicode>
       </TextEquiv>
     </TextRegion>
     <TextRegion id="r10" type="header">

@@ -20,8 +20,6 @@
                     <mods:genre authority="marcgt">book</mods:genre>
                     <mods:note type="statement of responsibility">Matthäus Merian</mods:note>
                     <mods:note>Dies ist eine zusätzliche Testnotiz</mods:note>
-                    <mods:note type="statement of responsibility">Matthäus Merian</mods:note>
-                    <mods:note>Dies ist eine zusätzliche Testnotiz</mods:note>
                     <mods:location>
                         <mods:physicalLocation>DE-385: https://lobid.org/organisations/DE-385</mods:physicalLocation>
                     </mods:location>
@@ -29,12 +27,6 @@
                     <mods:subject>
                         <mods:topic>irgendwelche schönen Städte</mods:topic>
                     </mods:subject>
-                    <mods:name>
-                        <mods:namePart>Gandalf, der Weiße</mods:namePart>
-                    </mods:name>
-                    <mods:name>
-                        <mods:namePart>noch ein, name Part</mods:namePart>
-                    </mods:name>
                     <mods:name>
                         <mods:namePart>Gandalf, der Weiße</mods:namePart>
                     </mods:name>
@@ -56,22 +48,6 @@
         </sourceDesc>
     </teiHeader>
     <text>
-        <pb n="1"/>
-        <fw type="pageNum">1.</fw>
-        <lb/>Gesamtzeile: 1 TextRegion 1 Seite 1 Zeile 1
-        <lb/>Gesamtzeile: 3 TextRegion 3 Seite 1 Zeile 1
-        <lb/>Gesamtzeile: 2 TextRegion 2 Seite 1 Zeile 1
-        <fw type="catch">Kustode1</fw>
-        <fw type="sig">Bogensignatur1</fw>
-        <pb n="[2]"/>
-        <fw type="pageNum">3</fw>
-        <fw type="header">HeaderSeite2</fw>
-        <lb/>Gesamtzeile: 1 TextRegion 1 Seite 2 Zeile 1
-        <lb/>Gesamtzeile: 2 TextRegion 2 Seite 2 Zeile 1
-        <lb/>Gesamtzeile: 3 TextRegion 3 Seite 2 Zeile 1
-        <lb/>Gesamtzeile: 4 TextRegion 4 Seite 2 Zeile 1
-        <fw type="catch">Kustode2</fw>
-        <fw type="sig">Bogensignatur2</fw>
         <pb n="1"/>
         <fw type="pageNum">1.</fw>
         <lb/>Gesamtzeile: 1 TextRegion 1 Seite 1 Zeile 1
