@@ -31,6 +31,7 @@ public class Main {
 		String modsPath = cmdLineParser.getModsPath();
 		String ocrFolderName = cmdLineParser.getOCRFolderName();
 		String teiPathNameFile = cmdLineParser.getTEIPathNameFile();
+		String parametersPath = "../parameters/parameters.xml";
 	
 		// create Java object with data from XML file after unmarshalling
 		InputStream inputStream = new FileInputStream(modsPath);
@@ -66,7 +67,7 @@ public class Main {
 		xmlReader.close();
 
 		// create TEI from modsCollection-object and list of PcGts-objects
-		TEI teiObject = TEICreator.createTEI(modsCollection, pcgtsList);
+		TEI teiObject = TEICreator.createTEI(modsCollection, pcgtsList, parametersPath);
 		String teiXmlString = TEIMarshaller.marshall(teiObject);
 		
 		// write TEI as file

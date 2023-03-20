@@ -17,8 +17,8 @@ public class InputOutput2Test extends XMLTestCase
 	public void setUp()
 	{
 		XMLUnit.setIgnoreWhitespace(true);
+		XMLUnit.setIgnoreAttributeOrder(false);
 	}
-
 
 	@Test
 	void TEItestcase2Test() throws JAXBException, IOException, TransformerException, SAXException
@@ -26,7 +26,8 @@ public class InputOutput2Test extends XMLTestCase
 		String modsFilePath = "/testcase2/modsFiles/Testmods.xml";
 		String ocrFolderPathString = "/testcase2/ocrOutputFiles/";
 		String teiPathNameFile = "src/test/resources/testcase2/teiOutputFiles/TEI_created_TestBand2.xml";
-		String tei = TestHelperClass.createTEIandCSV(teiPathNameFile, ocrFolderPathString, modsFilePath, getClass());
+		String parametersPath = "src/test/resources/testcase2/parameters.xml";
+		String tei = TestHelperClass.createTEIandCSV(teiPathNameFile, ocrFolderPathString, modsFilePath, parametersPath, getClass());
 		String xmlToString = TestHelperClass.createXMLfromFile("src/test/resources/testcase2/expectedTEIOutputFiles/TEI_created_TestBand2.xml");
 		String expectedCSVFile = Files.readString(Paths.get("src/test/resources/testcase2/expectedTEIOutputFiles/TEI_created_TestBand2_page-numbers.csv"));
 		String outputCSVFile = Files.readString(Paths.get("src/test/resources/testcase2/teiOutputFiles/TEI_created_TestBand2_page-numbers.csv"));

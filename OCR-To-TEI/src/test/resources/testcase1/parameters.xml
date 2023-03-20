@@ -3,6 +3,14 @@
         <titleAddition>Grundstrukturierte TEI-Daten</titleAddition>
         <readingOrder>
                 <!-- allowed values: page_number header subheading drop_capital paragraph catch_word signature_mark-->
+                <!-- <first>subheading</first>
+                 <second>drop_capital</second>
+                 <third>paragraph</third>
+                 <fourth>signature_mark</fourth>
+                 <fifth>catch_word</fifth>
+                 <sixth>header</sixth>
+                 <seventh>page_number</seventh> -->
+
                  <first>signature_mark</first>
                  <second>catch_word</second>
                  <third>header</third>

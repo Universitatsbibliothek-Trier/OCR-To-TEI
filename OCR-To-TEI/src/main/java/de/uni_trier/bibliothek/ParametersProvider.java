@@ -12,10 +12,10 @@ import jakarta.xml.bind.JAXBException;
 
 public class ParametersProvider
 {
-	public static Parameters getParameters() throws JAXBException, IOException
+	public static Parameters getParameters(String parametersPath) throws JAXBException, IOException
 	{
 		Unmarshaller<Parameters> unmarshallerParameters = new Unmarshaller<>(Parameters.class);
-		InputStream inputStreamParameters = new FileInputStream("../parameters/parameters.xml");
+		InputStream inputStreamParameters = new FileInputStream(parametersPath);
 		Reader xmlReaderParameters = new InputStreamReader(inputStreamParameters);
 		Parameters parameters = unmarshallerParameters.unmarshal(xmlReaderParameters);
 		xmlReaderParameters.close();

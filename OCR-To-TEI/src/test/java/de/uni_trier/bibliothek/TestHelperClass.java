@@ -36,7 +36,7 @@ import jakarta.xml.bind.JAXBException;
 public class TestHelperClass extends XMLTestCase
 {
 
-	public static String createTEIandCSV(String teiPathNameFile, String ocrFolderPathString, String modsFilePath, Class testClass) throws JAXBException, IOException
+	public static String createTEIandCSV(String teiPathNameFile, String ocrFolderPathString, String modsFilePath, String parametersPath, Class testClass) throws JAXBException, IOException
 	{
 		// create modscollection
 		InputStream modsFile = testClass.getResourceAsStream(modsFilePath);
@@ -71,7 +71,7 @@ public class TestHelperClass extends XMLTestCase
 		xmlReader.close();
 		
 		// create TEI from modsCollection-object and list of PcGts-objects
-		TEI teiObject = TEICreator.createTEI(modsCollection, pcgtsList);
+		TEI teiObject = TEICreator.createTEI(modsCollection, pcgtsList, parametersPath);
 		String teiXmlString = TEIMarshaller.marshall(teiObject);
 		Path teiFilePath = Paths.get(teiPathNameFile);
 		Files.writeString(teiFilePath, teiXmlString, StandardCharsets.UTF_8);	
@@ -85,8 +85,4 @@ public class TestHelperClass extends XMLTestCase
         String xmlString = xml.toString();   
 		return xmlString;
 	}
-
-
-	
-	
 }
