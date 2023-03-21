@@ -109,7 +109,7 @@ public class TEICreator extends TEI {
 		teiPlaceTerm.setType(mods.getOriginInfo().getPlace().getPlaceTerm().getType());
 		teiHbzIdentifier.setType(mods.getIdentifier().getType());
 		teiHbzIdentifier.setValue(mods.getIdentifier().getValue());
-		titleStmt.setTitle(mods.getTitleInfo().getTitle() + " " + parameters.getTitleAddition());
+		titleStmt.setTitle(mods.getTitleInfo().getTitle() + " " + parameters.getTitleAddition() + ".");
 		teiObject.setText(teiText);
 		teiMods.setTitleInfo(teiTitleInfo);
 		teiMods.setPhysicalDescription(teiPhysicalDescription);
