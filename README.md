@@ -10,7 +10,7 @@ Um das Programm auszuführen zu können müssen verschiedene Argumente mitgegebe
 Dieser Befehl muss vom Ordner aus gestartet werden, in dem sich die `pom.xml`-Datei von Maven befindet.
 Alternativ dazu kann das Bash-Skript `startWithArguments.sh` ausgeführt werden, dass den Benutzer über ein Menü die benötigten Argumente eingeben lässt.
 Als zusätzliche Eingabe kann in der `parameters.xml`-Datei ein String eingegeben werden, der dem Titel hinzugefügt wird.
-Ein weiteres Skrip zur Ausführung des Programmes ist die Datei `createteifile.sh`. Ein Beispiel zur Ausführung des Programmes über das Skript kann folgedermaßen aussehen:
+Ein weiteres Skript zur Ausführung des Programmes ist die Datei `createteifile.sh`. Ein Beispiel zur Ausführung des Programmes über das Skript kann folgendermaßen aussehen:
 `./createteifile.sh -m /PfadZuMODSDatei.xml -o /PfadZuOCRDaten/ -t /PfadUndNameDerTEIDatei.xml`
 Dabei spielt die Reihenfolge der Pfade keine Rolle, sodass folgender Befehl ebenfalls möglich ist:
 `./createteifile.sh -t /PfadUndNameDerTEIDatei.xml -m /PfadZuMODSDatei.xml -o /PfadZuOCRDaten/` 
