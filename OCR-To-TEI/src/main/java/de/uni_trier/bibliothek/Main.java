@@ -13,6 +13,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import de.uni_trier.bibliothek.xml.XMLValidator;
 import de.uni_trier.bibliothek.xml.mods.ModsUnmarshaller;
 import de.uni_trier.bibliothek.xml.mods.model.generated.ModsCollection;
 import de.uni_trier.bibliothek.xml.ocr.OcrDataReader;
@@ -74,6 +75,16 @@ public class Main {
 		Path teiFilePath = Paths.get(teiPathNameFile);
 		Files.writeString(teiFilePath, teiXmlString, StandardCharsets.UTF_8);	
 		System.out.println("TEI and .csv created in: " + teiPathName);	
+
+		// validate against tei_all.xsd
+		if (XMLValidator.validateXMLSchema("src/main/resources/tei_all.xsd", teiPathNameFile))
+		{
+			System.out.println("Validation von " + teiPathNameFile + " gegen " +"tei_all.xsd" + " ist true.");
+		}
+		else
+		{
+			System.out.println("Validation von " + teiPathNameFile + " gegen " +"tei_all.xsd" + " ist false.");
+		}
 	}
 
 }
