@@ -5,14 +5,14 @@ Dazu werden über Unmarshaller die Daten aus den XML-Dateien in Objekten gespeic
 
 ## Ausführung
 
-Um das Programm auszuführen zu können müssen verschiedene Argumente mitgegeben werden. Da das Java-Programm von Maven zusammengebaut wird, sieht der Befehl zum Starten wie folgt aus:
-`mvn -q compile exec:java -Dexec.arguments="-m,/PfadZurModsDatei.xml,-o,/PfadZumOCROrdner/,-t,/PfadFürTEIUndCSV/teiName.xml"`
+Um das Programm auszuführen zu können müssen verschiedene Argumente mitgegeben werden. Da das Java-Programm von Maven zusammengebaut wird, sieht der Befehl zum Starten wie folgt aus:\
+`mvn -q compile exec:java -Dexec.arguments="-m,/PfadZurModsDatei.xml,-o,/PfadZumOCROrdner/,-t,/PfadFürTEIUndCSV/teiName.xml"`\
 Dieser Befehl muss vom Ordner aus gestartet werden, in dem sich die `pom.xml`-Datei von Maven befindet.
 Alternativ dazu kann das Bash-Skript `startWithArguments.sh` ausgeführt werden, dass den Benutzer über ein Menü die benötigten Argumente eingeben lässt.
-Als zusätzliche Eingabe kann in der `parameters.xml`-Datei ein String eingegeben werden, der dem Titel hinzugefügt wird.
-Ein weiteres Skript zur Ausführung des Programmes ist die Datei `createteifile.sh`. Ein Beispiel zur Ausführung des Programmes über das Skript kann folgendermaßen aussehen:
+Als zusätzliche Eingabe kann in der `parameters.xml`-Datei ein String eingegeben werden, der dem Titel hinzugefügt wird.\
+Ein weiteres Skript zur Ausführung des Programmes ist die Datei `createteifile.sh`. Ein Beispiel zur Ausführung des Programmes über das Skript kann folgendermaßen aussehen:\
 `./createteifile.sh -m /PfadZuMODSDatei.xml -o /PfadZuOCRDaten/ -t /PfadUndNameDerTEIDatei.xml`
-Dabei spielt die Reihenfolge der Pfade keine Rolle, sodass folgender Befehl ebenfalls möglich ist:
+Dabei spielt die Reihenfolge der Pfade keine Rolle, sodass folgender Befehl ebenfalls möglich ist:\
 `./createteifile.sh -t /PfadUndNameDerTEIDatei.xml -m /PfadZuMODSDatei.xml -o /PfadZuOCRDaten/` 
 
 ## Ordnerstruktur
