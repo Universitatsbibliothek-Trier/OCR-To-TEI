@@ -36,7 +36,7 @@ import jakarta.xml.bind.JAXBException;
 public class TestHelperClass extends XMLTestCase
 {
 
-	public static String createTEIandCSV(String teiPathNameFile, String ocrFolderPathString, String modsFilePath, String parametersPath, Class testClass) throws JAXBException, IOException
+	public static <T> String createTEIandCSV(String teiPathNameFile, String ocrFolderPathString, String modsFilePath, String parametersPath, Class<T> testClass) throws JAXBException, IOException
 	{
 		// create modscollection
 		InputStream modsFile = testClass.getResourceAsStream(modsFilePath);
