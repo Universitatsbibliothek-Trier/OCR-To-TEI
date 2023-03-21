@@ -21,8 +21,6 @@ import jakarta.xml.bind.annotation.XmlType;
  * <complexType name="Lb">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <all>
- *       </all>
  *     </restriction>
  *   </complexContent>
  * </complexType>
@@ -31,9 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Lb", namespace = "http://www.tei-c.org/ns/1.0", propOrder = {
-
-})
+@XmlType(name = "Lb", namespace = "http://www.tei-c.org/ns/1.0")
 public class Lb {
 
 
