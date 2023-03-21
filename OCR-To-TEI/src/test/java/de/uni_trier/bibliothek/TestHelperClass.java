@@ -53,9 +53,7 @@ public class TestHelperClass extends XMLTestCase
 			}
 		});
 		Arrays.sort(ocrFiles);
-
 		String teiPathName = CSVCreator.createTEIPathName(teiPathNameFile);
-		System.out.println("PathName of csv: " + teiPathName);
 		File csvFile = CSVCreator.createFile();
 
 		ArrayList<PcGts> pcgtsList = new ArrayList<PcGts>();

@@ -35,6 +35,5 @@ public class InputOutput2Test extends XMLTestCase
 		expectedCSVFile = expectedCSVFile.trim();
 		outputCSVFile = outputCSVFile.trim();
 		assertEquals("csv not smiliar", expectedCSVFile, outputCSVFile);
-	}
-	
+	}	
 }
