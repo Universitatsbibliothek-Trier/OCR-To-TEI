@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15"
+  xmlns:self="http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15"
+  elementFormDefault="qualified"
+  attributeFormDefault="unqualified">
+
+  <xs:element name="PcGts">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="Metadata" type="self:Metadata" />
+        <xs:element name="Page" type="self:Page" />
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="Page">
+    <xs:sequence>
+      <xs:element name="ReadingOrder" type="self:ReadingOrder" maxOccurs="1"  />
+      <xs:choice maxOccurs="unbounded" >
+        <xs:element name="TextRegion" type="self:TextRegion" minOccurs="1"  />
+       <xs:element name="ImageRegion" type="self:ImageRegion" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="imageFilename" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string"/>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="imageHeight" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="\d+" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="imageWidth" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="\d+" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="ImageRegion">
+    <xs:sequence>
+      <xs:element name="Coords" type="self:Coords" />
+    </xs:sequence>
+    <xs:attribute name="id" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="r\d+" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+
+
+  <xs:complexType name="TextRegion">
+    <xs:sequence>
+      <xs:element name="Coords" type="self:Coords" />
+      <xs:element name="TextLine" type="self:TextLine" minOccurs="0"
+        maxOccurs="unbounded" />
+      <xs:element name="TextEquiv" type="self:TextEquiv" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="id" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="r\d+" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="orientation" use="optional">
+      <xs:simpleType>
+        <xs:restriction base="xs:string"/>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="type" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string"/>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="TextLine">
+    <xs:sequence>
+      <xs:element name="Coords" type="self:Coords" />
+      <xs:element name="TextEquiv" type="self:TextEquiv" minOccurs="1"
+        maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="id" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="l\d+" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="Coords">
+    <xs:attribute name="points" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="\d+(,\d+ \d+)*,\d+" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="TextEquiv">
+    <xs:sequence>
+      <xs:element name="Unicode" type="self:Unicode" />
+    </xs:sequence>
+    <xs:attribute name="index" use="optional">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="\d+" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:simpleType name="Unicode">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <xs:complexType name="ReadingOrder">
+    <xs:all>
+      <xs:element name="OrderedGroup" type="self:OrderedGroup" />
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="OrderedGroup">
+    <xs:sequence>
+      <xs:element name="RegionRefIndexed" type="self:RegionRefIndexed" minOccurs="1"
+        maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="id">
+      <xs:simpleType>
+        <xs:restriction base="xs:string"/>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="RegionRefIndexed">
+    <xs:attribute name="index" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:pattern value="\d*" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="regionRef" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="r\d*" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="Metadata">
+    <xs:all>
+      <xs:element name="Creator" type="self:Creator" />
+      <xs:element name="Created" type="self:Created" />
+      <xs:element name="LastChange" type="self:LastChange" />
+      <xs:element name="Comments" type="self:Comments" />
+    </xs:all>
+  </xs:complexType>
+
+  <xs:simpleType name="Creator">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+
+  <xs:simpleType name="Created">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="LastChange">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Comments">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+
+</xs:schema> 

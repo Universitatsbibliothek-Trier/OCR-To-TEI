@@ -78,7 +78,7 @@ public class TEICreator extends TEI {
 	public static JAXBElement<Pb> jaxbPb;
 
 
-	public static TEI createTEI(ModsCollection modsCollection, ArrayList<PcGts> pcgtsList)
+	public static TEI createTEI(ModsCollection modsCollection, ArrayList<PcGts> pcgtsList, String parametersPath)
 			throws IOException, JAXBException {
 		// take objects from Mods XML file
 		de.uni_trier.bibliothek.xml.tei.model.generated.ModsCollection teiModsCollection = new de.uni_trier.bibliothek.xml.tei.model.generated.ModsCollection();
@@ -88,14 +88,13 @@ public class TEICreator extends TEI {
 		addNotes(mods);
 
 		// add Lines with special information elements
-		addLines(pcgtsList);
+		addLines(pcgtsList, parametersPath);
 		
 		// add Names
 		addNames(mods);
 
 		// get title appendage from parameters.xml
-		Parameters parameters = ParametersProvider.getParameters();
-
+		Parameters parameters = ParametersProvider.getParameters(parametersPath);
 		// map data from modsCollection onto TEI object
 		teiTitleInfo.setTitle(mods.getTitleInfo().getTitle());
 		teiPhysicalForm.setValue(mods.getPhysicalDescription().getForm().getValue());
@@ -138,9 +137,10 @@ public class TEICreator extends TEI {
 		return teiObject;
 	}
 
-	public static void addLines(ArrayList<PcGts> pcgtsList) throws IOException, JAXBException
+	public static void addLines(ArrayList<PcGts> pcgtsList, String parametersPath) throws IOException, JAXBException
 	{
 		// add lines and special elements from files with OCR-Output
+		teiText.getContent().clear();
 		int ipageCount = 0;
 		for (PcGts pcgtsObject : pcgtsList) {	
 			jaxbPb = teiObjectFactoryParameters.createTextPb(new Pb());
@@ -160,7 +160,7 @@ public class TEICreator extends TEI {
 			pageFwElement.setType("pageNum");
 			catchWordFwElement.setType("catch");
 			ArrayList<String> lineStrings = OcrDataReader.getTextLines(pcgtsObject);
-			ArrayList<String> parametersList = getReadingOrderList();
+			ArrayList<String> parametersList = getReadingOrderList(parametersPath);
 			String pageNumberOCR = Integer.toString(ipageCount);
 			pageNumberOCR = "[" + pageNumberOCR + "]";	
 			if (!OcrDataReader.getSpecialElement(pcgtsObject, "page-number").isEmpty())
@@ -180,6 +180,7 @@ public class TEICreator extends TEI {
 
 	public static void addNotes(de.uni_trier.bibliothek.xml.mods.model.generated.Mods mods)
 	{
+		teiMods.getNote().clear();
 		for (de.uni_trier.bibliothek.xml.mods.model.generated.Note noteObject : mods.getNote()) {
 			Note teiNote = new Note();
 			String typeAttribute = noteObject.getType();
@@ -193,6 +194,7 @@ public class TEICreator extends TEI {
 
 	public static void addNames(de.uni_trier.bibliothek.xml.mods.model.generated.Mods mods)
 	{
+		teiMods.getName().clear();
 		for (de.uni_trier.bibliothek.xml.mods.model.generated.Name nameObject : mods.getName()) {
 			Name teiName = new Name();
 			teiName.setNamePart(nameObject.getNamePart());
@@ -200,10 +202,10 @@ public class TEICreator extends TEI {
 		}
 	}
 
-	public static ArrayList<String> getReadingOrderList() throws JAXBException, IOException
+	public static ArrayList<String> getReadingOrderList(String parametersPath) throws JAXBException, IOException
 	{
 		ArrayList<String> parametersList = new ArrayList<String>();
-		Parameters parameters = ParametersProvider.getParameters();
+		Parameters parameters = ParametersProvider.getParameters(parametersPath);
 		ReadingOrder readingOrder = parameters.getReadingOrder();
 		parametersList.add(readingOrder.getFirst());
 		parametersList.add(readingOrder.getSecond());
@@ -218,6 +220,7 @@ public class TEICreator extends TEI {
 
 	public static void addParameterElements (ArrayList<String> lineStrings, ArrayList<String> parametersList, PcGts pcgtsObject)
 	{
+		
 		// use order from parameters file
 		for (String orderType : parametersList)
 			{

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TEI version="5.0" xmlns="http://www.tei-c.org/ns/1.0" xmlns:mods="http://www.loc.gov/mods/v3">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Trier und Köln. Grundstrukturierte TEI-Daten</title>
+            </titleStmt>
+        </fileDesc>
+        <sourceDesc>
+            <mods:modsCollection>
+                <mods:mods version="3.5" ID="merian1690topographia">
+                    <mods:identifier type="HBZ">HT018907295</mods:identifier>
+                    <mods:originInfo>
+                        <mods:dateIssued>1690</mods:dateIssued>
+                        <mods:place>
+                            <mods:placeTerm type="text">[Frankfurt, Main]</mods:placeTerm>
+                        </mods:place>
+                        <mods:publisher>[Meriansche Erben]</mods:publisher>
+                    </mods:originInfo>
+                    <mods:genre authority="marcgt">book</mods:genre>
+                    <mods:note type="statement of responsibility">Matthäus Merian</mods:note>
+                    <mods:note>Dies ist eine zusätzliche Testnotiz</mods:note>
+                    <mods:location>
+                        <mods:physicalLocation>DE-385: https://lobid.org/organisations/DE-385</mods:physicalLocation>
+                    </mods:location>
+                    <mods:typeOfResource>text</mods:typeOfResource>
+                    <mods:subject>
+                        <mods:topic>irgendwelche schönen Städte</mods:topic>
+                    </mods:subject>
+                    <mods:name>
+                        <mods:namePart>Gandalf, der Weiße</mods:namePart>
+                    </mods:name>
+                    <mods:name>
+                        <mods:namePart>noch ein, name Part</mods:namePart>
+                    </mods:name>
+                    <mods:recordInfo>
+                        <mods:recordContentSource>DE-605</mods:recordContentSource>
+                    </mods:recordInfo>
+                    <mods:physicalDescription>
+                        <mods:extent>3 Seiten, 0 ungezählte Seiten, 0 ungezählte Blätter Bildtafeln (zum Teil gefaltet) ; Illustrationen, Karten ; 4°</mods:extent>
+                        <mods:form authority="marcform">print</mods:form>
+                    </mods:physicalDescription>
+                    <mods:titleInfo>
+                        <mods:title>Trier und Köln.</mods:title>
+                    </mods:titleInfo>
+                </mods:mods>
+            </mods:modsCollection>
+        </sourceDesc>
+    </teiHeader>
+    <text>
+        <pb n="1"/>
+        <fw type="pageNum">1</fw>
+        <lb/>Gesamtzeile: 1 TextRegion 1 Seite 1 Zeile 1
+        <lb/>Gesamtzeile: 3 TextRegion 3 Seite 1 Zeile 1
+        <lb/>Gesamtzeile: 2 TextRegion 2 Seite 1 Zeile 1
+        <fw type="catch">Kustode1</fw>
+        <fw type="sig">Bogensignatur1</fw>
+        <pb n="2"/>
+        <fw type="pageNum">2</fw>
+        <fw type="header">HeaderSeite2</fw>
+        <lb/>Gesamtzeile: 1 TextRegion 1 Seite 2 Zeile 1
+        <lb/>Gesamtzeile: 2 TextRegion 2 Seite 2 Zeile 1
+        <lb/>Gesamtzeile: 3 TextRegion 3 Seite 2 Zeile 1
+        <lb/>Gesamtzeile: 4 TextRegion 4 Seite 2 Zeile 1
+        <fw type="catch">Kustode2</fw>
+        <fw type="sig">Bogensignatur2</fw>
+    </text>
+</TEI>
