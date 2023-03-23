@@ -77,7 +77,7 @@ public class Main {
 		System.out.println("TEI and .csv created in: " + teiPathName);	
 
 		// validate against tei_all.xsd
-		if (XMLValidator.validateXMLSchema("src/main/resources/tei_all.xsd", teiPathNameFile))
+		if (XMLValidator.validateXMLSchema("src/main/resources/officialTEI/tei_all.xsd", teiPathNameFile))
 		{
 			System.out.println("Validation von " + teiPathNameFile + " gegen " +"tei_all.xsd" + " ist true.");
 		}
@@ -85,6 +85,16 @@ public class Main {
 		{
 			System.out.println("Validation von " + teiPathNameFile + " gegen " +"tei_all.xsd" + " ist false.");
 		}
+
+		// String teiExamplePath = "src/main/resources/TEIexamplesFiles/merian_01_header.xml";
+		// if (XMLValidator.validateXMLSchema("src/main/resources/officialTEI/tei_all.xsd", teiExamplePath))
+		// {
+		// 	System.out.println("Validation von " + teiExamplePath + " gegen " +"tei_all.xsd" + " ist true.");
+		// }
+		// else
+		// {
+		// 	System.out.println("Validation von " + teiExamplePath + " gegen " +"tei_all.xsd" + " ist false.");
+		// }
 	}
 
 }

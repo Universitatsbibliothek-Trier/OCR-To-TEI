@@ -22,4 +22,5 @@ public class ParametersProvider
 		inputStreamParameters.close();
 		return parameters;
 	}
+
 }

@@ -91,14 +91,29 @@
 
   <xs:complexType name="TitleStmt">
     <xs:sequence>
-      <xs:element name="title" type="self:Title" />
+      <xs:element name="title" type="self:Title" maxOccurs="1"/>
+      <xs:element name="respStmt" type="self:RespStmt" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
+
+  <xs:complexType name="RespStmt">
+    <xs:sequence>
+      <xs:element name="resp" type="self:Resp" maxOccurs="1"/>
+      <xs:element name="name" type="self:Name" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="Resp">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+
+  <xs:simpleType name="Name">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
 
   <xs:simpleType name="Title">
     <xs:restriction base="xs:string" />
   </xs:simpleType>
-
 
   <xs:complexType name="SourceDesc">
     <xs:sequence>

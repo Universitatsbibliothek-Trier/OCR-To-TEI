@@ -25,6 +25,7 @@ import de.uni_trier.bibliothek.xml.tei.model.generated.Place;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Place.PlaceTerm;
 import de.uni_trier.bibliothek.xml.tei.model.generated.PlaceTermValue;
 import de.uni_trier.bibliothek.xml.tei.model.generated.RecordInfo;
+import de.uni_trier.bibliothek.xml.tei.model.generated.RespStmt;
 import de.uni_trier.bibliothek.xml.tei.model.generated.SourceDesc;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Subject;
 import de.uni_trier.bibliothek.xml.tei.model.generated.TEI;
@@ -45,6 +46,7 @@ public class TEICreator extends TEI {
 	public static TeiHeader teiHeader = new TeiHeader();
 	public static FileDesc fileDesc = new FileDesc();
 	public static TitleStmt titleStmt = new TitleStmt();
+	public static RespStmt respStmt = new RespStmt();
 	public static SourceDesc sourceDesc = new SourceDesc();
 	public static Mods teiMods = new Mods();
 	public static HbzIdentifier teiHbzIdentifier = new HbzIdentifier();
@@ -131,6 +133,14 @@ public class TEICreator extends TEI {
 		sourceDesc.setModsCollection(teiModsCollection);
 		teiHeader.setSourceDesc(sourceDesc);
 		fileDesc.setTitleStmt(titleStmt);
+		//get from parameters
+		ArrayList<RespStmt> respStmt = new ArrayList<>();
+		respStmt = (ArrayList<RespStmt>) titleStmt.getRespStmt();
+		RespStmt respStmtObject = new RespStmt();
+		respStmtObject.setName("Universitätsbibliothek Trier");
+		respStmtObject.setResp("created at");
+		respStmt.add(respStmtObject);
+		//
 		teiHeader.setFileDesc(fileDesc);
 		teiObject.setTeiHeader(teiHeader);
 		teiObject.setVersion(TEIVERSION);

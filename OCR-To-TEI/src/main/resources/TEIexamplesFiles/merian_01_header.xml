@@ -1,0 +1,53 @@
+<TEI version="5.0"
+    xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>
+                    M.Z. Topographia Helvetiæ, Rhætiæ, Et Valesiæ: Das ist/ Beschreibung und eigentliche Abbildung der vornehmsten Städte und Plätze in der Hochlöblichen Eydgenoßschafft, Graubündten, Wallis/ und etlicher zugewandten Orthen. Grundstrukturierte TEI-Daten.
+                </title>
+                <respStmt>
+                    <resp>created at</resp>
+                    <name>Universitätsbibliothek Trier</name>
+                    <!-- Aus parameters.xml -->
+                </respStmt>
+                <!-- Es können mehrere respStmt-Elemente auftauchen -->
+            </titleStmt>
+            <publicationStmt>
+                <p>Veröffentlicht unter CC-0-Lizenz</p> <!-- aus parameters.xml -->
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <!-- Aus:
+                        <mods:name>
+                        <mods:namePart></mods:namePart>
+                        </mods:name>
+                        -->    
+                        <author>Zeiller, Martin</author> <!-- Kann mehrere Autor*innen enthalten -->
+                        <author>Merian, Matthaeus, der Ältere</author>
+                        <author>Frankfurt am Main</author><!-- Aus:     <mods:name>
+                            <mods:namePart>Frankfurt am Main</mods:namePart>
+                          </mods:name>
+                       -->
+                       <!-- Falsche Angaben in `<author>` werden nachträglich geändert (manuell oder so) -->
+                        <title>Topographia Helvetiæ, Rhætiæ, Et Valesiæ: Das ist/ Beschreibung und eigentliche Abbildung der vornehmsten Städte und Plätze in der Hochlöblichen Eydgenoßschafft, Graubündten, Wallis/ und etlicher zugewandten Orthen</title> <!-- Aus `mods:titleInfo`: `mods:title` und, sofern vorhanden, `mods:subTitle`-->
+                        <edition>In dieser andern Edition mit sonderm Fleiß durchgangen, und von vorigen Fehlern corrigirt/ vermehrt und gebessert.</edition><!-- Aus: <mods:edition>In dieser andern Edition mit sonderm Fleiß durchgangen, und von vorigen Fehlern corrigirt/ vermehrt und gebessert.</mods:edition> -->
+                        <imprint>
+                            <pubPlace>Franckfurt am Mayn</pubPlace><!-- aus: <mods:place>
+                            <mods:placeTerm type="text">Franckfurt am Mayn</mods:placeTerm>
+                            </mods:place>-->
+                            <publisher>Zum Truck verlegt von denen Merianischen Erben</publisher><!-- Aus: <mods:publisher>Zum Truck verlegt von denen Merianischen Erben</mods:publisher> -->
+                            <date>1655</date><!-- Aus: <mods:dateIssued>1655</mods:dateIssued> -->
+                        </imprint>
+                    </monogr>
+                    <series>
+                        <title>Topographia Germaniae</title> <!-- in parameters.xml -->
+                        <biblScope>Band 11</biblScope> <!-- Wird manuell nachgetragen -->
+                    </series>
+                </biblStruct>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text><body><div><p>Lorem Ipsum Dolor Sit Amet</p></div></body></text>
+</TEI>

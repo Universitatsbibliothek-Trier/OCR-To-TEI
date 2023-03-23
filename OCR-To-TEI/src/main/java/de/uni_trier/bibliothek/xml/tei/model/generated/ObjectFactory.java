@@ -132,6 +132,16 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link RespStmt }
+     * 
+     * @return
+     *     the new instance of {@link RespStmt }
+     */
+    public RespStmt createRespStmt() {
+        return new RespStmt();
+    }
+
+    /**
      * Create an instance of {@link SourceDesc }
      * 
      * @return
