@@ -95,6 +95,9 @@ public class TEICreator extends TEI {
 		// add Names
 		addNames(mods);
 
+		// add respStmt element
+		addRespStmt(parametersPath);
+
 		// get title appendage from parameters.xml
 		Parameters parameters = ParametersProvider.getParameters(parametersPath);
 		// map data from modsCollection onto TEI object
@@ -133,19 +136,28 @@ public class TEICreator extends TEI {
 		sourceDesc.setModsCollection(teiModsCollection);
 		teiHeader.setSourceDesc(sourceDesc);
 		fileDesc.setTitleStmt(titleStmt);
-		//get from parameters
-		ArrayList<RespStmt> respStmt = new ArrayList<>();
-		respStmt = (ArrayList<RespStmt>) titleStmt.getRespStmt();
-		RespStmt respStmtObject = new RespStmt();
-		respStmtObject.setName("Universitätsbibliothek Trier");
-		respStmtObject.setResp("created at");
-		respStmt.add(respStmtObject);
-		//
 		teiHeader.setFileDesc(fileDesc);
 		teiObject.setTeiHeader(teiHeader);
 		teiObject.setVersion(TEIVERSION);
 		return teiObject;
 	}
+
+
+	public static void addRespStmt(String parametersPath) throws JAXBException, IOException
+	{
+		titleStmt.getRespStmt().clear();
+		Parameters parameters = ParametersProvider.getParameters(parametersPath);
+		// de.uni_trier.bibliothek.xml.parameters.model.generated.RespStmt respStmtParameteres = parameters.getRespStmt();
+		for (RespStmt respStmt : titleStmt.getRespStmt())
+		{
+			RespStmt respStmtObject = new RespStmt();
+			respStmtObject.setName(parameters.getRespStmt().getName());
+			respStmtObject.setResp(parameters.getRespStmt().getResp());
+			titleStmt.getRespStmt().add(respStmtObject);
+		}
+	
+	}
+
 
 	public static void addLines(ArrayList<PcGts> pcgtsList, String parametersPath) throws IOException, JAXBException
 	{
@@ -212,6 +224,7 @@ public class TEICreator extends TEI {
 		}
 	}
 
+	
 	public static ArrayList<String> getReadingOrderList(String parametersPath) throws JAXBException, IOException
 	{
 		ArrayList<String> parametersList = new ArrayList<String>();

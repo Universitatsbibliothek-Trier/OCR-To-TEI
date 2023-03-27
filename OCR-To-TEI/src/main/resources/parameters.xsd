@@ -7,9 +7,25 @@
       <xs:all>
         <xs:element name="titleAddition" type="self:TitleAddition" />
         <xs:element name="readingOrder" type="self:ReadingOrder" />
+        <xs:element name="respStmt" type="self:RespStmt"/>
       </xs:all>
     </xs:complexType>
   </xs:element>
+  
+  <xs:complexType name="RespStmt">
+    <xs:sequence>
+      <xs:element name="resp" type="self:Resp" maxOccurs="1"/>
+      <xs:element name="name" type="self:Name" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="Resp">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+
+  <xs:simpleType name="Name">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
 
   <xs:complexType name="ReadingOrder">
     <xs:sequence >

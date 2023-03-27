@@ -1,5 +1,5 @@
 {
-"author": [["namePart"], ["author"]],
+"author": [["namePart"], ["biblStruct/monogr/author"]],
 "title": [["title", "subTitle"], ["title"]],
 "edition": [["edition"], ["edition"]],
 "where": [["pubPlace"], ["placeTerm"]],

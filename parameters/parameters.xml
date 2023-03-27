@@ -11,5 +11,9 @@
                  <sixth>catch_word</sixth>
                  <seventh>signature_mark</seventh>
         </readingOrder>
-        <!--respstmt data -->
+        <respStmt>
+                <resp>created at</resp>
+                <name>Universitätsbibliothek Trier</name>
+        </respStmt>
+        
 </parameters>

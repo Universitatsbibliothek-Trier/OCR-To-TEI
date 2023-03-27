@@ -55,4 +55,14 @@ public class ObjectFactory {
         return new ReadingOrder();
     }
 
+    /**
+     * Create an instance of {@link RespStmt }
+     * 
+     * @return
+     *     the new instance of {@link RespStmt }
+     */
+    public RespStmt createRespStmt() {
+        return new RespStmt();
+    }
+
 }

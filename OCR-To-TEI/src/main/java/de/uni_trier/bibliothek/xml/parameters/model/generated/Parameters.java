@@ -26,6 +26,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *       <all>
  *         <element name="titleAddition" type="{/OCR-To-TEI/src/main/resources}TitleAddition"/>
  *         <element name="readingOrder" type="{/OCR-To-TEI/src/main/resources}ReadingOrder"/>
+ *         <element name="respStmt" type="{/OCR-To-TEI/src/main/resources}RespStmt"/>
  *       </all>
  *     </restriction>
  *   </complexContent>
@@ -45,6 +46,8 @@ public class Parameters {
     protected String titleAddition;
     @XmlElement(required = true)
     protected ReadingOrder readingOrder;
+    @XmlElement(required = true)
+    protected RespStmt respStmt;
 
     /**
      * Ruft den Wert der titleAddition-Eigenschaft ab.
@@ -92,6 +95,30 @@ public class Parameters {
      */
     public void setReadingOrder(ReadingOrder value) {
         this.readingOrder = value;
+    }
+
+    /**
+     * Ruft den Wert der respStmt-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link RespStmt }
+     *     
+     */
+    public RespStmt getRespStmt() {
+        return respStmt;
+    }
+
+    /**
+     * Legt den Wert der respStmt-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link RespStmt }
+     *     
+     */
+    public void setRespStmt(RespStmt value) {
+        this.respStmt = value;
     }
 
 }
