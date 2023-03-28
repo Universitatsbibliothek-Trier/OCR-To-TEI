@@ -26,7 +26,8 @@ import jakarta.xml.bind.annotation.XmlType;
  *       <all>
  *         <element name="titleAddition" type="{/OCR-To-TEI/src/main/resources}TitleAddition"/>
  *         <element name="readingOrder" type="{/OCR-To-TEI/src/main/resources}ReadingOrder"/>
- *         <element name="respStmt" type="{/OCR-To-TEI/src/main/resources}RespStmt"/>
+ *         <element name="respStmtElements" type="{/OCR-To-TEI/src/main/resources}RespStmtElements"/>
+ *         <element name="publicationStmt" type="{/OCR-To-TEI/src/main/resources}PublicationStmt"/>
  *       </all>
  *     </restriction>
  *   </complexContent>
@@ -47,7 +48,9 @@ public class Parameters {
     @XmlElement(required = true)
     protected ReadingOrder readingOrder;
     @XmlElement(required = true)
-    protected RespStmt respStmt;
+    protected RespStmtElements respStmtElements;
+    @XmlElement(required = true)
+    protected PublicationStmt publicationStmt;
 
     /**
      * Ruft den Wert der titleAddition-Eigenschaft ab.
@@ -98,27 +101,51 @@ public class Parameters {
     }
 
     /**
-     * Ruft den Wert der respStmt-Eigenschaft ab.
+     * Ruft den Wert der respStmtElements-Eigenschaft ab.
      * 
      * @return
      *     possible object is
-     *     {@link RespStmt }
+     *     {@link RespStmtElements }
      *     
      */
-    public RespStmt getRespStmt() {
-        return respStmt;
+    public RespStmtElements getRespStmtElements() {
+        return respStmtElements;
     }
 
     /**
-     * Legt den Wert der respStmt-Eigenschaft fest.
+     * Legt den Wert der respStmtElements-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is
-     *     {@link RespStmt }
+     *     {@link RespStmtElements }
      *     
      */
-    public void setRespStmt(RespStmt value) {
-        this.respStmt = value;
+    public void setRespStmtElements(RespStmtElements value) {
+        this.respStmtElements = value;
+    }
+
+    /**
+     * Ruft den Wert der publicationStmt-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link PublicationStmt }
+     *     
+     */
+    public PublicationStmt getPublicationStmt() {
+        return publicationStmt;
+    }
+
+    /**
+     * Legt den Wert der publicationStmt-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link PublicationStmt }
+     *     
+     */
+    public void setPublicationStmt(PublicationStmt value) {
+        this.publicationStmt = value;
     }
 
 }

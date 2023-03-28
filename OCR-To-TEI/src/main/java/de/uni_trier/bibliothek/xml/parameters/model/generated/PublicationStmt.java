@@ -5,29 +5,26 @@
 //
 
 
-package de.uni_trier.bibliothek.xml.tei.model.generated;
+package de.uni_trier.bibliothek.xml.parameters.model.generated;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für Pb complex type.
+ * <p>Java-Klasse für PublicationStmt complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="Pb">
+ * <complexType name="PublicationStmt">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <attribute name="n">
- *         <simpleType>
- *           <restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *           </restriction>
- *         </simpleType>
- *       </attribute>
+ *       <sequence>
+ *         <element name="p" type="{/OCR-To-TEI/src/main/resources}P"/>
+ *       </sequence>
  *     </restriction>
  *   </complexContent>
  * </complexType>
@@ -36,34 +33,36 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Pb")
-public class Pb {
+@XmlType(name = "PublicationStmt", propOrder = {
+    "p"
+})
+public class PublicationStmt {
 
-    @XmlAttribute(name = "n")
-    protected String n;
+    @XmlElement(required = true)
+    protected String p;
 
     /**
-     * Ruft den Wert der n-Eigenschaft ab.
+     * Ruft den Wert der p-Eigenschaft ab.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getN() {
-        return n;
+    public String getP() {
+        return p;
     }
 
     /**
-     * Legt den Wert der n-Eigenschaft fest.
+     * Legt den Wert der p-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setN(String value) {
-        this.n = value;
+    public void setP(String value) {
+        this.p = value;
     }
 
 }

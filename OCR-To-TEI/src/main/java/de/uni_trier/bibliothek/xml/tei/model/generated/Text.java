@@ -41,7 +41,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Text", namespace = "http://www.tei-c.org/ns/1.0", propOrder = {
+@XmlType(name = "Text", propOrder = {
     "content"
 })
 public class Text {

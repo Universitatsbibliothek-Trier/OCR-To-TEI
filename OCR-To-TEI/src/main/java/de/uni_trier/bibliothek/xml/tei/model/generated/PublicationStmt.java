@@ -14,17 +14,16 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für RespStmt complex type.
+ * <p>Java-Klasse für PublicationStmt complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="RespStmt">
+ * <complexType name="PublicationStmt">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="resp" type="{http://www.tei-c.org/ns/1.0}Resp"/>
- *         <element name="name" type="{http://www.tei-c.org/ns/1.0}Name"/>
+ *         <element name="p" type="{http://www.tei-c.org/ns/1.0}P"/>
  *       </sequence>
  *     </restriction>
  *   </complexContent>
@@ -34,63 +33,36 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RespStmt", propOrder = {
-    "resp",
-    "name"
+@XmlType(name = "PublicationStmt", propOrder = {
+    "p"
 })
-public class RespStmt {
+public class PublicationStmt {
 
     @XmlElement(required = true)
-    protected String resp;
-    @XmlElement(required = true)
-    protected String name;
+    protected String p;
 
     /**
-     * Ruft den Wert der resp-Eigenschaft ab.
+     * Ruft den Wert der p-Eigenschaft ab.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getResp() {
-        return resp;
+    public String getP() {
+        return p;
     }
 
     /**
-     * Legt den Wert der resp-Eigenschaft fest.
+     * Legt den Wert der p-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setResp(String value) {
-        this.resp = value;
-    }
-
-    /**
-     * Ruft den Wert der name-Eigenschaft ab.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * Legt den Wert der name-Eigenschaft fest.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setName(String value) {
-        this.name = value;
+    public void setP(String value) {
+        this.p = value;
     }
 
 }

@@ -11,6 +11,7 @@ import de.uni_trier.bibliothek.xml.ocr.OcrDataReader;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.PcGts;
 import de.uni_trier.bibliothek.xml.parameters.model.generated.Parameters;
 import de.uni_trier.bibliothek.xml.parameters.model.generated.ReadingOrder;
+import de.uni_trier.bibliothek.xml.tei.model.generated.BiblStruct;
 import de.uni_trier.bibliothek.xml.tei.model.generated.FileDesc;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Form;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Fw;
@@ -24,6 +25,7 @@ import de.uni_trier.bibliothek.xml.tei.model.generated.PhysicalDescription;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Place;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Place.PlaceTerm;
 import de.uni_trier.bibliothek.xml.tei.model.generated.PlaceTermValue;
+import de.uni_trier.bibliothek.xml.tei.model.generated.PublicationStmt;
 import de.uni_trier.bibliothek.xml.tei.model.generated.RecordInfo;
 import de.uni_trier.bibliothek.xml.tei.model.generated.RespStmt;
 import de.uni_trier.bibliothek.xml.tei.model.generated.SourceDesc;
@@ -47,8 +49,10 @@ public class TEICreator extends TEI {
 	public static FileDesc fileDesc = new FileDesc();
 	public static TitleStmt titleStmt = new TitleStmt();
 	public static RespStmt respStmt = new RespStmt();
+	public static PublicationStmt publicStmt = new PublicationStmt();
 	public static SourceDesc sourceDesc = new SourceDesc();
 	public static Mods teiMods = new Mods();
+	public static BiblStruct biblStruct = new BiblStruct();
 	public static HbzIdentifier teiHbzIdentifier = new HbzIdentifier();
 	public static OriginInfo teiOriginInfo = new OriginInfo();
 	public static Place teiPlace = new Place();
@@ -98,45 +102,49 @@ public class TEICreator extends TEI {
 		// add respStmt element
 		addRespStmt(parametersPath);
 
-		// get title appendage from parameters.xml
+		// get info from parameters.xml
 		Parameters parameters = ParametersProvider.getParameters(parametersPath);
 		// map data from modsCollection onto TEI object
 		teiTitleInfo.setTitle(mods.getTitleInfo().getTitle());
-		teiPhysicalForm.setValue(mods.getPhysicalDescription().getForm().getValue());
-		teiPhysicalForm.setAuthority(mods.getPhysicalDescription().getForm().getAuthority());
-		teiPhysicalDescription.setForm(teiPhysicalForm);
-		teiPhysicalDescription.setExtent(mods.getPhysicalDescription().getExtent());
-		teiRecordInfo.setRecordContentSource(mods.getRecordInfo().getRecordContentSource());
-		teiSubject.setTopic(mods.getSubject().getTopic());
-		teiLocation.setPhysicalLocation(mods.getLocation().getPhysicalLocation());
-		teiPlaceTerm.setValue(PlaceTermValue.fromValue(mods.getOriginInfo().getPlace().getPlaceTerm().getValue().value()));
-		teiPlace.setPlaceTerm(teiPlaceTerm);
-		teiPlaceTerm.setType(mods.getOriginInfo().getPlace().getPlaceTerm().getType());
-		teiHbzIdentifier.setType(mods.getIdentifier().getType());
-		teiHbzIdentifier.setValue(mods.getIdentifier().getValue());
+		// teiPhysicalForm.setValue(mods.getPhysicalDescription().getForm().getValue());
+		// teiPhysicalForm.setAuthority(mods.getPhysicalDescription().getForm().getAuthority());
+		// teiPhysicalDescription.setForm(teiPhysicalForm);
+		// teiPhysicalDescription.setExtent(mods.getPhysicalDescription().getExtent());
+		// teiRecordInfo.setRecordContentSource(mods.getRecordInfo().getRecordContentSource());
+		// teiSubject.setTopic(mods.getSubject().getTopic());
+		// teiLocation.setPhysicalLocation(mods.getLocation().getPhysicalLocation());
+		// teiPlaceTerm.setValue(PlaceTermValue.fromValue(mods.getOriginInfo().getPlace().getPlaceTerm().getValue().value()));
+		// teiPlace.setPlaceTerm(teiPlaceTerm);
+		// teiPlaceTerm.setType(mods.getOriginInfo().getPlace().getPlaceTerm().getType());
+		// teiHbzIdentifier.setType(mods.getIdentifier().getType());
+		// teiHbzIdentifier.setValue(mods.getIdentifier().getValue());
 		titleStmt.setTitle(mods.getTitleInfo().getTitle() + " " + parameters.getTitleAddition() + ".");
 		teiObject.setText(teiText);
-		teiMods.setTitleInfo(teiTitleInfo);
-		teiMods.setPhysicalDescription(teiPhysicalDescription);
-		teiMods.setRecordInfo(teiRecordInfo);
-		teiMods.setSubject(teiSubject);
-		teiMods.setTypeOfResource(mods.getTypeOfResource());
-		teiMods.setLocation(teiLocation);
-		teiGenre.setValue(GenreValue.fromValue(mods.getGenre().getValue().value()));
-		teiGenre.setAuthority(mods.getGenre().getAuthority());
-		teiMods.setGenre(teiGenre);
-		teiOriginInfo.setDateIssued(mods.getOriginInfo().getDateIssued());
-		teiOriginInfo.setPlace(teiPlace);
-		teiOriginInfo.setPublisher(mods.getOriginInfo().getPublisher());
-		teiMods.setIdentifier(teiHbzIdentifier);
-		teiMods.setOriginInfo(teiOriginInfo);
-		teiMods.setVersion(mods.getVersion());
-		teiMods.setID(mods.getID());
-		teiModsCollection.setMods(teiMods);
-		sourceDesc.setModsCollection(teiModsCollection);
-		teiHeader.setSourceDesc(sourceDesc);
+		// teiMods.setTitleInfo(teiTitleInfo);
+		// teiMods.setPhysicalDescription(teiPhysicalDescription);
+		// teiMods.setRecordInfo(teiRecordInfo);
+		// teiMods.setSubject(teiSubject);
+		// teiMods.setTypeOfResource(mods.getTypeOfResource());
+		// teiMods.setLocation(teiLocation);
+		// teiGenre.setValue(GenreValue.fromValue(mods.getGenre().getValue().value()));
+		// teiGenre.setAuthority(mods.getGenre().getAuthority());
+		// teiMods.setGenre(teiGenre);
+		// teiOriginInfo.setDateIssued(mods.getOriginInfo().getDateIssued());
+		// teiOriginInfo.setPlace(teiPlace);
+		// teiOriginInfo.setPublisher(mods.getOriginInfo().getPublisher());
+		// teiMods.setIdentifier(teiHbzIdentifier);
+		// teiMods.setOriginInfo(teiOriginInfo);
+		// teiMods.setVersion(mods.getVersion());
+		// teiMods.setID(mods.getID());
+		// teiModsCollection.setMods(teiMods);
+		// sourceDesc.setModsCollection(teiModsCollection);
+		sourceDesc.setBiblStruct(biblStruct);
+		// teiHeader.setSourceDesc(sourceDesc);
 		fileDesc.setTitleStmt(titleStmt);
 		teiHeader.setFileDesc(fileDesc);
+		publicStmt.setP(parameters.getPublicationStmt().getP());
+		fileDesc.setPublicationStmt(publicStmt);
+		fileDesc.setSourceDesc(sourceDesc);
 		teiObject.setTeiHeader(teiHeader);
 		teiObject.setVersion(TEIVERSION);
 		return teiObject;
@@ -147,15 +155,14 @@ public class TEICreator extends TEI {
 	{
 		titleStmt.getRespStmt().clear();
 		Parameters parameters = ParametersProvider.getParameters(parametersPath);
-		// de.uni_trier.bibliothek.xml.parameters.model.generated.RespStmt respStmtParameteres = parameters.getRespStmt();
-		for (RespStmt respStmt : titleStmt.getRespStmt())
+		ArrayList<de.uni_trier.bibliothek.xml.parameters.model.generated.RespStmt> respStmtParameters = new ArrayList<>(parameters.getRespStmtElements().getRespStmt());
+		for (de.uni_trier.bibliothek.xml.parameters.model.generated.RespStmt respStmt : respStmtParameters)
 		{
 			RespStmt respStmtObject = new RespStmt();
-			respStmtObject.setName(parameters.getRespStmt().getName());
-			respStmtObject.setResp(parameters.getRespStmt().getResp());
+			respStmtObject.setName(respStmt.getName());
+			respStmtObject.setResp(respStmt.getResp());
 			titleStmt.getRespStmt().add(respStmtObject);
-		}
-	
+		}	
 	}
 
 

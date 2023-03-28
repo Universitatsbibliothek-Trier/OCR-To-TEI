@@ -25,7 +25,6 @@ import jakarta.xml.bind.annotation.XmlType;
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
  *         <element name="fileDesc" type="{http://www.tei-c.org/ns/1.0}FileDesc"/>
- *         <element name="sourceDesc" type="{http://www.tei-c.org/ns/1.0}SourceDesc"/>
  *       </sequence>
  *       <attribute name="version">
  *         <simpleType>
@@ -49,16 +48,13 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TeiHeader", namespace = "http://www.tei-c.org/ns/1.0", propOrder = {
-    "fileDesc",
-    "sourceDesc"
+@XmlType(name = "TeiHeader", propOrder = {
+    "fileDesc"
 })
 public class TeiHeader {
 
     @XmlElement(required = true)
     protected FileDesc fileDesc;
-    @XmlElement(required = true)
-    protected SourceDesc sourceDesc;
     @XmlAttribute(name = "version")
     protected String version;
     @XmlAttribute(name = "ID")
@@ -86,30 +82,6 @@ public class TeiHeader {
      */
     public void setFileDesc(FileDesc value) {
         this.fileDesc = value;
-    }
-
-    /**
-     * Ruft den Wert der sourceDesc-Eigenschaft ab.
-     * 
-     * @return
-     *     possible object is
-     *     {@link SourceDesc }
-     *     
-     */
-    public SourceDesc getSourceDesc() {
-        return sourceDesc;
-    }
-
-    /**
-     * Legt den Wert der sourceDesc-Eigenschaft fest.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link SourceDesc }
-     *     
-     */
-    public void setSourceDesc(SourceDesc value) {
-        this.sourceDesc = value;
     }
 
     /**

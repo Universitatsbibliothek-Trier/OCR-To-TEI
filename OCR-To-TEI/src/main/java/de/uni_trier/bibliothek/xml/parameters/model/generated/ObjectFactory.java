@@ -56,6 +56,26 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link RespStmtElements }
+     * 
+     * @return
+     *     the new instance of {@link RespStmtElements }
+     */
+    public RespStmtElements createRespStmtElements() {
+        return new RespStmtElements();
+    }
+
+    /**
+     * Create an instance of {@link PublicationStmt }
+     * 
+     * @return
+     *     the new instance of {@link PublicationStmt }
+     */
+    public PublicationStmt createPublicationStmt() {
+        return new PublicationStmt();
+    }
+
+    /**
      * Create an instance of {@link RespStmt }
      * 
      * @return

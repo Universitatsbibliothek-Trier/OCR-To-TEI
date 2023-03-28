@@ -5,7 +5,7 @@
 //
 
 
-package de.uni_trier.bibliothek.xml.tei.model.generated;
+package de.uni_trier.bibliothek.xml.parameters.model.generated;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,17 +16,16 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für TitleStmt complex type.
+ * <p>Java-Klasse für RespStmtElements complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="TitleStmt">
+ * <complexType name="RespStmtElements">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="title" type="{http://www.tei-c.org/ns/1.0}Title"/>
- *         <element name="respStmt" type="{http://www.tei-c.org/ns/1.0}RespStmt" maxOccurs="unbounded"/>
+ *         <element name="respStmt" type="{/OCR-To-TEI/src/main/resources}RespStmt" maxOccurs="unbounded"/>
  *       </sequence>
  *     </restriction>
  *   </complexContent>
@@ -36,40 +35,13 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TitleStmt", propOrder = {
-    "title",
+@XmlType(name = "RespStmtElements", propOrder = {
     "respStmt"
 })
-public class TitleStmt {
+public class RespStmtElements {
 
-    @XmlElement(required = true)
-    protected String title;
     @XmlElement(required = true)
     protected List<RespStmt> respStmt;
-
-    /**
-     * Ruft den Wert der title-Eigenschaft ab.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getTitle() {
-        return title;
-    }
-
-    /**
-     * Legt den Wert der title-Eigenschaft fest.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setTitle(String value) {
-        this.title = value;
-    }
 
     /**
      * Gets the value of the respStmt property.

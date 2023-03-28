@@ -13,14 +13,16 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für Lb complex type.
+ * <p>Java-Klasse für BiblStruct complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="Lb">
+ * <complexType name="BiblStruct">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <all>
+ *       </all>
  *     </restriction>
  *   </complexContent>
  * </complexType>
@@ -29,8 +31,10 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Lb")
-public class Lb {
+@XmlType(name = "BiblStruct", propOrder = {
+
+})
+public class BiblStruct {
 
 
 }

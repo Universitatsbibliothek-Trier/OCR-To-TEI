@@ -1,65 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<TEI version="5.0" xmlns="http://www.tei-c.org/ns/1.0" xmlns:mods="http://www.loc.gov/mods/v3">
+<TEI version="5.0" xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
             <titleStmt>
                 <title>Topographia Archiepiscopatuvm Moguntinensis, Treuirensis, et Coloniensis, Das ist Beschreibúng der Vornembsten Stätt vnd Plätz, in denen Ertzbistúmen Maÿntz, Trier, vnd Cöln. Grundstrukturierte TEI-Daten.</title>
+                <respStmt>
+                    <resp>created at</resp>
+                    <name>Universitätsbibliothek Trier</name>
+                </respStmt>
+                <respStmt>
+                    <resp>created at</resp>
+                    <name>Matthaeus Merian</name>
+                </respStmt>
             </titleStmt>
+            <publicationStmt>
+                <p>Veröffentlicht unter CC-0-Lizenz</p>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct/>
+            </sourceDesc>
         </fileDesc>
-        <sourceDesc>
-            <mods:modsCollection>
-                <mods:mods version="3.5" ID="merian1690topographia">
-                    <mods:identifier type="HBZ">HT018907295</mods:identifier>
-                    <mods:originInfo>
-                        <mods:dateIssued>1690</mods:dateIssued>
-                        <mods:place>
-                            <mods:placeTerm type="text">[Frankfurt, Main]</mods:placeTerm>
-                        </mods:place>
-                        <mods:publisher>[Meriansche Erben]</mods:publisher>
-                    </mods:originInfo>
-                    <mods:genre authority="marcgt">book</mods:genre>
-                    <mods:note type="statement of responsibility">An Tag gegeben dúrch Matth: Merian ; [Martin Zeiller]</mods:note>
-                    <mods:note>Bevorzugter Titel: Topographia Archiepiscopatuum Moguntinensis, Trevirensis et Coloniensis</mods:note>
-                    <mods:note>Bibliographischer Nachweis: Wüthrich: Das druckgraphische Werk von Matthaeus Merian d. Ae., Band 4 (1996), Nummer 31</mods:note>
-                    <mods:note>Textverfasser ermittelt</mods:note>
-                    <mods:note>Hinweise zur Ausgabe (nach Wüthrich): 3. Ausgabe Frankfurt, Meriansche Erben</mods:note>
-                    <mods:note>Erscheinungsjahr nach Wüthrich: datiert 1646, effektiv um 1690</mods:note>
-                    <mods:note>Blatt M4, verso unbedruckt</mods:note>
-                    <mods:note>Seite 3 mit Hozschnittleiste "Vase und Rebhühner"</mods:note>
-                    <mods:note>Die Panoramaansicht von Mainz mit großem vertikalem Riß, 8 cm vom linken Bildrand aus. - Im Register sind von "Königsberg" bis "Kyll" die Anfangsmajuskeln K in Schwabacher- statt in Fraktur-Lettern gesetzt.</mods:note>
-                    <mods:note>Kupfertitel (erstes Blatt). - Reihenfolge der Kupfer siehe Bindeanweisung (43 Nummern). Die Karte des Eichsfelds fehlt im Kupferverzeichnis und im Band.</mods:note>
-                    <mods:note>Format: groß-4°</mods:note>
-                    <mods:note>FEI-Fingerprint nach dem Exemplar der Universitätsbibliothek Trier</mods:note>
-                    <mods:note>hbz Verbund-ID: HT018907295</mods:note>
-                    <mods:location>
-                        <mods:physicalLocation>DE-385: https://lobid.org/organisations/DE-385</mods:physicalLocation>
-                    </mods:location>
-                    <mods:typeOfResource>text</mods:typeOfResource>
-                    <mods:subject>
-                        <mods:topic>vornehmsten Städte Plätze den Erzbistümern Mainz Köln</mods:topic>
-                    </mods:subject>
-                    <mods:name>
-                        <mods:namePart>Merian, Matthaeus, der Ältere</mods:namePart>
-                    </mods:name>
-                    <mods:name>
-                        <mods:namePart>Zeiller, Martin</mods:namePart>
-                    </mods:name>
-                    <mods:name>
-                        <mods:namePart>Frankfurt am Main</mods:namePart>
-                    </mods:name>
-                    <mods:recordInfo>
-                        <mods:recordContentSource>DE-605</mods:recordContentSource>
-                    </mods:recordInfo>
-                    <mods:physicalDescription>
-                        <mods:extent>95 Seiten, 9 ungezählte Seiten, 64 ungezählte Blätter Bildtafeln (zum Teil gefaltet) ; Illustrationen, Karten ; 4°</mods:extent>
-                        <mods:form authority="marcform">print</mods:form>
-                    </mods:physicalDescription>
-                    <mods:titleInfo>
-                        <mods:title>Topographia Archiepiscopatuvm Moguntinensis, Treuirensis, et Coloniensis, Das ist Beschreibúng der Vornembsten Stätt vnd Plätz, in denen Ertzbistúmen Maÿntz, Trier, vnd Cöln.</mods:title>
-                    </mods:titleInfo>
-                </mods:mods>
-            </mods:modsCollection>
-        </sourceDesc>
     </teiHeader>
     <text>
         <pb n="1"/>
