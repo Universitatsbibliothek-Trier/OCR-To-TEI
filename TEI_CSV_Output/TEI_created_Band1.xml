@@ -17,7 +17,12 @@
                 <p>Veröffentlicht unter CC-0-Lizenz</p>
             </publicationStmt>
             <sourceDesc>
-                <biblStruct/>
+                <biblStruct>
+                    <monogr>
+                        <edition>test</edition>
+                    </monogr>
+                    <series/>
+                </biblStruct>
             </sourceDesc>
         </fileDesc>
     </teiHeader>

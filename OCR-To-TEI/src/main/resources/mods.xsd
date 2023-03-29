@@ -179,6 +179,11 @@
 
   <xs:complexType name="OriginInfo">
     <xs:sequence>
+      <xs:element name="edition" minOccurs="0" maxOccurs="1">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
       <xs:element name="dateIssued">
         <xs:simpleType>
           <xs:restriction base="xs:string">

@@ -136,19 +136,58 @@
   </xs:complexType>
 
   <xs:complexType name="Monogr">
-    <xs:all>
-      <xs:element name="author" type="self:Monogr" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="title" type="self:Title" minOccurs="1" maxOccurs="1"/>
+    <xs:sequence>
+      <xs:element name="author" type="self:Author" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="title" type="self:TitleMonogr" minOccurs="1" maxOccurs="1"/>
       <xs:element name="edition" type="self:Edition" minOccurs="1" maxOccurs="1"/>
       <xs:element name="imprint" type="self:Imprint" minOccurs="1" maxOccurs="1"/>
-    </xs:all>
+    </xs:sequence>
   </xs:complexType>
+
+  <xs:simpleType name="Author">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+
+  <xs:simpleType name="TitleMonogr">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+
+  <xs:simpleType name="Edition">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+
+  <xs:complexType name="Imprint">
+    <xs:sequence>
+      <xs:element name="pubPlace" type="self:PubPlace" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="publisher" type="self:Publisher" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="date" type="self:Date" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="PubPlace">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+
+  <xs:simpleType name="Publisher">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+
+  <xs:simpleType name="Date">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
 
   <xs:complexType name="Series">
     <xs:all>
-      <xs:element name="title" type="self:Title" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="title" type="self:TitleSeries" minOccurs="1" maxOccurs="1"/>
       <xs:element name="biblScope" type="self:BiblScope" minOccurs="1" maxOccurs="1"/>
     </xs:all>
   </xs:complexType>
 
+  <xs:simpleType name="TitleSeries">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+
+  <xs:simpleType name="BiblScope">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
 </xs:schema>

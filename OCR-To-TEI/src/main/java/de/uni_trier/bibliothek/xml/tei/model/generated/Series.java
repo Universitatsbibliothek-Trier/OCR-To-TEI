@@ -14,17 +14,17 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für BiblStruct complex type.
+ * <p>Java-Klasse für Series complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="BiblStruct">
+ * <complexType name="Series">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <all>
- *         <element name="monogr" type="{http://www.tei-c.org/ns/1.0}Monogr"/>
- *         <element name="series" type="{http://www.tei-c.org/ns/1.0}Series"/>
+ *         <element name="title" type="{http://www.tei-c.org/ns/1.0}TitleSeries"/>
+ *         <element name="biblScope" type="{http://www.tei-c.org/ns/1.0}BiblScope"/>
  *       </all>
  *     </restriction>
  *   </complexContent>
@@ -34,62 +34,62 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "BiblStruct", propOrder = {
+@XmlType(name = "Series", propOrder = {
 
 })
-public class BiblStruct {
+public class Series {
 
     @XmlElement(required = true)
-    protected Monogr monogr;
+    protected String title;
     @XmlElement(required = true)
-    protected Series series;
+    protected String biblScope;
 
     /**
-     * Ruft den Wert der monogr-Eigenschaft ab.
+     * Ruft den Wert der title-Eigenschaft ab.
      * 
      * @return
      *     possible object is
-     *     {@link Monogr }
+     *     {@link String }
      *     
      */
-    public Monogr getMonogr() {
-        return monogr;
+    public String getTitle() {
+        return title;
     }
 
     /**
-     * Legt den Wert der monogr-Eigenschaft fest.
+     * Legt den Wert der title-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is
-     *     {@link Monogr }
+     *     {@link String }
      *     
      */
-    public void setMonogr(Monogr value) {
-        this.monogr = value;
+    public void setTitle(String value) {
+        this.title = value;
     }
 
     /**
-     * Ruft den Wert der series-Eigenschaft ab.
+     * Ruft den Wert der biblScope-Eigenschaft ab.
      * 
      * @return
      *     possible object is
-     *     {@link Series }
+     *     {@link String }
      *     
      */
-    public Series getSeries() {
-        return series;
+    public String getBiblScope() {
+        return biblScope;
     }
 
     /**
-     * Legt den Wert der series-Eigenschaft fest.
+     * Legt den Wert der biblScope-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is
-     *     {@link Series }
+     *     {@link String }
      *     
      */
-    public void setSeries(Series value) {
-        this.series = value;
+    public void setBiblScope(String value) {
+        this.biblScope = value;
     }
 
 }

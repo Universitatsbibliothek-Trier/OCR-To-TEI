@@ -162,6 +162,36 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Monogr }
+     * 
+     * @return
+     *     the new instance of {@link Monogr }
+     */
+    public Monogr createMonogr() {
+        return new Monogr();
+    }
+
+    /**
+     * Create an instance of {@link Imprint }
+     * 
+     * @return
+     *     the new instance of {@link Imprint }
+     */
+    public Imprint createImprint() {
+        return new Imprint();
+    }
+
+    /**
+     * Create an instance of {@link Series }
+     * 
+     * @return
+     *     the new instance of {@link Series }
+     */
+    public Series createSeries() {
+        return new Series();
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link Pb }{@code >}
      * 
      * @param value

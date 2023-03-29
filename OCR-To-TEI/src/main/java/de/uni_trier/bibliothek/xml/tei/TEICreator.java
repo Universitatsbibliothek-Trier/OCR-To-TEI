@@ -19,6 +19,7 @@ import de.uni_trier.bibliothek.xml.tei.model.generated.HbzIdentifier;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Lb;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Location;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Mods;
+import de.uni_trier.bibliothek.xml.tei.model.generated.Monogr;
 import de.uni_trier.bibliothek.xml.tei.model.generated.OriginInfo;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Pb;
 import de.uni_trier.bibliothek.xml.tei.model.generated.PhysicalDescription;
@@ -28,6 +29,7 @@ import de.uni_trier.bibliothek.xml.tei.model.generated.PlaceTermValue;
 import de.uni_trier.bibliothek.xml.tei.model.generated.PublicationStmt;
 import de.uni_trier.bibliothek.xml.tei.model.generated.RecordInfo;
 import de.uni_trier.bibliothek.xml.tei.model.generated.RespStmt;
+import de.uni_trier.bibliothek.xml.tei.model.generated.Series;
 import de.uni_trier.bibliothek.xml.tei.model.generated.SourceDesc;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Subject;
 import de.uni_trier.bibliothek.xml.tei.model.generated.TEI;
@@ -53,6 +55,9 @@ public class TEICreator extends TEI {
 	public static SourceDesc sourceDesc = new SourceDesc();
 	public static Mods teiMods = new Mods();
 	public static BiblStruct biblStruct = new BiblStruct();
+	public static Monogr monogr = new Monogr();
+	public static Series series = new Series();
+
 	public static HbzIdentifier teiHbzIdentifier = new HbzIdentifier();
 	public static OriginInfo teiOriginInfo = new OriginInfo();
 	public static Place teiPlace = new Place();
@@ -91,13 +96,13 @@ public class TEICreator extends TEI {
 		de.uni_trier.bibliothek.xml.mods.model.generated.Mods mods = modsCollection.getMods();
 
 		// add Notes
-		addNotes(mods);
+		// addNotes(mods);
 
 		// add Lines with special information elements
 		addLines(pcgtsList, parametersPath);
 		
 		// add Names
-		addNames(mods);
+		addAuthors(mods);
 
 		// add respStmt element
 		addRespStmt(parametersPath);
@@ -138,7 +143,13 @@ public class TEICreator extends TEI {
 		// teiMods.setID(mods.getID());
 		// teiModsCollection.setMods(teiMods);
 		// sourceDesc.setModsCollection(teiModsCollection);
+		
+
 		sourceDesc.setBiblStruct(biblStruct);
+		biblStruct.setMonogr(monogr);
+		biblStruct.setSeries(series);
+		monogr.setEdition(mods.getOriginInfo().getEdition());
+		monogr.setEdition("test");
 		// teiHeader.setSourceDesc(sourceDesc);
 		fileDesc.setTitleStmt(titleStmt);
 		teiHeader.setFileDesc(fileDesc);
@@ -221,7 +232,7 @@ public class TEICreator extends TEI {
 		}
 	}
 
-	public static void addNames(de.uni_trier.bibliothek.xml.mods.model.generated.Mods mods)
+	public static void addAuthors(de.uni_trier.bibliothek.xml.mods.model.generated.Mods mods)
 	{
 		teiMods.getName().clear();
 		for (de.uni_trier.bibliothek.xml.mods.model.generated.Name nameObject : mods.getName()) {
@@ -229,6 +240,7 @@ public class TEICreator extends TEI {
 			teiName.setNamePart(nameObject.getNamePart());
 			teiMods.getName().add(teiName);
 		}
+		
 	}
 
 	
