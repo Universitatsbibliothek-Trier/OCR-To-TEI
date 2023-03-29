@@ -48,6 +48,11 @@
           <xs:restriction base="xs:string"/>
         </xs:simpleType>
       </xs:element>
+      <xs:element name="subtitle">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
 

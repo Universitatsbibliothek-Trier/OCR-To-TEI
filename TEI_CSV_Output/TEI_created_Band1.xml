@@ -3,7 +3,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Topographia Archiepiscopatuvm Moguntinensis, Treuirensis, et Coloniensis, Das ist Beschreibúng der Vornembsten Stätt vnd Plätz, in denen Ertzbistúmen Maÿntz, Trier, vnd Cöln. Grundstrukturierte TEI-Daten.</title>
+                <title>M.Z. Topographia Helvetiæ, Rhætiæ, Te Valesiæ Grundstrukturierte TEI-Daten.</title>
                 <respStmt>
                     <resp>created at</resp>
                     <name>Universitätsbibliothek Trier</name>
@@ -19,7 +19,11 @@
             <sourceDesc>
                 <biblStruct>
                     <monogr>
-                        <edition>test</edition>
+                        <author>Merian, Matthaeus, der Ältere</author>
+                        <author>Zeiller, Martin</author>
+                        <author>Frankfurt am Main</author>
+                        <title>M.Z. Topographia Helvetiæ, Rhætiæ, Te Valesiæ null</title>
+                        <edition>In dieser andern Edition mit sonderm Fleiß durchgangen, und von vorigen Fehlern corrigirt/ vermehrt und gebessert.</edition>
                     </monogr>
                     <series/>
                 </biblStruct>

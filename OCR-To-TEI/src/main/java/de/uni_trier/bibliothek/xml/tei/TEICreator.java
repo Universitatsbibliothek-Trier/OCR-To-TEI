@@ -144,13 +144,13 @@ public class TEICreator extends TEI {
 		// teiModsCollection.setMods(teiMods);
 		// sourceDesc.setModsCollection(teiModsCollection);
 		
-
+		System.out.println(mods.getTitleInfo().getSubtitle());
 		sourceDesc.setBiblStruct(biblStruct);
 		biblStruct.setMonogr(monogr);
 		biblStruct.setSeries(series);
 		monogr.setEdition(mods.getOriginInfo().getEdition());
-		monogr.setEdition("test");
-		// teiHeader.setSourceDesc(sourceDesc);
+		monogr.setTitle(mods.getTitleInfo().getTitle() + " " + mods.getTitleInfo().getSubtitle());
+
 		fileDesc.setTitleStmt(titleStmt);
 		teiHeader.setFileDesc(fileDesc);
 		publicStmt.setP(parameters.getPublicationStmt().getP());
@@ -234,13 +234,11 @@ public class TEICreator extends TEI {
 
 	public static void addAuthors(de.uni_trier.bibliothek.xml.mods.model.generated.Mods mods)
 	{
-		teiMods.getName().clear();
+		monogr.getAuthor().clear();
 		for (de.uni_trier.bibliothek.xml.mods.model.generated.Name nameObject : mods.getName()) {
-			Name teiName = new Name();
-			teiName.setNamePart(nameObject.getNamePart());
-			teiMods.getName().add(teiName);
+			String nameObjectString = nameObject.getNamePart();
+			monogr.getAuthor().add(nameObjectString);
 		}
-		
 	}
 
 	
