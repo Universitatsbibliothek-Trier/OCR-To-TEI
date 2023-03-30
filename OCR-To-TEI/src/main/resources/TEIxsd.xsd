@@ -158,7 +158,7 @@
 
   <xs:complexType name="Imprint">
     <xs:sequence>
-      <xs:element name="pubPlace" type="self:PubPlace" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="pubPlace" type="self:PubPlace" minOccurs="1" maxOccurs="1"/>
       <xs:element name="publisher" type="self:Publisher" minOccurs="1" maxOccurs="1"/>
       <xs:element name="date" type="self:Date" minOccurs="1" maxOccurs="1"/>
     </xs:sequence>

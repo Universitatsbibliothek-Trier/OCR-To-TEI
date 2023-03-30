@@ -3,42 +3,29 @@ package de.uni_trier.bibliothek.xml.tei;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import de.uni_trier.bibliothek.xml.tei.model.generated.GenreValue;
 import de.uni_trier.bibliothek.ParametersProvider;
 import de.uni_trier.bibliothek.xml.mods.model.generated.ModsCollection;
-import de.uni_trier.bibliothek.xml.tei.model.generated.Name;
 import de.uni_trier.bibliothek.xml.ocr.OcrDataReader;
 import de.uni_trier.bibliothek.xml.ocr.model.generated.PcGts;
 import de.uni_trier.bibliothek.xml.parameters.model.generated.Parameters;
 import de.uni_trier.bibliothek.xml.parameters.model.generated.ReadingOrder;
 import de.uni_trier.bibliothek.xml.tei.model.generated.BiblStruct;
 import de.uni_trier.bibliothek.xml.tei.model.generated.FileDesc;
-import de.uni_trier.bibliothek.xml.tei.model.generated.Form;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Fw;
-import de.uni_trier.bibliothek.xml.tei.model.generated.HbzIdentifier;
+import de.uni_trier.bibliothek.xml.tei.model.generated.Imprint;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Lb;
-import de.uni_trier.bibliothek.xml.tei.model.generated.Location;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Mods;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Monogr;
-import de.uni_trier.bibliothek.xml.tei.model.generated.OriginInfo;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Pb;
-import de.uni_trier.bibliothek.xml.tei.model.generated.PhysicalDescription;
-import de.uni_trier.bibliothek.xml.tei.model.generated.Place;
-import de.uni_trier.bibliothek.xml.tei.model.generated.Place.PlaceTerm;
-import de.uni_trier.bibliothek.xml.tei.model.generated.PlaceTermValue;
 import de.uni_trier.bibliothek.xml.tei.model.generated.PublicationStmt;
-import de.uni_trier.bibliothek.xml.tei.model.generated.RecordInfo;
 import de.uni_trier.bibliothek.xml.tei.model.generated.RespStmt;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Series;
 import de.uni_trier.bibliothek.xml.tei.model.generated.SourceDesc;
-import de.uni_trier.bibliothek.xml.tei.model.generated.Subject;
 import de.uni_trier.bibliothek.xml.tei.model.generated.TEI;
 import de.uni_trier.bibliothek.xml.tei.model.generated.TeiHeader;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Text;
 import de.uni_trier.bibliothek.xml.tei.model.generated.TitleInfo;
 import de.uni_trier.bibliothek.xml.tei.model.generated.TitleStmt;
-import de.uni_trier.bibliothek.xml.tei.model.generated.Genre;
-import de.uni_trier.bibliothek.xml.tei.model.generated.Note;
 import de.uni_trier.bibliothek.xml.tei.model.generated.ObjectFactory;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.JAXBException;
@@ -50,24 +37,13 @@ public class TEICreator extends TEI {
 	public static TeiHeader teiHeader = new TeiHeader();
 	public static FileDesc fileDesc = new FileDesc();
 	public static TitleStmt titleStmt = new TitleStmt();
-	public static RespStmt respStmt = new RespStmt();
 	public static PublicationStmt publicStmt = new PublicationStmt();
 	public static SourceDesc sourceDesc = new SourceDesc();
 	public static Mods teiMods = new Mods();
 	public static BiblStruct biblStruct = new BiblStruct();
 	public static Monogr monogr = new Monogr();
 	public static Series series = new Series();
-
-	public static HbzIdentifier teiHbzIdentifier = new HbzIdentifier();
-	public static OriginInfo teiOriginInfo = new OriginInfo();
-	public static Place teiPlace = new Place();
-	public static PlaceTerm teiPlaceTerm = new PlaceTerm();
-	public static Genre teiGenre = new Genre();
-	public static Location teiLocation = new Location();
-	public static Subject teiSubject = new Subject();
-	public static RecordInfo teiRecordInfo = new RecordInfo();
-	public static PhysicalDescription teiPhysicalDescription = new PhysicalDescription();
-	public static Form teiPhysicalForm = new Form();
+	public static Imprint imprint = new Imprint();
 	public static TitleInfo teiTitleInfo = new TitleInfo();
 	public static Text teiText = new Text();
 	public static TEI teiObject = new TEI();
@@ -92,11 +68,7 @@ public class TEICreator extends TEI {
 	public static TEI createTEI(ModsCollection modsCollection, ArrayList<PcGts> pcgtsList, String parametersPath)
 			throws IOException, JAXBException {
 		// take objects from Mods XML file
-		de.uni_trier.bibliothek.xml.tei.model.generated.ModsCollection teiModsCollection = new de.uni_trier.bibliothek.xml.tei.model.generated.ModsCollection();
 		de.uni_trier.bibliothek.xml.mods.model.generated.Mods mods = modsCollection.getMods();
-
-		// add Notes
-		// addNotes(mods);
 
 		// add Lines with special information elements
 		addLines(pcgtsList, parametersPath);
@@ -111,46 +83,24 @@ public class TEICreator extends TEI {
 		Parameters parameters = ParametersProvider.getParameters(parametersPath);
 		// map data from modsCollection onto TEI object
 		teiTitleInfo.setTitle(mods.getTitleInfo().getTitle());
-		// teiPhysicalForm.setValue(mods.getPhysicalDescription().getForm().getValue());
-		// teiPhysicalForm.setAuthority(mods.getPhysicalDescription().getForm().getAuthority());
-		// teiPhysicalDescription.setForm(teiPhysicalForm);
-		// teiPhysicalDescription.setExtent(mods.getPhysicalDescription().getExtent());
-		// teiRecordInfo.setRecordContentSource(mods.getRecordInfo().getRecordContentSource());
-		// teiSubject.setTopic(mods.getSubject().getTopic());
-		// teiLocation.setPhysicalLocation(mods.getLocation().getPhysicalLocation());
-		// teiPlaceTerm.setValue(PlaceTermValue.fromValue(mods.getOriginInfo().getPlace().getPlaceTerm().getValue().value()));
-		// teiPlace.setPlaceTerm(teiPlaceTerm);
-		// teiPlaceTerm.setType(mods.getOriginInfo().getPlace().getPlaceTerm().getType());
-		// teiHbzIdentifier.setType(mods.getIdentifier().getType());
-		// teiHbzIdentifier.setValue(mods.getIdentifier().getValue());
 		titleStmt.setTitle(mods.getTitleInfo().getTitle() + " " + parameters.getTitleAddition() + ".");
-		teiObject.setText(teiText);
-		// teiMods.setTitleInfo(teiTitleInfo);
-		// teiMods.setPhysicalDescription(teiPhysicalDescription);
-		// teiMods.setRecordInfo(teiRecordInfo);
-		// teiMods.setSubject(teiSubject);
-		// teiMods.setTypeOfResource(mods.getTypeOfResource());
-		// teiMods.setLocation(teiLocation);
-		// teiGenre.setValue(GenreValue.fromValue(mods.getGenre().getValue().value()));
-		// teiGenre.setAuthority(mods.getGenre().getAuthority());
-		// teiMods.setGenre(teiGenre);
-		// teiOriginInfo.setDateIssued(mods.getOriginInfo().getDateIssued());
-		// teiOriginInfo.setPlace(teiPlace);
-		// teiOriginInfo.setPublisher(mods.getOriginInfo().getPublisher());
-		// teiMods.setIdentifier(teiHbzIdentifier);
-		// teiMods.setOriginInfo(teiOriginInfo);
-		// teiMods.setVersion(mods.getVersion());
-		// teiMods.setID(mods.getID());
-		// teiModsCollection.setMods(teiMods);
-		// sourceDesc.setModsCollection(teiModsCollection);
-		
-		System.out.println(mods.getTitleInfo().getSubtitle());
+		teiObject.setText(teiText);		
 		sourceDesc.setBiblStruct(biblStruct);
 		biblStruct.setMonogr(monogr);
+		series.setBiblScope("Band XX");
+		series.setTitle(parameters.getTitle());
 		biblStruct.setSeries(series);
 		monogr.setEdition(mods.getOriginInfo().getEdition());
-		monogr.setTitle(mods.getTitleInfo().getTitle() + " " + mods.getTitleInfo().getSubtitle());
-
+		if(mods.getTitleInfo().getSubTitle() != null){
+			monogr.setTitle(mods.getTitleInfo().getTitle() + ": " + mods.getTitleInfo().getSubTitle());
+		}
+		else{
+			monogr.setTitle(mods.getTitleInfo().getTitle());
+		}
+		imprint.setPubPlace(mods.getOriginInfo().getPlace().getPlaceTerm().getValue());
+		imprint.setPublisher(mods.getOriginInfo().getPublisher());
+		imprint.setDate(mods.getOriginInfo().getDateIssued());
+		monogr.setImprint(imprint);
 		fileDesc.setTitleStmt(titleStmt);
 		teiHeader.setFileDesc(fileDesc);
 		publicStmt.setP(parameters.getPublicationStmt().getP());
@@ -175,7 +125,6 @@ public class TEICreator extends TEI {
 			titleStmt.getRespStmt().add(respStmtObject);
 		}	
 	}
-
 
 	public static void addLines(ArrayList<PcGts> pcgtsList, String parametersPath) throws IOException, JAXBException
 	{
@@ -203,6 +152,7 @@ public class TEICreator extends TEI {
 			ArrayList<String> parametersList = getReadingOrderList(parametersPath);
 			String pageNumberOCR = Integer.toString(ipageCount);
 			pageNumberOCR = "[" + pageNumberOCR + "]";	
+			// remove square brackets if logic page number equals OCR page number
 			if (!OcrDataReader.getSpecialElement(pcgtsObject, "page-number").isEmpty())
 			{
 				String pageNumber = OcrDataReader.getSpecialElement(pcgtsObject, "page-number").replaceAll("[\\D]", "");
@@ -218,20 +168,6 @@ public class TEICreator extends TEI {
 		}
 	}
 
-	public static void addNotes(de.uni_trier.bibliothek.xml.mods.model.generated.Mods mods)
-	{
-		teiMods.getNote().clear();
-		for (de.uni_trier.bibliothek.xml.mods.model.generated.Note noteObject : mods.getNote()) {
-			Note teiNote = new Note();
-			String typeAttribute = noteObject.getType();
-			if (!(typeAttribute == null)) {
-				teiNote.setType(typeAttribute);
-			}
-			teiNote.setValue(noteObject.getValue());
-			teiMods.getNote().add(teiNote);
-		}
-	}
-
 	public static void addAuthors(de.uni_trier.bibliothek.xml.mods.model.generated.Mods mods)
 	{
 		monogr.getAuthor().clear();
@@ -241,7 +177,6 @@ public class TEICreator extends TEI {
 		}
 	}
 
-	
 	public static ArrayList<String> getReadingOrderList(String parametersPath) throws JAXBException, IOException
 	{
 		ArrayList<String> parametersList = new ArrayList<String>();
@@ -257,10 +192,8 @@ public class TEICreator extends TEI {
 		return parametersList;
 	}
 
-
 	public static void addParameterElements (ArrayList<String> lineStrings, ArrayList<String> parametersList, PcGts pcgtsObject)
 	{
-		
 		// use order from parameters file
 		for (String orderType : parametersList)
 			{

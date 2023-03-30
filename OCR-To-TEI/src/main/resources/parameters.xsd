@@ -5,6 +5,7 @@
   <xs:element name="parameters">
     <xs:complexType>
       <xs:all>
+        <xs:element name="title" type="self:Title" maxOccurs="1"/>
         <xs:element name="titleAddition" type="self:TitleAddition" maxOccurs="1"/>
         <xs:element name="readingOrder" type="self:ReadingOrder" maxOccurs="1" />
         <xs:element name="respStmtElements" type="self:RespStmtElements" maxOccurs="1"/>
@@ -12,6 +13,10 @@
       </xs:all>
     </xs:complexType>
   </xs:element>
+
+  <xs:simpleType name="Title">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
 
   <xs:complexType name="PublicationStmt">
     <xs:sequence>

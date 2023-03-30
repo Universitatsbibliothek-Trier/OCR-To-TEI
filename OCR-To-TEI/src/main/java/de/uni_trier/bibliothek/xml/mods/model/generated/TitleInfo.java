@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *             </restriction>
  *           </simpleType>
  *         </element>
- *         <element name="subtitle">
+ *         <element name="subTitle" minOccurs="0">
  *           <simpleType>
  *             <restriction base="{http://www.w3.org/2001/XMLSchema}string">
  *             </restriction>
@@ -46,14 +46,13 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TitleInfo", propOrder = {
     "title",
-    "subtitle"
+    "subTitle"
 })
 public class TitleInfo {
 
     @XmlElement(required = true)
     protected String title;
-    @XmlElement(required = true)
-    protected String subtitle;
+    protected String subTitle;
 
     /**
      * Ruft den Wert der title-Eigenschaft ab.
@@ -80,27 +79,27 @@ public class TitleInfo {
     }
 
     /**
-     * Ruft den Wert der subtitle-Eigenschaft ab.
+     * Ruft den Wert der subTitle-Eigenschaft ab.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getSubtitle() {
-        return subtitle;
+    public String getSubTitle() {
+        return subTitle;
     }
 
     /**
-     * Legt den Wert der subtitle-Eigenschaft fest.
+     * Legt den Wert der subTitle-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setSubtitle(String value) {
-        this.subtitle = value;
+    public void setSubTitle(String value) {
+        this.subTitle = value;
     }
 
 }

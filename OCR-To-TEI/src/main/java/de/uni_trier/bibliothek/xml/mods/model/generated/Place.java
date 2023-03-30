@@ -101,7 +101,7 @@ public class Place {
     public static class PlaceTerm {
 
         @XmlValue
-        protected PlaceTermValue value;
+        protected String value;
         @XmlAttribute(name = "type")
         @XmlSchemaType(name = "anySimpleType")
         protected String type;
@@ -111,10 +111,10 @@ public class Place {
          * 
          * @return
          *     possible object is
-         *     {@link PlaceTermValue }
+         *     {@link String }
          *     
          */
-        public PlaceTermValue getValue() {
+        public String getValue() {
             return value;
         }
 
@@ -123,10 +123,10 @@ public class Place {
          * 
          * @param value
          *     allowed object is
-         *     {@link PlaceTermValue }
+         *     {@link String }
          *     
          */
-        public void setValue(PlaceTermValue value) {
+        public void setValue(String value) {
             this.value = value;
         }
 

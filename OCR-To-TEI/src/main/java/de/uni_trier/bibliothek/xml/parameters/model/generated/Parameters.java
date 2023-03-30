@@ -24,6 +24,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <all>
+ *         <element name="title" type="{/OCR-To-TEI/src/main/resources}Title"/>
  *         <element name="titleAddition" type="{/OCR-To-TEI/src/main/resources}TitleAddition"/>
  *         <element name="readingOrder" type="{/OCR-To-TEI/src/main/resources}ReadingOrder"/>
  *         <element name="respStmtElements" type="{/OCR-To-TEI/src/main/resources}RespStmtElements"/>
@@ -44,6 +45,8 @@ import jakarta.xml.bind.annotation.XmlType;
 public class Parameters {
 
     @XmlElement(required = true)
+    protected String title;
+    @XmlElement(required = true)
     protected String titleAddition;
     @XmlElement(required = true)
     protected ReadingOrder readingOrder;
@@ -51,6 +54,30 @@ public class Parameters {
     protected RespStmtElements respStmtElements;
     @XmlElement(required = true)
     protected PublicationStmt publicationStmt;
+
+    /**
+     * Ruft den Wert der title-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getTitle() {
+        return title;
+    }
+
+    /**
+     * Legt den Wert der title-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setTitle(String value) {
+        this.title = value;
+    }
 
     /**
      * Ruft den Wert der titleAddition-Eigenschaft ab.

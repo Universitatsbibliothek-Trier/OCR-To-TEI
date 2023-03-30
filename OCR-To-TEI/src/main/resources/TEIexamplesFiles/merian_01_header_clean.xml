@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TEI version="5.0"
+    xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>
+                    M.Z. Topographia Helvetiæ, Rhætiæ, Et Valesiæ: Das ist/ Beschreibung und eigentliche Abbildung der vornehmsten Städte und Plätze in der Hochlöblichen Eydgenoßschafft, Graubündten, Wallis/ und etlicher zugewandten Orthen. Grundstrukturierte TEI-Daten.
+                </title>
+                <respStmt>
+                    <resp>created at</resp>
+                    <name>Universitätsbibliothek Trier</name>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <p>Veröffentlicht unter CC-0-Lizenz</p> 
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>  
+                        <author>Zeiller, Martin</author> 
+                        <author>Merian, Matthaeus, der Ältere</author>
+                        <author>Frankfurt am Main</author>
+                        <title>Topographia Helvetiæ, Rhætiæ, Et Valesiæ: Das ist/ Beschreibung und eigentliche Abbildung der vornehmsten Städte und Plätze in der Hochlöblichen Eydgenoßschafft, Graubündten, Wallis/ und etlicher zugewandten Orthen</title> 
+                        <edition>In dieser andern Edition mit sonderm Fleiß durchgangen, und von vorigen Fehlern corrigirt/ vermehrt und gebessert.</edition>
+                        <imprint>
+                            <pubPlace>Franckfurt am Mayn</pubPlace>
+                            <publisher>Zum Truck verlegt von denen Merianischen Erben</publisher>
+                            <date>1655</date>
+                        </imprint>
+                    </monogr>
+                    <series>
+                        <title>Topographia Germaniae</title>
+                        <biblScope>Band 11</biblScope> 
+                    </series>
+                </biblStruct>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text><body><div><p>Lorem Ipsum Dolor Sit Amet</p></div></body></text>
+</TEI>
