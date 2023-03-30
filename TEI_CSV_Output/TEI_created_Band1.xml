@@ -3,7 +3,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Topographia Archiepiscopatuvm Moguntinensis, Treuirensis, et Coloniensis, Das ist Beschreibúng der Vornembsten Stätt vnd Plätz, in denen Ertzbistúmen Maÿntz, Trier, vnd Cöln. Grundstrukturierte TEI-Daten.</title>
+                <title>M.Z. Topographia Helvetiæ, Rhætiæ, Te Valesiæ Grundstrukturierte TEI-Daten.</title>
                 <respStmt>
                     <resp>created at</resp>
                     <name>Universitätsbibliothek Trier</name>
@@ -22,11 +22,12 @@
                         <author>Merian, Matthaeus, der Ältere</author>
                         <author>Zeiller, Martin</author>
                         <author>Frankfurt am Main</author>
-                        <title>Topographia Archiepiscopatuvm Moguntinensis, Treuirensis, et Coloniensis, Das ist Beschreibúng der Vornembsten Stätt vnd Plätz, in denen Ertzbistúmen Maÿntz, Trier, vnd Cöln.</title>
+                        <title>M.Z. Topographia Helvetiæ, Rhætiæ, Te Valesiæ: Das ist/ Beschreibung und eigentliche Abbildung der vornehmsten Städte und Plätze in der Hochlöblichen Eydgenoßschafft, Graubündten, Wallis/ und etlicher zugewandten Orthen</title>
+                        <edition>In dieser andern Edition mit sonderm Fleiß durchgangen, und von vorigen Fehlern corrigirt/ vermehrt und gebessert.</edition>
                         <imprint>
-                            <pubPlace>[Frankfurt, Main]</pubPlace>
-                            <publisher>[Meriansche Erben]</publisher>
-                            <date>1690</date>
+                            <pubPlace>Franckfurt am Mayn</pubPlace>
+                            <publisher>Zum Truck verlegt von denen Merianischen Erben</publisher>
+                            <date>1655</date>
                         </imprint>
                     </monogr>
                     <series>
