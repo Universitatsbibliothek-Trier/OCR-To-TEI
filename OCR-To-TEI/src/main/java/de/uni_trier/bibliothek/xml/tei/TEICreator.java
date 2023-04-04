@@ -54,6 +54,7 @@ public class TEICreator extends TEI {
 	public static Fw pageFwElement;
 	public static Fw headerFwElement;
 	public static Fw catchWordFwElement;
+	public static Fw ornamentFwElement;
 
 	// create jaxb objects for special information elements
 	public static ObjectFactory teiObjectFactoryParameters = new ObjectFactory();
@@ -62,6 +63,7 @@ public class TEICreator extends TEI {
 	public static JAXBElement<Fw> jaxbFwPageNumber;	
 	public static JAXBElement<Fw> jaxbFwHeader;	
 	public static JAXBElement<Fw> jaxbFwCatchWord;
+	public static JAXBElement<Fw> jaxbFwOrnament;
 	public static JAXBElement<Pb> jaxbPb;
 
 
@@ -138,17 +140,21 @@ public class TEICreator extends TEI {
 			jaxbFwPageNumber = teiObjectFactoryParameters.createTextFw(new Fw());	
 			jaxbFwHeader = teiObjectFactoryParameters.createTextFw(new Fw());	
 			jaxbFwCatchWord = teiObjectFactoryParameters.createTextFw(new Fw());
+			jaxbFwOrnament = teiObjectFactoryParameters.createTextFw(new Fw());
 			ipageCount++;
 			pb = new Pb();
 			signatureFwElement = new Fw();
 			pageFwElement  = new Fw();
 			headerFwElement = new Fw();
 			catchWordFwElement = new Fw();
+			ornamentFwElement = new Fw();
 			signatureFwElement.setType("sig");
+			ornamentFwElement.setType("ornament");
 			headerFwElement.setType("header");
 			pageFwElement.setType("pageNum");
 			catchWordFwElement.setType("catch");
 			ArrayList<String> lineStrings = OcrDataReader.getTextLines(pcgtsObject);
+			// with ImageRegion
 			ArrayList<String> parametersList = getReadingOrderList(parametersPath);
 			String pageNumberOCR = Integer.toString(ipageCount);
 			pageNumberOCR = "[" + pageNumberOCR + "]";	
@@ -161,6 +167,10 @@ public class TEICreator extends TEI {
 					pageNumberOCR = pageNumberOCR.substring(1, pageNumberOCR.length()-1);		
 				}	
 			}
+			
+			jaxbFwOrnament.setValue(ornamentFwElement);
+			teiText.getContent().add(jaxbFwOrnament);
+
 			pb.setN(pageNumberOCR);
 			jaxbPb.setValue(pb);
 			teiText.getContent().add(jaxbPb);
@@ -212,9 +222,16 @@ public class TEICreator extends TEI {
 						// processed in method "getTextLines" from OcrDataReader
 						break;
 					case "paragraph":
-						for (String textLineStrings : lineStrings) {
+						for (String textLineString : lineStrings) {
+							// test auf imageregionelement
+							// System.out.println(textLineString);
+							if(textLineString.equals("textLineOrnament"))
+							{
+								System.out.println("ornament");
+								teiText.getContent().add(jaxbFwOrnament);
+							}
 							teiText.getContent().add(jaxbLb);
-							teiText.getContent().add(textLineStrings);
+							teiText.getContent().add(textLineString);
 						}
 						break;
 					case "catch_word":

@@ -8,10 +8,6 @@
                     <resp>created at</resp>
                     <name>Universitätsbibliothek Trier</name>
                 </respStmt>
-                <respStmt>
-                    <resp>created at</resp>
-                    <name>Matthaeus Merian</name>
-                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <p>Veröffentlicht unter CC-0-Lizenz</p>
@@ -39,8 +35,11 @@
         </fileDesc>
     </teiHeader>
     <text>
+        <fw type="ornament"/>
         <pb n="1"/>
         <fw type="pageNum">1.</fw>
+        <fw type="ornament"/>
+        <lb/>textLineOrnament
         <lb/>S werden zu dem Hochloͤblichſten
         <lb/>Unter⸗Rheiniſchen Kreyß (deſſen Außſchreiben⸗
         <lb/>der Fuͤrſt der Herr Chur⸗Fuͤrſt zu Meyntz / ꝛc. iſt) gerechnet / die
@@ -70,8 +69,11 @@
         <lb/>dem A B C. nach / folgen ſollen.
         <fw type="catch">Kustode1</fw>
         <fw type="sig">Testsignatur1</fw>
+        <fw type="ornament"/>
         <pb n="[2]"/>
         <fw type="pageNum">13</fw>
+        <fw type="ornament"/>
+        <lb/>textLineOrnament
         <lb/>Meyntz.
         <lb/>Jß iſt die Haupt⸗Stadt
         <lb/>deß Hochloͤblichſten Ertzbiſt⸗
@@ -160,6 +162,7 @@
         <lb/>nur ein ſtarcke Mauer / daran nicht wenig
         <lb/>Thuͦrn ſtehen. Und dieſes ſagt Radevicus.
         <fw type="catch">Kustode2</fw>
+        <fw type="ornament"/>
         <pb n="[3]"/>
         <fw type="pageNum">29</fw>
         <fw type="header">Lauftitel1</fw>
@@ -268,6 +271,7 @@
         <lb/>Theil vom heiligen Creutz: S. Chryſoſtomi
         <lb/>Haupt: Das Haupt S. Mercurii deß Maͤrty⸗
         <fw type="sig">TestSignatur2</fw>
+        <fw type="ornament"/>
         <pb n="[4]"/>
         <fw type="pageNum">30</fw>
         <fw type="header">Lauftitel2</fw>
@@ -375,6 +379,7 @@
         <lb/>ein Kloſter⸗Frau allhie / auß Fuͤrſtlichen
         <lb/>Stammen / erbauet hat. 2. Marien / im Gna⸗
         <lb/>den⸗oder Heiligen⸗Thal / oder Dalheim / Ci⸗
+        <fw type="ornament"/>
         <pb n="[5]"/>
         <fw type="pageNum">31</fw>
         <lb/>ſterzer Ordens. 3. Zu S. Agnes / auch Ci⸗
@@ -481,6 +486,7 @@
         <lb/>ſer Arnolphus belaͤgert / und erobert. Kaͤiſer
         <lb/>Otho der Erſte / hat ſie auch lang belaͤgert /
         <lb/>aber nicht erobert. Anno 1081. iſt ſie meiſten⸗
+        <fw type="ornament"/>
         <pb n="[6]"/>
         <fw type="pageNum">32</fw>
         <lb/>theils in Feuer auffgangen; auch Anno 1137.
@@ -587,6 +593,7 @@
         <lb/>Schloß / und die Herꝛlichkeit Bingen ſam̄t
         <lb/>den Dorffſchafften Hochheim / Floͤrſchheim /
         <lb/>und andern Oertern / ſo dem Capitel ge⸗
+        <fw type="ornament"/>
         <pb n="[7]"/>
         <fw type="pageNum">42</fw>
         <lb/>hoͤrig / mit eingeſchloſſen. Anno 1647. ge⸗
@@ -694,6 +701,7 @@
         <lb/>ge Bonifacius, ſo der Teutſchen Apoſtel ge⸗
         <lb/>nannt wird / nicht nur Biſchoff / ſondern ein
         <fw type="sig">TestSignatur3</fw>
+        <fw type="ornament"/>
         <pb n="[8]"/>
         <fw type="pageNum">42</fw>
         <lb/>Ertzbiſchoff / und der Erſte in dieſer Wuͤrde zu
@@ -800,6 +808,7 @@
         <lb/>Si non in cœlis, ſtes ubicunque velis.
         <lb/>Er iſt geſtorben Anno 1288. und hat ihme
         <lb/>Gerhardus II. oder Gebhardus ſuccedirt /
+        <fw type="ornament"/>
         <pb n="[9]"/>
         <fw type="pageNum">42</fw>
         <lb/>welcher die Kaͤyſer Adolphum, und Aber-
@@ -906,6 +915,7 @@
         <lb/>ſeiner Religion geweſen / abgeſchafft; auch
         <lb/>den verbottenen Buͦchern nachzufragen befoh⸗
         <lb/>len. Ihme hat ſuccedirt Johann Schweick⸗
+        <fw type="ornament"/>
         <pb n="[10]"/>
         <fw type="pageNum">42</fw>
         <lb/>hard von Cronenbers / der in das drey
@@ -1012,6 +1022,7 @@
         <lb/>Regni, &amp;c. Juribus, ac privilegiis, lib. 3. cap.
         <lb/>10. pag. 339. daß dieſes ein alte deß Ertzbi⸗
         <lb/>ſchoffs zu Meyntz prærogativa, daß er die von
+        <fw type="ornament"/>
         <pb n="[11]"/>
         <fw type="pageNum">42</fw>
         <lb/>dem Keyſer neulich creirte Koͤnig croͤnte / und
@@ -1115,6 +1126,7 @@
         <lb/>des Orts / mit groſſer Verwunderung ange⸗
         <lb/>ſehen; wie in tomo 4. Theatri Europ. fol.
         <lb/>966. b. ſtehet.
+        <fw type="ornament"/>
         <pb n="[12]"/>
         <fw type="pageNum">42</fw>
         <lb/>Aſchaffenburg.
@@ -1220,6 +1232,7 @@
         <lb/>General-Adjutant Garrier mit ſonderlicher
         <lb/>Behendigkeit / erſtlich die Stadt / hernach das
         <lb/>Chur⸗Fuͤrſtl. Reſidentz⸗Schloß mit Sturm
+        <fw type="ornament"/>
         <pb n="[13]"/>
         <fw type="pageNum">42</fw>
         <lb/>erobert hat. Anno 1647. bekamen dieſen Ort
@@ -1322,6 +1335,7 @@
         <lb/>ſig Buͤrger / ſo der Waldenſer Lehr anhiengen /
         <lb/>vom Ertzbiſchoff Conrado zu Meyntz / ſo
         <lb/>Anno 1395. geſtorben / verbrandt worden; wie
+        <fw type="ornament"/>
         <pb n="[14]"/>
         <fw type="pageNum">42</fw>
         <lb/>in einer geſchriebenen Verzeichnuß ſtehet. An⸗
@@ -1428,6 +1442,7 @@
         <lb/>Weymariſchen / und Frantzoſen; hernach im
         <lb/>Chriſtmonat von den Bayriſchen beſetzt wor⸗
         <lb/>den.
+        <fw type="ornament"/>
         <pb n="[15]"/>
         <fw type="pageNum">42</fw>
         <lb/>Biſchoffsheim.
@@ -1528,6 +1543,7 @@
         <lb/>ten aber / werde es mit dem Rhein beſchloſſen:
         <lb/>Habe herrlichen Wein / ſonderlich bey Ruͤd⸗
         <lb/>desheim / gegen Bingen uͤber. Und das ſagt
+        <fw type="ornament"/>
         <pb n="[16]"/>
         <fw type="pageNum">42</fw>
         <lb/>Dilich. Anno 1635. haben die verbundene
@@ -1633,6 +1649,7 @@
         <lb/>In vornehme Stadt in Thuͤringen / jetzo
         <lb/>Chur⸗Meyntz gehoͤrig / iſt in der Topo-
         <lb/>graphia Saxoniæ Superioris einkommen.
+        <fw type="ornament"/>
         <pb n="[17]"/>
         <fw type="pageNum">42</fw>
         <lb/>Fritzlar.
@@ -1738,6 +1755,7 @@
         <lb/>ge und hohe ſteinerne Bruͤcke über die Eder /
         <lb/>welche daſelbſt ſich in unterſchiedliche brei⸗
         <lb/>te Fluͤſſe theilet. Uber dieſe Bruͤcke gehet
+        <fw type="ornament"/>
         <pb n="[18]"/>
         <fw type="pageNum">42</fw>
         <lb/>die vornehmſte Landſtraß / von Caſſel auff
@@ -1840,6 +1858,7 @@
         <lb/>giſchen Chronick / ſchreibet am 164. Blat / daß
         <lb/>Anno 1478. Graff Heinrich von Schwar⸗
         <lb/>tzenburg / fuͤr Heiligenſtatt kommen / und ſie /
+        <fw type="ornament"/>
         <pb n="[19]"/>
         <fw type="pageNum">42</fw>
         <lb/>wie auch hernach Ruͤſteburg / eingenommen;
@@ -1946,6 +1965,7 @@
         <lb/>bet / dem Ertzbiſchoff Gerlaco zu Meyntz Du⸗
         <lb/>derſtadt verkaufft habe) ſich hierinn geirret /
         <lb/>und daß ſolcher Kauff ſchon laͤngſt vorhero /
+        <fw type="ornament"/>
         <pb n="[20]"/>
         <fw type="pageNum">42</fw>
         <lb/>wie oben gemeldet worden / geſchehen iſt. Und
@@ -2050,6 +2070,7 @@
         <lb/>Ort / da das Waſſer Nidda / in Meyn faͤllet /
         <lb/>iſt das luſtige Meyntziſche Staͤdtlein / und
         <lb/>ſchoͤnes Schloß Hoͤchſt / welches umbs Jahr
+        <fw type="ornament"/>
         <pb n="[21]"/>
         <fw type="pageNum">42</fw>
         <lb/>1400. vom Ertzbiſchoff Johann / Graffen zu
@@ -2153,6 +2174,7 @@
         <lb/>Koͤnigshoven.
         <lb/>Ine Stadt in Franckenland an der Tau⸗
         <lb/>ber / daran zwar auch andere Herrſchaff⸗
+        <fw type="ornament"/>
         <pb n="[22]"/>
         <fw type="pageNum">42</fw>
         <lb/>ten / aber Chur⸗Meyntz den meiſten Theil ha⸗
@@ -2256,6 +2278,7 @@
         <lb/>folgten Vergleich / ihme Diethero, blieben
         <lb/>ſeye / ſam̄t dem Schloß / und dem Zoll. Es
         <lb/>hat allhie ein Bad / ſo dem Magen / fuͤrs Blut
+        <fw type="ornament"/>
         <pb n="[23]"/>
         <fw type="pageNum">42</fw>
         <lb/>außwerffen / und uͤbrig ſchwitzen dienet / wie
@@ -2353,6 +2376,7 @@
         <lb/>ingleichem zu einer Meyntziſchen Stadt ma⸗
         <lb/>chet; Iſt auch eines / wie wir Nachricht haben /
         <lb/>aber geringes Staͤdtlein.
+        <fw type="ornament"/>
         <pb n="[24]"/>
         <fw type="pageNum">42</fw>
         <lb/>Rheinegg / Rhineck.
@@ -2455,6 +2479,7 @@
         <lb/>denen er doch endlich einen freyen Abzug ver⸗
         <lb/>ſtattet. Hergegen haben ſich Anno 1635. im
         <lb/>Septembri, die Schwediſchen allda auff
+        <fw type="ornament"/>
         <pb n="[25]"/>
         <fw type="pageNum">42</fw>
         <lb/>Gnad und Ungnad ergeben müſſen. Anno
@@ -2555,8 +2580,11 @@
         <lb/>nen bey zwey und zwantzig Officirer geweſen /
         <lb/>mit Haab und Gut gefangen genommen / die
         <lb/>gemeine Reuter untergeſtellet / und die Offici⸗
+        <fw type="ornament"/>
         <pb n="[26]"/>
         <fw type="pageNum">42</fw>
+        <fw type="ornament"/>
+        <lb/>textLineOrnament
         <lb/>rer noch darzu auff Rantzion geſetzt; welchen
         <lb/>groben Fehler / ihnen männiglich vor unver⸗
         <lb/>antwortlich angezogen / von denen allen noch
@@ -2619,8 +2647,11 @@
         <lb/>thumlich gehört. Iſt kein rechtes Schloß.
         <lb/>Es wird die Stadt Urſel von Königs⸗
         <lb/>ſtein auß regiert.
+        <fw type="ornament"/>
         <pb n="[27]"/>
         <fw type="pageNum">42</fw>
+        <fw type="ornament"/>
+        <lb/>textLineOrnament
         <lb/>Trier.
         <lb/>S wird dieſe weit⸗
         <lb/>berühmte Stadt Latei⸗
@@ -2708,6 +2739,7 @@
         <lb/>leſen ſeyn. Dann / ob ſie wol hernach nicht
         <lb/>mehr ſo anſehnlich geweſen / als zuvor / da ihr
         <lb/>fünff vornehme Städte am Rheinſtrom / mit
+        <fw type="ornament"/>
         <pb n="[28]"/>
         <fw type="pageNum">42</fw>
         <lb/>vielem Lande / unterwürffig waren; wie hie⸗
@@ -2814,6 +2846,7 @@
         <lb/>Zeit. Gedachtes S. Maximini Kloſter / ſo
         <lb/>ſehr berühmt / und reich / hat Käyſer Conſtan-
         <lb/>tinus Magnus, und ſeine Mutter Helena, ge⸗
+        <fw type="ornament"/>
         <pb n="[29]"/>
         <fw type="pageNum">42</fw>
         <lb/>ſtifftet: Iſt aber / zu deß obgemeldten Ortelii
@@ -2920,6 +2953,7 @@
         <lb/>man ſagt / 28. Brunnen daſelbſten. Es iſt die⸗
         <lb/>ſes Kloſter des Benedictiner⸗Ordens. So
         <lb/>viel aber anbelangt die H. Märtyrer / ſo in ob⸗
+        <fw type="ornament"/>
         <pb n="[30]"/>
         <fw type="pageNum">42</fw>
         <lb/>gedachtem S. Paulini Stifft begraben / ſo ſeyn
@@ -3026,6 +3060,7 @@
         <lb/>Geiſtlichen / abgelauffen ſeye. Zu welcher Zeit
         <lb/>dann das Collegium der Schöffen die Ab⸗
         <lb/>gehende erſetzt / und ſolche der Schultheiß / als
+        <fw type="ornament"/>
         <pb n="[31]"/>
         <fw type="pageNum">42</fw>
         <lb/>gleichſam der Præſident / beſtättiget habe. Und
@@ -3132,6 +3167,7 @@
         <lb/>ſen. Unter Ertzbiſchoff Reicharden Greiffen⸗
         <lb/>kla / hat An. 1522. Frantz von Sickingen / Tri⸗
         <lb/>er ſechs Tag lang / aber vergebens / belagert.
+        <fw type="ornament"/>
         <pb n="[32]"/>
         <fw type="pageNum">42</fw>
         <lb/>An. 1152. hat Marggraff Albrecht von Bran⸗
@@ -3238,6 +3274,7 @@
         <lb/>Iohannes Limnæus ſchreibet / lib. 7. Iuris-
         <lb/>publ. Imperii Romano-Germanici cap.
         <lb/>48. num. 5. daß ihn ein vornehmer Rechts⸗
+        <fw type="ornament"/>
         <pb n="[33]"/>
         <fw type="pageNum">42</fw>
         <lb/>gelehrter berichtet habe / wie daß Käyſer Ru-
@@ -3346,6 +3383,7 @@
         <lb/>nach dem er Eucharius dem Biſtthumb drey
         <lb/>und zwantzig Jahr vorgeſtanden / und ge⸗
         <lb/>ſtorben / ſo ſeye ihm Valerius ſuccedirt /
+        <fw type="ornament"/>
         <pb n="[34]"/>
         <fw type="pageNum">42</fw>
         <lb/>ſo 15. Jahr Biſchoff geweſen: Folgends habe
@@ -3452,6 +3490,7 @@
         <lb/>mius in Compend. Annal. f. 37. in 457. Jahr
         <lb/>nachdem wenig Jahr zuvor / ſie auch Attila
         <lb/>eingenommen / und übel verwüſtet hatte / wie er
+        <fw type="ornament"/>
         <pb n="[35]"/>
         <fw type="pageNum">42</fw>
         <lb/>ſchreibet. Bey dieſer Fränckiſchen Regierung
@@ -3558,6 +3597,7 @@
         <lb/>genannt / ſo der LXXVIII. Biſchoff geweſen /
         <lb/>der S. Peters Tempel gar außgebauet hat:
         <lb/>Dem Anno 1078. Egilbertus: dieſem Anno
+        <fw type="ornament"/>
         <pb n="[36]"/>
         <fw type="pageNum">42</fw>
         <lb/>1102. Bruno ſuccedirt / welcher S. Eu-
@@ -3652,6 +3692,7 @@
         <lb/>ſcheid / Neucaſtel / Marienburg / Eberch⸗
         <lb/>ſtein / Montabur / Hardenfels / die Schlöſ⸗
         <lb/>ſer / mit Saalen / Cammern / und andern
+        <fw type="ornament"/>
         <pb n="[37]"/>
         <fw type="pageNum">42</fw>
         <lb/>Gebäuen / ſtatt⸗ und köſtlich renovirt;
@@ -3741,6 +3782,7 @@
         <lb/>das Haupt deß Apoſtels Matthiæ, ſo viel Jahr
         <lb/>in dem Schloß Ehrenbreitſtein auffbehalten /
         <lb/>und in Verwahrung genommen worden /
+        <fw type="ornament"/>
         <pb n="[38]"/>
         <fw type="pageNum">42</fw>
         <lb/>Anno 1422. nach Trier gebracht; und Waſ⸗
@@ -3847,6 +3889,7 @@
         <lb/>Bruno. 6. Godefridus. 7. Meigainherus. 8.
         <lb/>Adelbertus. 9. Hellinus, oder Hellius. 10. Ar-
         <lb/>noldus. n. Joanes. 12. Theodoricus ein Graff
+        <fw type="ornament"/>
         <pb n="[39]"/>
         <fw type="pageNum">42</fw>
         <lb/>von Wied. 13. Arnoldus von Iſenburg. 14.
@@ -3953,6 +3996,7 @@
         <lb/>Reſidentz / geordnet haben. Endlich ward Herr
         <lb/>Carl Caſpar von der Leyen / oder a Petra, deß
         <lb/>oben hochgedachten Herrn Ertzbiſchoffs / und
+        <fw type="ornament"/>
         <pb n="[40]"/>
         <fw type="pageNum">42</fw>
         <lb/>Churfürſtens / Johannis a Petra, Vetter / zum
@@ -4057,6 +4101,7 @@
         <lb/>ſchoff zu Trier / kein Herrſchafft über den Fluß
         <lb/>geſtatten; ſondern ſchreiben dieſelbe ihnen /
         <lb/>auß uraltem Gebrauch und Ubung / zu. So
+        <fw type="ornament"/>
         <pb n="[41]"/>
         <fw type="pageNum">42</fw>
         <lb/>habe es auch in den Gräntzen deß Trieriſchen
@@ -4163,6 +4208,7 @@
         <lb/>danten Vignori Soldaten dieſelbe mit Füſſen
         <lb/>getreten / endlich ſich mit geworffen und ge⸗
         <lb/>ſchlagen. In dieſem 75. Jahre iſt die Stadt
+        <fw type="ornament"/>
         <pb n="42"/>
         <fw type="pageNum">42</fw>
         <lb/>von denen Käyſerlichen und Reichs⸗Alliirten
@@ -4265,6 +4311,7 @@
         <lb/>Flor biß auffs Jahr 1277. geſtanden; zu wel⸗
         <lb/>cher Zeit / da das Schloß wieder zu fallen an⸗
         <lb/>fienge / Biſchoff Henricus, wie obengemeldt /
+        <fw type="ornament"/>
         <pb n="[43]"/>
         <fw type="pageNum">42</fw>
         <lb/>Hand angelegt habe. Es ligt dieſe Stadt gar
@@ -4365,6 +4412,7 @@
         <lb/>te gehorſam ſeyn / dieſelbe mit groſſem Gewalt
         <lb/>angriffen / die Thor zerbrochen / und einen
         <lb/>Theil der Stadt / mit der Vorſtadt angezün⸗
+        <fw type="ornament"/>
         <pb n="[44]"/>
         <fw type="pageNum">42</fw>
         <lb/>det; welches gleichwol wider ſeinen Willen ge⸗
@@ -4470,6 +4518,7 @@
         <lb/>ten aber Caſpar Lerch de Ordin. equeſtri
         <lb/>German. in fundam. 2. Summar. 144. ſchrei⸗
         <lb/>bet.
+        <fw type="ornament"/>
         <pb n="[45]"/>
         <fw type="pageNum">42</fw>
         <lb/>Wir wollen aber auch vernehmen / was an⸗
@@ -4575,6 +4624,7 @@
         <lb/>von Ehrenberg / der war ihr Feind. In derſel⸗
         <lb/>bigen Zeit verbrannt Beckelnheim in dem
         <lb/>Stifft zu Trier / beynahe zumal: Das thät
+        <fw type="ornament"/>
         <pb n="[46]"/>
         <fw type="pageNum">42</fw>
         <lb/>auch der vorgenannte Ritter von Ehrenberg /
@@ -4681,6 +4731,7 @@
         <lb/>tor allhie / oder die Baley Coblentz; / iſt
         <lb/>monatlich auff 4. zu Roß / und 20. zu Fuß /
         <lb/>oder 128. Gülden / angeſchlagen. Zu Unter⸗
+        <fw type="ornament"/>
         <pb n="[47]"/>
         <fw type="pageNum">42</fw>
         <lb/>haltung deß Cammergerichts zu Speyer gibt
@@ -4785,6 +4836,7 @@
         <lb/>Graf von Wieth / und Velten von Iſen⸗
         <lb/>berg / und nahmen da den Kauffleuten mehr
         <lb/>dann vier tauſend Gülden werth Gewand /
+        <fw type="ornament"/>
         <pb n="[48]"/>
         <fw type="pageNum">42</fw>
         <lb/>und führeten das gen Iſenburg. In der Zeit
@@ -4886,6 +4938,7 @@
         <lb/>mit deß Hertzogen von Lothringen Deputir⸗
         <lb/>ten oder Geſandten ein Vergleich getroffen /
         <lb/>daß I. Durchl. gegen Erlegung auff Ziel und
+        <fw type="ornament"/>
         <pb n="[49]"/>
         <fw type="pageNum">42</fw>
         <lb/>Zeit dreymal hundert tauſend Reichsthaler /
@@ -4986,6 +5039,7 @@
         <lb/>der Erndte / und da es nicht ſehr geregnet / gien⸗
         <lb/>ge die Löhne allhie / von wunderlicher Gottes
         <lb/>Gewalt / biß über die Schupe / daß man mit
+        <fw type="ornament"/>
         <pb n="[50]"/>
         <fw type="pageNum">42</fw>
         <lb/>Nachen allenthalben darüber fuhr. Und iſt diß
@@ -5089,6 +5143,7 @@
         <lb/>freuen / und deſſen Proprietarios zu betrüben /
         <lb/>geſtalt ſie auch das Feuer nicht beſtens ver⸗
         <lb/>wahreten.
+        <fw type="ornament"/>
         <pb n="[51]"/>
         <fw type="pageNum">42</fw>
         <lb/>Loich.
@@ -5191,6 +5246,7 @@
         <lb/>ſcheid / Reifferſcheid / Virneburg und
         <lb/>Neuenar. Matth. Quade in Teutſcher
         <lb/>Nation Herrlichkeit / ſchreibet von ſolchem
+        <fw type="ornament"/>
         <pb n="[52]"/>
         <fw type="pageNum">42</fw>
         <lb/>Lande Ripuaria am 469. Blat / alſo: Zwiſchen
@@ -5296,6 +5352,7 @@
         <lb/>Stadt vom Käyſer Rudolpho, auff deß ge⸗
         <lb/>melten Ertzbiſchoffs Boemundi zu Trier / der
         <lb/>Anno 1299. geſtorben / Vorbitt / mit der Frey⸗
+        <fw type="ornament"/>
         <pb n="[53]"/>
         <fw type="pageNum">42</fw>
         <lb/>heit begabet worden / als wie ſonſten die Kö⸗
@@ -5399,6 +5456,7 @@
         <lb/>macht. Er behielte auch ein die Incorpora-
         <lb/>tion derſelben Kirchen / und Paſtoreyen zu
         <lb/>Brechen. Dieſelbe Paſtorey zu Brechen /
+        <fw type="ornament"/>
         <pb n="[54]"/>
         <fw type="pageNum">42</fw>
         <lb/>wird nun zu ewigen Tagen einem Biſchoff zu
@@ -5500,6 +5558,7 @@
         <lb/>nem Berge / und rauhen Ort / zwiſchen hohen
         <lb/>Steinfelſen; und dann etwas ferners ein
         <lb/>Schloß / gleiches Namens / auff einem etwas
+        <fw type="ornament"/>
         <pb n="[55]"/>
         <fw type="pageNum">42</fw>
         <lb/>niedern Berg / in der Enge zween höhern Ber⸗
@@ -5600,6 +5659,7 @@
         <lb/>mariſchen / nachdem ſie dieſe Stadt auch an⸗
         <lb/>gegriffen / und / einen gantzen Tag über / die⸗
         <lb/>ſelbe auß groben Stücken ſtarck beſchoſſen /
+        <fw type="ornament"/>
         <pb n="[56]"/>
         <fw type="pageNum">42</fw>
         <lb/>unverrichter Sachen / und mit Schaden / wie⸗
@@ -5705,6 +5765,7 @@
         <lb/>ſchen Chronick fol. 46. ſtehet. Es hat dieſe
         <lb/>Stadt im vergangenen Krieg auch wol etwas
         <lb/>außgeſtanden. Anno 1631. hat ein Rheingraff /
+        <fw type="ornament"/>
         <pb n="[57]"/>
         <fw type="pageNum">42</fw>
         <lb/>ſo in Schwediſchen Dienſten geweſen / her⸗
@@ -5795,8 +5856,11 @@
         <lb/>Sirßberg / Sternenberg / Tryß / ꝛc. von de⸗
         <lb/>nen wir / auſſer deß Namens / ſonſten
         <lb/>wenig finden.
+        <fw type="ornament"/>
         <pb n="[58]"/>
         <fw type="pageNum">42</fw>
+        <fw type="ornament"/>
+        <lb/>textLineOrnament
         <lb/>Cölln.
         <lb/>S haben vorzeiten
         <lb/>die UBII, die Wetteraw /
@@ -5884,6 +5948,7 @@
         <lb/>Cölln / ſondere arge Liſt / ſo uns GOtt helffe /
         <lb/>und ſeine Heiligen / ꝛc.
         <lb/>Im Anhang deß H. Reckmanns Lübecki⸗
+        <fw type="ornament"/>
         <pb n="[59]"/>
         <fw type="pageNum">42</fw>
         <lb/>ſcher Chronick ſtehet pag. 293. ſeq. alſo: Wa
@@ -5990,6 +6055,7 @@
         <lb/>Tag wird die Wahl vorgenommen / und die
         <lb/>jenigen / ſo verſtändig / fromm / und mit Tu⸗
         <lb/>genden begabt / auch gutes Leutmunds ſeyn /
+        <fw type="ornament"/>
         <pb n="[60]"/>
         <fw type="pageNum">42</fw>
         <lb/>ohne Anſehung deß Stands in den Zünfften /
@@ -6096,6 +6162,7 @@
         <lb/>eine Mutter deren zu Löven in Braband iſt;
         <lb/>und welche ein Rath allhie auff ſeinen Unko⸗
         <lb/>ſten im Jahr 1388. eingeführet / und dieſelbe
+        <fw type="ornament"/>
         <pb n="[61]"/>
         <fw type="pageNum">42</fw>
         <lb/>Pabſt Urbanus der VI. befreyet hat. Auſſer
@@ -6202,6 +6269,7 @@
         <lb/>Fuß von einem unſchuldigen Kindlein ge⸗
         <lb/>wieſen. In S. Gerionis Tempel ſoll nicht al⸗
         <lb/>ein er / ſondern auch viel hundert Märtyrer /
+        <fw type="ornament"/>
         <pb n="[62]"/>
         <fw type="pageNum">42</fw>
         <lb/>ſo unter den Kaiſern Diocletiano und Ma-
@@ -6308,6 +6376,7 @@
         <lb/>einander gethan / darinnen viel umbkommen
         <lb/>ſeyn: Welche Zwiſpalt hernach / als ſich der
         <lb/>Biſchoff zu den Fürnehmſten der Stadt ge⸗
+        <fw type="ornament"/>
         <pb n="[63]"/>
         <fw type="pageNum">42</fw>
         <lb/>ſellet / noch lang mit groſſem Schaden der
@@ -6414,6 +6483,7 @@
         <lb/>gehuldet / und geſchworen; hergegen er ihr dero
         <lb/>Freyheiten ꝛc. beſtättiget: Und als er deß Jahrs
         <lb/>1469. wieder hieher gelangt / ſie mit mehreren
+        <fw type="ornament"/>
         <pb n="[64]"/>
         <fw type="pageNum">42</fw>
         <lb/>Freyheiten und Gnaden / und darunter mit ei⸗
@@ -6520,6 +6590,7 @@
         <lb/>kend in ein eiſern Keſicht geſperrt hat. 55. Wich-
         <lb/>bodus, 56. Henricus II. 57. Walramus, 58.
         <lb/>Guilielmus, unter Kaiſer Carln dem IV.
+        <fw type="ornament"/>
         <pb n="[65]"/>
         <fw type="pageNum">42</fw>
         <lb/>59. Joannes. 60. Adolphus II. Graf von der
@@ -6626,6 +6697,7 @@
         <lb/>Hertzogthumb Weſtphalen / Engeren / und
         <lb/>die Grafſchafft Arnsberg / Werle / Arnsberg /
         <lb/>Geſecke / Atendorn / Nehem / Grevenſtein /
+        <fw type="ornament"/>
         <pb n="[66]"/>
         <fw type="pageNum">42</fw>
         <lb/>Ruden / Eversberg / Stattberg / mit Hoor⸗
@@ -6732,6 +6804,7 @@
         <lb/>daß allein die Mauer von ſolcher Pfarrkirchen
         <lb/>Thurn iſt ſtehen geblieben. Unter den vorneh⸗
         <lb/>men Leuten deß beſagten Cloſters iſt B. Ru-
+        <fw type="ornament"/>
         <pb n="[67]"/>
         <fw type="pageNum">42</fw>
         <lb/>pertus, zugenannt Tuitienſis, oder Divitenſis,
@@ -6838,6 +6911,7 @@
         <lb/>meiſtern ſeyn die Cenſores, oderStimmeiſter /
         <lb/>ſo auff das Heil / und Wolfahrt / der gantzen
         <lb/>Stadt gute achtung zu geben haben. Auff
+        <fw type="ornament"/>
         <pb n="[68]"/>
         <fw type="pageNum">42</fw>
         <lb/>dieſe folgen die Weinmeiſter / und Andere /
@@ -6944,6 +7018,7 @@
         <lb/>führt worden: Iſt 16. Werckſchuh lang / und
         <lb/>8. breit: und wird deßgleichen Werck in dieſer
         <lb/>Landes Gegend nirgends / als zu Linnich / im
+        <fw type="ornament"/>
         <pb n="[69]"/>
         <fw type="pageNum">42</fw>
         <lb/>Gülcher Lande / geſehen. Anno 1645. ſtunde
@@ -7050,6 +7125,7 @@
         <lb/>keiner erwehlet wird / er könne dann ſeinen ho⸗
         <lb/>hen Adel / von acht Ahnherren her / bewei⸗
         <lb/>ſen: Die jenige aber / ſo nicht hohen Standes
+        <fw type="ornament"/>
         <pb n="[70]"/>
         <fw type="pageNum">42</fw>
         <lb/>ſeyn / als die obangedeute acht Prieſterliche
@@ -7156,6 +7232,7 @@
         <lb/>Auſſer dieſen vornehmen jetzt erzehlten / ſeyn zu
         <lb/>Cölln auch 10. Pfarrkirchen / heutigs Tags /
         <lb/>als 1. zu S. Columba. 2. Zu S. Martin dem
+        <fw type="ornament"/>
         <pb n="[71]"/>
         <fw type="pageNum">42</fw>
         <lb/>Kleinern / darinn / jährlich / den 7. Octobris,
@@ -7262,6 +7339,7 @@
         <lb/>Gemählde hat. Gegen über / im Metter⸗
         <lb/>nichiſchen Hauſe / iſt ein Heydniſcher Gang
         <lb/>unter der Erden / mit alten gegoſſenen Mau⸗
+        <fw type="ornament"/>
         <pb n="[72]"/>
         <fw type="pageNum">42</fw>
         <lb/>ren / ſo einen weit fort führet. 11. Die Sam⸗
@@ -7368,6 +7446,7 @@
         <lb/>auch Benedictiner⸗Ordens / ſat einer Pfarr⸗
         <lb/>kirch / von welcher oben. 8. Das Kloſter zu
         <lb/>S. Maria Magdalena / oder zur Frauen Alb /
+        <fw type="ornament"/>
         <pb n="[73]"/>
         <fw type="pageNum">42</fw>
         <lb/>der regulirten Jungfrauen S. Auguſtini Or⸗
@@ -7474,6 +7553,7 @@
         <lb/>Regul S. Auguſtini, ſeyn ſolle. 37. Der Be⸗
         <lb/>ginen / oder Schweſtern Convent / vorgedach⸗
         <lb/>ten Ordens / in der Affterſtraß / zum Denandt;
+        <fw type="ornament"/>
         <pb n="[74]"/>
         <fw type="pageNum">42</fw>
         <lb/>ſonſten der allerheiligſten Dreyfaltigkeit ge⸗
@@ -7580,6 +7660,7 @@
         <lb/>dern Teutſchen / gar lang belagert / erobert /
         <lb/>und zerſtöret worden. Anno 406. machten ſich
         <lb/>abermals unterſchiedliche Teutſche Völcker
+        <fw type="ornament"/>
         <pb n="[75]"/>
         <fw type="pageNum">42</fw>
         <lb/>an Cöln; bekamen auch die Francken dieſe
@@ -7686,6 +7767,7 @@
         <lb/>ſiehe was allbereit oben beygebracht worden /
         <lb/>und von der Auffruhr allda / im Jahr 1513. de⸗
         <lb/>ren auch oben gedacht wird / Chytræum lib. 6.
+        <fw type="ornament"/>
         <pb n="[76]"/>
         <fw type="pageNum">42</fw>
         <lb/>Saxoniæ fol. 177. da er alſo ſchreibet: Colo-
@@ -7790,6 +7872,7 @@
         <lb/>Recht / und Beveſtigung ſeiner Städtlein /
         <lb/>Rodenberg / Durſten / Lechenich und Kem⸗
         <lb/>pen erlangt. Er hat auch mit groſſem Geld
+        <fw type="ornament"/>
         <pb n="[77]"/>
         <fw type="pageNum">42</fw>
         <lb/>wieder gelößt die Grafſchafft Hilikrod oder
@@ -7896,6 +7979,7 @@
         <lb/>Maximiani Jovii, Maximini, Licinii, und
         <lb/>Conſtantini Magni. 7. Euphrates, der endlich
         <lb/>ein Arianer u abgeſetzt wordē. 8. S. Severinus,
+        <fw type="ornament"/>
         <pb n="[78]"/>
         <fw type="pageNum">42</fw>
         <lb/>auß Aquitanien / Anno 348. oder 49. erwehlt /
@@ -7926,6 +8010,7 @@
         <lb/>und der Anno 717. geſtorben. 23. Raginfre-
         <lb/>dus, oder Reginfridus, von theils Albericus
         <lb/>genannt. 24. S. Hildegarus, oder Hildegirus,
+        <fw type="ornament"/>
         <pb n="[79]"/>
         <fw type="pageNum">42</fw>
         <lb/>Valckenſtein / ſo Aunno 1370. ſein Ampt wie⸗
@@ -8031,6 +8116,7 @@
         <lb/>Wir wollen nunmehr in Beſchreibung an⸗
         <lb/>derer Oerter dieſes Hochlöbl. Churfürſten⸗
         <lb/>thumbs fortfahren; als da ſeyn:
+        <fw type="ornament"/>
         <pb n="[80]"/>
         <fw type="pageNum">42</fw>
         <lb/>Alpen.
@@ -8136,6 +8222,7 @@
         <lb/>Wein ſtritte; welches in den meiſten andern
         <lb/>Sauerbrunnen / die mit dem Wein gemiſcht
         <lb/>werden / nicht zu geſchehen pflegt. Er ſteigt in
+        <fw type="ornament"/>
         <pb n="[81]"/>
         <fw type="pageNum">42</fw>
         <lb/>die Naſen und Hirn; und wird von den In⸗
@@ -8239,6 +8326,7 @@
         <lb/>ertappt und getödtet worden / als deß Pii
         <lb/>Caſſii, Florentii, und Maluſi, mit ihren
         <lb/>Geſellen ruhen; deßwegen auch ſolche Kirch
+        <fw type="ornament"/>
         <pb n="[82]"/>
         <fw type="pageNum">42</fw>
         <lb/>ſtattliche Freyheiten hat; die ihr S. Helena, als
@@ -8345,6 +8433,7 @@
         <lb/>wie Tacitus bezeuget / verehret / und ihme auch
         <lb/>zu gewiſſen Tägen / Menſchen geopffert ha⸗
         <lb/>ben.
+        <fw type="ornament"/>
         <pb n="[83]"/>
         <fw type="pageNum">42</fw>
         <lb/>Gegen Bonn über / nahend dem Rhein /
@@ -8444,6 +8533,7 @@
         <lb/>thumb Weſtphalen; davon in der Topo-
         <lb/>graphia Weſtphaliæ, pag. 84. b. Bericht ge⸗
         <lb/>ſchehen.
+        <fw type="ornament"/>
         <pb n="[84]"/>
         <fw type="pageNum">42</fw>
         <lb/>Godesberg.
@@ -8541,6 +8631,7 @@
         <lb/>kommen / dem Ort mit Schieſſen / und Feuer⸗
         <lb/>ballen einwerffen alſo geängſtet / daß / ohnan⸗
         <lb/>geſehen / ſich die Belägerten etliche Tag
+        <fw type="ornament"/>
         <pb n="[85]"/>
         <fw type="pageNum">0199</fw>
         <lb/>wacker gewehret / die Stadt endlich den 7. Fe-
@@ -8644,6 +8735,7 @@
         <lb/>ſeye. Anno 1475. in dem Cöllniſchen Krieg /
         <lb/>hatte Hertzog Carl von Burgund / als deß ab⸗
         <lb/>geſetzten Biſchoffs Ruperti zu Cölln / Helf⸗
+        <fw type="ornament"/>
         <pb n="[86]"/>
         <lb/>Namen⸗Register /
         <lb/>Der Landſchaſten / Gäw / Thäler / Städtlein / Städt / Flecken /
@@ -8732,6 +8824,7 @@
         <lb/>Bodobrica 45. b.
         <lb/>Bonn 68. a. 77. b. 79. a. 83.a. 86. a.
         <lb/>Bondorff 55. a.
+        <fw type="ornament"/>
         <pb n="[87]"/>
         <lb/>Boppart 45. b. 48. a.
         <lb/>Boyenburg 86. a.
@@ -8834,6 +8927,7 @@
         <lb/>Berbach 22. b.
         <lb/>Eberchſtein / Eberſtein 38. b.
         <lb/>Eberswald 43. a.
+        <fw type="ornament"/>
         <pb n="[88]"/>
         <lb/>Eccho am Rheinſtrom 59. a.
         <lb/>Eder / Fl. 19. a.
@@ -8933,6 +9027,7 @@
         <lb/>Hammersbach 86. a.
         <lb/>Hammerſtein 48. a. 50. b. 82. b.
         <lb/>Hardenberg 25. b.
+        <fw type="ornament"/>
         <pb n="[89]"/>
         <lb/>Hardenfels / Hartenfels 38. b. 51. a.
         <lb/>Hard / 68. a. 78. b.
@@ -9038,6 +9133,7 @@
         <lb/>Lobach / Fl. 4. a.
         <lb/>Loich / Loch. Kl. 53. a. b.
         <lb/>Loichener See 43. a. 54. a.
+        <fw type="ornament"/>
         <pb n="[90]"/>
         <lb/>Lohn / Lone / Fl. 24. b. 44. a.
         <lb/>Lohngäw 24. b.
@@ -9141,6 +9237,7 @@
         <lb/>Orſuels 37. a.
         <lb/>Oſen 78. b.
         <lb/>Ottweiler 57. b.
+        <fw type="ornament"/>
         <pb n="[91]"/>
         <lb/>P.
         <lb/>Alatiolum, 38. b. 56. a.
@@ -9246,6 +9343,7 @@
         <lb/>Stadt Wirbſen 21. b.
         <lb/>Stein am Rhein / oder auffm Stein 86. a. 91. a
         <lb/>Steine / Kl. 25. b.
+        <fw type="ornament"/>
         <pb n="[92]"/>
         <lb/>Steinfeld 92. b. 95. a.
         <lb/>Steinheim 11. a. 26. b.
@@ -9351,6 +9449,7 @@
         <lb/>Wollmenich. S. Welmenach.
         <lb/>Woringen / Wöringen 65. a. 93. a. b.
         <lb/>Wormes auff dem Eichsfeld 22. a.
+        <fw type="ornament"/>
         <pb n="[93]"/>
         <lb/>Z.
         <lb/>Albach 4. a.
