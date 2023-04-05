@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<TEI version="5.0" xmlns="http://www.tei-c.org/ns/1.0" xmlns:mods="http://www.loc.gov/mods/v3">
+<TEI version="5.0" xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -8,57 +8,35 @@
                     <resp>created at</resp>
                     <name>Universitätsbibliothek Trier</name>
                 </respStmt>
-                <respStmt>
-                    <resp>created at</resp>
-                    <name>Universitätsbibliothek Trier</name>
-                </respStmt>
             </titleStmt>
+            <publicationStmt>
+                <p>Veröffentlicht unter CC-0-Lizenz</p>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Gandalf, der Weiße</author>
+                        <author>noch ein, name Part</author>
+                        <title>Trier und Köln.</title>
+                        <imprint>
+                            <pubPlace>[Frankfurt, Main]</pubPlace>
+                            <publisher>[Meriansche Erben]</publisher>
+                            <date>1690</date>
+                        </imprint>
+                    </monogr>
+                    <series>
+                        <title>Topographia Germaniae</title>
+                        <biblScope>Band XX</biblScope>
+                    </series>
+                </biblStruct>
+            </sourceDesc>
         </fileDesc>
-        <sourceDesc>
-            <mods:modsCollection>
-                <mods:mods version="3.5" ID="merian1690topographia">
-                    <mods:identifier type="HBZ">HT018907295</mods:identifier>
-                    <mods:originInfo>
-                        <mods:dateIssued>1690</mods:dateIssued>
-                        <mods:place>
-                            <mods:placeTerm type="text">[Frankfurt, Main]</mods:placeTerm>
-                        </mods:place>
-                        <mods:publisher>[Meriansche Erben]</mods:publisher>
-                    </mods:originInfo>
-                    <mods:genre authority="marcgt">book</mods:genre>
-                    <mods:note type="statement of responsibility">Matthäus Merian</mods:note>
-                    <mods:note>Dies ist eine zusätzliche Testnotiz</mods:note>
-                    <mods:location>
-                        <mods:physicalLocation>DE-385: https://lobid.org/organisations/DE-385</mods:physicalLocation>
-                    </mods:location>
-                    <mods:typeOfResource>text</mods:typeOfResource>
-                    <mods:subject>
-                        <mods:topic>irgendwelche schönen Städte</mods:topic>
-                    </mods:subject>
-                    <mods:name>
-                        <mods:namePart>Gandalf, der Weiße</mods:namePart>
-                    </mods:name>
-                    <mods:name>
-                        <mods:namePart>noch ein, name Part</mods:namePart>
-                    </mods:name>
-                    <mods:recordInfo>
-                        <mods:recordContentSource>DE-605</mods:recordContentSource>
-                    </mods:recordInfo>
-                    <mods:physicalDescription>
-                        <mods:extent>3 Seiten, 0 ungezählte Seiten, 0 ungezählte Blätter Bildtafeln (zum Teil gefaltet) ; Illustrationen, Karten ; 4°</mods:extent>
-                        <mods:form authority="marcform">print</mods:form>
-                    </mods:physicalDescription>
-                    <mods:titleInfo>
-                        <mods:title>Trier und Köln.</mods:title>
-                    </mods:titleInfo>
-                </mods:mods>
-            </mods:modsCollection>
-        </sourceDesc>
     </teiHeader>
     <text>
         <pb n="1"/>
         <fw type="sig">Bogensignatur1</fw>
         <fw type="catch">Kustode1</fw>
+        <fw type="ornament"/>
         <lb/>Gesamtzeile: 1 TextRegion 1 Seite 1 Zeile 1
         <lb/>Gesamtzeile: 2 TextRegion 1 Seite 1 Zeile 2
         <lb/>Gesamtzeile: 3 TextRegion 1 Seite 1 Zeile 3

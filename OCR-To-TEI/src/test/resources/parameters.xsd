@@ -5,11 +5,49 @@
   <xs:element name="parameters">
     <xs:complexType>
       <xs:all>
-        <xs:element name="titleAddition" type="self:TitleAddition" />
-        <xs:element name="readingOrder" type="self:ReadingOrder" />
+        <xs:element name="title" type="self:Title" maxOccurs="1"/>
+        <xs:element name="titleAddition" type="self:TitleAddition" maxOccurs="1"/>
+        <xs:element name="readingOrder" type="self:ReadingOrder" maxOccurs="1" />
+        <xs:element name="respStmtElements" type="self:RespStmtElements" maxOccurs="1"/>
+        <xs:element name="publicationStmt" type="self:PublicationStmt" maxOccurs="1"/>
       </xs:all>
     </xs:complexType>
   </xs:element>
+
+  <xs:simpleType name="Title">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <xs:complexType name="PublicationStmt">
+    <xs:sequence>
+      <xs:element name="p" type="self:P" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="P">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <xs:complexType name="RespStmtElements">
+    <xs:sequence>
+      <xs:element name="respStmt" type="self:RespStmt" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="RespStmt">
+    <xs:sequence>
+      <xs:element name="resp" type="self:Resp" maxOccurs="1"/>
+      <xs:element name="name" type="self:Name" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="Resp">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+
+  <xs:simpleType name="Name">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
 
   <xs:complexType name="ReadingOrder">
     <xs:sequence >

@@ -167,12 +167,9 @@ public class TEICreator extends TEI {
 					pageNumberOCR = pageNumberOCR.substring(1, pageNumberOCR.length()-1);		
 				}	
 			}
-			
-			jaxbFwOrnament.setValue(ornamentFwElement);
-			// teiText.getContent().add(jaxbFwOrnament);
-
 			pb.setN(pageNumberOCR);
 			jaxbPb.setValue(pb);
+			jaxbFwOrnament.setValue(ornamentFwElement);
 			teiText.getContent().add(jaxbPb);
 			addParameterElements(lineStrings, parametersList, pcgtsObject);				
 		}
@@ -223,18 +220,15 @@ public class TEICreator extends TEI {
 						break;
 					case "paragraph":
 						for (String textLineString : lineStrings) {
-							// test auf imageregionelement
-							// System.out.println(textLineString);
+							// test if imageRegion
 							if(textLineString.equals("textLineOrnament"))
 							{
-								// System.out.println("ornament");
 								teiText.getContent().add(jaxbFwOrnament);
 							}
 							else{
 								teiText.getContent().add(jaxbLb);
 								teiText.getContent().add(textLineString);
-							}
-							
+							}							
 						}
 						break;
 					case "catch_word":
