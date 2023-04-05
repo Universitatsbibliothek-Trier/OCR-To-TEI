@@ -5,3 +5,4 @@
 *.class
 /OCR-To-TEI/scripts/startWithConstant.sh
 /OCR-To-TEI/scripts/startAltModsWithConstant.sh
+/OCR-To-TEI/src/main/resources/ocrOutputFiles/backup

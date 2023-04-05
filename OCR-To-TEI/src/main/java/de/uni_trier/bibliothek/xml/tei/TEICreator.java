@@ -169,7 +169,7 @@ public class TEICreator extends TEI {
 			}
 			
 			jaxbFwOrnament.setValue(ornamentFwElement);
-			teiText.getContent().add(jaxbFwOrnament);
+			// teiText.getContent().add(jaxbFwOrnament);
 
 			pb.setN(pageNumberOCR);
 			jaxbPb.setValue(pb);
@@ -227,11 +227,14 @@ public class TEICreator extends TEI {
 							// System.out.println(textLineString);
 							if(textLineString.equals("textLineOrnament"))
 							{
-								System.out.println("ornament");
+								// System.out.println("ornament");
 								teiText.getContent().add(jaxbFwOrnament);
 							}
-							teiText.getContent().add(jaxbLb);
-							teiText.getContent().add(textLineString);
+							else{
+								teiText.getContent().add(jaxbLb);
+								teiText.getContent().add(textLineString);
+							}
+							
 						}
 						break;
 					case "catch_word":

@@ -28,9 +28,11 @@ public class OcrDataReader extends PcGts {
 		boolean capitalExists = false;
 		boolean firstImageRegionAppearance = false;
 		List<Object> imageOrRegionList = getRegionOrTextRegionListOrdered(page);
-		int regioncount = 0;
+		// System.out.println("imageregion appeared: " + firstImageRegionAppearance);
+		// int regioncount = 0;
 		// List<TextRegion> textRegionOrdered = sortOrder(page);
 		for (Object textOrImageRegion : imageOrRegionList) {
+			// System.out.println("check Region");
 			// regioncount++;
 			// if(regioncount == firstImageRegionAppearance)
 			// {
@@ -82,6 +84,8 @@ public class OcrDataReader extends PcGts {
 										capitalExists = false;
 									}	
 									// add text from Unicode to ArrayList
+									// System.out.println("textline added");
+
 									ocrTextLineList.add(unicode);
 									break; // sought index found
 								}
@@ -91,9 +95,11 @@ public class OcrDataReader extends PcGts {
 				}
 			}
 			else if((!firstImageRegionAppearance) && textOrImageRegion instanceof ImageRegion){
-				System.out.println("image region added");
-				// ocrTextLineList.add("textLineOrnament");
+				// System.out.println("image region added");
+				ocrTextLineList.add("textLineOrnament");
 				firstImageRegionAppearance = true;
+
+				// System.out.println("imageregion appeared in else branch: " + firstImageRegionAppearance);
 			}			
 		}
 		return ocrTextLineList;
@@ -180,42 +186,59 @@ public class OcrDataReader extends PcGts {
 		return specialElement;
 	}
 
-	public static List<Object> getRegionOrTextRegionListOrdered(Page page) {
+	public static List<Object> getRegionOrTextRegionListOrdered(Page page) 
+	{
 		OrderedGroup orderedGroup = page.getReadingOrder().getOrderedGroup();
 		List<Object> textRegionOrImageRegionListOrdered = new ArrayList<Object>();
 		List<Object> textRegionObjectList = page.getTextRegionOrImageRegion();
 		boolean imageRegionAppearance = false;
-		List<TextRegion> textRegionList = new ArrayList<TextRegion>();
-		boolean foundFirstImageRegion = false;
 		int regionCount = 0;
 		List<RegionRefIndexed> regionRefIndexedList = orderedGroup.getRegionRefIndexed();
+		System.out.println("check new page");
+		for (Object textOrImageRegion : textRegionObjectList){
+			if((!imageRegionAppearance) && textOrImageRegion instanceof ImageRegion)
+			{
+				imageRegionAppearance = true;
+				ImageRegion imageRegion =  ImageRegion.class.cast(textOrImageRegion);
+				textRegionOrImageRegionListOrdered.add(imageRegion);
+				System.out.println("imageRegion added");
+			}
+		}
 		for (int i = 0; i < regionRefIndexedList.size(); i++) {
 			String regionRefId = regionRefIndexedList.get(i).getRegionRef();
+			String regionRefIdNumber = regionRefId.substring(1);
+			int regionRefIdInt = Integer.parseInt(regionRefIdNumber);
+
+
 			for (Object textOrImageRegion : textRegionObjectList) {
 
-				
+				// if((!imageRegionAppearance) && textOrImageRegion instanceof ImageRegion){
+				// 	// System.out.println("image region found");
+					
+				// 	ImageRegion imageRegion =  ImageRegion.class.cast(textOrImageRegion);
+				// 	int imageRegionId = Integer.parseInt(imageRegion.getId().substring(1));
+				// 	System.out.println("image region added");
+				// 	System.out.println("image region id ist: " + imageRegion.getId());
+					
+				// 	// System.out.println("image region added");
+				// 	textRegionOrImageRegionListOrdered.add(imageRegion);
+				// 	imageRegionAppearance = true;
+				// 	// break; // found correct TextRegion
+				// }	
 				if(textOrImageRegion instanceof TextRegion)
 				{
 					TextRegion textRegion =  TextRegion.class.cast(textOrImageRegion);
 					if (textRegion.getId().equals(regionRefId)) {
-						// System.out.println("text region added");
+						System.out.println("text region added");
+						// System.out.println("TextRegion id ist: " + textRegion.getId());
 						textRegionOrImageRegionListOrdered.add(textRegion);
 						// break; // found correct TextRegion
 					}	
 				}
-				if((!imageRegionAppearance) && textOrImageRegion instanceof ImageRegion){
-					
-					ImageRegion imageRegion =  ImageRegion.class.cast(textOrImageRegion);
-					// System.out.println("image region added");
-					
-					System.out.println("image region added");
-					textRegionOrImageRegionListOrdered.add(imageRegion);
-					imageRegionAppearance = true;
-					// break; // found correct TextRegion
-					
-				}				
-			}
+				
+			}				
 		}
+		
 		return textRegionOrImageRegionListOrdered;
 	}
 }
