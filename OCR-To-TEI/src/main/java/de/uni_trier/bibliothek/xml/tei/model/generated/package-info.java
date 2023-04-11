@@ -4,5 +4,5 @@
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
 //
 
-@jakarta.xml.bind.annotation.XmlSchema(namespace = "http://www.loc.gov/mods/v3", elementFormDefault = jakarta.xml.bind.annotation.XmlNsForm.QUALIFIED)
+@jakarta.xml.bind.annotation.XmlSchema(namespace = "http://www.tei-c.org/ns/1.0", elementFormDefault = jakarta.xml.bind.annotation.XmlNsForm.QUALIFIED)
 package de.uni_trier.bibliothek.xml.tei.model.generated;

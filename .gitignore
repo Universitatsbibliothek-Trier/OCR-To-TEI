@@ -4,3 +4,4 @@
 /.vscode
 *.class
 /OCR-To-TEI/scripts/startWithConstant.sh
+/OCR-To-TEI/scripts/startAltModsWithConstant.sh

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods:modsCollection xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-5.xsd">
+  <mods:mods xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 ../mods.xsd" version="3.5" ID="merian1655topographia">
+    <mods:genre authority="marcgt">book</mods:genre>
+    <mods:name>
+      <mods:namePart>Merian, Matthaeus, der Ältere</mods:namePart>
+    </mods:name>
+    <mods:name>
+      <mods:namePart>Zeiller, Martin</mods:namePart>
+    </mods:name>
+    <mods:name>
+      <mods:namePart>Frankfurt am Main</mods:namePart>
+    </mods:name>
+    <mods:originInfo>
+      <mods:edition>In dieser andern Edition mit sonderm Fleiß durchgangen, und von vorigen Fehlern corrigirt/ vermehrt und gebessert.</mods:edition>
+      <mods:dateIssued>1655</mods:dateIssued>
+      <mods:publisher>Zum Truck verlegt von denen Merianischen Erben</mods:publisher>
+      <mods:place>
+        <mods:placeTerm type="text">Franckfurt am Mayn</mods:placeTerm>
+      </mods:place>
+    </mods:originInfo>
+    <mods:identifier type="HBZ">HT018899501</mods:identifier>
+    <mods:location>
+      <mods:physicalLocation> ah232-1 99 (Raraausleihe)DE-385: https://lobid.org/organisations/DE-385</mods:physicalLocation>
+    </mods:location>
+    <mods:subject>
+      <mods:topic>Eidgenossenschaft Graubünden Orten</mods:topic>
+    </mods:subject>
+    <mods:typeOfResource>text</mods:typeOfResource>
+    <mods:physicalDescription>
+      <mods:form authority="marcform">print</mods:form>
+      <mods:extent>90 Seiten, 6 ungezählte Seiten, 2 ungezählte Blätter, 137 ungezählte Blätter Bildtafeln (zum Teil gefaltet) ; Illustrationen, Karten ; 4°</mods:extent>
+    </mods:physicalDescription>
+    <mods:recordInfo>
+      <mods:recordContentSource>DE-605</mods:recordContentSource>
+    </mods:recordInfo>
+    <mods:titleInfo>
+      <mods:title>M.Z. Topographia Helvetiæ, Rhætiæ, Te Valesiæ</mods:title>
+      <mods:subTitle>Das ist/ Beschreibung und eigentliche Abbildung der vornehmsten Städte und Plätze in der Hochlöblichen Eydgenoßschafft, Graubündten, Wallis/ und etlicher zugewandten Orthen</mods:subTitle>
+    </mods:titleInfo>
+    <mods:note type="statement of responsibility">In Truck gegeben v. Verlegt Durch Matthæum Meriān</mods:note>
+    <mods:note>Bevorzugter Titel: Topographia Helvetiae, Rhaetiae et Valesiae</mods:note>
+    <mods:note>Bibliographischer Nachweis: Wüthrich, Lucas Heinrich: Das druckgraphische Werk von Matthaeus Merian d. Ae., Band 4 (1996), Nummer 6; nicht bei Schuchhard</mods:note>
+    <mods:note>Neuer Drucktitel</mods:note>
+    <mods:note>Verantwortlichkeitsangabe: Matthaeus Merian ist im Kupfertitel genannt. - Martin Zeiller (M.Z.) ist Textverfasser, von Matthaeus Merian stammen die Illustrationen (Kupfer)</mods:note>
+    <mods:note>Hinweise zur Ausgabe (nach Wüthrich): 3. deutsche Ausgabe, Frankfurt (Matthaeus Merians Erben)</mods:note>
+    <mods:note>Vorlageform der Veröffentlichungsangabe: Franckfurt am Mayn/ Zum Truck verlegt von denen Merianischen Erben. Jm Jahr MDCLIV.</mods:note>
+    <mods:note>Erscheinungsjahr nach Wüthrich: datiert 1654, effektiv später, nach 1655</mods:note>
+    <mods:note>Kupfertitel: Topographia Heluetiæ, Rhætiæ et Valesiæ, Das ist Beschreibung vnd Eigentliche Abbildûng der Vornembsten Stätte vnd Plätz in der Hochlöblichen Eydgnoßschafft, Grawbündten, Walliß, vnd etlicher Zugewanten Orten</mods:note>
+    <mods:note>Kupfertitel. - Reihenfolge der Kupfer siehe Bindeanweisung</mods:note>
+    <mods:note>Erscheinungsjahr Kupfertitel: M.DC.XLII.</mods:note>
+    <mods:note>Umfangsangabe: Seiten 60-62 als 40-42, Seite 82 als 28, Seite 87 als 69 paginiert</mods:note>
+    <mods:note>Format: groß-4°</mods:note>
+    <mods:note>Gedruckter Titel ohne Verlagssignet von Merian. - Zierleiste auf Seite 5 und 10 und zu Beginn des Registers mit Röslein</mods:note>
+    <mods:note>FEI-Fingerprint nach dem Exemplar der Universitätsbibliothek Trier</mods:note>
+    <mods:note>hbz Verbund-ID: HT018899501</mods:note>
+  </mods:mods>
+</mods:modsCollection>

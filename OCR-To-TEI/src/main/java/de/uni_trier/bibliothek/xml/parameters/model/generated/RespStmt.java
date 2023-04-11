@@ -5,7 +5,7 @@
 //
 
 
-package de.uni_trier.bibliothek.xml.mods.model.generated;
+package de.uni_trier.bibliothek.xml.parameters.model.generated;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -14,27 +14,17 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für TitleInfo complex type.
+ * <p>Java-Klasse für RespStmt complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="TitleInfo">
+ * <complexType name="RespStmt">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="title">
- *           <simpleType>
- *             <restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *             </restriction>
- *           </simpleType>
- *         </element>
- *         <element name="subTitle" minOccurs="0">
- *           <simpleType>
- *             <restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *             </restriction>
- *           </simpleType>
- *         </element>
+ *         <element name="resp" type="{/OCR-To-TEI/src/main/resources}Resp"/>
+ *         <element name="name" type="{/OCR-To-TEI/src/main/resources}Name"/>
  *       </sequence>
  *     </restriction>
  *   </complexContent>
@@ -44,62 +34,63 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TitleInfo", propOrder = {
-    "title",
-    "subTitle"
+@XmlType(name = "RespStmt", propOrder = {
+    "resp",
+    "name"
 })
-public class TitleInfo {
+public class RespStmt {
 
     @XmlElement(required = true)
-    protected String title;
-    protected String subTitle;
+    protected String resp;
+    @XmlElement(required = true)
+    protected String name;
 
     /**
-     * Ruft den Wert der title-Eigenschaft ab.
+     * Ruft den Wert der resp-Eigenschaft ab.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getTitle() {
-        return title;
+    public String getResp() {
+        return resp;
     }
 
     /**
-     * Legt den Wert der title-Eigenschaft fest.
+     * Legt den Wert der resp-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setTitle(String value) {
-        this.title = value;
+    public void setResp(String value) {
+        this.resp = value;
     }
 
     /**
-     * Ruft den Wert der subTitle-Eigenschaft ab.
+     * Ruft den Wert der name-Eigenschaft ab.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getSubTitle() {
-        return subTitle;
+    public String getName() {
+        return name;
     }
 
     /**
-     * Legt den Wert der subTitle-Eigenschaft fest.
+     * Legt den Wert der name-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setSubTitle(String value) {
-        this.subTitle = value;
+    public void setName(String value) {
+        this.name = value;
     }
 
 }

@@ -23,7 +23,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element ref="{http://www.loc.gov/mods/v3}modsCollection"/>
+ *         <element name="biblStruct" type="{http://www.tei-c.org/ns/1.0}BiblStruct"/>
  *       </sequence>
  *     </restriction>
  *   </complexContent>
@@ -33,36 +33,36 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SourceDesc", namespace = "http://www.tei-c.org/ns/1.0", propOrder = {
-    "modsCollection"
+@XmlType(name = "SourceDesc", propOrder = {
+    "biblStruct"
 })
 public class SourceDesc {
 
-    @XmlElement(namespace = "http://www.loc.gov/mods/v3", required = true)
-    protected ModsCollection modsCollection;
+    @XmlElement(required = true)
+    protected BiblStruct biblStruct;
 
     /**
-     * Ruft den Wert der modsCollection-Eigenschaft ab.
+     * Ruft den Wert der biblStruct-Eigenschaft ab.
      * 
      * @return
      *     possible object is
-     *     {@link ModsCollection }
+     *     {@link BiblStruct }
      *     
      */
-    public ModsCollection getModsCollection() {
-        return modsCollection;
+    public BiblStruct getBiblStruct() {
+        return biblStruct;
     }
 
     /**
-     * Legt den Wert der modsCollection-Eigenschaft fest.
+     * Legt den Wert der biblStruct-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is
-     *     {@link ModsCollection }
+     *     {@link BiblStruct }
      *     
      */
-    public void setModsCollection(ModsCollection value) {
-        this.modsCollection = value;
+    public void setBiblStruct(BiblStruct value) {
+        this.biblStruct = value;
     }
 
 }

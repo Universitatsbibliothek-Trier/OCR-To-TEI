@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Lb", namespace = "http://www.tei-c.org/ns/1.0")
+@XmlType(name = "Lb")
 public class Lb {
 
 

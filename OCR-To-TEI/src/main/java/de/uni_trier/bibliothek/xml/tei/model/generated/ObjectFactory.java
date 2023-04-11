@@ -42,16 +42,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Place }
-     * 
-     * @return
-     *     the new instance of {@link Place }
-     */
-    public Place createPlace() {
-        return new Place();
-    }
-
-    /**
      * Create an instance of {@link TEI }
      * 
      * @return
@@ -122,6 +112,16 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link PublicationStmt }
+     * 
+     * @return
+     *     the new instance of {@link PublicationStmt }
+     */
+    public PublicationStmt createPublicationStmt() {
+        return new PublicationStmt();
+    }
+
+    /**
      * Create an instance of {@link TitleStmt }
      * 
      * @return
@@ -129,6 +129,16 @@ public class ObjectFactory {
      */
     public TitleStmt createTitleStmt() {
         return new TitleStmt();
+    }
+
+    /**
+     * Create an instance of {@link RespStmt }
+     * 
+     * @return
+     *     the new instance of {@link RespStmt }
+     */
+    public RespStmt createRespStmt() {
+        return new RespStmt();
     }
 
     /**
@@ -142,143 +152,43 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ModsCollection }
+     * Create an instance of {@link BiblStruct }
      * 
      * @return
-     *     the new instance of {@link ModsCollection }
+     *     the new instance of {@link BiblStruct }
      */
-    public ModsCollection createModsCollection() {
-        return new ModsCollection();
+    public BiblStruct createBiblStruct() {
+        return new BiblStruct();
     }
 
     /**
-     * Create an instance of {@link Mods }
+     * Create an instance of {@link Monogr }
      * 
      * @return
-     *     the new instance of {@link Mods }
+     *     the new instance of {@link Monogr }
      */
-    public Mods createMods() {
-        return new Mods();
+    public Monogr createMonogr() {
+        return new Monogr();
     }
 
     /**
-     * Create an instance of {@link TitleInfo }
+     * Create an instance of {@link Imprint }
      * 
      * @return
-     *     the new instance of {@link TitleInfo }
+     *     the new instance of {@link Imprint }
      */
-    public TitleInfo createTitleInfo() {
-        return new TitleInfo();
+    public Imprint createImprint() {
+        return new Imprint();
     }
 
     /**
-     * Create an instance of {@link PhysicalDescription }
+     * Create an instance of {@link Series }
      * 
      * @return
-     *     the new instance of {@link PhysicalDescription }
+     *     the new instance of {@link Series }
      */
-    public PhysicalDescription createPhysicalDescription() {
-        return new PhysicalDescription();
-    }
-
-    /**
-     * Create an instance of {@link Form }
-     * 
-     * @return
-     *     the new instance of {@link Form }
-     */
-    public Form createForm() {
-        return new Form();
-    }
-
-    /**
-     * Create an instance of {@link RecordInfo }
-     * 
-     * @return
-     *     the new instance of {@link RecordInfo }
-     */
-    public RecordInfo createRecordInfo() {
-        return new RecordInfo();
-    }
-
-    /**
-     * Create an instance of {@link Location }
-     * 
-     * @return
-     *     the new instance of {@link Location }
-     */
-    public Location createLocation() {
-        return new Location();
-    }
-
-    /**
-     * Create an instance of {@link Name }
-     * 
-     * @return
-     *     the new instance of {@link Name }
-     */
-    public Name createName() {
-        return new Name();
-    }
-
-    /**
-     * Create an instance of {@link Subject }
-     * 
-     * @return
-     *     the new instance of {@link Subject }
-     */
-    public Subject createSubject() {
-        return new Subject();
-    }
-
-    /**
-     * Create an instance of {@link Note }
-     * 
-     * @return
-     *     the new instance of {@link Note }
-     */
-    public Note createNote() {
-        return new Note();
-    }
-
-    /**
-     * Create an instance of {@link Genre }
-     * 
-     * @return
-     *     the new instance of {@link Genre }
-     */
-    public Genre createGenre() {
-        return new Genre();
-    }
-
-    /**
-     * Create an instance of {@link HbzIdentifier }
-     * 
-     * @return
-     *     the new instance of {@link HbzIdentifier }
-     */
-    public HbzIdentifier createHbzIdentifier() {
-        return new HbzIdentifier();
-    }
-
-    /**
-     * Create an instance of {@link OriginInfo }
-     * 
-     * @return
-     *     the new instance of {@link OriginInfo }
-     */
-    public OriginInfo createOriginInfo() {
-        return new OriginInfo();
-    }
-
-    /**
-     * Create an instance of {@link Place.PlaceTerm }
-     * 
-     * @return
-     *     the new instance of {@link Place.PlaceTerm }
-     */
-    public Place.PlaceTerm createPlacePlaceTerm() {
-        return new Place.PlaceTerm();
+    public Series createSeries() {
+        return new Series();
     }
 
     /**

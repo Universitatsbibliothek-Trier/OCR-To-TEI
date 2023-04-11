@@ -41,7 +41,7 @@ import jakarta.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Fw", namespace = "http://www.tei-c.org/ns/1.0", propOrder = {
+@XmlType(name = "Fw", propOrder = {
     "value"
 })
 public class Fw {

@@ -2,6 +2,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.tei-c.org/ns/1.0"
   xmlns:self="http://www.tei-c.org/ns/1.0"  elementFormDefault="qualified"
   attributeFormDefault="unqualified" xmlns:mods="http://www.loc.gov/mods/v3">
+  <xs:import namespace="http://www.loc.gov/mods/v3" schemaLocation="mods.xsd"/>
 
   <xs:element name="TEI">
     <xs:complexType>
@@ -49,6 +50,7 @@
   </xs:simpleType>
 
   <xs:complexType name="Pb">
+    <!-- <xs:all/> -->
     <xs:attribute name="n">
       <xs:simpleType>
         <xs:restriction base="xs:string"/>
@@ -56,11 +58,14 @@
     </xs:attribute>
   </xs:complexType>
 
-  <xs:complexType name="Lb"/>
+  <xs:complexType name="Lb">
+    <!-- <xs:all /> -->
+  </xs:complexType>
 
   <xs:complexType name="TeiHeader">
     <xs:sequence>
       <xs:element name="fileDesc" type="self:FileDesc" minOccurs="1" maxOccurs="1" />
+      <xs:element name="sourceDesc" type="self:SourceDesc" minOccurs="1" maxOccurs="1" />
     </xs:sequence>
     <xs:attribute name="version">
       <xs:simpleType>
@@ -82,7 +87,6 @@
     <xs:sequence>
       <xs:element name="titleStmt" type="self:TitleStmt" />
       <xs:element name="publicationStmt" type="self:PublicationStmt" />
-      <xs:element name="sourceDesc" type="self:SourceDesc" minOccurs="1" maxOccurs="1" />
     </xs:sequence>
   </xs:complexType>
 
@@ -124,70 +128,8 @@
 
   <xs:complexType name="SourceDesc">
     <xs:sequence>
-      <xs:element name="biblStruct" type="self:BiblStruct" maxOccurs="1"/>
+      <xs:element ref="mods:modsCollection" />
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="BiblStruct">
-    <xs:all>
-      <xs:element name="monogr" type="self:Monogr" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="series" type="self:Series" minOccurs="1" maxOccurs="1"/>
-    </xs:all>
-  </xs:complexType>
-
-  <xs:complexType name="Monogr">
-    <xs:sequence>
-      <xs:element name="author" type="self:Author" minOccurs="1" maxOccurs="unbounded"/>
-      <xs:element name="title" type="self:TitleMonogr" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="edition" type="self:Edition" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="imprint" type="self:Imprint" minOccurs="1" maxOccurs="1"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:simpleType name="Author">
-    <xs:restriction base="xs:string" />
-  </xs:simpleType>
-
-  <xs:simpleType name="TitleMonogr">
-    <xs:restriction base="xs:string" />
-  </xs:simpleType>
-
-  <xs:simpleType name="Edition">
-    <xs:restriction base="xs:string" />
-  </xs:simpleType>
-
-  <xs:complexType name="Imprint">
-    <xs:sequence>
-      <xs:element name="pubPlace" type="self:PubPlace" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="publisher" type="self:Publisher" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="date" type="self:Date" minOccurs="1" maxOccurs="1"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:simpleType name="PubPlace">
-    <xs:restriction base="xs:string" />
-  </xs:simpleType>
-
-  <xs:simpleType name="Publisher">
-    <xs:restriction base="xs:string" />
-  </xs:simpleType>
-
-  <xs:simpleType name="Date">
-    <xs:restriction base="xs:string" />
-  </xs:simpleType>
-
-  <xs:complexType name="Series">
-    <xs:all>
-      <xs:element name="title" type="self:TitleSeries" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="biblScope" type="self:BiblScope" minOccurs="1" maxOccurs="1"/>
-    </xs:all>
-  </xs:complexType>
-
-  <xs:simpleType name="TitleSeries">
-    <xs:restriction base="xs:string" />
-  </xs:simpleType>
-
-  <xs:simpleType name="BiblScope">
-    <xs:restriction base="xs:string" />
-  </xs:simpleType>
 </xs:schema>

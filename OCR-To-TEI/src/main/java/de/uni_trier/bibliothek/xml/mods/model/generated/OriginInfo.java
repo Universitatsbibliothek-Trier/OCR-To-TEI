@@ -23,6 +23,12 @@ import jakarta.xml.bind.annotation.XmlType;
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
+ *         <element name="edition" minOccurs="0">
+ *           <simpleType>
+ *             <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *             </restriction>
+ *           </simpleType>
+ *         </element>
  *         <element name="dateIssued">
  *           <simpleType>
  *             <restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -48,18 +54,44 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "OriginInfo", propOrder = {
+    "edition",
     "dateIssued",
     "place",
     "publisher"
 })
 public class OriginInfo {
 
+    protected String edition;
     @XmlElement(required = true)
     protected String dateIssued;
     @XmlElement(required = true)
     protected Place place;
     @XmlElement(required = true)
     protected String publisher;
+
+    /**
+     * Ruft den Wert der edition-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getEdition() {
+        return edition;
+    }
+
+    /**
+     * Legt den Wert der edition-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setEdition(String value) {
+        this.edition = value;
+    }
 
     /**
      * Ruft den Wert der dateIssued-Eigenschaft ab.
