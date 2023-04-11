@@ -26,6 +26,7 @@ public class OcrDataReader extends PcGts {
 		Page page = pcgtsObject.getPage();
 		String capital = "";
 		boolean capitalExists = false;
+		
 		List<Object> imageOrRegionList = getRegionOrTextRegionListOrdered(page);
 		for (Object textOrImageRegion : imageOrRegionList) {
 			// check if drop-capital exists
@@ -62,8 +63,9 @@ public class OcrDataReader extends PcGts {
 						// get attribute "id" from textline
 						String textLineID = textLine.getId();
 						char l = 'l';
+						char r = 'r';
 						// check if new line begins
-						if (textLineID.charAt(0) == l && !textEquivList.isEmpty()) {
+						if (textLineID.charAt(0) == l || textLineID.charAt(0) == r && !textEquivList.isEmpty()) {
 							for (TextEquiv TextEquiv : textEquivList) {
 								String unicode = TextEquiv.getUnicode();
 								if (TextEquiv.getIndex() != null && TextEquiv.getIndex().equals("0")) {

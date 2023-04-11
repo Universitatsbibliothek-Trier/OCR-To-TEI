@@ -91,9 +91,7 @@
     </xs:sequence>
     <xs:attribute name="id" use="required">
       <xs:simpleType>
-        <xs:restriction base="xs:string">
-          <xs:pattern value="l\d+" />
-        </xs:restriction>
+        <xs:restriction base="xs:string"/>
       </xs:simpleType>
     </xs:attribute>
   </xs:complexType>

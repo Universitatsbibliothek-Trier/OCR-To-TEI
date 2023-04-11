@@ -32,7 +32,6 @@ import jakarta.xml.bind.annotation.XmlType;
  *       <attribute name="id" use="required">
  *         <simpleType>
  *           <restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *             <pattern value="l\d+"/>
  *           </restriction>
  *         </simpleType>
  *       </attribute>
