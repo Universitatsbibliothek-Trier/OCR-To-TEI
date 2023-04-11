@@ -37,6 +37,7 @@
             <xs:enumeration value = "header"/>
             <xs:enumeration value = "catch"/>
             <xs:enumeration value = "pageNum"/>
+            <xs:enumeration value = "ornament"/>
            </xs:restriction>
          </xs:simpleType>
        </xs:attribute>

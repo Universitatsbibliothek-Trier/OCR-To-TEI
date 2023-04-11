@@ -16,9 +16,6 @@
         <RegionRefIndexed index="4" regionRef="r6"/>
       </OrderedGroup>
     </ReadingOrder>
-    <ImageRegion id="r1">
-      <Coords points="381,340 381,1176 3569,1176 3569,340"/>
-    </ImageRegion>
     <TextRegion id="r2" orientation="0.25" type="paragraph">
       <Coords points="2312,2673"/>
       <TextLine id="l1">
