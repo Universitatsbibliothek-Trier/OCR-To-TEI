@@ -53,19 +53,22 @@ public class CmdLineParser
             if (commandLine.hasOption("mods"))
             {
                 modsPath = commandLine.getOptionValue("mods");
-                System.out.println("Path to mods file entered: " + modsPath);
+                System.out.println("Path to mods file:");
+                System.out.println(modsPath);
             }
 
             if (commandLine.hasOption("ocr"))
             {
                 ocrFolderName = commandLine.getOptionValue("ocr");
-                System.out.println("Path to OCR folder entered: " + ocrFolderName);
+                System.out.println("Path to OCR folder:");
+                System.out.println(ocrFolderName);
             }
 
             if (commandLine.hasOption("tei"))
             {
                 teiPathNameFile = commandLine.getOptionValue("tei");
-                System.out.println("Path with TEI filename entered: " + teiPathNameFile);
+                System.out.println("Path with TEI filename:");
+                System.out.println(teiPathNameFile);
             }
         }
         catch (ParseException exception)
