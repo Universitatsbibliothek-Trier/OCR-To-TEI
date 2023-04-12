@@ -84,13 +84,25 @@ public class TEICreator extends TEI {
 		// get info from parameters.xml
 		Parameters parameters = ParametersProvider.getParameters(parametersPath);
 		// map data from modsCollection onto TEI object
-		teiTitleInfo.setTitle(mods.getTitleInfo().getTitle());
+		if(!mods.getTitleInfo().getTitle().isEmpty()){
+			teiTitleInfo.setTitle(mods.getTitleInfo().getTitle());
+		}
+		else{
+			System.out.println("Kein Titel in Mods-Datei gefunden!");
+		}
+		
 		titleStmt.setTitle(mods.getTitleInfo().getTitle() + " " + parameters.getTitleAddition() + ".");
 		teiObject.setText(teiText);		
 		sourceDesc.setBiblStruct(biblStruct);
 		biblStruct.setMonogr(monogr);
 		series.setBiblScope("Band XX");
-		series.setTitle(parameters.getTitle());
+		if(!parameters.getTitle().isEmpty()){
+			series.setTitle(parameters.getTitle());
+		}
+		else{
+			System.out.println("Bitte Titel in der parameters.xml-Datei angeben!");
+		}
+		
 		biblStruct.setSeries(series);
 		monogr.setEdition(mods.getOriginInfo().getEdition());
 		if(mods.getTitleInfo().getSubTitle() != null){
@@ -165,7 +177,7 @@ public class TEICreator extends TEI {
 				if(ipageCount==Integer.parseInt(pageNumber))
 				{
 					pageNumberOCR = pageNumberOCR.substring(1, pageNumberOCR.length()-1);		
-				}	
+				}
 			}
 			pb.setN(pageNumberOCR);
 			jaxbPb.setValue(pb);
