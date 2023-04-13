@@ -12,6 +12,8 @@ public class CSVCreator {
 	public static String createTEIPathName(String teiPathFileName) throws IOException
 	{
 		// create TEI pathname and .csv path with filename
+		// replace blackslashes from windows paths
+		teiPathFileName = teiPathFileName.replaceAll("[\\\\]", "/");
 		int lastSlash = teiPathFileName.lastIndexOf('/');
 		String csvFileName = teiPathFileName.substring(lastSlash+1,teiPathFileName.length());
 		csvFileName = csvFileName.substring(0,csvFileName.length()-4);
