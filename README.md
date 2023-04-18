@@ -7,7 +7,9 @@ Mit diesem Java-Programm ist es möglich aus einem Dateiordner, in dem sich XML-
 
 ## Ausführung
 
-
+Voraussetzungen:\
+Voraussetzungen für das Ausführen des Programmes sind ein installiertes Java JDK und Maven.\
+Nötige Angaben:\
 Vor dem Ausführen müssen bestimmte Angaben in der `parameters.xml`-Datei erfolgen: der Titel in `title`, ein Zusatz zum Titel in `titleAddition`, die Reihenfolge der vorkommenden Elemente (z.B Bogensignaturen, Kustoden) in `readingOrder`, ein statement of responsibility in `respStmt` und ein publication statement in `publicationStmt`.
 
 Für Ubuntu:\
@@ -29,7 +31,7 @@ Zur Ausführung des Programmes kann die Datei `create_tei_paths.bat` ausgeführt
 Enthält `parameters.xml`-Datei, in der bestimmte Angaben, zum Beispiel zur Reihenfolge der speziellen Elemente (z.B Bogensignaturen, Kustoden) gemacht werden können.
 
 **TEI_CSV_Output**  
-Enthält nach der Ausführung je nach angegebenen Pfad die XML-Datei nach TEI-Vorgaben und eine `.csv`-Datei mit Angaben über nicht erkannte Seitenzahlen.
+Enthält nach der Ausführung je nach angegebenen Pfaden die XML-Datei nach TEI-Vorgaben und eine `.csv`-Datei mit Angaben über nicht erkannte Seitenzahlen.
 
 **OCR-To-TEI**  
 Enthält die `pom.xml` für Maven und eine `.bat`-Datei zum Ausführen des Programmes unter Windows.
@@ -72,8 +74,7 @@ Enthält außerdem zwei Skripte zum Starten des Programmes.
 
 ## Dependencies
 
-Die Dependencies werden beim Starten des Projektes von Maven automatisch geladen.
-Die Libraries von `JAXB RI` von https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-ri/4.0.0 werden im Ordner **OCR-To-TEI/lib** benötigt, sodass die Struktur wie folgt aussieht:
-<!-- Eclipse Distribution License, Version 1.0: ist anderer Name für 3-Klausel-BSD-Lizenz: mit GNU GPL vereinbar -->
-**.../OCR-To-TEI/lib/jaxb-ri-4.0.0/jaxb-ri**
+Die Dependencies werden beim Starten des Projektes von Maven automatisch geladen.<!-- Eclipse Distribution License, Version 1.0: ist anderer Name für 3-Klausel-BSD-Lizenz: mit GNU GPL vereinbar -->
+Die Libraries von `JAXB RI` von https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-ri/4.0.0 sind explizit im Ordner **OCR-To-TEI/lib** zu finden.
+
 
