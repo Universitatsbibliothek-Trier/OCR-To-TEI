@@ -28,11 +28,20 @@ Zur Ausführung des Programmes kann die Datei `create_tei_paths.bat` ausgeführt
 **parameters**  
 Enthält `parameters.xml`-Datei, in der bestimmte Angaben, zum Beispiel zur Reihenfolge der speziellen Elemente (z.B Bogensignaturen, Kustoden) gemacht werden können.
 
+**TEI_CSV_Output**  
+Enthält nach der Ausführung je nach angegebenen Pfad die XML-Datei nach TEI-Vorgaben und eine `.csv`-Datei mit Angaben über nicht erkannte Seitenzahlen.
+
+**OCR-To-TEI**  
+Enthält die `pom.xml` für Maven und eine `.bat`-Datei zum Ausführen des Programmes unter Windows.
+
 **OCR-To-TEI/source/main/resources**  
-Enthält `.xsd`-Dateien für XML-Dateien mit OCR-Output, für XML-Dateien mit Mods, für XML-Dateien mit allen offiziellen TEI-Vorgaben, für XML-Dateien mit speziell ausgewählten TEI-Vorgaben und für die parameters-Datei.
+Enthält `.xsd`-Dateien für XML-Dateien mit OCR-Output, für XML-Dateien mit Mods, für XML-Dateien, die sich an offizielle TEI-Vorgaben halten, für XML-Dateien mit speziell ausgewählten TEI-Vorgaben und für die parameters-Datei.
 
 **OCR-To-TEI/source/main/java/de/uni_trier/bibliothek**  
 Enthält `Main`-Klasse des Java-Projektes, den `CSVCreator`, den `CmdLineParser`, der die Kommandozeilenargumente einliest und den `ParametersProvider`, der ein parameter-Objekt zurückgibt. 
+
+**OCR-To-TEI/source/main/java/de/uni_trier/bibliothek/xml**  
+Enthält eine Klasse um XML-Dateien gegen ein Schema zu validieren, eine Klasse um aus einer XML-Datei Java-Objekte zu erzeugen und umgekehrt.
 
 **OCR-To-TEI/source/main/java/de/uni_trier/bibliothek/xml/mods**  
 Enthält `ModsUnmarshaller`, der aus einer angegebenen XML-Datei Java-Objekte generiert.
@@ -58,8 +67,8 @@ Enthält außerdem einen `TEICreator`, der Daten aus OCR-Output und Metadaten zu
 Enthält automatisch generierte Java-Klassen.
 
 **OCR-To-TEI/scripts**  
-Enthält Skripte zum Generieren von Java-Klassen aus `.xsd`-Dateien. In diesem Fall von `xml_OCR_Output.xsd`,`mods.xsd` und `TEIxsd.xsd`.
-Enthält außerdem ein Skript zum Starten des Programmes.
+Enthält Skripte zum Generieren von Java-Klassen aus `.xsd`-Dateien. In diesem Fall von `xml_OCR_Output.xsd`,`mods.xsd`,`TEIxsd.xsd` und `parameters.xsd`.
+Enthält außerdem zwei Skripte zum Starten des Programmes.
 
 ## Dependencies
 
