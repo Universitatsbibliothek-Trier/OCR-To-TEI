@@ -1,3 +1,7 @@
+// Copyright (c) 2023 René Ackels
+//
+// Permission is hereby granted, free of charge, to any person obtaining
+
 package de.uni_trier.bibliothek;
 
 import java.io.File;
@@ -90,6 +94,7 @@ public class Main {
 		}
 		System.out.println("-------");	
 		System.out.println("Validation of parameters-file against parameters.xsd:");	
+		
 		// validate against parameters.xsd
 		if (XMLValidator.validateXMLSchema("src/main/resources/parameters.xsd", parametersPath))
 		{
