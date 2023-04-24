@@ -3,7 +3,8 @@
 /OCR-To-TEI/.vscode
 /.vscode
 *.class
-/example-data/daten_minimal_tei.tei
+/example-data/
+/OCR-To-TEI/bin/
 /OCR-To-TEI/src/main/java/de/uni_trier/bibliothek/xml/tei/TEICreator_backup.java
 /OCR-To-TEI/src/main/resources/TEIxsd_backup.xsd
 /OCR-To-TEI/scripts/startWithConstant.sh
