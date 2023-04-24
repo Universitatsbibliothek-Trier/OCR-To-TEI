@@ -40,7 +40,7 @@ Enthält die `pom.xml` für Maven und eine `.bat`-Datei zum Ausführen des Progr
 Enthält `.xsd`-Dateien für XML-Dateien mit OCR-Output, für XML-Dateien mit Mods, für XML-Dateien, die sich an offizielle TEI-Vorgaben halten, für XML-Dateien mit speziell ausgewählten TEI-Vorgaben und für die parameters-Datei.
 
 **OCR-To-TEI/source/main/java/de/uni_trier/bibliothek**  
-Enthält `Main`-Klasse des Java-Projektes, den `CSVCreator`, den `CmdLineParser`, der die Kommandozeilenargumente einliest und den `ParametersProvider`, der ein parameter-Objekt zurückgibt. 
+Enthält `Main`-Klasse des Java-Projektes, den `CSVCreator`, den `CmdLineParser`, der die Kommandozeilenargumente einliest und den `ParametersProvider`, der ein `parameters`-Objekt zurückgibt. 
 
 **OCR-To-TEI/source/main/java/de/uni_trier/bibliothek/xml**  
 Enthält eine Klasse um XML-Dateien gegen ein Schema zu validieren, eine Klasse um aus einer XML-Datei Java-Objekte zu erzeugen und umgekehrt.
@@ -74,7 +74,8 @@ Enthält außerdem zwei Skripte zum Starten des Programmes.
 
 ## Dependencies
 
-Die Dependencies werden beim Starten des Projektes von Maven automatisch geladen.<!-- Eclipse Distribution License, Version 1.0: ist anderer Name für 3-Klausel-BSD-Lizenz: mit GNU GPL vereinbar -->
+Die Dependencies werden beim Starten des Projektes von Maven automatisch geladen.
+<!-- Eclipse Distribution License, Version 1.0: ist anderer Name für 3-Klausel-BSD-Lizenz: mit GNU GPL vereinbar -->
 Die Libraries von `JAXB RI` von https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-ri/4.0.0 sind explizit im Ordner **OCR-To-TEI/lib** zu finden.
 
 

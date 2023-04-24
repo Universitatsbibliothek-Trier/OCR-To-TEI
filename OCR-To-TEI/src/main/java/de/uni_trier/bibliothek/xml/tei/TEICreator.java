@@ -182,7 +182,6 @@ public class TEICreator extends TEI {
 			pageFwElement.setType("pageNum");
 			catchWordFwElement.setType("catch");
 			ArrayList<String> lineStrings = OcrDataReader.getTextLines(pcgtsObject);
-			// with ImageRegion
 			ArrayList<String> parametersList = getReadingOrderList(parametersPath);
 			String pageNumberOCR = Integer.toString(ipageCount);
 			pageNumberOCR = "[" + pageNumberOCR + "]";	
