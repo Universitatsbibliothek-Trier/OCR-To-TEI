@@ -50,14 +50,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>. -->
     </dependency>   
 
     <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <!-- Eclipse Public License, Version 2.0: frei, aber unvereinbar mit GNU GPL -->
-      <artifactId>junit-jupiter</artifactId>
-      <version>5.9.2</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
       <groupId>com.opencsv</groupId>
       <!-- Lizenz: Apache 2.0: fällt unter GNU General Public License, Version 3: mit GNU GPL vereinbar -->
       <artifactId>opencsv</artifactId>
