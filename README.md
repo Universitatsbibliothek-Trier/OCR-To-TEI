@@ -86,8 +86,6 @@ Enthält außerdem zwei Skripte zum Starten des Programmes.
 
 ## Dependencies
 
-Die Dependencies werden beim Starten des Projektes von Maven automatisch geladen.
-<!-- Eclipse Distribution License, Version 1.0: ist anderer Name für 3-Klausel-BSD-Lizenz: mit GNU GPL vereinbar -->
-Die Libraries von `JAXB RI` von https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-ri/4.0.0 sind explizit im Ordner **OCR-To-TEI/lib** zu finden.
+Die Dependencies werden beim Starten des Projektes von Maven automatisch geladen und sind in der `pom.xml`-Datei zu finden.
 
 
