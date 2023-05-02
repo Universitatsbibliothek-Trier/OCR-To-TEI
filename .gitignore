@@ -3,7 +3,13 @@
 /OCR-To-TEI/.vscode
 /.vscode
 *.class
+/example-data/
+/OCR-To-TEI/bin/
+/OCR-To-TEI/src/main/java/de/uni_trier/bibliothek/xml/tei/TEICreator_backup.java
+/OCR-To-TEI/src/main/resources/TEIxsd_backup.xsd
 /OCR-To-TEI/scripts/startWithConstant.sh
 /OCR-To-TEI/scripts/startAltModsWithConstant.sh
-/OCR-To-TEI/scripts/startWithConstantHiwiKath.sh
+/OCR-To-TEI/scripts/test_startWithConstant.sh
 /OCR-To-TEI/src/main/resources/ocrOutputFiles/backup
+/OCR-To-TEI/src/main/resources/modsFiles/test.xml
+/OCR-To-TEI/src/test/

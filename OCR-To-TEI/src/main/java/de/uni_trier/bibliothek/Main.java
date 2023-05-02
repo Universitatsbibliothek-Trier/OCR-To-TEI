@@ -1,3 +1,21 @@
+// @author       René Ackels, Anne Königs
+// Copyright (c) 2023 René Ackels, Anne Königs
+
+// This file is part of OCR-To-TEI.
+
+// OCR-To-TEI is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+
+// OCR-To-TEI is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 package de.uni_trier.bibliothek;
 
 import java.io.File;
@@ -74,16 +92,31 @@ public class Main {
 		// write TEI as file
 		Path teiFilePath = Paths.get(teiPathNameFile);
 		Files.writeString(teiFilePath, teiXmlString, StandardCharsets.UTF_8);	
-		System.out.println("TEI and .csv created in: " + teiPathName);	
+		System.out.println("TEI and .csv created in:");	
+		System.out.println(teiPathName);	
+		System.out.println("-------");	
+		System.out.println("Validation against tei_all.xsd:");	
 
 		// validate against tei_all.xsd
 		if (XMLValidator.validateXMLSchema("src/main/resources/officialTEI/tei_all.xsd", teiPathNameFile))
 		{
-			System.out.println("Validation von " + teiPathNameFile + " gegen " +"tei_all.xsd" + " ist true.");
+			System.out.println("Validation of " + teiPathNameFile + " against " +"tei_all.xsd" + " is true.");
 		}
 		else
 		{
-			System.out.println("Validation von " + teiPathNameFile + " gegen " +"tei_all.xsd" + " ist false.");
+			System.out.println("Validation of " + teiPathNameFile + " against " +"tei_all.xsd" + " is false.");
+		}
+		System.out.println("-------");	
+		System.out.println("Validation of parameters-file against parameters.xsd:");	
+		
+		// validate against parameters.xsd
+		if (XMLValidator.validateXMLSchema("src/main/resources/parameters.xsd", parametersPath))
+		{
+			System.out.println("Validation of " + parametersPath + " against " +"parameters.xsd" + " is true.");
+		}
+		else
+		{
+			System.out.println("Validation of " + parametersPath + " against " +"parameters.xsd" + " is false.");
 		}
 	}
 

@@ -1,3 +1,21 @@
+// @author       René Ackels, Anne Königs
+// Copyright (c) 2023 René Ackels, Anne Königs
+
+// This file is part of OCR-To-TEI.
+
+// OCR-To-TEI is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+
+// OCR-To-TEI is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 package de.uni_trier.bibliothek.xml.ocr;
 
 import java.io.File;
@@ -22,11 +40,9 @@ public class OcrDataReader extends PcGts {
 
 	public static ArrayList<String> getTextLines(PcGts pcgtsObject) throws IOException, JAXBException {
 		ArrayList<String> ocrTextLineList = new ArrayList<String>();
-		// read values from Java object
 		Page page = pcgtsObject.getPage();
 		String capital = "";
 		boolean capitalExists = false;
-		
 		List<Object> imageOrRegionList = getRegionOrTextRegionListOrdered(page);
 		for (Object textOrImageRegion : imageOrRegionList) {
 			// check if drop-capital exists
@@ -60,11 +76,9 @@ public class OcrDataReader extends PcGts {
 				else if (textRegion.getType().equals("paragraph")) {
 					for (TextLine textLine : textRegion.getTextLine()) {
 						List<TextEquiv> textEquivList = textLine.getTextEquiv();
-						// get attribute "id" from textline
 						String textLineID = textLine.getId();
 						char l = 'l';
 						char r = 'r';
-						// check if new line begins
 						if (textLineID.charAt(0) == l || textLineID.charAt(0) == r && !textEquivList.isEmpty()) {
 							for (TextEquiv TextEquiv : textEquivList) {
 								String unicode = TextEquiv.getUnicode();
@@ -93,7 +107,6 @@ public class OcrDataReader extends PcGts {
 		String pageNumber = getSpecialElement(pcgtsObject, "page-number");
 		String comment = "";
 		try {
-			// create FileWriter object with file as parameter
 			FileWriter outputfile = new FileWriter(csvFile, true);
 			CSVWriter writer = new CSVWriter(outputfile);
 			// add data to csv

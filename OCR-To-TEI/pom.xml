@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- @author       René Ackels, Anne Königs
+Copyright (c) 2023 René Ackels, Anne Königs
+
+This file is part of OCR-To-TEI.
+
+OCR-To-TEI is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+OCR-To-TEI is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>. -->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
@@ -21,44 +38,28 @@
     <!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
     <dependency>
       <groupId>jakarta.xml.bind</groupId>
+      <!-- Eclipse Distribution License, Version 1.0: ist anderer Name für 3-Klausel-BSD-Lizenz: mit GNU GPL vereinbar -->
       <artifactId>jakarta.xml.bind-api</artifactId>
       <version>3.0.1</version>
       <scope>compile</scope>
     </dependency>
+    
     <dependency>
       <groupId>com.sun.xml.bind</groupId>
+      <!-- Eclipse Distribution License, Version 1.0: ist anderer Name für 3-Klausel-BSD-Lizenz: mit GNU GPL vereinbar -->
       <artifactId>jaxb-impl</artifactId>
       <version>3.0.2</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-slf4j-impl</artifactId>
-      <version>2.19.0</version>
-    </dependency>
-
-    <!-- testing -->
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter</artifactId>
-      <version>5.9.2</version>
-      <scope>test</scope>
-    </dependency>
+    </dependency>   
 
     <dependency>
       <groupId>com.opencsv</groupId>
+      <!-- Lizenz: Apache 2.0: fällt unter GNU General Public License, Version 3: mit GNU GPL vereinbar -->
       <artifactId>opencsv</artifactId>
       <version>5.7.1</version>
     </dependency>
 
     <dependency>
-      <groupId>org.assertj</groupId>
-      <artifactId>assertj-core</artifactId>
-      <version>3.23.1</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
+      <!-- Lizenz: Apache 2.0: fällt unter GNU General Public License, Version 3: mit GNU GPL vereinbar -->
       <groupId>commons-cli</groupId>
       <artifactId>commons-cli</artifactId>
       <version>1.5.0</version>
@@ -66,6 +67,7 @@
 
    <dependency>
      <groupId>org.xmlunit</groupId>
+     <!-- Lizenz: 3-Klausel-BSD-Lizenz: mit GNU GPL vereinbar -->
      <artifactId>xmlunit-legacy</artifactId>
      <version>2.9.1</version>
      <scope>test</scope>
@@ -73,6 +75,7 @@
 
    <dependency>
      <groupId>com.jcabi</groupId>
+     <!-- Lizenz: 3-Klausel-BSD-Lizenz: mit GNU GPL vereinbar -->
      <artifactId>jcabi-xml</artifactId>
      <version>0.27.2</version>
    </dependency>
@@ -83,6 +86,7 @@
      <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
+        <!-- Lizenz: Apache 2.0: fällt unter GNU General Public License, Version 3: mit GNU GPL vereinbar -->
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
         <configuration>
@@ -93,6 +97,7 @@
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
+        <!-- Lizenz: Apache 2.0: fällt unter GNU General Public License, Version 3: mit GNU GPL vereinbar -->
         <artifactId>maven-surefire-plugin</artifactId>
         <configuration>
           <disableXmlReport>false</disableXmlReport>
@@ -103,6 +108,7 @@
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
+        <!-- Lizenz: Apache 2.0: fällt unter GNU General Public License, Version 3: mit GNU GPL vereinbar -->
         <artifactId>maven-resources-plugin</artifactId>
         <version>3.2.0</version>
         <configuration>
@@ -112,6 +118,7 @@
 
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
+        <!-- Lizenz: Apache 2.0: fällt unter GNU General Public License, Version 3: mit GNU GPL vereinbar -->
         <artifactId>exec-maven-plugin</artifactId>
         <version>3.1.0</version>
         <configuration>
@@ -121,6 +128,7 @@
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
+        <!-- Lizenz: Apache 2.0: fällt unter GNU General Public License, Version 3: mit GNU GPL vereinbar -->
         <artifactId>maven-assembly-plugin</artifactId>
         <configuration>
           <archive>

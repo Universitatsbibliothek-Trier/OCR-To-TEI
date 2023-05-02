@@ -1,3 +1,21 @@
+// @author       René Ackels, Anne Königs
+// Copyright (c) 2023 René Ackels, Anne Königs
+
+// This file is part of OCR-To-TEI.
+
+// OCR-To-TEI is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+
+// OCR-To-TEI is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 package de.uni_trier.bibliothek.xml.tei;
 
 import java.io.IOException;
@@ -84,13 +102,25 @@ public class TEICreator extends TEI {
 		// get info from parameters.xml
 		Parameters parameters = ParametersProvider.getParameters(parametersPath);
 		// map data from modsCollection onto TEI object
-		teiTitleInfo.setTitle(mods.getTitleInfo().getTitle());
+		if(!mods.getTitleInfo().getTitle().isEmpty()){
+			teiTitleInfo.setTitle(mods.getTitleInfo().getTitle());
+		}
+		else{
+			System.out.println("Kein Titel in Mods-Datei gefunden!");
+		}
+		
 		titleStmt.setTitle(mods.getTitleInfo().getTitle() + " " + parameters.getTitleAddition() + ".");
 		teiObject.setText(teiText);		
 		sourceDesc.setBiblStruct(biblStruct);
 		biblStruct.setMonogr(monogr);
 		series.setBiblScope("Band XX");
-		series.setTitle(parameters.getTitle());
+		if(!parameters.getTitle().isEmpty()){
+			series.setTitle(parameters.getTitle());
+		}
+		else{
+			System.out.println("Bitte Titel in der parameters.xml-Datei angeben!");
+		}
+		
 		biblStruct.setSeries(series);
 		monogr.setEdition(mods.getOriginInfo().getEdition());
 		if(mods.getTitleInfo().getSubTitle() != null){
@@ -154,7 +184,6 @@ public class TEICreator extends TEI {
 			pageFwElement.setType("pageNum");
 			catchWordFwElement.setType("catch");
 			ArrayList<String> lineStrings = OcrDataReader.getTextLines(pcgtsObject);
-			// with ImageRegion
 			ArrayList<String> parametersList = getReadingOrderList(parametersPath);
 			String pageNumberOCR = Integer.toString(ipageCount);
 			pageNumberOCR = "[" + pageNumberOCR + "]";	
@@ -165,7 +194,7 @@ public class TEICreator extends TEI {
 				if(ipageCount==Integer.parseInt(pageNumber))
 				{
 					pageNumberOCR = pageNumberOCR.substring(1, pageNumberOCR.length()-1);		
-				}	
+				}
 			}
 			pb.setN(pageNumberOCR);
 			jaxbPb.setValue(pb);
