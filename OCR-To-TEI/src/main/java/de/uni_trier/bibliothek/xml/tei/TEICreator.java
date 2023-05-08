@@ -29,6 +29,7 @@ import de.uni_trier.bibliothek.xml.parameters.model.generated.Parameters;
 import de.uni_trier.bibliothek.xml.parameters.model.generated.ReadingOrder;
 import de.uni_trier.bibliothek.xml.tei.model.generated.BiblStruct;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Body;
+import de.uni_trier.bibliothek.xml.tei.model.generated.Div;
 import de.uni_trier.bibliothek.xml.tei.model.generated.FileDesc;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Fw;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Imprint;
@@ -36,6 +37,7 @@ import de.uni_trier.bibliothek.xml.tei.model.generated.Lb;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Mods;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Monogr;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Pb;
+import de.uni_trier.bibliothek.xml.tei.model.generated.Pbody;
 import de.uni_trier.bibliothek.xml.tei.model.generated.PublicationStmt;
 import de.uni_trier.bibliothek.xml.tei.model.generated.RespStmt;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Series;
@@ -66,7 +68,10 @@ public class TEICreator extends TEI {
 	public static TitleInfo teiTitleInfo = new TitleInfo();
 	public static Text teiText = new Text();
 	public static Body teiBody = new Body();
+	public static Div teiDiv = new Div();
+	public static Pbody teiPbody = new Pbody();
 	public static TEI teiObject = new TEI();
+	
 
 	// create objects for special information elements
 	public static Pb pb;
@@ -114,6 +119,8 @@ public class TEICreator extends TEI {
 		titleStmt.setTitle(mods.getTitleInfo().getTitle() + " " + parameters.getTitleAddition() + ".");
 		teiObject.setText(teiText);		
 		teiText.setBody(teiBody);
+		teiBody.setDiv(teiDiv);
+		teiDiv.setP(teiPbody);
 		sourceDesc.setBiblStruct(biblStruct);
 		biblStruct.setMonogr(monogr);
 		series.setBiblScope("Band XX");
@@ -164,16 +171,16 @@ public class TEICreator extends TEI {
 	public static void addLines(ArrayList<PcGts> pcgtsList, String parametersPath) throws IOException, JAXBException
 	{
 		// add lines and special elements from files with OCR-Output
-		teiBody.getContent().clear();
+		teiPbody.getContent().clear();
 		int ipageCount = 0;
 		for (PcGts pcgtsObject : pcgtsList) {	
-			jaxbPb = teiObjectFactoryParameters.createBodyPb(new Pb());
-			jaxbLb = teiObjectFactoryParameters.createBodyLb(new Lb());	
-			jaxbFwSignature = teiObjectFactoryParameters.createBodyFw(new Fw());		
-			jaxbFwPageNumber = teiObjectFactoryParameters.createBodyFw(new Fw());	
-			jaxbFwHeader = teiObjectFactoryParameters.createBodyFw(new Fw());	
-			jaxbFwCatchWord = teiObjectFactoryParameters.createBodyFw(new Fw());
-			jaxbFwOrnament = teiObjectFactoryParameters.createBodyFw(new Fw());
+			jaxbPb = teiObjectFactoryParameters.createPbodyPb(new Pb());
+			jaxbLb = teiObjectFactoryParameters.createPbodyLb(new Lb());	
+			jaxbFwSignature = teiObjectFactoryParameters.createPbodyFw(new Fw());		
+			jaxbFwPageNumber = teiObjectFactoryParameters.createPbodyFw(new Fw());	
+			jaxbFwHeader = teiObjectFactoryParameters.createPbodyFw(new Fw());	
+			jaxbFwCatchWord = teiObjectFactoryParameters.createPbodyFw(new Fw());
+			jaxbFwOrnament = teiObjectFactoryParameters.createPbodyFw(new Fw());
 			ipageCount++;
 			pb = new Pb();
 			signatureFwElement = new Fw();
@@ -202,7 +209,7 @@ public class TEICreator extends TEI {
 			pb.setN(pageNumberOCR);
 			jaxbPb.setValue(pb);
 			jaxbFwOrnament.setValue(ornamentFwElement);
-			teiBody.getContent().add(jaxbPb);
+			teiPbody.getContent().add(jaxbPb);
 			addParameterElements(lineStrings, parametersList, pcgtsObject);				
 		}
 	}
@@ -255,11 +262,11 @@ public class TEICreator extends TEI {
 							// test if imageRegion
 							if(textLineString.equals("textLineOrnament"))
 							{
-								teiBody.getContent().add(jaxbFwOrnament);
+								teiPbody.getContent().add(jaxbFwOrnament);
 							}
 							else{
-								teiBody.getContent().add(jaxbLb);
-								teiBody.getContent().add(textLineString);
+								teiPbody.getContent().add(jaxbLb);
+								teiPbody.getContent().add(textLineString);
 							}							
 						}
 						break;
@@ -281,7 +288,7 @@ public class TEICreator extends TEI {
 		if(!OcrDataReader.getSpecialElement(pcgtsObject,elementType).isEmpty()) {
 			fwElement.setValue(OcrDataReader.getSpecialElement(pcgtsObject,elementType));
 			jaxbElement.setValue(fwElement);
-			teiBody.getContent().add(jaxbElement);
+			teiPbody.getContent().add(jaxbElement);
 		}
 	}
 }

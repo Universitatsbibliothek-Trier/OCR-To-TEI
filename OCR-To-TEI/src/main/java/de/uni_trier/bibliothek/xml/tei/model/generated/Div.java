@@ -13,16 +13,16 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für Body complex type.
+ * <p>Java-Klasse für Div complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="Body">
+ * <complexType name="Div">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <choice>
- *         <element name="div" type="{http://www.tei-c.org/ns/1.0}Div"/>
+ *         <element name="p" type="{http://www.tei-c.org/ns/1.0}Pbody"/>
  *       </choice>
  *     </restriction>
  *   </complexContent>
@@ -32,35 +32,35 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Body", propOrder = {
-    "div"
+@XmlType(name = "Div", propOrder = {
+    "p"
 })
-public class Body {
+public class Div {
 
-    protected Div div;
+    protected Pbody p;
 
     /**
-     * Ruft den Wert der div-Eigenschaft ab.
+     * Ruft den Wert der p-Eigenschaft ab.
      * 
      * @return
      *     possible object is
-     *     {@link Div }
+     *     {@link Pbody }
      *     
      */
-    public Div getDiv() {
-        return div;
+    public Pbody getP() {
+        return p;
     }
 
     /**
-     * Legt den Wert der div-Eigenschaft fest.
+     * Legt den Wert der p-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is
-     *     {@link Div }
+     *     {@link Pbody }
      *     
      */
-    public void setDiv(Div value) {
-        this.div = value;
+    public void setP(Pbody value) {
+        this.p = value;
     }
 
 }
