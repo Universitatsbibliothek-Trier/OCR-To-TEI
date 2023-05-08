@@ -13,16 +13,16 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für Text complex type.
+ * <p>Java-Klasse für Body complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>{@code
- * <complexType name="Text">
+ * <complexType name="Body">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <choice>
- *         <element name="body" type="{http://www.tei-c.org/ns/1.0}Body"/>
+ *         <element name="div" type="{http://www.tei-c.org/ns/1.0}Div"/>
  *       </choice>
  *     </restriction>
  *   </complexContent>
@@ -32,35 +32,35 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Text", propOrder = {
-    "body"
+@XmlType(name = "Body", propOrder = {
+    "div"
 })
-public class Text {
+public class Body {
 
-    protected Body body;
+    protected Div div;
 
     /**
-     * Ruft den Wert der body-Eigenschaft ab.
+     * Ruft den Wert der div-Eigenschaft ab.
      * 
      * @return
      *     possible object is
-     *     {@link Body }
+     *     {@link Div }
      *     
      */
-    public Body getBody() {
-        return body;
+    public Div getDiv() {
+        return div;
     }
 
     /**
-     * Legt den Wert der body-Eigenschaft fest.
+     * Legt den Wert der div-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is
-     *     {@link Body }
+     *     {@link Div }
      *     
      */
-    public void setBody(Body value) {
-        this.body = value;
+    public void setDiv(Div value) {
+        this.div = value;
     }
 
 }

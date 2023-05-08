@@ -36,7 +36,26 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>. -->
     </xs:complexType>
   </xs:element>
 
-  <xs:complexType name="Text" mixed="true">
+   <xs:complexType name="Text">
+    <xs:choice>
+      <xs:element name="body" type="self:Body" maxOccurs="1" />
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="Body">
+    <xs:choice>
+      <xs:element name="div" type="self:Div"  />
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="Div">
+    <xs:choice>
+      <xs:element name="p" type="self:Pbody"  />
+    </xs:choice>
+  </xs:complexType>
+
+
+  <xs:complexType name="Pbody" mixed="true">
     <xs:choice maxOccurs="unbounded">
       <xs:element name="pb" type="self:Pb" maxOccurs="unbounded" />
       <xs:element name="lb" type="self:Lb" maxOccurs="unbounded" />
