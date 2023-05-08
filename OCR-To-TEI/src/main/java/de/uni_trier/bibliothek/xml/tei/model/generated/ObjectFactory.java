@@ -30,9 +30,9 @@ import jakarta.xml.bind.annotation.XmlRegistry;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _TextPb_QNAME = new QName("http://www.tei-c.org/ns/1.0", "pb");
-    private final static QName _TextLb_QNAME = new QName("http://www.tei-c.org/ns/1.0", "lb");
-    private final static QName _TextFw_QNAME = new QName("http://www.tei-c.org/ns/1.0", "fw");
+    private final static QName _BodyPb_QNAME = new QName("http://www.tei-c.org/ns/1.0", "pb");
+    private final static QName _BodyLb_QNAME = new QName("http://www.tei-c.org/ns/1.0", "lb");
+    private final static QName _BodyFw_QNAME = new QName("http://www.tei-c.org/ns/1.0", "fw");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: de.uni_trier.bibliothek.xml.tei.model.generated
@@ -69,6 +69,16 @@ public class ObjectFactory {
      */
     public Text createText() {
         return new Text();
+    }
+
+    /**
+     * Create an instance of {@link Body }
+     * 
+     * @return
+     *     the new instance of {@link Body }
+     */
+    public Body createBody() {
+        return new Body();
     }
 
     /**
@@ -199,9 +209,9 @@ public class ObjectFactory {
      * @return
      *     the new instance of {@link JAXBElement }{@code <}{@link Pb }{@code >}
      */
-    @XmlElementDecl(namespace = "http://www.tei-c.org/ns/1.0", name = "pb", scope = Text.class)
-    public JAXBElement<Pb> createTextPb(Pb value) {
-        return new JAXBElement<>(_TextPb_QNAME, Pb.class, Text.class, value);
+    @XmlElementDecl(namespace = "http://www.tei-c.org/ns/1.0", name = "pb", scope = Body.class)
+    public JAXBElement<Pb> createBodyPb(Pb value) {
+        return new JAXBElement<>(_BodyPb_QNAME, Pb.class, Body.class, value);
     }
 
     /**
@@ -212,9 +222,9 @@ public class ObjectFactory {
      * @return
      *     the new instance of {@link JAXBElement }{@code <}{@link Lb }{@code >}
      */
-    @XmlElementDecl(namespace = "http://www.tei-c.org/ns/1.0", name = "lb", scope = Text.class)
-    public JAXBElement<Lb> createTextLb(Lb value) {
-        return new JAXBElement<>(_TextLb_QNAME, Lb.class, Text.class, value);
+    @XmlElementDecl(namespace = "http://www.tei-c.org/ns/1.0", name = "lb", scope = Body.class)
+    public JAXBElement<Lb> createBodyLb(Lb value) {
+        return new JAXBElement<>(_BodyLb_QNAME, Lb.class, Body.class, value);
     }
 
     /**
@@ -225,9 +235,9 @@ public class ObjectFactory {
      * @return
      *     the new instance of {@link JAXBElement }{@code <}{@link Fw }{@code >}
      */
-    @XmlElementDecl(namespace = "http://www.tei-c.org/ns/1.0", name = "fw", scope = Text.class)
-    public JAXBElement<Fw> createTextFw(Fw value) {
-        return new JAXBElement<>(_TextFw_QNAME, Fw.class, Text.class, value);
+    @XmlElementDecl(namespace = "http://www.tei-c.org/ns/1.0", name = "fw", scope = Body.class)
+    public JAXBElement<Fw> createBodyFw(Fw value) {
+        return new JAXBElement<>(_BodyFw_QNAME, Fw.class, Body.class, value);
     }
 
 }
