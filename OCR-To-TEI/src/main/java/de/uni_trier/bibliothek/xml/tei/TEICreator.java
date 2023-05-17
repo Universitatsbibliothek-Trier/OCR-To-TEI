@@ -174,6 +174,7 @@ public class TEICreator extends TEI {
 		teiPbody.getContent().clear();
 		int ipageCount = 0;
 		for (PcGts pcgtsObject : pcgtsList) {	
+			System.out.println("Processing Page: " + (ipageCount + 1));
 			jaxbPb = teiObjectFactoryParameters.createPbodyPb(new Pb());
 			jaxbLb = teiObjectFactoryParameters.createPbodyLb(new Lb());	
 			jaxbFwSignature = teiObjectFactoryParameters.createPbodyFw(new Fw());		
