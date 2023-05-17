@@ -12,4 +12,6 @@
 /OCR-To-TEI/scripts/test_startWithConstant.sh
 /OCR-To-TEI/src/main/resources/ocrOutputFiles/backup
 /OCR-To-TEI/src/main/resources/modsFiles/test.xml
+/OCR-To-TEI/src/main/resources/ocrOutputFiles/nickbayern
 /OCR-To-TEI/src/test/
+/TEI_CSV_Output/

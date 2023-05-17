@@ -1,4 +1,4 @@
-# @author       René Ackels, Anne Königs
+# @author       René Ackels
 # Copyright (c) 2023 René Ackels, Anne Königs
 
 # This file is part of OCR-To-TEI.
