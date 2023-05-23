@@ -1,5 +1,5 @@
 # @author       René Ackels
-# Copyright (c) 2023 René Ackels, Anne Königs
+# Copyright (c) 2023 Universität Trier
 
 # This file is part of OCR-To-TEI.
 
@@ -20,7 +20,7 @@
 
 # start java program with parameters from command line
 
-echo "OCR-To-TEI  Copyright (C) 2023  René Ackels, Anne Königs"
+echo "OCR-To-TEI  Copyright (C) 2023  Universität Trier"
 echo "This program comes with ABSOLUTELY NO WARRANTY; for details type 'show w'."
 echo "This is free software, and you are welcome to redistribute it"
 echo "under certain conditions; type 'show c' for details."

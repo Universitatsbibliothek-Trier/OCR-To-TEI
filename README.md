@@ -1,4 +1,4 @@
-Copyright (c) 2023 René Ackels, Anne Königs\
+Copyright (c) 2023 Universität Trier\
 Permission is hereby granted, free of charge, to any person obtaining
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -13,14 +13,14 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-## Erstellen einer TEI-Datei aus Meta-Daten und OCR-Output in Form von XML-Dateien
+## Erstellen einer TEI-konformen XML-Datei aus Meta-Daten und OCR-Output
 
-Mit diesem Java-Programm ist es möglich aus einem Dateiordner, in dem sich XML-Dateien, die von einem OCR-Server aus Textseiten generiert wurden, und einer XML-Datei mit Metainformationen über ein entsprechendes Buch XML-Dateien zu erzeugen, die den Vorgaben der TEI entsprechen. Dabei wird zusätzlich eine `.csv`-Datei erstellt, die Informationen über von der OCR nicht erkannte Seitenzahlen enthält.
+Mit diesem Java-Programm ist es möglich aus einem Dateiordner, in dem sich XML-Dateien, die von einem OCR4all-Server aus Textseiten erkannt und generiert wurden, und einer XML-Datei mit Metainformationen über ein entsprechendes Buch/Band eine XML-Datei zu erzeugen, die den Vorgaben/dem Schema der TEI entspricht. Dabei wird zusätzlich eine `.csv`-Datei erstellt, die Informationen über die von der OCR nicht erkannten Seitenzahlen enthält.
 
 ## Ausführung
 
 Voraussetzungen:\
-Voraussetzungen für das Ausführen des Programmes sind ein installiertes Java JDK und Maven.\
+Voraussetzungen für das Ausführen des Programmes sind ein installiertes Java JDK und Apache Maven.\
 Nötige Angaben:\
 Vor dem Ausführen müssen bestimmte Angaben in der `parameters.xml`-Datei erfolgen: der Titel in `title`, ein Zusatz zum Titel in `titleAddition`, die Reihenfolge der vorkommenden Elemente (z.B Bogensignaturen, Kustoden) in `readingOrder`, ein statement of responsibility in `respStmt` und ein publication statement in `publicationStmt`.
 
@@ -30,9 +30,9 @@ Um das Programm von einem Bash-Terminal aus auszuführen müssen verschiedene Ar
 Dieser Befehl muss vom Ordner aus gestartet werden, in dem sich die `pom.xml`-Datei von Maven befindet.
 Alternativ dazu kann das Bash-Skript `startWithArguments.sh` ausgeführt werden, dass den Benutzer über ein Menü die benötigten Argumente eingeben lässt.
 Ein weiteres Skript zur Ausführung des Programmes ist die Datei `createteifile.sh`. Ein Beispiel zur Ausführung des Programmes über das Skript kann folgendermaßen aussehen:\
-`./createteifile.sh -m /PfadZuMODSDatei.xml -o /PfadZuOCRDaten/ -t /PfadUndNameDerTEIDatei.xml`
+`./createteifile.sh -m /PfadZuMODSDatei.xml -o /PfadZuOCRDaten/ -t /PfadUndNameDerTEIDatei.xml`\
 Dabei spielt die Reihenfolge der Pfade keine Rolle, sodass folgender Befehl ebenfalls möglich ist:\
-`./createteifile.sh -t /PfadUndNameDerTEIDatei.xml -m /PfadZuMODSDatei.xml -o /PfadZuOCRDaten/` \
+`./createteifile.sh -t /PfadUndNameDerTEIDatei.xml -m /PfadZuMODSDatei.xml -o /PfadZuOCRDaten/` 
 
 Für Windows:\
 Zur Ausführung des Programmes kann die Datei `create_tei_paths.bat` ausgeführt werden. Diese Datei kann bearbeitet werden, um die benötigen Pfade je nach Bedarf anzupassen.

@@ -1,5 +1,5 @@
 // @author       René Ackels
-// Copyright (c) 2023 René Ackels, Anne Königs
+// Copyright (c) 2023 Universität Trier
 
 // This file is part of OCR-To-TEI.
 
