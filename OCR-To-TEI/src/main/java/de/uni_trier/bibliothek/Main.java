@@ -88,10 +88,11 @@ public class Main {
 		// create TEI from modsCollection-object and list of PcGts-objects
 		TEI teiObject = TEICreator.createTEI(modsCollection, pcgtsList, parametersPath);
 		String teiXmlString = TEIMarshaller.marshall(teiObject);
+		String teiXmlStringSchema = InsertSchema.insertSchema(teiXmlString);
 		
 		// write TEI as file
 		Path teiFilePath = Paths.get(teiPathNameFile);
-		Files.writeString(teiFilePath, teiXmlString, StandardCharsets.UTF_8);	
+		Files.writeString(teiFilePath, teiXmlStringSchema, StandardCharsets.UTF_8);	
 		System.out.println("TEI and .csv created in:");	
 		System.out.println(teiPathName);	
 		System.out.println("-------");	
