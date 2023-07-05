@@ -30,6 +30,7 @@ import de.uni_trier.bibliothek.xml.parameters.model.generated.ReadingOrder;
 import de.uni_trier.bibliothek.xml.tei.model.generated.BiblStruct;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Body;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Div;
+import de.uni_trier.bibliothek.xml.tei.model.generated.Figure;
 import de.uni_trier.bibliothek.xml.tei.model.generated.FileDesc;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Fw;
 import de.uni_trier.bibliothek.xml.tei.model.generated.Imprint;
@@ -79,16 +80,18 @@ public class TEICreator extends TEI {
 	public static Fw pageFwElement;
 	public static Fw headerFwElement;
 	public static Fw catchWordFwElement;
-	public static Fw ornamentFwElement;
+	public static Figure figureFwElement;
+	// public static Fw ornamentFwElement;
 
 	// create jaxb objects for special information elements
 	public static ObjectFactory teiObjectFactoryParameters = new ObjectFactory();
 	public static JAXBElement<Lb> jaxbLb;	
 	public static JAXBElement<Fw> jaxbFwSignature;		
+	public static JAXBElement<Figure> jaxbFWFigure;		
 	public static JAXBElement<Fw> jaxbFwPageNumber;	
 	public static JAXBElement<Fw> jaxbFwHeader;	
 	public static JAXBElement<Fw> jaxbFwCatchWord;
-	public static JAXBElement<Fw> jaxbFwOrnament;
+	// public static JAXBElement<Fw> jaxbFwOrnament;
 	public static JAXBElement<Pb> jaxbPb;
 
 
@@ -181,16 +184,18 @@ public class TEICreator extends TEI {
 			jaxbFwPageNumber = teiObjectFactoryParameters.createPbodyFw(new Fw());	
 			jaxbFwHeader = teiObjectFactoryParameters.createPbodyFw(new Fw());	
 			jaxbFwCatchWord = teiObjectFactoryParameters.createPbodyFw(new Fw());
-			jaxbFwOrnament = teiObjectFactoryParameters.createPbodyFw(new Fw());
+			jaxbFWFigure = teiObjectFactoryParameters.createPbodyFigure(new Figure());
+			// jaxbFwOrnament = teiObjectFactoryParameters.createPbodyFw(new Fw());
 			ipageCount++;
 			pb = new Pb();
+			// figureFwElement = new Figure();
 			signatureFwElement = new Fw();
 			pageFwElement  = new Fw();
 			headerFwElement = new Fw();
 			catchWordFwElement = new Fw();
-			ornamentFwElement = new Fw();
+			// ornamentFwElement = new Fw();
 			signatureFwElement.setType("sig");
-			ornamentFwElement.setType("ornament");
+			// ornamentFwElement.setType("ornament");
 			headerFwElement.setType("header");
 			pageFwElement.setType("pageNum");
 			catchWordFwElement.setType("catch");
@@ -209,7 +214,7 @@ public class TEICreator extends TEI {
 			}
 			pb.setN(pageNumberOCR);
 			jaxbPb.setValue(pb);
-			jaxbFwOrnament.setValue(ornamentFwElement);
+			// jaxbFwOrnament.setValue(ornamentFwElement);
 			teiPbody.getContent().add(jaxbPb);
 			addParameterElements(lineStrings, parametersList, pcgtsObject);				
 		}
@@ -263,7 +268,7 @@ public class TEICreator extends TEI {
 							// test if imageRegion
 							if(textLineString.equals("textLineOrnament"))
 							{
-								teiPbody.getContent().add(jaxbFwOrnament);
+								teiPbody.getContent().add(jaxbFWFigure);
 							}
 							else{
 								teiPbody.getContent().add(jaxbLb);

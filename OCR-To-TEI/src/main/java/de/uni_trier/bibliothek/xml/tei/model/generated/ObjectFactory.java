@@ -33,6 +33,7 @@ public class ObjectFactory {
     private final static QName _PbodyPb_QNAME = new QName("http://www.tei-c.org/ns/1.0", "pb");
     private final static QName _PbodyLb_QNAME = new QName("http://www.tei-c.org/ns/1.0", "lb");
     private final static QName _PbodyFw_QNAME = new QName("http://www.tei-c.org/ns/1.0", "fw");
+    private final static QName _PbodyFigure_QNAME = new QName("http://www.tei-c.org/ns/1.0", "figure");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: de.uni_trier.bibliothek.xml.tei.model.generated
@@ -99,6 +100,16 @@ public class ObjectFactory {
      */
     public Pbody createPbody() {
         return new Pbody();
+    }
+
+    /**
+     * Create an instance of {@link Figure }
+     * 
+     * @return
+     *     the new instance of {@link Figure }
+     */
+    public Figure createFigure() {
+        return new Figure();
     }
 
     /**
@@ -258,6 +269,19 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://www.tei-c.org/ns/1.0", name = "fw", scope = Pbody.class)
     public JAXBElement<Fw> createPbodyFw(Fw value) {
         return new JAXBElement<>(_PbodyFw_QNAME, Fw.class, Pbody.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Figure }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link Figure }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://www.tei-c.org/ns/1.0", name = "figure", scope = Pbody.class)
+    public JAXBElement<Figure> createPbodyFigure(Figure value) {
+        return new JAXBElement<>(_PbodyFigure_QNAME, Figure.class, Pbody.class, value);
     }
 
 }

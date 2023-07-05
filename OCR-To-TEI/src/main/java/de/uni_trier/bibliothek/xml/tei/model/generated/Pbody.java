@@ -32,6 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *         <element name="pb" type="{http://www.tei-c.org/ns/1.0}Pb" maxOccurs="unbounded"/>
  *         <element name="lb" type="{http://www.tei-c.org/ns/1.0}Lb" maxOccurs="unbounded"/>
  *         <element name="fw" type="{http://www.tei-c.org/ns/1.0}Fw" maxOccurs="unbounded"/>
+ *         <element name="figure" type="{http://www.tei-c.org/ns/1.0}Figure"/>
  *       </choice>
  *     </restriction>
  *   </complexContent>
@@ -49,7 +50,8 @@ public class Pbody {
     @XmlElementRefs({
         @XmlElementRef(name = "pb", namespace = "http://www.tei-c.org/ns/1.0", type = JAXBElement.class, required = false),
         @XmlElementRef(name = "lb", namespace = "http://www.tei-c.org/ns/1.0", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "fw", namespace = "http://www.tei-c.org/ns/1.0", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "fw", namespace = "http://www.tei-c.org/ns/1.0", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "figure", namespace = "http://www.tei-c.org/ns/1.0", type = JAXBElement.class, required = false)
     })
     @XmlMixed
     protected List<Serializable> content;
@@ -72,6 +74,7 @@ public class Pbody {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
+     * {@link JAXBElement }{@code <}{@link Figure }{@code >}
      * {@link JAXBElement }{@code <}{@link Fw }{@code >}
      * {@link JAXBElement }{@code <}{@link Lb }{@code >}
      * {@link JAXBElement }{@code <}{@link Pb }{@code >}

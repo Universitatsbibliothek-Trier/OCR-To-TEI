@@ -30,7 +30,6 @@ import jakarta.xml.bind.annotation.XmlValue;
  *             <enumeration value="header"/>
  *             <enumeration value="catch"/>
  *             <enumeration value="pageNum"/>
- *             <enumeration value="ornament"/>
  *           </restriction>
  *         </simpleType>
  *       </attribute>

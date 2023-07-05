@@ -60,8 +60,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>. -->
       <xs:element name="pb" type="self:Pb" maxOccurs="unbounded" />
       <xs:element name="lb" type="self:Lb" maxOccurs="unbounded" />
       <xs:element name="fw" type="self:Fw" maxOccurs="unbounded"/>
+      <xs:element name="figure" type="self:Figure" maxOccurs="1"/>
     </xs:choice>
   </xs:complexType>
+
+    <xs:complexType name="Figure">
+    <xs:attribute name="facs">
+      <xs:simpleType>
+        <xs:restriction base="xs:string"/>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+
+
+
 
   <xs:complexType name="Fw">
     <xs:simpleContent>
@@ -73,13 +85,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>. -->
             <xs:enumeration value = "header"/>
             <xs:enumeration value = "catch"/>
             <xs:enumeration value = "pageNum"/>
-            <xs:enumeration value = "ornament"/>
            </xs:restriction>
          </xs:simpleType>
        </xs:attribute>
      </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+
 
   <xs:simpleType name="FwValue">
     <xs:restriction base="xs:string"/>
