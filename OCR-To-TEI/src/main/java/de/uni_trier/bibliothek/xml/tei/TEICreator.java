@@ -188,7 +188,6 @@ public class TEICreator extends TEI {
 			// jaxbFwOrnament = teiObjectFactoryParameters.createPbodyFw(new Fw());
 			ipageCount++;
 			pb = new Pb();
-			// figureFwElement = new Figure();
 			signatureFwElement = new Fw();
 			pageFwElement  = new Fw();
 			headerFwElement = new Fw();
@@ -202,16 +201,16 @@ public class TEICreator extends TEI {
 			ArrayList<String> lineStrings = OcrDataReader.getTextLines(pcgtsObject);
 			ArrayList<String> parametersList = getReadingOrderList(parametersPath);
 			String pageNumberOCR = Integer.toString(ipageCount);
-			pageNumberOCR = "[" + pageNumberOCR + "]";	
-			// remove square brackets if logic page number equals OCR page number
-			if (!OcrDataReader.getSpecialElement(pcgtsObject, "page-number").isEmpty())
-			{
-				String pageNumber = OcrDataReader.getSpecialElement(pcgtsObject, "page-number").replaceAll("[\\D]", "");
-				if(ipageCount==Integer.parseInt(pageNumber))
-				{
-					pageNumberOCR = pageNumberOCR.substring(1, pageNumberOCR.length()-1);		
-				}
-			}
+			// pageNumberOCR = "[" + pageNumberOCR + "]";	
+			// // remove square brackets if logic page number equals OCR page number
+			// if (!OcrDataReader.getSpecialElement(pcgtsObject, "page-number").isEmpty())
+			// {
+			// 	String pageNumber = OcrDataReader.getSpecialElement(pcgtsObject, "page-number").replaceAll("[\\D]", "");
+			// 	if(ipageCount==Integer.parseInt(pageNumber))
+			// 	{
+			// 		pageNumberOCR = pageNumberOCR.substring(1, pageNumberOCR.length()-1);		
+			// 	}
+			// }
 			pb.setN(pageNumberOCR);
 			jaxbPb.setValue(pb);
 			// jaxbFwOrnament.setValue(ornamentFwElement);
