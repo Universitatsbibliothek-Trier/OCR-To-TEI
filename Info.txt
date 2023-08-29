@@ -1,0 +1,11 @@
+Beschreibung des Programmes OCR-To-TEI:
+
+Basierend auf der Programmiersprache Java ermöglicht OCR-To-TEI durch Nutzung der API Java™ Architecture for XML Binding (JAXB), XML-Dateien in Java-Objekte 
+umzuwandeln und umgekehrt. Vor dem Ausführen kann in einer parameters.xml-Datei die Reihenfolge von verschiedenen Elementen (z. B. Kustode, Bogensignatur) und 
+weitere Metadaten angegeben werden. In einem ersten Schritt liest OCR-To-TEI dann die von OCR4all ausgegebenen XML-Dateien eines vollständigen Topographie-Bandes 
+ein. Eine XML-Datei entspricht dabei einer Seite. Sie ist zu diesem Zeitpunkt weder TEI-konform noch von Menschen lesbar. Gleichzeitig werden die Metainformationen 
+des jeweiligen Bandes in Form einer weiteren XML-Datei in das Programm eingespeist. OCR-To-TEI kombiniert beide Datensätze und generiert daraus eine menschenlesbare, 
+TEI-konforme XML-Datei. Dabei werden die Metadaten des Bandes im TEI-Header hinterlegt und der OCR-Output in ein <text>-Element eingefügt. Die Datei enthält zudem 
+weitere Elemente, die u. a. die Position von Kustoden, Bogensignaturen, Überschriften, Zeilen- und Seitenumbrüchen angeben. Zusätzlich wird eine .csv-Datei erzeugt, 
+in der listenbasiert angeführt wird, ob eine Seitenzahl von OCR4all nicht korrekt erkannt wurde und dahingehend Handlungsbedarf besteht. Das Programm wurde unter der 
+GNU General Public License auf dem Github-Account der UB Trier veröffentlicht: https://github.com/Universitatsbibliothek-Trier/OCR-To-TEI
